@@ -27,6 +27,8 @@ useEffect(() => {
 })
 
   return (
+    <>
+    <p>Map</p>
     <LoadScript googleMapsApiKey="AIzaSyBiJG97_IYoMHOFyLB-JmGfXWGQa9ocJ24"
     onError={handleLoadError}>
       <GoogleMap
@@ -37,7 +39,8 @@ useEffect(() => {
       >
         { /* Add any child components or markers here */ }
       </GoogleMap>
-    </LoadScript>
+      </LoadScript>
+      </>
   );
 };
 

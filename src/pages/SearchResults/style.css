@@ -1,14 +1,21 @@
 .search-results-container {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.left-content {
-  flex: 1;
-  padding: 20px;
-}
-
-.map-container {
-  flex: 1;
   height: 100%;
+}
+
+.filters-applied {
+  flex-basis: 20%;
+  background-color: antiquewhite;
+}
+.search-cards {
+  flex-basis: 40%;
+  padding: 0 10px;
+}
+.map-container {
+  height: 100%;
+  flex-basis: 40%;
+}
+
+.map-container p {
+  background-color: aquamarine;
 }
