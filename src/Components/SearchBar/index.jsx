@@ -35,7 +35,7 @@ const [tttt] = useTranslation(["details"]);
     onSearch(filters);
   };
 
-  const foundHotels = ["EquitanaHotelResort", "HotelKouty"];
+  const foundHotels = ["EquitanaHotelResort", "HotelKouty"]; /* fokh]sjoprykfjoksry */
 
   return (
     <div className="search-bar-wrapper">
