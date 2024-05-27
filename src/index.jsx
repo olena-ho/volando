@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import { App } from "./components/App";
 import { HomePage } from "./pages/HomePage";
+import { SearchResults } from "./pages/SearchResults";
 import './i18n';
 import './global.css';
 

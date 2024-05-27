@@ -12,9 +12,8 @@ header {
   background-size: contain;
 }
 
-.home-page {
+.search-results-container {
   display: flex;
-  height: 100vh;
 }
 
 .left-content {

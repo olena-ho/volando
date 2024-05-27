@@ -1,0 +1,14 @@
+.search-results-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.map-container {
+  flex: 1;
+  height: 100%;
+}
