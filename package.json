@@ -9,8 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "i18next": "^23.11.5",
-    "i18next-http-backend": "^2.5.2",
+    "@react-google-maps/api": "^2.19.3",
     "i18next": "^23.11.5",
     "i18next-http-backend": "^2.5.2",
     "react": "^18.2.0",
@@ -25,4 +24,3 @@
     "vite": "^4.4.5"
   }
 }
-
