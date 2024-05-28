@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
-const containerStyle = {
+ const containerStyle = {
   width: '100%',
   height: '100%'
-};
+}; 
 
 const center = {
   lat: 49.5,
@@ -20,15 +20,8 @@ const handleMapLoad = (map) => {
 };
 
 const Map = () => {
-const [hotels, setHotels] = useState([]);
-
-useEffect(() => {
-  
-})
-
   return (
     <>
-    <p>Map</p>
     <LoadScript googleMapsApiKey="AIzaSyBiJG97_IYoMHOFyLB-JmGfXWGQa9ocJ24"
     onError={handleLoadError}>
       <GoogleMap
