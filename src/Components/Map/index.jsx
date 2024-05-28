@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { GoogleMap, InfoWindow, LoadScript, Marker } from '@react-google-maps/api';
+import hotels from '../../api/hotels.json';
 
  const containerStyle = {
   width: '100%',
@@ -21,6 +22,7 @@ const handleMapLoad = (map) => {
 
 const Map = () => {
   const [currentLocation, setCurrentLocation] = useState(null);
+  const [displayInfo, setdisplayInfo] = useState(null);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -42,6 +44,10 @@ const Map = () => {
     }
   }, []);
 
+  const handleMarkerClick = (i) => {
+    setdisplayInfo(i);
+  };
+
   return (
     <>
     <LoadScript googleMapsApiKey="AIzaSyBiJG97_IYoMHOFyLB-JmGfXWGQa9ocJ24"
@@ -53,6 +59,32 @@ const Map = () => {
         onLoad={handleMapLoad}
       >
         {currentLocation && <Marker position={currentLocation} />}
+
+{hotels.map((hotel, i) => {
+
+const descriptionWords = hotel.description.split(' ');
+const shortenedDescription = descriptionWords.slice(0, 9).join(' ');
+
+  return(
+  <Marker
+  key={i}
+  position={{lat: hotel.location.latitude, lng: hotel.location.longitude}}
+  onClick={() => handleMarkerClick(i)}
+  >
+    {displayInfo === i && (
+      <InfoWindow onCloseClick={() => setdisplayInfo(null)}>
+<div>
+  <h3>{hotel.name}</h3>
+  <p>{`${shortenedDescription}...`}</p>
+</div>
+      </InfoWindow>
+    )}
+
+  </Marker>
+  );
+})}
+
+{currentLocation && <Marker position={currentLocation} />}
       </GoogleMap>
       </LoadScript>
       </>
