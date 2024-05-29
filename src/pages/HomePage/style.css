@@ -5,11 +5,10 @@ header {
   margin-top: 4rem;
 }
 
-.logo {
-  width: 10rem;
-  height: 10rem;
-  background-image: url(./img/rocket.svg);
-  background-size: contain;
+.main-page__container {
+  padding-top: 100px;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .search-results-container {
@@ -27,3 +26,4 @@ header {
   border-radius: 15px; 
   overflow: hidden;
 }
+

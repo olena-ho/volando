@@ -36,7 +36,7 @@ export const SearchBar = ({ onSearch }) => {
     <div className="search-bar-wrapper">
       <Dropdown
         title={t('activitiesP')}
-        options={['Outdoors', 'Art', 'Sport', 'Relax']}
+        options={['Outdoors', 'Art', 'Sport', 'Relax', 'Fun for kids']}
         onChange={(option, checked) => handleFilterChange('activities', option, checked)}
       />
       <Dropdown
