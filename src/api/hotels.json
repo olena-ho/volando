@@ -1,7 +1,7 @@
 [
   {
     "name": "Equitana Hotel Resort",
-    "activities": ["outdoors", "sport","horse-riding", "spa", "bowling", "billiard", "minigolf", "jogging track", "fishing"],
+    "activities": ["Outdoors", "Sport","horse-riding", "spa", "bowling", "billiard", "minigolf", "jogging track", "fishing"],
     "address": "Martinice 1, 262 72 Březnice, Czech Republic",
     "location": {
       "latitude": 49.5791,
@@ -11,11 +11,11 @@
     "description": "The most beautiful view in the world is from the back of a horse. It's true. Don't be afraid and try horse riding with us. At our riding arena, we organize competitions such as the Czech Republic Championship in show jumping, but we also offer our services to absolute beginners in horse riding. Small children, parents, or even everyone together can enjoy a ride on horseback.",
     "amenities": ["Free Wi-Fi", "Parking", "Wellness and SPA", "Restaurant"],
     "web": "http://www.equitana.cz",
-    "images": ["horse-ocean.jpg", "horse-kid.jpg", "horse-passion.jpg"]
+    "images": [""]
   },
   {
     "name": "Hotel Kouty",
-    "activities": ["Tennis", "Beach volleyball", "Paddleboard", "Yoga"],
+    "activities": ["Outdoors","tennis", "beach volleyball", "paddleboard", "yoga"],
     "address": "Zblovice 63, 675 26 Zblovice, Czech Republic",
     "location": {
       "latitude": 49.1060,
@@ -26,14 +26,12 @@
     "amenities": ["Free Wi-Fi", "Parking", "Cedar sauna", "Restaurant"],
     "web": "http://www.hotelkouty.cz",
     "images": [
-      "../../assets/Kouty/paddleboard.jpg",
-      "../../assets/Kouty/beach-volleyball.jpg",
-      "../../assets/Kouty/yoga.jpg"
+     
     ]
   },
   {
     "name": "Golf Resort Olomouc",
-    "activities": ["golf"],
+    "activities": ["Outdoors","golf"],
     "address": "Dolany-Véska 89, 783 16 Dolany, Czech Republic",
     "location": {
       "latitude": 49.6350,
@@ -43,11 +41,11 @@
     "description": "A four-star hotel ideal for golf enthusiasts, offering rooms with a view of the championship course. The resort provides a rich breakfast buffet, free Wi-Fi, parking, and pet-friendly accommodations.",
     "amenities": ["Free Wi-Fi", "Parking", "Pet-friendly", "Restaurant", "Training areas", "Club rentals"],
     "web": "https://www.golfolomouc.cz/en/hotel/hotel",
-    "images": []
+    "images": ["../ass"]
   },
   {
     "name": "Caribe Bay",
-    "activities": ["Aquapark"],
+    "activities": ["Fun for kids","Aquapark"],
     "address": "Via Michelangelo Buonarroti, 15, 30016 Lido di Jesolo, Venice, Italy",
     "location": {
       "latitude": 45.5128,
@@ -61,7 +59,7 @@
   },
   {
     "name": "Six Senses Douro Valley",
-    "activities": ["painting", "water sports", "cooking masterclass", "Port wine tasting"],
+    "activities": ["painting", "water sports", "cooking masterclass", "port wine tasting"],
     "address": "Quinta Vale de Abraão, Samodães, 5100-758 Lamego, Portugal",
     "location": {
       "latitude": 41.1610,
