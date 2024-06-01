@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { GoogleMap, InfoWindow, LoadScript, Marker } from '@react-google-maps/api';
-import hotels from '../../api/hotels.json';
+import hotels from '../../api/hotels.js';
 
  const containerStyle = {
   width: '100%',
