@@ -18,3 +18,8 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+}

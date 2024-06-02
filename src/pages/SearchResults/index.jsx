@@ -1,5 +1,4 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { SearchBar } from "../../components/SearchBar";
 import Map from "../../components/Map";
 import "./style.css";
