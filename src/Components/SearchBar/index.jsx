@@ -82,9 +82,11 @@ export const SearchBar = ({ onSearch }) => {
           handleFilterChange("rating", option, checked)
         }
       />
+      <a href="/search-results">
       <button className="search-button" onClick={handleSearch}>
         {t("searchB")}
-      </button>
+        </button>
+        </a>
     </div>
   );
 };

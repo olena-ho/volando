@@ -4,5 +4,6 @@
   "priceP": "Price",
   "ratingP": "Rating from guests",
   "locationP": "Type a country / continent",
-  "searchB": "Search"
+  "searchB": "Search",
+  "applyB": "Apply"
 }
