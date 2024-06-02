@@ -3,7 +3,12 @@
   "comfortP": "Comfort",
   "priceP": "Price",
   "ratingP": "Rating from guests",
-  "locationP": "Type a country / continent",
+  "locationP": "Type a country",
   "searchB": "Search",
-  "applyB": "Apply"
+  "applyB": "Apply",
+  "outdoors": "Outdoors activities",
+  "kids": "Fun for kids",
+  "art": "Art and Culture",
+  "sport": "Sport",
+  "relax": "Relax"
 }
