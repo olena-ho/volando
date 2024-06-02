@@ -4,15 +4,15 @@ import './style.css';
 
 export const Card = () => {
   const [tttt] = useTranslation(["details"]);
-  const foundHotels = [hotels];
+  const foundHotels = hotels.slice(0, 3); // Вибираємо перші три готелі з масиву
 
   return (
     <section className="">
       <div className="container-card">  
-        {hotels.map((hotel, index) => {
+        {foundHotels.map((hotel, index) => { // Змінили `hotels` на `foundHotels`
           const activities = typeof hotel.activities === 'string'
-            ? hotel.activities.split(',') // Якщо activities є рядком, розділити його на масив
-            : hotel.activities; // Якщо activities вже масив, використати його без змін
+            ? hotel.activities.split(',') 
+            : hotel.activities;
 
           return (
             <div key={index} className="hotel-card">
@@ -30,17 +30,6 @@ export const Card = () => {
                   <p className="hotel-rating">Rating: {hotel.rating}</p>
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
-
-      <div className="search-cards">
-        {foundHotels.map((hotel, index) => {
-          return (
-            <div key={index}>
-              <p>{hotel.name}</p>
-              <p>{tttt(`${hotel.name}.description`)}</p>
             </div>
           );
         })}
