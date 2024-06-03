@@ -1,0 +1,675 @@
+[
+  {
+    "name": "Equitana Hotel Resort",
+    "activities": ["Venku", "Sport", "jízda na koni", "spa", "bowling", "billiard", "minigolf", "běžecká dráha", "rybaření"],
+    "address": "Martinice 1, 262 72 Březnice, Česká republika",
+    "country": "cz",
+    "coordinates": {
+      "latitude": 49.5791,
+      "longitude": 13.8301
+    },
+    "rating": 4,
+    "description": "Nejkrásnější pohled na světě je ze zad koně. Je to pravda. Nebojte se a vyzkoušejte jízdu na koni s námi. Na našem jezdeckém areálu pořádáme soutěže, jako je Mistrovství České republiky v parkurovém skákání, ale nabízíme naše služby i úplným začátečníkům v jízdě na koni. Malé děti, rodiče nebo dokonce všichni společně si mohou užít jízdu na koni.",
+    "amenities": ["Bezplatné Wi-Fi", "Parkování", "Wellness a SPA", "Restaurace"],
+    "website": "http://www.equitana.cz",
+    "images": ["/assets/Equitana/horse-kid.jpg"]
+  },
+  {
+    "name": "Hotel Kouty",
+    "activities": ["Venku", "tenis", "plážový volejbal", "paddleboard", "jóga"],
+    "address": "Zblovice 63, 675 26 Zblovice, Česká republika",
+    "coordinates": {
+      "latitude": 49.1060,
+      "longitude": 15.6450
+    },
+    "rating": 4,
+    "description": "Hotel se nachází v lesním areálu o rozloze 10 hektarů s vlastním rybníkem o rozloze 2,5 hektaru, v malebném údolí na úpatí Melechova kopce. V okolí chat protéká potok, který napájí pstruhový rybník s jednou z nejčistších vod v České republice. K dispozici jsou dva tenisové kurty s umělým povrchem, hřiště, trampolína, plážové volejbalové hřiště, posilovna, stolní tenis a sauna. Naši malí hosté mají k dispozici hřiště a trampolínu. O několik set metrů dále se nachází soukromý rybářský revír v obci Kouty – Homole rybník. Můžete chytit pstruhy, kapry nebo candáty. Povolenky lze vyzvednout na recepci hotelu po předchozí dohodě.",
+    "amenities": ["Bezplatné Wi-Fi", "Parkování", "Cedrová sauna", "Restaurace"],
+    "website": "http://www.hotelkouty.cz",
+    "images": []
+  },
+  {
+    "name": "Golf Resort Olomouc",
+    "activities": ["Venku", "golf"],
+    "address": "Dolany-Véska 89, 783 16 Dolany, Česká republika",
+    "coordinates": {
+      "latitude": 49.6350,
+      "longitude": 17.3023
+    },
+    "rating": 4,
+    "description": "Čtyřhvězdičkový hotel ideální pro milovníky golfu, nabízí pokoje s výhledem na šampionátové hřiště. Resort nabízí bohatý snídaňový bufet, bezplatné Wi-Fi, parkování a ubytování pro domácí mazlíčky.",
+    "amenities": ["Bezplatné Wi-Fi", "Parkování", "Domácí mazlíčci vítáni", "Restaurace", "Tréninkové plochy", "Půjčovna golfového vybavení"],
+    "website": "https://www.golfolomouc.cz/en/hotel/hotel",
+    "images": ["../ass"]
+  },
+  {
+    "name": "Caribe Bay",
+    "activities": ["Zábava pro děti", "Akvapark"],
+    "address": "Via Michelangelo Buonarroti, 15, 30016 Lido di Jesolo, Benátky, Itálie",
+    "coordinates": {
+      "latitude": 45.5128,
+      "longitude": 12.6446
+    },
+    "rating": 4,
+    "description": "Caribe Bay je karibský tematický vodní park nabízející různé atrakce, včetně skluzavek, bazénů a živých show. Je to oblíbená destinace pro rodinnou zábavu a vodní aktivity.",
+    "amenities": ["Tematické bazény", "Skluzavky", "Show", "Restaurace", "Bezplatné Wi-Fi"],
+    "website": "https://www.caribebay.it/en",
+    "images": []
+  },
+  {
+    "name": "Six Senses Douro Valley",
+    "activities": ["malování", "vodní sporty", "kurzy vaření", "ochutnávka portského vína"],
+    "address": "Quinta Vale de Abraão, Samodães, 5100-758 Lamego, Portugalsko",
+    "coordinates": {
+      "latitude": 41.1610,
+      "longitude": -7.7851
+    },
+    "rating": 5,
+    "description": "Tento luxusní resort v údolí Douro nabízí směs relaxace a aktivit, včetně kurzů vaření, ochutnávek vína a vodních sportů. Je zasazen do malebného vinařského prostředí.",
+    "amenities": ["Bezplatné Wi-Fi", "Spa", "Restaurace", "Bazén", "Vinotéka"],
+    "website": "https://www.sixsenses.com/en/resorts/douro-valley/experiences/",
+    "images": []
+  },
+  {
+    "name": "The Boulders Resort",
+    "activities": ["golf", "letecké balóny", "horolezectví"],
+    "address": "34631 N Tom Darlington Dr, Scottsdale, AZ 85262, USA",
+    "coordinates": {
+      "latitude": 33.8466,
+      "longitude": -111.9277
+    },
+    "rating": 5,
+    "description": "Nachází se v Sonorské poušti, tento resort nabízí unikátní venkovní dobrodružství, včetně golfu na jeho proslulých hřištích, horolezectví a letů horkovzdušnými balóny.",
+    "amenities": ["Bezplatné Wi-Fi", "Spa", "Fitness centrum", "Restaurace", "Golfová hřiště"],
+    "website": "https://www.theboulders.com/outdoor-adventures/",
+    "images": []
+  },
+  {
+    "name": "The Residences at Chevy Chase",
+    "activities": ["polštářové boje"],
+    "address": "8551 Connecticut Ave, Chevy Chase, MD 20815, USA",
+    "coordinates": {
+      "latitude": 38.9965,
+      "longitude": -77.0690
+    },
+    "rating": 0,
+    "description": "Unikátní rezidence nabízející neobvyklou aktivitu polštářových bojů za 60 dolarů, spolu s dalšími luxusními vybaveními.",
+    "amenities": ["Luxusní apartmány", "Fitness centrum", "Domácí mazlíčci vítáni", "Konzierge služby"],
+    "website": "https://www.theresidenceschevychase.com/",
+    "images": []
+  },
+  {
+    "name": "Loews Coronado Bay Resort",
+    "activities": ["surfování pro psy"],
+    "address": "4000 Coronado Bay Road, Coronado, CA 92118, USA",
+    "coordinates": {
+      "latitude": 32.6325,
+      "longitude": -117.1384
+    },
+    "rating": 4.5,
+    "description": "Loews Coronado Bay Resort nabízí unikátní zážitky, včetně lekcí surfování pro psy. Nachází se na soukromém 15akrovém poloostrově, resort je klidným útočištěm s úchvatnými výhledy na Tichý oceán a panorama San Diega.",
+    "amenities": ["Bezplatné Wi-Fi", "Parkování", "Wellness a Spa", "Restaurace", "Bazén"],
+    "website": "https://www.loewshotels.com/coronado-bay-resort",
+    "images": []
+  },
+  {
+    "name": "Sonesta Select Boston Lowell Chelmsford",
+    "activities": ["exotické menu pro zvířata"],
+    "address": "30 Industrial Ave E, Lowell, MA 01852, USA",
+    "location": {
+      "latitude": 42.6321,
+      "longitude": -71.3224
+    },
+    "rating": 4,
+    "description": "Sonesta Select Boston Lowell Chelmsford nabízí jedinečný zážitek z jídla s exotickým menu navrženým speciálně pro domácí mazlíčky. Hotel je domácím mazlíčkům přátelský a snaží se zajistit pohodlný a příjemný pobyt jak pro hosty, tak pro jejich zvířecí společníky.",
+    "amenities": ["Wi-Fi zdarma", "Parkování", "Restaurace", "Fitness centrum"],
+    "web": "https://www.sonesta.com/sonesta-select/ma/lowell/sonesta-select-boston-lowell-chelmsford",
+    "images": []
+  },
+  {
+    "name": "Obriy Village",
+    "activities": ["tradiční ukrajinské horké vany", "jízda na koni"],
+    "address": "Opishnya, Poltavská oblast, Ukrajina",
+    "location": {
+      "latitude": 49.9722,
+      "longitude": 34.6083
+    },
+    "rating": 4.5,
+    "description": "Obriy Village nabízí nezapomenutelné zážitky v tradičních ukrajinských horkých vanách a jízdě na koni v malebném prostředí Opishnya. Je to místo, kde si můžete opravdu užít krásy ukrajinské přírody a pohostinnosti.",
+    "amenities": ["Wi-Fi zdarma", "Parkování", "Restaurace", "Wellness"],
+    "web": "https://obriyvillage.com/",
+    "images": []
+  },
+  {
+    "name": "Concept Stay Sirimiri",
+    "activities": ["jízda na koni", "horké vany"],
+    "address": "Jaremče, Ukrajina",
+    "location": {
+      "latitude": 48.4482,
+      "longitude": 24.5527
+    },
+    "rating": 4.5,
+    "description": "Concept Stay Sirimiri nabízí jedinečný pobyt s aktivitami jako je jízda na koni a relaxace v horkých vanách, umístěný v krásných Karpatech. Tento útulek je ideální pro ty, kteří hledají spojení s přírodou a odpočinek.",
+    "amenities": ["Wi-Fi zdarma", "Parkování", "Restaurace", "Wellness"],
+    "web": "https://en.concept-stay.com/sirimiri",
+    "images": []
+  },
+  {
+    "name": "Scandi Eco Park",
+    "activities": ["terapie se zvířaty", "husky psi", "jízda na koni", "bikejoring", "trekking"],
+    "address": "Černihiv, Ukrajina",
+    "location": {
+      "latitude": 51.4982,
+      "longitude": 31.2893
+    },
+    "rating": 4.5,
+    "description": "Scandi Eco Park nabízí různé venkovní a terapeutické aktivity, včetně terapie se zvířaty, interakcí s husky psy, jízdy na koni, bikejoringu a trekkingu. Je to ekologické místo navržené pro milovníky přírody.",
+    "amenities": ["Wi-Fi zdarma", "Parkování", "Restaurace", "Wellness"],
+    "web": "https://www.facebook.com/scandi.eco.park/",
+    "images": []
+  },
+  {
+    "name": "Aves Travel",
+    "activities": ["termální prameny"],
+    "address": "Různé lokality, Ukrajina",
+    "location": {
+      "latitude": 48.3794,
+      "longitude": 31.1656
+    },
+    "rating": 4.5,
+    "description": "Aves Travel nabízí kurátorované pobyty v různých lázeňských resortech s termálními prameny po celé Ukrajině, poskytující omlazující zážitky v přírodních termálních vodách. Tyto resorty jsou ideální pro relaxaci a prospěch zdraví.",
+    "amenities": ["Wi-Fi zdarma", "Parkování", "Restaurace", "Wellness"],
+    "web": "https://www.avestravel.com.ua/hotel_list/goteli-z-garjachimi-dzherelami-v-ukraini/",
+    "images": []
+  },
+  {
+    "name": "The Manta Resort",
+    "activities": ["podvodní hotel"],
+    "address": "Pemba Island, Tanzanie",
+    "location": {
+      "latitude": -5.2350,
+      "longitude": 39.7763
+    },
+    "rating": 5,
+    "description": "The Manta Resort nabízí mimořádný zážitek s jeho podvodním pokojem, poskytující úchvatný výhled na mořský život v průzračných vodách Indického oceánu. Je to jedinečný a luxusní útěk na ostrově Pemba.",
+    "amenities": ["Wi-Fi zdarma", "Parkování", "Restaurace", "Wellness"],
+    "web": "https://themantaresort.com/",
+    "images": []
+  },
+  {
+    "name": "Poseidon Undersea Resorts",
+    "activities": ["podvodní hotel"],
+    "address": "Ostrov Fidži",
+    "location": {
+      "latitude": -17.7134,
+      "longitude": 178.0650
+    },
+    "rating": 5,
+    "description": "Poseidon Undersea Resorts nabízí jedinečný zážitek z pobytu pod vodou v luxusních apartmánech obklopených živým mořským životem fídžijských ostrovů. Je to bezkonkurenční podvodní dobrodružství.",
+    "amenities": ["Wi-Fi zdarma", "Restaurace", "Wellness", "Luxusní apartmány"],
+    "web": "https://www.poseidonresorts.com/",
+    "images": []
+  },
+  {
+    "name": "Icehotel",
+    "activities": ["ledový hotel"],
+    "address": "Marknadsvägen 63, 981 91 Jukkasjärvi, Švédsko",
+    "location": {
+      "latitude": 67.8500,
+      "longitude": 20.6161
+    },
+    "rating": 5,
+    "description": "Icehotel ve Švédsku je unikátní hotel postavený zcela z ledu a sněhu. Hosté mohou bydlet v pokojích vytesaných umělci z celého světa a zažít nezapomenutelný arktický zážitek.",
+    "amenities": ["Wi-Fi zdarma", "Restaurace", "Bar", "Galerie umění"],
+    "web": "https://www.icehotel.com/",
+    "images": []
+  },
+  {
+    "name": "Treehotel",
+    "activities": ["stromečkové domy"],
+    "address": "Edeforsväg 2A, 960 24 Harads, Švédsko",
+    "location": {
+      "latitude": 65.8254,
+      "longitude": 20.9694
+    },
+    "rating": 5,
+    "description": "Treehotel ve Švédsku nabízí jedinečné ubytování ve stromečkových domech, každý navržený jinými architekty. Hosté si mohou užít krásné lesní prostředí a úžasné výhledy ze svých pokojů ve větvích stromů.",
+    "amenities": ["Wi-Fi zdarma", "Restaurace", "Sauna", "Vany"],
+    "web": "https://treehotel.se/",
+    "images": []
+  },
+  {
+    "name": "Luna Salada Hotel",
+    "activities": ["sůl hotel"],
+    "address": "Salar de Uyuni, Colchani, Bolívie",
+    "location": {
+      "latitude": -20.1338,
+      "longitude": -67.4891
+    },
+    "rating": 4.5,
+    "description": "Hotel Luna Salada je postavený zcela z bloků soli a nabízí hostům jedinečný pobyt na okraji největší solné pláně na světě. Hotel poskytuje úchvatné výhledy a opravdu jedinečný zážitek.",
+    "amenities": ["Wi-Fi zdarma", "Restaurace", "Wellness", "Vany"],
+    "web": "https://lunasaladahotel.com.bo/",
+    "images": []
+  },
+  {
+    "name": "Happy Guests Lodge",
+    "activities": ["rybí společník za £5"],
+    "address": "Tarporley Road, Dutton, Warrington WA4 4EZ, Anglie",
+    "location": {
+      "latitude": 53.3000,
+      "longitude": -2.6500
+    },
+    "rating": 4,
+    "description": "Happy Guests Lodge nabízí jedinečný zážitek, kde si hosté mohou pronajmout rybího společníka na pokoji za £5. Je to útulný a přátelský penzion situovaný v malebné anglické krajině Cheshire.",
+    "amenities": ["Wi-Fi zdarma", "Parkování", "Restaurace", "Přátelský k domácím mazlíčkům"],
+    "web": "http://www.happyguestslodge.co.uk/",
+    "images": []
+  },
+  {
+    "name": "Hotel Divorce",
+    "activities": ["rozvodový hotel"],
+    "address": "Zeestraat 35, 2518 AA Den Haag, Nizozemsko",
+    "location": {
+      "latitude": 52.0833,
+      "longitude": 4.3000
+    },
+    "rating": 4,
+    "description": "Hotel Divorce nabízí unikátní služby pro páry hledající smířlivý rozvod. Hotel poskytuje právní a psychologickou podporu, aby pomohl páru hladce se rozvést.",
+    "amenities": ["Wi-Fi zdarma", "Restaurace", "Wellness", "Právní služby"],
+    "web": "https://www.carlton.nl/hotel-ambassador-den-haag",
+    "images": []
+  },
+  {
+    "name": "Protea Hotel by Marriott Polokwane Ranch Resort",
+    "activities": ["procházka s lvy"],
+    "address": "25 km jižně od Polokwane na silnici R101 nebo N1, Polokwane, 0700, Jižní Afrika",
+    "location": {
+      "latitude": -23.8916,
+      "longitude": 29.4486
+    },
+    "rating": 4.5,
+    "description": "Protea Hotel by Marriott Polokwane Ranch Resort nabízí hostům mimořádnou příležitost projít se s lvy. Resort poskytuje kombinaci luxusního ubytování a vzrušujících zážitků s divokou zvěří.",
+    "amenities": ["Wi-Fi zdarma", "Restaurace", "Wellness", "Bazén"],
+    "web": "https://www.marriott.com/en-us/hotels/ptgra-protea-hotel-polokwane-ranch-resort/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0",
+    "images": []
+  },
+  {
+    "name": "V8 Hotel Classic Motorworld Region Stuttgart",
+    "activities": ["dekorace v autostylu", "půjčovna aut", "masáže", "lustrace bot"],
+    "address": "Charles-Lindbergh-Platz 1, 71034 Böblingen, Německo",
+    "location": {
+      "latitude": 48.6810,
+      "longitude": 8.9999
+    },
+    "rating": 4.5,
+    "description": "Nacházející se na starém letišti ve Stuttgartu, tento hotel je ideální pro automobilové nadšence. Hotel nabízí jedinečně navržené apartmány s automobilovou výzdobou, včetně originálních autodílů umístěných na stěnách.",
+    "amenities": ["Restaurace", "Bar", "Sauna", "Zasedací místnosti", "Fitness centrum"],
+    "web": "https://www.booking.com",
+    "images": []
+  },
+  {
+    "name": "Masseria Cervarolo",
+    "activities": ["vaření", "tématické večery", "procházky"],
+    "address": "SP 14 Ostuni-Martina Franca, km 4,5, 72017 Ostuni BR, Itálie",
+    "location": {
+      "latitude": 40.7392,
+      "longitude": 17.5816
+    },
+    "rating": 4.8,
+    "description": "Původně rodinná farma z 16. století, tento hotel nabízí relaxační atmosféru s kombinací historického šarmu a moderního komfortu. Hosté si mohou užít různé aktivity a prozkoumat okolní vesnice.",
+    "amenities": ["Wellness", "Bazén", "Restaurace", "Zahrada"],
+    "web": "https://www.booking.com",
+    "images": []
+  },
+  {
+    "name": "Electra Palace Hotel",
+    "activities": ["výstavy umění", "večeře na střeše"],
+    "address": "9 Aristotelous Square, Thessaloniki, 546 24, Řecko",
+    "location": {
+      "latitude": 40.6323,
+      "longitude": 22.9404
+    },
+    "rating": 4.7,
+    "description": "Nacházející se v srdci Soluňe, tento hotel nabízí úchvatný výhled na moře a kulturní zážitky, včetně prohlídek uměleckých děl vystavených na objektu.",
+    "amenities": ["Střešní bazén", "Vnitřní bazén", "Restaurace"],
+    "web": "https://www.booking.com",
+    "images": []
+  },
+  {
+    "name": "Gaylord Palms and Convention Center",
+    "activities": ["krmení aligátorů", "pirátské a princeznovské představení", "bruslení na ledu", "lekce surfování"],
+    "address": "6000 W Osceola Pkwy, Kissimmee, FL 34746, USA",
+    "location": {
+      "latitude": 28.3514,
+      "longitude": -81.5331
+    },
+    "rating": 4.6,
+    "description": "Tento hotel má jedinečný atrium s aligátory a hady a také nabízí širokou škálu sezónních aktivit, jako jsou honičky a zdobení sušenek.",
+    "amenities": ["Vodní park", "Wellness", "Různé možnosti stravování"],
+    "web": "https://www.creativetravelguide.com",
+    "images": []
+  },
+  {
+    "name": "Treebones Resort",
+    "activities": ["glamping v jurtech", "soukromé terasy s výhledem na krajinu"],
+    "address": "71895 CA-1, Big Sur, CA 93920, USA",
+    "location": {
+      "latitude": 35.9643,
+      "longitude": -121.5370
+    },
+    "rating": 4.5,
+    "description": "Zvláštní, ekologicky šetrný resort nabízející ubytování ve stylu glampingu s nádherným výhledem na Big Sur.",
+    "amenities": ["Restaurace", "Ekologická zahrada", "Turistické trasy"],
+    "web": "https://www.creativetravelguide.com",
+    "images": []
+  },
+  {
+    "name": "Hotel Max",
+    "activities": ["výstavy umění", "gramofony v pokojích"],
+    "address": "620 Stewart St, Seattle, WA 98101, USA",
+    "location": {
+      "latitude": 47.6132,
+      "longitude": -122.3361
+    },
+    "rating": 4.4,
+    "description": "Nacházející se v centru Seattlu, tento hotel je známý svým uměleckým a hudebním tématem, které se projevuje originálními uměleckými díly a ikonickými fotografiami po celém objektu.",
+    "amenities": ["Restaurace", "Fitness centrum", "Obchodní služby"],
+    "web": "https://www.creativetravelguide.com",
+    "images": []
+  },
+  {
+    "name": "Grand Velas Riviera Maya",
+    "activities": ["kurzy salsy", "aqua fitness kurzy"],
+    "address": "Carretera Cancún Tulum Km 62, 77710 Playa del Carmen, Q.R., Mexiko",
+    "location": {
+      "latitude": 20.6371,
+      "longitude": -87.0568
+    },
+    "rating": 4.9,
+    "description": "Luxusní all-inclusive resort nabízející různé aktivity, včetně kurzů salsy a aqua fitness.",
+    "amenities": ["Wellness", "Více bazénů", "Gurmánská restaurace"],
+    "web": "https://www.grandvelas.com",
+    "images": []
+  },
+  {
+    "name": "W Barcelona",
+    "activities": ["ranní jóga", "salsa večery"],
+    "address": "Plaça de la Rosa dels Vents, 1, 08039 Barcelona, Španělsko",
+    "location": {
+      "latitude": 41.3684,
+      "longitude": 2.1924
+    },
+    "rating": 4.7,
+    "description": "Nacházející se podél pobřeží, tento hotel nabízí dechberoucí výhled na Středozemní moře a pořádá salsa večery, které si hosté mohou užít.",
+    "amenities": ["Přístup na pláž", "Nekonečný bazén", "Více restaurací a barů"],
+    "web": "https://www.marriott.com",
+    "images": []
+  },
+  {
+    "name": "Hotel del Coronado",
+    "activities": ["plážová jóga", "lekce surfování", "půjčovna jízdních kol", "plážová ohniště"],
+    "address": "1500 Orange Ave, Coronado, CA 92118, USA",
+    "location": {
+      "latitude": 32.6809,
+      "longitude": -117.1784
+    },
+    "rating": 4.6,
+    "description": "Nacházející se na úchvatných pobřeží Coronado Island, tento historický hotel nabízí širokou škálu aktivit, včetně plážové jógy, lekcí surfování, půjčovny jízdních kol a plážových ohnišť.",
+    "amenities": ["Více restaurací a barů", "Wellness", "Přístup k pláži"],
+    "web": "https://hoteldel.com/",
+    "images": []
+  },
+  {
+    "name": "Amangiri",
+    "activities": ["pozorování hvězd", "balonování", "pěší túry", "jízda na koni"],
+    "address": "1 Kayenta Rd, Canyon Point, UT 84741, USA",
+    "location": {
+      "latitude": 37.0185,
+      "longitude": -111.9291
+    },
+    "rating": 4.9,
+    "description": "Umístěný uprostřed krásy pouště v Utahu, Amangiri nabízí luxusní ubytování a škálu aktivit, včetně pozorování hvězd, balonování, pěších túr a jízdy na koni.",
+    "amenities": ["Wellness", "Bazén", "Vynikající stravování"],
+    "web": "https://www.aman.com/resorts/amangiri",
+    "images": []
+  },
+  {
+    "name": "Soneva Fushi",
+    "activities": ["šnorchlování", "potápění", "soukromé promítání v kině", "kurzy vaření čokolády"],
+    "address": "Kunfunadhoo Island, Baa Atoll, Maledivy",
+    "location": {
+      "latitude": 5.7264,
+      "longitude": 73.0030
+    },
+    "rating": 4.8,
+    "description": "Zabalený do neposkvrněné krásy Malediv, Soneva Fushi nabízí luxusní vily a řadu unikátních aktivit, včetně šnorchlování, potápění, soukromých promítání v kině a kurzů vaření čokolády.",
+    "amenities": ["Wellness", "Více možností stravování", "Soukromá pláž"],
+    "web": "https://www.soneva.com/soneva-fushi/",
+    "images": []
+  },
+  {
+    "name": "Fogo Island Inn",
+    "activities": ["pozorování ledovců", "výlety lodí", "umělecké rezidenční programy", "sběr lesních plodů"],
+    "address": "210 Main Rd, Joe Batt's Arm, NL A0G 2X0, Kanada",
+    "location": {
+      "latitude": 49.7174,
+      "longitude": -54.1760
+    },
+    "rating": 4.9,
+    "description": "Umístěný na dramatických útesech Fogo Island, tento oceněný hostinec nabízí dechberoucí výhledy a širokou škálu aktivit, včetně pozorování ledovců, výletů lodí, uměleckých rezidenčních programů a sběru lesních plodů.",
+    "amenities": ["Vynikající stravování", "Wellness", "Knihovna"],
+    "web": "https://www.fogoislandinn.ca/",
+    "images": []
+  },
+  {
+    "name": "Kakslauttanen Arctic Resort",
+    "activities": ["lov polární záře", "psí spřežení", "rybaření na ledě", "sněžní skútry"],
+    "address": "Kiilopääntie 9, 99830 Saariselkä, Finsko",
+    "location": {
+      "latitude": 68.4186,
+      "longitude": 27.4177
+    },
+    "rating": 4.7,
+    "description": "Nacházející se ve finské Laponsku, Kakslauttanen Arctic Resort nabízí jedinečné ubytování v skleněných iglú a srubových chatách. Hosté si mohou užít aktivity jako lov polární záře, psí spřežení, rybaření na ledě a jízdu na sněžních skútrech.",
+    "amenities": ["Sauna", "Restaurace", "Dárkový obchod"],
+    "web": "https://www.kakslauttanen.fi/",
+    "images": []
+  },
+  {
+    "name": "Whitepod Eco-Luxury Hotel",
+    "activities": ["lyžování", "sněžní túry", "jóga", "pozorování hvězd"],
+    "address": "Les Giettes, 1871 Monthey, Švýcarsko",
+    "location": {
+      "latitude": 46.2176,
+      "longitude": 6.9144
+    },
+    "rating": 4.8,
+    "description": "Usazený ve švýcarských Alpách, Whitepod Eco-Luxury Hotel nabízí jedinečné ubytování v geodetických kupolích a škálu aktivit, včetně lyžování, sněžních túr, jógy a pozorování hvězd.",
+    "amenities": ["Restaurace", "Wellness", "Soukromé lyžařské sjezdovky"],
+    "web": "https://www.whitepod.com/",
+    "images": []
+  },
+  {
+    "name": "Amilla Fushi",
+    "activities": ["ponorové prohlídky", "pikniky na soukromých ostrovech", "rybolov při západu slunce", "poddovodní stravování"],
+    "address": "Baa Atoll, Maledivy",
+    "location": {
+      "latitude": 5.7832,
+      "longitude": 73.4023
+    },
+    "rating": 4.9,
+    "description": "Umístěný na Maledivách, Amilla Fushi nabízí luxusní nadvodní a plážové vily a unikátní aktivity, jako jsou ponorové prohlídky, pikniky na soukromých ostrovech, rybolov při západu slunce a podvodní stravování.",
+    "amenities": ["Wellness", "Více možností stravování", "Soukromá pláž"],
+    "web": "https://www.amilla.com/",
+    "images": []
+  },
+  {
+    "name": "Longitude 131°",
+    "activities": ["výlety k Uluru při východu slunce", "výlety na velbloudech", "zkušenosti s původní kulturou"],
+    "address": "Yulara Drive, Yulara NT 0872, Austrálie",
+    "location": {
+      "latitude": -25.3447,
+      "longitude": 131.0369
+    },
+    "rating": 4.8,
+    "description": "Nacházející se poblíž národního parku Uluru-Kata Tjuta, Longitude 131° nabízí luxusní stany s nepřekonatelnými výhledy na Uluru. Hosté si mohou užít výlety k Uluru při východu slunce, výlety na velbloudech a zkušenosti s původní kulturou.",
+    "amenities": ["Restaurace", "Wellness", "Bazén"],
+    "web": "https://longitude131.com.au/",
+    "images": []
+  },
+  {
+    "name": "Soneva Kiri",
+    "activities": ["stravování ve stromech", "večeře na soukromé pláži", "šnorchlování", "pozorování hvězd"],
+    "address": "110 Moo 4, Ko Kut, Trat 23000, Thajsko",
+    "location": {
+      "latitude": 11.5890,
+      "longitude": 102.5260
+    },
+    "rating": 4.9,
+    "description": "Nacházející se na odlehlém ostrově Koh Kood, Soneva Kiri nabízí luxusní vily a jedinečné stravovací zážitky jako stravování ve stromech a večeře na soukromé pláži. Hosté si zde mohou také užít šnorchlování a pozorování hvězd v tomto nedotčeném ráji.",
+    "amenities": ["Wellness", "Soukromý nekonečný bazén", "Soukromá služba komorníka"],
+    "web": "https://www.soneva.com/soneva-kiri/",
+    "images": []
+  },
+  {
+    "name": "The Singular Patagonia",
+    "activities": ["turistika", "jízda na koni", "pozorování ptáků", "glaciálové túry"],
+    "address": "KM 5 Norte, Puerto Bories, Puerto Natales, Natales, Magallanes y la Antártica Chilena, Chile",
+    "location": {
+      "latitude": -51.7206,
+      "longitude": -72.5068
+    },
+    "rating": 4.8,
+    "description": "Před krásnou kulisou patagonské krajiny nabízí The Singular Patagonia širokou škálu venkovních aktivit, včetně turistiky, jízdy na koni, pozorování ptáků a glaciálových túr. Hosté se mohou ponořit do přírodní krásy jižního Chile.",
+    "amenities": ["Restaurace", "Wellness", "Krytý bazén"],
+    "web": "https://www.thesingular.com/patagonia/",
+    "images": []
+  },
+  {
+    "name": "Explora Rapa Nui",
+    "activities": ["turistika", "jízda na koni", "jízda na kole", "pozorování hvězd"],
+    "address": "Unnamed Road, Isla de Pascua, Valparaíso Region, Chile",
+    "location": {
+      "latitude": -27.1384,
+      "longitude": -109.4275
+    },
+    "rating": 4.9,
+    "description": "Nacházející se na Velikonočním ostrově, Explora Rapa Nui nabízí prozkoumávání archeologických památek ostrova, sopečných krajin a nedotčených pláží. Hosté se mohou těšit na aktivity jako je turistika, jízda na koni, jízda na kole a pozorování hvězd.",
+    "amenities": ["Restaurace", "Wellness", "Venkovní bazén"],
+    "web": "https://www.explora.com/hotels-and-travesias/easter-island/explora-rapa-nui/",
+    "images": []
+  }, 
+  {
+    "name": "Amangani",
+    "activities": ["horolezectví", "lyžování", "výhledy na hory"],
+    "address": "1535 NE Butte Road, Jackson, Wyoming 83001, USA",
+    "location": {
+      "latitude": 43.5285,
+      "longitude": -110.666
+    },
+    "rating": 4.7,
+    "description": "Nacházející se v pohoří Grand Teton v Wyomingu, USA, Amangani nabízí možnosti horolezectví, lyžování nebo jednoduše užívání si výhledů na hory.",
+    "amenities": ["Restaurace", "Wellness", "Fitness centrum"],
+    "web": "https://www.aman.com/resorts/amangani",
+    "images": []
+  },
+  {
+    "name": "Southern Ocean Lodge",
+    "activities": ["explorace divoké přírody", "vinařské túry"],
+    "address": "Hanson Bay Road, Kangaroo Island, Jižní Austrálie 5222, Austrálie",
+    "location": {
+      "latitude": -36.0357,
+      "longitude": 137.2335
+    },
+    "rating": 4.9,
+    "description": "Situovaný na Kangaroo Island nedaleko Jižní Austrálie, Southern Ocean Lodge nabízí možnosti explorace divoké přírody, setkávání se s klokany a dalšími místními obyvateli, stejně jako vinařské túry do místních vinařství.",
+    "amenities": ["Restaurace", "Wellness", "Knihovna"],
+    "web": "https://southernoceanlodge.com.au/",
+    "images": []
+  },
+  {
+    "name": "Explora Patagonia",
+    "activities": ["prozkoumávání kaňonů", "lesní výlety", "výlety na jezera"],
+    "address": "Hotel Salto Chico, Národní park Torres del Paine, Chile",
+    "location": {
+      "latitude": -50.9423,
+      "longitude": -73.4068
+    },
+    "rating": 4.8,
+    "description": "Situovaný v Patagonii, Chile, Explora Patagonia je ideální pro milovníky přírody. Můžete prozkoumávat kaňony, lesy a jezera během denních výletů a vychutnávat si pohodlí hotelu večer.",
+    "amenities": ["Restaurace", "Wellness", "Bar"],
+    "web": "https://www.explora.com/patagonia/",
+    "images": []
+  },
+  {
+    "name": "The Brando",
+    "activities": ["šnorchlování", "kajakování", "paddleboarding"],
+    "address": "Tetiaroa Private Island, Arue, Francouzská Polynésie",
+    "location": {
+      "latitude": -17.5695,
+      "longitude": -149.6079
+    },
+    "rating": 4.9,
+    "description": "Nacházející se na soukromém ostrově Tetiaroa ve Francouzské Polynésii, The Brando nabízí širokou škálu vodních aktivit, včetně šnorchlování, kajakování a paddleboardingu v křišťálově čistých vodách Jižního Pacifiku.",
+    "amenities": ["Restaurace", "Wellness", "Soukromá pláž"],
+    "web": "https://thebrando.com/",
+    "images": []
+  },
+  {
+    "name": "Ladera Resort",
+    "activities": ["ziplining", "turistika", "návštěva síry"],
+    "address": "Soufrière, St Lucia",
+    "location": {
+      "latitude": 13.8569,
+      "longitude": -61.0565
+    },
+    "rating": 4.8,
+    "description": "Situovaný na sopečné hřebeni s výhledem na Pitony na ostrově St Lucia, Ladera Resort nabízí dobrodružné aktivity jako ziplining, turistiku a návštěvu nedalekých pramenů síry.",
+    "amenities": ["Restaurace", "Wellness", "Soukromé ponořovací bazény"],
+    "web": "https://www.ladera.com/",
+    "images": []
+  },
+  {
+    "name": "The Datai Langkawi",
+    "activities": ["procházky v deštném lese", "vedené přírodní túry", "plážové jóga"],
+    "address": "Jalan Teluk Datai, 07000 Langkawi, Kedah, Malajsie",
+    "location": {
+      "latitude": 6.4254,
+      "longitude": 99.7089
+    },
+    "rating": 4.8,
+    "description": "V srdeční části starověkého deštného pralesa na Langkawi v Malajsii nabízí The Datai Langkawi hostům možnost zažít divy přírody s procházkami v deštném lese, vedlejšími přírodními túrami a plážovými jóga seancemi.",
+    "amenities": ["Restaurace", "Wellness", "Golfové hřiště"],
+    "web": "https://www.thedatai.com/langkawi/",
+    "images": []
+  },
+  {
+    "name": "Amanwana",
+    "activities": ["trekking v džungli", "potápění", "šnorchlování"],
+    "address": "Moyo Island, Sumbawa, Západní Nusa Tenggara, Indonésie",
+    "location": {
+      "latitude": -8.3028,
+      "longitude": 117.3863
+    },
+    "rating": 4.7,
+    "description": "Nacházející se na ostrově Moyo v Indonésii, Amanwana nabízí hostům možnost prozkoumat nedotčené džungle s trekkingem v džungli, stejně jako podvodní dobrodružství s potápěním a šnorchlováním v okolních korálových útesech.",
+    "amenities": ["Restaurace", "Wellness", "Soukromá pláž"],
+    "web": "https://www.aman.com/resorts/amanwana",
+    "images": []
+  },
+  {
+    "name": "Singita Lebombo Lodge",
+    "activities": ["safari jízdy", "procházky v buši", "pozorování hvězd"],
+    "address": "N'wanetsi Concession, Národní park Kruger, Jižní Afrika",
+    "location": {
+      "latitude": -24.3083,
+      "longitude": 31.7053
+    },
+    "rating": 4.9,
+    "description": "Nacházející se v národním parku Kruger v Jižní Africe, Singita Lebombo Lodge nabízí nezapomenutelné safari zážitky včetně safari jízd, procházek v buši a pozorování hvězd v africké divočině.",
+    "amenities": ["Restaurace", "Wellness", "Bazén"],
+    "web": "https://singita.com/lebombo-lodge/",
+    "images": []
+  }
+]

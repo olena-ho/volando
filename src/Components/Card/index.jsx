@@ -1,4 +1,5 @@
 import hotels from "../../api/hotels";
+import details from "../../../public/locales/cs/details.json";
 import { useTranslation } from "react-i18next";
 import './style.css';
 
@@ -30,6 +31,17 @@ export const Card = () => {
                   <p className="hotel-rating">Rating: {hotel.rating}</p>
                 </div>
               </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="search-cards">
+        {foundHotels.map((hotel, index) => {
+          return (
+            <div key={index}>
+              <p>{hotel.name}</p>
+              <p>{tttt(`${hotel.activities}.activities`)}</p>
             </div>
           );
         })}
