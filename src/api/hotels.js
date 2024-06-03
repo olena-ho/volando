@@ -3,7 +3,7 @@ const hotels = [
     "name": "Equitana Hotel Resort",
     "activities": ["Outdoors", "Sport","horse-riding", "spa", "bowling", "billiard", "minigolf", "jogging track", "fishing"],
     "address": "Martinice 1, 262 72 Březnice, Czech Republic",
-    "country": "cz",
+    "loc-code": "cs-c",
     "location": {
       "latitude": 49.5791,
       "longitude": 13.8301
