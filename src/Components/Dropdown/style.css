@@ -51,6 +51,7 @@
   padding: 10px;
   overflow-y: auto;
   width: max-content;
+  min-width: 200px;
   border-radius: 5px;
   border: 1px solid #ddd;
 }
