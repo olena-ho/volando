@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 import cs from "./img/cs-lang.png";
 import uk from "./img/uk-lang.png";
 import en from "./img/en-lang.png";
-import logo from "../../../assets/img/header/logo.svg";
-import favorites from "../../../assets/img/header/heart.svg";
-import info from "../../../assets/img/header/info-2.png";
+import logo from "./img/logo.svg";
+import favorites from "./img/heart.svg";
+import info from "./img/info-2.png";
 import "./style.css";
 
 export const Header = () => {

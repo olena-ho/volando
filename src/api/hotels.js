@@ -11,7 +11,7 @@ const hotels = [
     "description": "The most beautiful view in the world is from the back of a horse. It's true. Don't be afraid and try horse riding with us. At our riding arena, we organize competitions such as the Czech Republic Championship in show jumping, but we also offer our services to absolute beginners in horse riding. Small children, parents, or even everyone together can enjoy a ride on horseback.",
     "amenities": ["Free Wi-Fi", "Parking", "Wellness and SPA", "Restaurant"],
     "web": "http://www.equitana.cz",
-    "images": ["../../assets/Equitana/horse-kid.jpg"]
+    "images": ["/assets/Equitana/horse-kid.jpg"]
   },
   {
     "name": "Hotel Kouty",

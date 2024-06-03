@@ -1,6 +1,6 @@
-import snowboarder from "../../../assets/img/homepage-img/snowboarder.jpg";
-import geolocation from "../../../assets/img/homepage-img/geolocation.png";
-import traveler from "../../../assets/img/homepage-img/traveler.png";
+import snowboarder from "./img/snowboarder.jpg";
+import geolocation from "./img/geolocation.png";
+import traveler from "./img/traveler.png";
 import "./style.css";
 
 export const HomeVisual = () => { 
