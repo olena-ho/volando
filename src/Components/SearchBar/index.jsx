@@ -11,7 +11,7 @@ export const SearchBar = ({ onSearch }) => {
   };
   const [filters, setFilters] = useState({
     activities: [],
-    location: [],
+    locCode: [],
     comfort: [],
     price: [],
     rating: [],
@@ -31,16 +31,16 @@ export const SearchBar = ({ onSearch }) => {
     });
   };
 
-  const handleLocationChange = (location) => {
+  const handleLocationChange = (locCode) => {
     setFilters((prevFilters) => ({
       ...prevFilters,
-      location: location,
+      locCode: locCode,
     }));
   };
 
   const handleLocationSubmit = () => {
     // add additional logic for when the location is submitted
-    console.log("Location submitted:", filters.location);
+    console.log("Location submitted:", filters.locCode);
   };
 
   const handleSearch = () => {

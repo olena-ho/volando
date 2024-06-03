@@ -26,9 +26,7 @@ const hotels = [
     "description": "The hotel is situated in a 10 hectare forest area with its own 2.5 hectare pond, in a picturesque valley at the foot of Melechov Hill. In the vicinity of the cottages flows a stream that feeds a trout pond with one of the cleanest waters in the Czech Republic. There are two tennis courts with artificial surface, playground, trampoline, beach volleyball court, gym, table tennis and sauna. Our little guests have at their disposal a playground and a trampoline. A few hundred meters away, there is a private fishing district in the village of Kouty – Homole Pond. You can catch trout, carp, or zander catfish. Allowances can be picked up at the hotel reception by prior arrangement.",
     "amenities": ["Free Wi-Fi", "Parking", "Cedar sauna", "Restaurant"],
     "web": "http://www.hotelkouty.cz",
-    "images": [
-     
-    ]
+    "images": []
   },
   {
     "name": "Golf Resort Olomouc",
