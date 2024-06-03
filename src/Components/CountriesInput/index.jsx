@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import "../Dropdown/style.css";
 import { countries } from "../../api/countries";
 
-export const Input = ({ placeholder, onChange }) => {
+export const CountriesInput = ({ placeholder, onChange }) => {
   const { t, i18n } = useTranslation();
   const [show, setShow] = useState(false);
   const [location, setLocation] = useState([]);
@@ -65,7 +65,7 @@ export const Input = ({ placeholder, onChange }) => {
   const filteredCountries = countries.filter((country) =>
     country.toLowerCase().includes(inputValue.toLowerCase())
   );
-
+//create an object with countries and key 
   return (
     <div className="dropdown-wrapper" ref={dropdownRef}>
       <input

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Dropdown } from "../Dropdown";
 import "./style.css";
-import { Input } from "../Input";
+import { CountriesInput } from "../CountriesInput";
 
 export const SearchBar = ({ onSearch }) => {
   const { t, i18n } = useTranslation();
@@ -56,7 +56,7 @@ export const SearchBar = ({ onSearch }) => {
           handleFilterChange("activities", option, checked)
         }
       />
-      <Input
+      <CountriesInput
         placeholder={t("locationP")}
         onChange={handleLocationChange}
         onSubmit={handleLocationSubmit}
