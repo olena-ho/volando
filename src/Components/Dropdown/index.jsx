@@ -18,6 +18,7 @@ export const Dropdown = ({ title, options, onChange }) => {
 
   const handleApply = () => {
     setShow(false);
+    console.log(checkedOptions);
   };
 
   const handleClickOutside = (event) => {
@@ -40,14 +41,14 @@ export const Dropdown = ({ title, options, onChange }) => {
       </button>
       <div className={`dropdown-content ${show ? 'show' : ''}`}>
         {options.map(option => (
-          <label className="checkbox-label" key={option}>
+          <label className="checkbox-label" key={option.key}>
             <input
               type="checkbox"
-              name={option}
-              checked={checkedOptions[option] || false}
+              name={option.key}
+              checked={checkedOptions[option.key] || false}
               onChange={handleCheckboxChange}
             />
-            {option}
+            {option.value}
           </label>
         ))}
         <button className="apply-button" onClick={handleApply}>{t("applyB")}</button>
