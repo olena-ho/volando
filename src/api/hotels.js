@@ -752,91 +752,97 @@ const hotels = [
   },
   {
     "name": "Hotel France",
-    "activities": ["Cycling", "Live music/performance", "Walking tours"],
+    "activities": ["outdoors", "sport", "art", "cycling", "Live music/performance", "Walking tours"],
     "address": "Soborna Street, Vinnytsia, Ukraine",
-    "loc-code": "ua-vn",
+    "loc-code": "ua-с",
     "location": {
       "latitude": 49.2331,
       "longitude": 28.4682
     },
     "rating": 4.5,
+    "price": "budget",
     "description": "Located in the heart of Vinnytsia, Hotel France offers elegant accommodations with a restaurant, free Wi-Fi, and various activities for guests, including cycling and walking tours. The hotel also features live performances and has a historical charm.",
-    "amenities": ["Free Wi-Fi", "Parking", "Restaurant", "Bar"],
+    "comfort": ["restaurant", "parking", "wifi", "bar"],
     "web": "http://www.hotelfrance.com",
     "images": []
   },
   {
     "name": "Safari-Club",
-    "activities": ["Swimming pool", "Spa", "Fitness center", "Horseback riding"],
+    "activities": ["pool", "sport", "horseback riding"],
     "address": "1A, Tsentralna Street, Vinnytsia, Ukraine",
-    "loc-code": "ua-vn",
+    "loc-code": "ua-с",
     "location": {
       "latitude": 49.2475,
       "longitude": 28.4953
     },
     "rating": 4.2,
+    "price": "midrange",
     "description": "The Safari-Club Hotel provides a unique experience with a swimming pool, spa services, and horseback riding facilities. It's ideal for those looking to combine relaxation with adventure. The hotel is situated in a serene environment with beautiful natural surroundings.",
-    "amenities": ["Free Wi-Fi", "Parking", "Spa", "Restaurant"],
+    "comfort": ["wifi", "parking", "spa", "restaurant", "gym"],
     "web": "http://www.safari-club.com",
     "images": []
   },
   {
     "name": "Fenix Town",
-    "activities": ["Fitness center", "Bowling", "Billiard", "Sauna"],
+    "activities": ["relax", "sport", "bowling", "billiard"],
     "address": "Khlebnaya Street 15, Vinnytsia, Ukraine",
-    "loc-code": "ua-vn",
+    "loc-code": "ua-c",
     "location": {
       "latitude": 49.2345,
       "longitude": 28.4630
     },
     "rating": 4.3,
+    "price": "budget",
     "description": "Fenix Town is a modern hotel featuring a variety of activities such as a fitness center, bowling, and billiard. Guests can also relax in the sauna. The hotel offers a comfortable and contemporary stay with excellent facilities.",
-    "amenities": ["Free Wi-Fi", "Parking", "Fitness Center", "Restaurant"],
+    "comfort": ["wifi", "parking", "gym", "restaurant"],
     "web": "http://www.fenixtown.com",
     "images": []
   },
   {
     "name": "Fairmont Grand Hotel Kyiv",
-    "activities": ["Spa", "Fitness center", "Sauna", "Indoor swimming pool"],
+    "activities": ["relax"],
     "address": "Naberezhno-Khreshchatytska Street 1, Kyiv, Ukraine",
-    "loc-code": "ua-ky",
+    "loc-code": "ua-c",
     "location": {
       "latitude": 50.4606,
       "longitude": 30.5302
     },
     "rating": 5,
+    "price": "luxury",
     "description": "Fairmont Grand Hotel Kyiv offers a mix of elegance and comfort, perfect for guests seeking both relaxation and cultural exploration. The spa services include massages, facials, and body treatments.",
-    "amenities": ["Free Wi-Fi", "Parking", "Wellness and Spa", "Restaurant", "Bar", "Meeting rooms", "Concierge services"],
+    "comfort": ["wifi", "parking", "spa", "restaurant", "bar"],
     "web": "https://www.fairmont.com/kyiv/",
     "images": []
   },
   {
-    "name": "Hilton Kyiv",
-    "activities": ["Spa", "Indoor pool", "Sauna", "Fitness center", "Wellness treatments"],
-    "address": "30 Tarasa Shevchenka Blvd, Kyiv, Ukraine",
-    "loc-code": "ua-ky",
+    "name": "Lisotel",
+    "activities": ["relax", "art", "outdoors", "kids"],
+    "address": "Pishchane Tract 7, Rokytne 09600 Ukraine",
+    "loc-code": "ua-c",
     "location": {
-      "latitude": 50.4413,
-      "longitude": 30.4899
+      "latitude": 49.6808,
+      "longitude": 30.4188
     },
     "rating": 5,
-    "description": "Hilton Kyiv offers modern accommodations with excellent amenities for both leisure and business travelers. The spa includes a range of treatments designed to rejuvenate and relax guests.",
-    "amenities": ["Free Wi-Fi", "Parking", "Wellness and Spa", "Restaurant", "Bar", "Pet-friendly rooms", "Business center", "EV charging"],
-    "web": "https://www.hilton.com/en/hotels/kyvkihh-hilton-kyiv/",
+    "price": "luxury",
+    "description": "Lisotel is a recreation center near Kyiv, located in the pine forest on the banks of the Ros River. The main feature of our complex is our love for the Ukrainian history and traditions.",
+    "comfort": ["wifi", "parking", "pool", "restaurant", "pets", "lake", "fireplace"],
+    "web": "https://lisotel.com.ua/en/",
     "images": []
   },
   {
     "name": "Opera Hotel",
-    "activities": ["Fitness center", "Spa", "Special spa packages", "Wine tasting"],
+    "activities": ["relax"],
     "address": "B. Khmelnitskogo St., 53, Kyiv, Ukraine",
-    "loc-code": "ua-ky",
+    "loc-code": "ua-c",
     "location": {
       "latitude": 50.4500,
       "longitude": 30.5000
     },
     "rating": 5,
+    "price": "luxury",
     "description": "Opera Hotel combines luxury and cultural charm, offering unique themed suites and comprehensive spa services. The hotel's award-winning wine list is a highlight for connoisseurs.",
-    "amenities": ["Free Wi-Fi", "Parking", "Wellness and Spa", "Restaurant", "Bar", "Business center", "Themed suites"],
+    "comfort": ["wifi", "parking", "spa", "restaurant"],
     "web": "https://opera-hotel.com/",
     "images": []
   }
