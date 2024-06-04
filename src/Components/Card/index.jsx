@@ -14,6 +14,7 @@ export const Card = () => {
       try {
         const response = await fetch(`/locales/${i18n.language}/details.json`);
         const data = await response.json();
+        console.log('Loaded details:', data); // Лог для перевірки завантаження даних
         setDetails(data);
       } catch (error) {
         console.error('Error loading details:', error);
@@ -26,21 +27,29 @@ export const Card = () => {
   }, [i18n.language]);
 
   useEffect(() => {
-    console.log(details);
+    console.log('Details state updated:', details); // Лог для перевірки стану details
   }, [details]);
 
   return (
     <section>
       <div className="container-card">
         {foundHotels.map((hotel, index) => {
-          if (!details) {
+          if (isLoading) {
             return <p key={index}>Loading...</p>;
           }
 
-          const translatedActivities = details[hotel.name]?.activities;
-          const activities = Array.isArray(translatedActivities)
-            ? translatedActivities
-            : hotel.activities;
+          if (!details) {
+            return <p key={index}>No details available</p>;
+          }
+
+          const hotelDetails = details[hotel.name];
+          console.log('Hotel details:', hotel.name, hotelDetails); // Лог для перевірки готельних даних
+
+          if (!hotelDetails) {
+            return null; // Якщо деталі для поточного готелю відсутні, не відображати готель
+          }
+
+          const activities = hotelDetails.activities;
 
           return (
             <div key={index} className="hotel-card">
@@ -49,26 +58,14 @@ export const Card = () => {
               <div className="hotel-info">
                 <h2>{hotel.name}</h2>
                 <div className="activities-container">
-                  {isLoading ? (
-                    <p>Loading details...</p>
-                  ) : (
-                    <div className="details-list">
-                      {Object.keys(details || {}).map((key) => {
-                        const activities = Array.isArray(
-                          details[key].activities,
-                        )
-                          ? details[key].activities
-                          : [];
-                        return (
-                          <div key={key}>
-                            <p>
-                              {key}: {activities.join(', ')}
-                            </p>
-                          </div>
-                        );
-                      })}
+                  <div className="details-list">
+                    {/* Відображення активностей для поточного готелю */}
+                    <div>
+                      <p>
+                        Activities: {activities.join(', ')}
+                      </p>
                     </div>
-                  )}
+                  </div>
                 </div>
                 <div className="details-container">
                   <p className="hotel-address">
