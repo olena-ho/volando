@@ -10,5 +10,18 @@
   "kids": "Aktivity pro děti",
   "art": "Umění a kultura",
   "sport": "Sport",
-  "relax": "Relaxace"
+  "relax": "Relaxace",
+  "wifi": "Wi-Fi",
+  "parking": "Parkování zdarma",
+  "pets": "Domácí zvířata povolena",
+  "pool": "Bazén",
+  "gym": "Fitness centrum",
+  "kitchen": "Kuchyň",
+  "budget": "$ - Rozpočet",
+  "midrange": "$$ - Midrange",
+  "luxury": "$$$ - Luxusní",
+  "4.5": "4.5+ hvězdy",
+  "4": "4+ hvězdy",
+  "3": "3+ hvězdy",
+  "any": "libovolné hodnocení"
 }

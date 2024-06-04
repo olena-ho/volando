@@ -10,5 +10,18 @@
   "kids": "Fun for kids",
   "art": "Art and Culture",
   "sport": "Sport",
-  "relax": "Relax"
+  "relax": "Relax",
+  "wifi": "Free Wifi",
+  "parking": "Free Parking",
+  "pets": "Pets allowed",
+  "pool": "Swimming Pool",
+  "gym": "Gym",
+  "kitchen": "Kitchen",
+  "budget": "$ - Budget",
+  "midrange": "$$ - Midrange",
+  "luxury": "$$$ - Luxury",
+  "4.5": "4.5+ stars",
+  "4": "4+ stars",
+  "3": "3+ stars",
+  "any": "any rating"
 }
