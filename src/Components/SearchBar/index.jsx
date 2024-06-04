@@ -63,21 +63,21 @@ export const SearchBar = ({ onSearch }) => {
       />
       <Dropdown
         title={t("comfortP")}
-        options={["Wifi", "Pool", "Gym"]}
+        options={[t("wifi"), t("parking"), t("pets"), t("pool"), t("gym"), t("kitchen")]}
         onChange={(option, checked) =>
           handleFilterChange("comfort", option, checked)
         }
       />
       <Dropdown
         title={t("priceP")}
-        options={["$ - Budget", "$$ - Midrange", "$$$ - Luxury"]}
+        options={[t("budget"), t("midrange"), t("luxury")]}
         onChange={(option, checked) =>
           handleFilterChange("price", option, checked)
         }
       />
       <Dropdown
         title={t("ratingP")}
-        options={["5 Stars", "4 Stars", "3 Stars", "2 Stars", "1 Star"]}
+        options={[t("4.5"), t("4"), t("3"), t("any")]}
         onChange={(option, checked) =>
           handleFilterChange("rating", option, checked)
         }
