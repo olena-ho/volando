@@ -5,7 +5,7 @@ import "../Dropdown/style.css";
 export const CountriesInput = ({ placeholder }) => {
   const { t, i18n} = useTranslation();
   const [show, setShow] = useState(false);
-  const [location, setLocation] = useState([]);
+  const [locCode, setLocCode] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [userInputValue, setUserInputValue] = useState([]);
   const [showAutocomplete, setShowAutocomplete] = useState(false);
@@ -15,18 +15,25 @@ export const CountriesInput = ({ placeholder }) => {
 
   useEffect(() => {
     const loadCountries = () => {
-      const countryTranslations = i18n.getResourceBundle(i18n.language, 'countries');
-      
+      const countryTranslations = i18n.getResourceBundle(
+        i18n.language,
+        "countries"
+      );
+
       if (!countryTranslations) {
-        console.error(`No country translations found for language: ${i18n.language}`);
+        console.error(
+          `No country translations found for language: ${i18n.language}`
+        );
         setIsLoading(false);
         return;
       }
 
-      const translatedCountries = Object.keys(countryTranslations).map(key => ({
-        key,
-        name: countryTranslations[key]
-      }));
+      const translatedCountries = Object.keys(countryTranslations).map(
+        (key) => ({
+          key,
+          name: countryTranslations[key],
+        })
+      );
       setCountries(translatedCountries);
       setIsLoading(false);
     };
@@ -45,7 +52,7 @@ export const CountriesInput = ({ placeholder }) => {
   };
 
   const handleSelect = (country) => {
-    setLocation((prevLocations) => [...prevLocations, country.key]);
+    setLocCode((prevLocCode) => [...prevLocCode, country.key]);
     setUserInputValue((prevValues) => [...prevValues, country.name]);
     setInputValue("");
     setShow(true);
@@ -53,15 +60,17 @@ export const CountriesInput = ({ placeholder }) => {
   };
 
   const handleRemove = (index) => {
-    setLocation((prevLocations) => prevLocations.filter((_, i) => i !== index));
+    setLocCode((prevLocCode) => prevLocCode.filter((_, i) => i !== index));
     setUserInputValue((prevValues) => prevValues.filter((_, i) => i !== index));
   };
+
 
   const handleApply = () => {
     setShow(false);
     const inputString = userInputValue.join(", ");
     setInputValue(inputString);
-    console.log(location);
+    onChange(locCode); // Pass the updated locCode to the parent component
+    console.log(locCode);
   };
 
   const handleClickOutside = (event) => {
@@ -81,6 +90,10 @@ export const CountriesInput = ({ placeholder }) => {
   const filteredCountries = countries.filter((country) =>
     country.name.toLowerCase().includes(inputValue.toLowerCase())
   );
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="dropdown-wrapper" ref={dropdownRef}>
