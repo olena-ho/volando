@@ -673,6 +673,96 @@ const hotels = [
     "amenities": ["Restaurant", "Spa", "Swimming pool"],
     "web": "https://singita.com/lebombo-lodge/",
     "images": []
+  },
+  {
+    "name": "Hotel France",
+    "activities": ["Cycling", "Live music/performance", "Walking tours"],
+    "address": "Soborna Street, Vinnytsia, Ukraine",
+    "loc-code": "ua-vn",
+    "location": {
+      "latitude": 49.2331,
+      "longitude": 28.4682
+    },
+    "rating": 4.5,
+    "description": "Located in the heart of Vinnytsia, Hotel France offers elegant accommodations with a restaurant, free Wi-Fi, and various activities for guests, including cycling and walking tours. The hotel also features live performances and has a historical charm.",
+    "amenities": ["Free Wi-Fi", "Parking", "Restaurant", "Bar"],
+    "web": "http://www.hotelfrance.com",
+    "images": []
+  },
+  {
+    "name": "Safari-Club",
+    "activities": ["Swimming pool", "Spa", "Fitness center", "Horseback riding"],
+    "address": "1A, Tsentralna Street, Vinnytsia, Ukraine",
+    "loc-code": "ua-vn",
+    "location": {
+      "latitude": 49.2475,
+      "longitude": 28.4953
+    },
+    "rating": 4.2,
+    "description": "The Safari-Club Hotel provides a unique experience with a swimming pool, spa services, and horseback riding facilities. It's ideal for those looking to combine relaxation with adventure. The hotel is situated in a serene environment with beautiful natural surroundings.",
+    "amenities": ["Free Wi-Fi", "Parking", "Spa", "Restaurant"],
+    "web": "http://www.safari-club.com",
+    "images": []
+  },
+  {
+    "name": "Fenix Town",
+    "activities": ["Fitness center", "Bowling", "Billiard", "Sauna"],
+    "address": "Khlebnaya Street 15, Vinnytsia, Ukraine",
+    "loc-code": "ua-vn",
+    "location": {
+      "latitude": 49.2345,
+      "longitude": 28.4630
+    },
+    "rating": 4.3,
+    "description": "Fenix Town is a modern hotel featuring a variety of activities such as a fitness center, bowling, and billiard. Guests can also relax in the sauna. The hotel offers a comfortable and contemporary stay with excellent facilities.",
+    "amenities": ["Free Wi-Fi", "Parking", "Fitness Center", "Restaurant"],
+    "web": "http://www.fenixtown.com",
+    "images": []
+  },
+  {
+    "name": "Fairmont Grand Hotel Kyiv",
+    "activities": ["Spa", "Fitness center", "Sauna", "Indoor swimming pool"],
+    "address": "Naberezhno-Khreshchatytska Street 1, Kyiv, Ukraine",
+    "loc-code": "ua-ky",
+    "location": {
+      "latitude": 50.4606,
+      "longitude": 30.5302
+    },
+    "rating": 5,
+    "description": "Fairmont Grand Hotel Kyiv offers a mix of elegance and comfort, perfect for guests seeking both relaxation and cultural exploration. The spa services include massages, facials, and body treatments.",
+    "amenities": ["Free Wi-Fi", "Parking", "Wellness and Spa", "Restaurant", "Bar", "Meeting rooms", "Concierge services"],
+    "web": "https://www.fairmont.com/kyiv/",
+    "images": []
+  },
+  {
+    "name": "Hilton Kyiv",
+    "activities": ["Spa", "Indoor pool", "Sauna", "Fitness center", "Wellness treatments"],
+    "address": "30 Tarasa Shevchenka Blvd, Kyiv, Ukraine",
+    "loc-code": "ua-ky",
+    "location": {
+      "latitude": 50.4413,
+      "longitude": 30.4899
+    },
+    "rating": 5,
+    "description": "Hilton Kyiv offers modern accommodations with excellent amenities for both leisure and business travelers. The spa includes a range of treatments designed to rejuvenate and relax guests.",
+    "amenities": ["Free Wi-Fi", "Parking", "Wellness and Spa", "Restaurant", "Bar", "Pet-friendly rooms", "Business center", "EV charging"],
+    "web": "https://www.hilton.com/en/hotels/kyvkihh-hilton-kyiv/",
+    "images": []
+  },
+  {
+    "name": "Opera Hotel",
+    "activities": ["Fitness center", "Spa", "Special spa packages", "Wine tasting"],
+    "address": "B. Khmelnitskogo St., 53, Kyiv, Ukraine",
+    "loc-code": "ua-ky",
+    "location": {
+      "latitude": 50.4500,
+      "longitude": 30.5000
+    },
+    "rating": 5,
+    "description": "Opera Hotel combines luxury and cultural charm, offering unique themed suites and comprehensive spa services. The hotel's award-winning wine list is a highlight for connoisseurs.",
+    "amenities": ["Free Wi-Fi", "Parking", "Wellness and Spa", "Restaurant", "Bar", "Business center", "Themed suites"],
+    "web": "https://opera-hotel.com/",
+    "images": []
   }
 ]
 
