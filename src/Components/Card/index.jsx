@@ -40,8 +40,8 @@ export const Card = ({ hotels }) => {
             return <p key={index}>No details available</p>;
           }
 
-          const hotelDetails = details[hotel];
-          console.log('Hotel details:', hotel, hotelDetails);
+          const hotelDetails = details[hotel.name];
+          console.log('Hotel details:', hotel.name, hotelDetails);
 
           if (!hotelDetails) {
             return null;
