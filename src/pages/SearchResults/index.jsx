@@ -6,11 +6,15 @@ import { Card } from "../../components/Card";
 import hotels from "../../api/hotels";
 
 export const SearchResults = () => {
-  const [filteredHotels, setFilteredHotels] = useState(hotels.slice(0, 3));
+  const [filteredHotels, setFilteredHotels] = useState(hotels);
+
+  const handleSearch = (updatedHotels) => {
+    setFilteredHotels(updatedHotels);
+  };
 
   return (
     <>
-      <SearchBar />
+      <SearchBar onSearch={handleSearch} /> {/* Ensure onSearch is passed */}
       <div className="search-results-container">
         <div className="filters-applied">Filters Applied</div>
         <Card hotels={filteredHotels} />
