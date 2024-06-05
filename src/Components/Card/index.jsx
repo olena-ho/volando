@@ -52,8 +52,9 @@ export const Card = ({ hotels }) => {
           return (
             <div key={index} className="hotel-card">
               <img src={hotel.images[0]} alt={hotel.name} />
+              
               <div className="hotel-info">
-                <h2>{hotel}</h2>
+                <h2>{hotel.name}</h2>
                 <div className="activities-container">
                   <div className="details-list">
                     <div>

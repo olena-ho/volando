@@ -1,16 +1,14 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import { HomeVisual } from "../../components/HomeVisual";
 import { SearchBar } from "../../components/SearchBar";
 import "./style.css";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 export const HomePage = () => {
-  const [filteredHotels, setFilteredHotels] = useState([]);
   const navigate = useNavigate();
 
-  const handleSearch = (results) => {
-    setFilteredHotels(results);
-    navigate('/search-results', { state: { filteredHotels: results } });
+  const handleSearch = (filteredHotels) => {
+    navigate("/search-results", { state: { filteredHotels } });
   };
 
   return (

@@ -33,29 +33,27 @@ export const SearchBar = ({ onSearch }) => {
   };
 
   const handleSearch = () => {
-    const filteredHotels = hotels
-      .filter((hotel) => {
-        const matchesActivities = filters.activities.every((activity) =>
-          hotel.activities.includes(activity)
-        );
-        const matchesComfort = filters.comfort.every((comfort) =>
-          hotel.comfort.includes(comfort)
-        );
-        const matchesPrice = filters.price.includes(hotel.price);
-        const matchesRating = filters.rating.some(
-          (rating) => hotel.rating >= parseFloat(rating)
-        );
-        const matchesLocation = filters.locCode.includes(hotel["loc-code"]);
+    const filteredHotels = hotels.filter((hotel) => {
+      const matchesActivities = filters.activities.every((activity) =>
+        hotel.activities.includes(activity)
+      );
+      const matchesComfort = filters.comfort.every((comfort) =>
+        hotel.comfort.includes(comfort)
+      );
+      const matchesPrice = filters.price.includes(hotel.price);
+      const matchesRating = filters.rating.some(
+        (rating) => hotel.rating >= parseFloat(rating)
+      );
+      const matchesLocation = filters.locCode.includes(hotel["loc-code"]);
 
-        return (
-          matchesActivities &&
-          matchesComfort &&
-          matchesPrice &&
-          matchesRating &&
-          matchesLocation
-        );
-      })
-      .map((hotel) => hotel.name);
+      return (
+        matchesActivities &&
+        matchesComfort &&
+        matchesPrice &&
+        matchesRating &&
+        matchesLocation
+      );
+    });
 
     console.log(filteredHotels);
     onSearch(filteredHotels);
