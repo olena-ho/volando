@@ -47,12 +47,12 @@ export const Card = ({ hotels }) => {
             return null;
           }
 
-          const activities = hotelDetails.activities;
+          const { activities = [], images = [], address = '', rating = '' } = hotelDetails;
 
           return (
             <div key={index} className="hotel-card">
               <img src={hotel.images[0]} alt={hotel.name} />
-
+              
               <div className="hotel-info">
                 <h2>{hotel.name}</h2>
                 <div className="activities-container">
@@ -66,10 +66,10 @@ export const Card = ({ hotels }) => {
                 </div>
                 <div className="details-container">
                   <p className="hotel-address">
-                    {t('address')}: {hotel.address}
+                    {t('address')}: {address}
                   </p>
                   <p className="hotel-rating">
-                    {t('rating')}: {hotel.rating}
+                    {t('rating')}: {rating}
                   </p>
                 </div>
               </div>

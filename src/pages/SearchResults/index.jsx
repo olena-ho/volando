@@ -1,16 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
+import { useLocation } from "react-router-dom";
 import { SearchBar } from "../../components/SearchBar";
 import Map from "../../components/Map";
 import "./style.css";
 import { Card } from "../../components/Card";
-import hotels from "../../api/hotels";
 
 export const SearchResults = () => {
-  const [filteredHotels, setFilteredHotels] = useState(hotels);
-
-  const handleSearch = (updatedHotels) => {
-    setFilteredHotels(updatedHotels);
-  };
+  const location = useLocation();
+  const filteredHotels = location.state?.filteredHotels || [];
 
   return (
     <>
@@ -19,7 +16,7 @@ export const SearchResults = () => {
         <div className="filters-applied">Filters Applied</div>
         <Card hotels={filteredHotels} />
         <div className="map-container">
-          <Map hotels={filteredHotels} />
+          <Map hotels={filteredHotels}/>
         </div>
       </div>
     </>
