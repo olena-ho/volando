@@ -44,7 +44,7 @@ export const SearchBar = ({ onSearch }) => {
         const matchesPrice = filters.price.includes(hotel.price);
         const matchesRating = filters.rating.some(
           (rating) => hotel.rating >= parseFloat(rating)
-        ); // Ensure rating is 4 or higher
+        );
         const matchesLocation = filters.locCode.includes(hotel["loc-code"]);
 
         return (
@@ -55,10 +55,10 @@ export const SearchBar = ({ onSearch }) => {
           matchesLocation
         );
       })
-      .map((hotel) => hotel.name); // Map to get only the hotel names
+      .map((hotel) => hotel.name);
 
     console.log(filteredHotels);
-    onSearch(filteredHotels); // Call the onSearch prop with the filtered hotels
+    onSearch(filteredHotels);
   };
 
   return (
