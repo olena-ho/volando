@@ -5,15 +5,20 @@ import './style.css';
 export const Dropdown = ({ title, options, onChange }) => {
   const { t, i18n } = useTranslation();
   const [show, setShow] = useState(false);
-  const [checkedOptions, setCheckedOptions] = useState({});
+  const [checkedOptions, setCheckedOptions] = useState([]);
   const dropdownRef = useRef(null);
 
   const toggleDropdown = () => setShow(!show);
 
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
-    setCheckedOptions(prev => ({ ...prev, [name]: checked }));
-    onChange(name, checked);
+    setCheckedOptions(prev => {
+      const newCheckedOptions = checked 
+        ? [...prev, name]
+        : prev.filter(option => option !== name);
+        setTimeout(() => onChange(newCheckedOptions), 0);
+      return newCheckedOptions;
+    });
   };
 
   const handleApply = () => {
@@ -45,7 +50,7 @@ export const Dropdown = ({ title, options, onChange }) => {
             <input
               type="checkbox"
               name={option.key}
-              checked={checkedOptions[option.key] || false}
+              checked={checkedOptions.includes(option.key)}
               onChange={handleCheckboxChange}
             />
             {option.value}
