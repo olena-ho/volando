@@ -18,18 +18,11 @@ export const SearchBar = ({ onSearch }) => {
     rating: [],
   });
 
-  const handleFilterChange = (category, option, checked) => {
-    setFilters((prevFilters) => {
-      const newFilters = { ...prevFilters };
-      if (checked) {
-        newFilters[category] = [...newFilters[category], option];
-      } else {
-        newFilters[category] = newFilters[category].filter(
-          (item) => item !== option
-        );
-      }
-      return newFilters;
-    });
+  const handleFilterChange = (category, newCheckedOptions) => {
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      [category]: newCheckedOptions,
+    }));
   };
 
   const handleLocationChange = (locCode) => {
@@ -79,8 +72,8 @@ export const SearchBar = ({ onSearch }) => {
           { key: "relax", value: t("relax") },
           { key: "kids", value: t("kids") },
         ]}
-        onChange={(option, checked) =>
-          handleFilterChange("activities", option, checked)
+        onChange={(newCheckedOptions) =>
+          handleFilterChange("activities", newCheckedOptions)
         }
       />
       <CountriesInput
@@ -97,8 +90,8 @@ export const SearchBar = ({ onSearch }) => {
           { key: "gym", value: t("gym") },
           { key: "kitchen", value: t("kitchen") },
         ]}
-        onChange={(option, checked) =>
-          handleFilterChange("comfort", option, checked)
+        onChange={(newCheckedOptions) =>
+          handleFilterChange("comfort", newCheckedOptions)
         }
       />
       <Dropdown
@@ -108,8 +101,8 @@ export const SearchBar = ({ onSearch }) => {
           { key: "midrange", value: t("midrange") },
           { key: "luxury", value: t("luxury") },
         ]}
-        onChange={(option, checked) =>
-          handleFilterChange("price", option, checked)
+        onChange={(newCheckedOptions) =>
+          handleFilterChange("price", newCheckedOptions)
         }
       />
       <Dropdown
@@ -120,8 +113,8 @@ export const SearchBar = ({ onSearch }) => {
           { key: "3", value: t("3") },
           { key: "any", value: t("any") },
         ]}
-        onChange={(option, checked) =>
-          handleFilterChange("rating", option, checked)
+        onChange={(newCheckedOptions) =>
+          handleFilterChange("rating", newCheckedOptions)
         }
       />
 
