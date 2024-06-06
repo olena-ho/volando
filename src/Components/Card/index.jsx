@@ -2,18 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './style.css';
 
-export const Card = ({ hotels }) => {
-  const { t, i18n } = useTranslation(['details', 'translation']);
-  const [details, setDetails] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+export const Card = ({ hotels, onHotelClick }) => {
+  const { t, i18n } = useTranslation(['details', 'translation']); // Hook for translations
+  const [details, setDetails] = useState(null); // State to store hotel details
+  const [isLoading, setIsLoading] = useState(true); // State to manage loading status
 
+  // Load hotel details based on current language
   useEffect(() => {
     const loadDetails = async () => {
       try {
         const response = await fetch(`/locales/${i18n.language}/details.json`);
         const data = await response.json();
         console.log('Loaded details:', data);
-        setDetails(data);
+        setDetails(data);  // Set details state
       } catch (error) {
         console.error('Error loading details:', error);
       } finally {
@@ -22,8 +23,9 @@ export const Card = ({ hotels }) => {
     };
 
     loadDetails();
-  }, [i18n.language]);
+  }, [i18n.language]); // Re-fetch details when language changes 
 
+  // Log details state updates
   useEffect(() => {
     console.log('Details state updated:', details);
   }, [details]);
@@ -50,23 +52,27 @@ export const Card = ({ hotels }) => {
           const { activities = [] } = hotelDetails;
 
           return (
-            <div key={index} className="hotel-card">
+            <div
+              key={index}
+              className="hotel-card"
+              onClick={() => onHotelClick(hotel)}
+            >
               <img src={hotel.images[0]} alt={hotel.name} />
-              
+
               <div className="hotel-info">
                 <h2>{hotel.name}</h2>
                 <div className="activities-container">
                   <div className="details-list">
                     <div>
                       <p>
-                      {t('translation:activities')}: {activities.join(', ')}
+                        {t('translation:activities')}: {activities.join(', ')}
                       </p>
                     </div>
                   </div>
                 </div>
                 <div className="details-container">
                   <p className="hotel-address">
-                  {t('translation:address')}: {hotel.address}
+                    {t('translation:address')}: {hotel.address}
                   </p>
                   <p className="hotel-rating">
                   {t('translation:ratingP')}: {hotel.rating}
