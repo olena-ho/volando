@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { GoogleMap, InfoWindow, LoadScript, Marker, DirectionsService } from '@react-google-maps/api';
+import React, { useEffect, useState, useMemo } from 'react';
+import { GoogleMap, InfoWindow, LoadScript, Marker, DirectionsService, DirectionsRenderer } from '@react-google-maps/api';
 
 const containerStyle = {
   width: '100%',
@@ -23,6 +23,7 @@ const Map = ({ hotels }) => {
   const [currentLocation, setCurrentLocation] = useState(null);
   const [displayInfo, setDisplayInfo] = useState(null);
   const [directions, setDirections] = useState(null);
+  const [selectedHotel, setSelectedHotel] = useState(null);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -44,17 +45,41 @@ const Map = ({ hotels }) => {
     }
   }, []);
 
-  const handleMarkerClick = (i) => {
-    setDisplayInfo(i);
+  const handleMarkerClick = (hotel) => {
+    setDisplayInfo(hotel);
+    setSelectedHotel(hotel);
+    setDirections(null); // Clear previous directions when a new marker is clicked
   };
 
-  const directionCallback = (responce, status) => {
+  const directionCallback = (response, status) => {
     if (status === 'OK') {
-      setDirections(responce);
+      setDirections(response);
     } else {
-      console.error('Di')
+      console.error('Directions request failed due to ' + status);
     }
-  }
+  };
+
+  const currentLocationMarker = useMemo(() => (
+    currentLocation && <Marker key="currentLocation" position={currentLocation} />
+  ), [currentLocation]);
+
+  const hotelMarkers = useMemo(() => hotels.map((hotel) => (
+    <Marker
+      key={hotel.address}
+      position={{ lat: hotel.location.latitude, lng: hotel.location.longitude }}
+      onClick={() => handleMarkerClick(hotel)}
+    >
+      {displayInfo === hotel && (
+        <InfoWindow onCloseClick={() => setDisplayInfo(null)}>
+          <div>
+            <h3>{hotel.name}</h3>
+            <p>{`${hotel.description.substring(0, 100)}...`}</p>
+            <button onClick={() => setSelectedHotel(hotel)}>Get Directions</button>
+          </div>
+        </InfoWindow>
+      )}
+    </Marker>
+  )), [hotels, displayInfo]);
 
   return (
     <>
@@ -66,30 +91,41 @@ const Map = ({ hotels }) => {
           onLoad={handleMapLoad}
         >
           {currentLocation && <Marker position={currentLocation} />}
+          
+          {hotels.map((hotel) => (
+            <Marker
+              key={hotel.address}
+              position={{ lat: hotel.location.latitude, lng: hotel.location.longitude }}
+              onClick={() => handleMarkerClick(hotel)}
+            >
+              {displayInfo === hotel && (
+                <InfoWindow onCloseClick={() => setDisplayInfo(null)}>
+                  <div>
+                    <h3>{hotel.name}</h3>
+                    <p>{`${hotel.description.substring(0, 100)}...`}</p>
+                    <button onClick={() => setSelectedHotel(hotel)}>Get Directions</button>
+                  </div>
+                </InfoWindow>
+              )}
+            </Marker>
+          ))}
+          
+          {currentLocation && selectedHotel && (
+            <DirectionsService
+              options={{
+                origin: currentLocation,
+                destination: {
+                  lat: selectedHotel.location.latitude,
+                  lng: selectedHotel.location.longitude
+                },
+                travelMode: 'DRIVING'
+              }}
+              callback={directionCallback}
+            />
+          )}
 
-          {hotels.map((hotel, i) => {
-            const descriptionWords = hotel.description.split(' ');
-            const shortenedDescription = descriptionWords.slice(0, 9).join(' ');
+          {directions && <DirectionsRenderer directions={directions} />}
 
-            return (
-              <Marker
-                key={i}
-                position={{ lat: hotel.location.latitude, lng: hotel.location.longitude }}
-                onClick={() => handleMarkerClick(i)}
-              >
-                {displayInfo === i && (
-                  <InfoWindow onCloseClick={() => setDisplayInfo(null)}>
-                    <div>
-                      <h3>{hotel.name}</h3>
-                      <p>{`${shortenedDescription}...`}</p>
-                    </div>
-                  </InfoWindow>
-                )}
-              </Marker>
-            );
-          })}
-
-          {currentLocation && <Marker position={currentLocation} />}
         </GoogleMap>
       </LoadScript>
     </>
