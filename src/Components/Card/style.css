@@ -13,6 +13,14 @@
     width: 100%; /* Ensuring responsiveness */
   }
 
+  .hotel-card:hover,
+  .hotel-card:focus {
+cursor: pointer;
+background-color: cornflowerblue;
+border-radius: 40px;
+
+  }
+
 .hotel-info {
   display: flex;
   flex-direction: column;

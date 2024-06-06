@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './style.css';
 
-export const Card = ({ hotels }) => {
+export const Card = ({ hotels, onHotelClick }) => {
   const { t, i18n } = useTranslation(['details', 'translation']);
   const [details, setDetails] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -50,26 +50,30 @@ export const Card = ({ hotels }) => {
           const { activities = [] } = hotelDetails;
 
           return (
-            <div key={index} className="hotel-card">
+            <div
+              key={index}
+              className="hotel-card"
+              onClick={() => onHotelClick(hotel)}
+            >
               <img src={hotel.images[0]} alt={hotel.name} />
-              
+
               <div className="hotel-info">
                 <h2>{hotel.name}</h2>
                 <div className="activities-container">
                   <div className="details-list">
                     <div>
                       <p>
-                      {t('translation:activities')}: {activities.join(', ')}
+                        {t('translation:activities')}: {activities.join(', ')}
                       </p>
                     </div>
                   </div>
                 </div>
                 <div className="details-container">
                   <p className="hotel-address">
-                  {t('translation:address')}: {hotel.address}
+                    {t('translation:address')}: {hotel.address}
                   </p>
                   <p className="hotel-rating">
-                  {t('translation:rating')}: {hotel.rating}
+                    {t('translation:rating')}: {hotel.rating}
                   </p>
                 </div>
               </div>
