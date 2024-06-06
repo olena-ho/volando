@@ -66,10 +66,10 @@ export const Card = ({ hotels }) => {
                 </div>
                 <div className="details-container">
                   <p className="hotel-address">
-                    {t('address')}: {address}
+                    {t('address')}: {hotel.address}
                   </p>
                   <p className="hotel-rating">
-                    {t('rating')}: {rating}
+                    {t('rating')}: {hotel.rating}
                   </p>
                 </div>
               </div>
