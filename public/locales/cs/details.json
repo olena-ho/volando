@@ -30,5 +30,440 @@
       "posilovna",
       "půjčovna holí"
     ]
+  },
+  "Caribe Bay": {
+    "description": "Caribe Bay je vodní park s karibskou tématikou, který nabízí celou řadu atrakcí, včetně skluzavek, bazénů a živých představení. Je to oblíbená destinace pro rodinnou zábavu a vodní aktivity.",
+    "activities": ["Děti", "Aquapark"],
+    "comfort": ["Bazén", "Restaurace", "Wifi"]
+  },
+  "Six Senses Douro Valley": {
+    "description": "Tento luxusní resort v údolí Douro nabízí kombinaci relaxace a aktivit, včetně kurzů vaření, ochutnávek vín a vodních sportů. Nachází se v malebném prostředí vinic.",
+    "activities": [
+      "Umění",
+      "Malování",
+      "Sport",
+      "Vodní sporty",
+      "Kurz vaření",
+      "Degustace portského vína"
+    ],
+    "comfort": ["Wifi", "Restaurace", "Bazén", "Vinný sklep"]
+  },
+  "The Boulders Resort": {
+    "description": "Tento resort se nachází v poušti Sonoran a nabízí jedinečné outdoorové dobrodružství, včetně golfu na jeho renomovaných hřištích, skalního lezení a jízd horkovzdušným balonem.",
+    "activities": ["Golf", "Horkovzdušné balóny", "Skalní lezení", "Venku", "Sport"],
+    "comfort": ["Wifi", "Tělocvična", "Restaurace"]
+  },
+  "The Residences at Chevy Chase": {
+    "description": "Unikátní rezidence nabízející mimo jiné neobvyklou aktivitu boj s polštářem za 60 $, kromě dalších luxusních vybavení.",
+    "activities": ["Boj s polštářem", "Relaxace"],
+    "comfort": ["Tělocvična", "Knihovna", "Mazlíček"]
+  },
+  "Loews Coronado Bay Resort": {
+    "description": "Loews Coronado Bay Resort nabízí jedinečné zážitky, včetně lekcí surfování pro psy. Nachází se na soukromém 15hektarovém poloostrově a je klidnou oázou na nábřeží s nádherným výhledem na Tichý oceán a panorama San Diega.",
+    "activities": ["Surfování pro psy", "Venku", "Sport"],
+    "comfort": ["Wifi", "Parkování", "Bazén", "Restaurace"]
+  },
+  "Obriy Village": {
+    "description": "Obriy Village nabízí nezapomenutelné zážitky v tradičních ukrajinských vanách a jízdou na koni malebným okolím Opishny. Je to místo, kde si můžete skutečně vychutnat krásu ukrajinské přírody a pohostinnosti.",
+    "activities": [
+      "Tradiční ukrajinské vany",
+      "Jízda na koni",
+      "Relaxace",
+      "Venku",
+      "Sport"
+    ],
+    "comfort": ["Wifi", "Parkování", "Restaurace", "Spa"]
+  },
+  "Concept Stay Sirimiri": {
+    "description": "Concept Stay Sirimiri nabízí jedinečný pobyt s aktivitami jako je jízda na koni a relaxace ve vířivkách, v krásných Karpatských horách. Toto útočiště je ideální pro ty, kteří chtějí být v kontaktu s přírodou a odpočinout si.",
+    "activities": ["Jízda na koni", "Vířivky", "Relaxace", "Venku", "Sport"],
+    "comfort": ["Wifi", "Parkování", "Restaurace", "Spa"]
+  },
+  "Scandi Eco Park": {
+    "description": "Scandi Eco Park nabízí celou řadu outdoorových a terapeutických aktivit, včetně canisterapie, interakcí se psími spřežnými husky, jízdy na koni, bikejoringu a turistiky. Je to ekologická destinace určená pro milovníky přírody.",
+    "activities": [
+      "Děti",
+      "Sport",
+      "Venku",
+      "Canisterapie",
+      "Severský pes",
+      "Jízda na koni",
+      "Bikejoring",
+      "Trekking"
+    ],
+    "comfort": ["Wifi", "Parkování", "Restaurace", "Spa"]
+  },
+  "Aves Travel": {
+    "description": "Aves Travel nabízí pobyty v pečlivě vybraných letoviscích s termálními prameny na Ukrajině a poskytuje omlazující zážitky v přírodních termálních vodách. Tyto resorty jsou ideální pro relaxaci a zlepšení zdraví.",
+    "activities": ["Termální prameny", "Relaxace"],
+    "comfort": ["Wifi", "Parkování", "Restaurace", "Spa"]
+  },
+  "The Manta Resort": {
+    "description": "The Manta Resort nabízí mimořádný zážitek s podvodním pokojem, který poskytuje nádherný výhled na mořský život v křišťálově čistých vodách Indického oceánu. Je to jedinečný a luxusní útěk na ostrově Pemba.",
+    "activities": ["Podvodní hotel", "Venku", "Relaxace"],
+    "comfort": ["Wifi", "Parkování", "Restaurace", "Spa"]
+  },
+  "Poseidon Undersea Resorts": {
+    "description": "Společnost Poseidon Undersea Resorts nabízí jedinečný zážitek z pobytu pod vodou v luxusních apartmánech, obklopených živým mořským životem fidžijských ostrovů. Je to bezkonkurenční podvodní dobrodružství.",
+    "activities": ["Podvodní hotel", "Relaxace", "Venku"],
+    "comfort": ["Wifi", "Restaurace", "Spa"]
+  },
+  "Icehotel": {
+    "description": "Icehotel ve Švédsku je jedinečný hotel postavený celý z ledu a sněhu. Hosté se mohou ubytovat v pokojích, které vytesali umělci z celého světa, a zažít tak nezapomenutelný arktický zážitek.",
+    "activities": ["Ledový hotel", "Umění"],
+    "comfort": ["Wifi", "Restaurace", "Bar"]
+  },
+  "Treehotel": {
+    "description": "Treehotel ve Švédsku nabízí jedinečné ubytování v domcích na stromě, z nichž každý navrhli jiní architekti. Hosté si mohou z pokojů na vrcholcích stromů vychutnat krásné lesní prostředí a nádherný výhled.",
+    "activities": ["Venku", "Relaxace"],
+    "comfort": ["Wifi", "Restaurace", "Sauna"]
+  },
+  "Luna Salada Hotel": {
+    "description": "Luna Salada Hotel je postaven celý z solných bloků a nabízí hostům jedinečný pobyt na okraji největšího solného pole na světě. Hotel nabízí nádherný výhled a skutečně jedinečný zážitek.",
+    "activities": ["Solný hotel", "Relaxace"],
+    "comfort": ["Wifi", "Restaurace", "Spa"]
+  },
+  "Happy Guests Lodge": {
+    "description": "Happy Guests Lodge nabízí jedinečný zážitek, kdy si hosté mohou za 5 liber nechat na pokoji rybího společníka. Je to útulná a přátelská chata v malebném venkovském prostředí Cheshire.",
+    "activities": ["Rybí společník za 5 liber", "Relaxace"],
+    "comfort": ["Wifi", "Parkování", "Restaurace", "Mazlíčci"]
+  },
+  "Hotel Divorce": {
+    "description": "Hotel Divorce nabízí jedinečnou službu pro páry, které se chtějí rozvést v dobrém. Hotel poskytuje právní a psychologickou podporu, aby rozchod proběhl hladce.",
+    "activities": ["Hotel pro rozvod", "Relaxace"],
+    "comfort": ["Wifi", "Restaurace", "Spa", "Právní služby"]
+  },
+  "Protea Hotel by Marriott Polokwane Ranch Resort": {
+    "description": "Protea Hotel by Marriott Polokwane Ranch Resort nabízí hostům mimořádnou příležitost procházet se s lvy. Resort poskytuje kombinaci luxusního ubytování a vzrušujících zážitků s divokou přírodou.",
+    "activities": ["Procházka s lvy", "Venku"],
+    "comfort": ["Wifi", "Restaurace", "Spa", "Bazén"]
+  },
+  "V8 Hotel Classic Motorworld Region Stuttgart": {
+    "description": "Tento hotel se nachází na starém stuttgartském letišti a je ideální pro milovníky automobilů. Hotel nabízí jedinečně navržené apartmány s automobilovým dekorem, včetně originálních součástí automobilů namontovaných na zdech.",
+    "activities": ["Relaxace", "Umění"],
+    "comfort": ["Restaurace", "Bar", "Tělocvična"]
+  },
+  "Masseria Cervarolo": {
+    "description": "Tento hotel byl původně rodinnou farmou ze 16. století a nabízí relaxační atmosféru s kombinací historického kouzla a moderního komfortu. Hosté si mohou užít různé aktivity a prozkoumat okolní vesnice.",
+    "activities": ["Umění", "Venku", "Relaxace"],
+    "comfort": ["Spa", "Bazén", "Restaurace", "Zahrada"]
+  },
+  "Electra Palace Hotel": {
+    "description": "Tento hotel se nachází v srdci Thessaloniki a nabízí nádherný výhled na moře a kulturní zážitky, včetně prohlížení uměleckých děl vystavených na pozemku.",
+    "activities": ["Umění", "Venku", "Relaxace"],
+    "comfort": ["Bazén", "Restaurace"]
+  },
+  "Gaylord Palms and Convention Center": {
+    "description": "Tento hotel má jedinečné atrium s aligátory a hady, stejně jako řadu sezónních aktivit, jako jsou honby za pokladem a zdobení cukroví.",
+    "activities": [
+      "Děti",
+      "Sport",
+      "Venku",
+      "Bruslení",
+      "Surfování"
+    ],
+    "comfort": ["Spa", "Restaurace", "Bazén"]
+  },
+  "Treebones Resort": {
+    "description": "Rozmarný ekologický resort nabízející ubytování ve stylu glampingu s nádherným výhledem na Big Sur.",
+    "activities": [
+      "Glamping v jurtách",
+      "Soukromé terasy s panoramatickým výhledem",
+      "Venku",
+      "Umění",
+      "Relaxace"
+    ],
+    "comfort": ["Restaurace", "Mazlíčci", "Organická zahrada", "Turistické stezky"]
+  },
+  "Hotel Max": {
+    "description": "Tento hotel se nachází v centru Seattlu a je známý svým uměleckým a hudebním tématem, s originálními uměleckými díly a ikonickými fotografiemi v celém objektu.",
+    "activities": ["Umění"],
+    "comfort": ["Restaurace", "Tělocvična"]
+  },
+  "Grand Velas Riviera Maya": {
+    "description": "Luxusní all-inclusive resort nabízející celou řadu aktivit, včetně kurzů salsy a cvičení ve vodě.",
+    "activities": ["Umění", "Sport"],
+    "comfort": ["Spa", "Bazén", "Restaurace"]
+  },
+  "W Barcelona": {
+    "description": "Tento hotel se nachází na pláži a nabízí dechberoucí výhled na Středozemní moře a pořádá pro hosty salské večery.",
+    "activities": ["Jóga", "Relaxace", "Salské večery"],
+    "comfort": ["Pláž", "Bazén", "Restaurace"]
+  },
+  "Hotel del Coronado": {
+    "description": "Tento historický hotel se nachází na nádherném pobřeží ostrova Coronado a nabízí širokou škálu aktivit, včetně plážové jógy, lekcí surfování, půjčovny jízdních kol a táboráků na pláži.",
+    "activities": ["Jóga", "Sport", "Venku"],
+    "comfort": ["Restaurace", "Spa", "Pláž"]
+  },
+  "Amangiri": {
+    "description": "Amangiri se nachází uprostřed drsné krásy pouště Utah a nabízí luxusní ubytování a řadu aktivit, včetně pozorování hvězd, létání horkovzdušným balonem, pěší turistiky a jízdy na koni.",
+    "activities": [
+      "Venku",
+      "Sport",
+      "Relaxace",
+      "Pozorování hvězd",
+      "Létání horkovzdušným balonem",
+      "Pěší turistika",
+      "Jízda na koni"
+    ],
+    "comfort": ["Spa", "Bazén", "Restaurace"]
+  },
+  "Soneva Fushi": {
+    "description": "Soneva Fushi se nachází uprostřed nedotčené krásy Malediv a nabízí luxusní vily a řadu jedinečných aktivit, včetně šnorchlování, potápění, promítání v soukromém kině a kurzů výroby čokolády.",
+    "activities": [
+      "Šnorchlování",
+      "Venku",
+      "Potápění",
+      "Umění",
+      "Promítání v soukromém kině",
+      "Kurzy výroby čokolády"
+    ],
+    "comfort": ["Spa", "Restaurace", "Pláž"]
+  },
+  "Fogo Island Inn": {
+    "description": "Tento oceňovaný hostinec se nachází na dramatických útesech ostrova Fogo a nabízí dechberoucí výhledy a řadu aktivit, včetně sledování ledovců, projížděk lodí, programů s umělci v rezidenci a sbírání bobulí.",
+    "activities": [
+      "Sledování ledovců",
+      "Projížďky lodí",
+      "Programy s umělci v rezidenci",
+      "Sběr bobulí",
+      "Umění",
+      "Venku"
+    ],
+    "comfort": ["Restaurace", "Spa", "Knihovna"]
+  },
+  "Kakslauttanen Arctic Resort": {
+    "description": "Kakslauttanen Arctic Resort se nachází v finském Laponsku a nabízí unikátní ubytování v  skleněných iglú a srubových chatách. Hosté si mohou užít aktivity jako lov polární záře, jízdu se psím spřežením, lov na ledu a jízdu na sněžném skútru.",
+    "activities": [
+      "Lov polární záře",
+      "Venku",
+      "Jízda se psím spřežením",
+      "Lov na ledu",
+      "Děti",
+      "Jízda na sněžném skútru"
+    ],
+    "comfort": ["Spa", "Restaurace"]
+  },
+  "Whitepod Eco-Luxury Hotel": {  
+    "description": "Whitepod Eco-Luxury Hotel se nachází v швейcarských Alpách (Švýcarské Alpy) a nabízí ubytování v jedinečných geodetických domech a řadu aktivit, včetně lyžování, sněžného chození, jógy a pozorování hvězd.",
+    "activities": [
+      "Lyžování",
+      "Sport",
+      "Venku",
+      "Sněžné chození",
+      "Jóga",
+      "Pozorování hvězd"
+    ],
+    "comfort": ["Restaurace", "Spa"]
+  },
+  "Amilla Fushi": {
+    "description": "Amilla Fushi se nachází na Maledivách a nabízí luxusní vily nad vodou a na pláži, stejně jako jedinečné aktivity, jako jsou projížďky ponorkou, pikniky na soukromém ostrově, rybaření při západu slunce a stravování pod vodou.",
+    "activities": [
+      "Venku",
+      "Projížďky ponorkou",
+      "Pikniky na soukromém ostrově",
+      "Rybaření při západu slunce",
+      "Stravování pod vodou"
+    ],
+    "comfort": ["Spa", "Restaurace", "Pláž"]
+  },
+  "Longitude 131°": {
+    "description": "Longitude 131° se nachází v blízkosti národního parku Uluru-Kata Tjuta a nabízí luxusní ubytování v  stanu s nepřekonatelným výhledem na Uluru. Hosté si mohou užít vyhlídkové jízdy na východ slunce nad Uluru, výlety na velbloudech a setkání s domorodou kulturou.",
+    "activities": [
+      "Vyhlídkové jízdy na východ slunce nad Uluru",
+      "Výlety na velbloudech",
+      "Setkání s domorodou kulturou",
+      "Umění",
+      "Venku"
+    ],
+    "comfort": ["Restaurace", "Spa", "Bazén"]
+  },
+  "Soneva Kiri": {
+    "description": "Soneva Kiri se nachází na odlehlém ostrově Koh Kood a nabízí luxusní vily a jedinečné stravovací zážitky, jako je večeře v korunách stromů a soukromé večeře na pláži. Hosté si v tomto nedotčeném ráji mohou také šnorchlovat a pozorovat hvězdy.",
+    "activities": [
+      "Večeře v korunách stromů",
+      "Soukromé večeře na pláži",
+      "Šnorchlování",
+      "Pozorování hvězd",
+      "Relaxace",
+      "Venku"
+    ],
+    "comfort": ["Spa", "Bazén"]
+  },
+  "The Singular Patagonia": {
+    "description": "The Singular Patagonia se nachází v nádherné scenérii Patagonie a nabízí řadu outdoorových aktivit, včetně pěší turistiky, jízdy na koni, pozorování ptáků a prohlídek ledovce. Hosté se mohou ponořit do přírodní krásy jižního Chile.",
+    "activities": [
+      "Venku",
+      "Sport",
+      "Pěší turistika",
+      "Jízda na koni",
+      "Pozorování ptáků",
+      "Prohlídky ledovce"
+    ],
+    "comfort": ["Restaurace", "Spa", "Bazén"]
+  },
+  "Explora Rapa Nui": {
+    "description": "Explora Rapa Nui se nachází na Velikonočním ostrově a nabízí průzkumy archeologických nalezišť ostrova, sopečných krajin a nedotčených pláží. Hosté si mohou užít aktivity jako pěší turistiku, jízdu na koni, cyklistiku a pozorování hvězd.",
+    "activities": [
+      "Venku",
+      "Sport",
+      "Pěší turistika",
+      "Jízda na koni",
+      "Cyklistika",
+      "Pozorování hvězd"
+    ],
+    "comfort": ["Restaurace", "Spa", "Bazén"]
+  },
+  "Amangani": {
+    "description": "Amangani se nachází v pohoří Grand Teton, Wyoming, USA, a nabízí možnosti horolezectví, lyžování nebo prostě jen kochání se výhledem na hory.",
+    "activities": [
+      "Sport",
+      "Horolezectví",
+      "Lyžování",
+      "Výhledy na hory",
+      "Venku"
+    ],
+    "comfort": ["Restaurace", "Spa", "Tělocvična"]
+  },
+  "Southern Ocean Lodge": {
+    "description": "Southern Ocean Lodge se nachází na Kangaroo Islandu poblíž jižní Austrálie a nabízí možnosti pozorování volně žijících zvířat, setkání s klokany a dalšími místními obyvateli a také vinařské exkurze do místních vinařství.",
+    "activities": [
+      "Pozorování volně žijících zvířat",
+      "Relaxace",
+      "Vinařské exkurze",
+      "Venku"
+    ],
+    "comfort": ["Restaurace", "Spa", "Knihovna"]
+  },
+  "Explora Patagonia": {
+    "description": "Explora Patagonia se nachází v Patagonii v Chile a je ideálním místem pro milovníky přírody. Během výletů můžete prozkoumávat kaňony, lesy a jezera a večer si užívat pohodlí hotelu.",
+    "activities": [
+      "Průzkum kaňonů",
+      "Trekování v lese",
+      "Výlety na jezero",
+      "Venku"
+    ],
+    "comfort": ["Restaurace", "Spa", "Bar"]
+  },
+  "The Brando": {
+    "description": "The Brando se nachází na soukromém ostrově Tetiaroa ve Francouzské Polynésii a nabízí řadu vodních aktivit, včetně šnorchlování, kajakování a paddleboardingu v křišťálově čistých vodách jižního Pacifiku.",
+    "activities": [
+      "Šnorchlování",
+      "Kajakování",
+      "Paddleboarding",
+      "Venku",
+      "Sport"
+    ],
+    "comfort": ["Restaurace", "Spa", "Pláž"]
+  },
+  "Ladera Resort": {
+    "description": "Ladera Resort se nachází na vulkanickém hřebeni s výhledem na Pitons na Svaté Lucii a nabízí dobrodružné aktivity, jako je ziplining, pěší turistika a návštěvy nedalekých sirných pramenů.",
+    "activities": [
+      "Ziplining",
+      "Pěší turistika",
+      "Návštěva sirných pramenů",
+      "Venku"
+    ],
+    "comfort": ["Restaurace", "Spa", "Bazén"]
+  },
+  "The Datai Langkawi": {
+    "description": "The Datai Langkawi se nachází v srdci starobylého deštného pralesa v Langkawi v Malajsii a nabízí hostům možnost zažít přírodní zázraky s procházkami deštným pralesem, vedenými přírodovědnými výlety a hodinami jógy na pláži.",
+    "activities": [
+      "Procházky deštným pralesem",
+      "Vedené přírodovědné výlety",
+      "Jóga na pláži",
+      "Venku",
+      "Relaxace",
+      "Golf"
+    ],
+    "comfort": ["Restaurace", "Spa"]
+  },
+  "Amanwana": {
+    "description": "Amanwana se nachází na ostrově Moyo v Indonésii a nabízí hostům možnost prozkoumat nedotčené džungle s trekováním v džungli a také podvodní dobrodružství s potápěním a šnorchlováním v okolních korálových útesech.",
+    "activities": [
+      "Venku",
+      "Trekking v džungli",
+      "Potápění",
+      "Šnorchlování",
+      "Sport"
+    ],
+    "comfort": ["Restaurace", "Spa", "Pláž"]
+  },
+  "Singita Lebombo Lodge": {
+    "description": "Singita Lebombo Lodge se nachází v národním parku Kruger v Jižní Africe a nabízí nezapomenutelné safari zážitky, včetně safari jízd, procházek buší a pozorování hvězd v africké divočině.",
+    "activities": [
+      "Safari jízdy",
+      "Procházky buší",
+      "Pozorování hvězd",
+      "Venku",
+      "Relaxace"
+    ],
+    "comfort": ["Restaurace", "Spa", "Bazén"]
+  },
+  "Hotel France": {
+    "description": "Hotel France se nachází v srdci Vinnytsia a nabízí elegantní ubytování s restaurací, bezplatným Wi-Fi a různými aktivitami pro hosty, včetně cyklistických a pěších výletů. Hotel také pořádá živá vystoupení a má historické kouzlo.",
+    "activities": [
+      "Venku",
+      "Sport",
+      "Umění",
+      "Cyklistika",
+      "Živá hudba/performance",
+      "Pěší túry"
+    ],
+    "comfort": ["Restaurace", "Parkování", "Wifi", "Bar"]
+  },
+  "Safari-Club": {
+    "description": "Hotel Safari-Club nabízí jedinečný zážitek s plaveckým bazénem, lázeňskými službami a možnostmi jízdy na koni. Je ideální pro ty, kteří chtějí spojit relaxaci s dobrodružstvím. Hotel se nachází v klidném prostředí s krásným přírodním okolím.",
+    "activities": [
+      "Bazén",
+      "Sport",
+      "Jízda na koni"
+    ],
+    "comfort": ["Wifi", "Parkování", "Spa", "Restaurace", "Tělocvična"]
+  },
+  "Fenix Town": {
+    "description": "Fenix Town je moderní hotel s řadou aktivit, jako je fitness centrum, bowling a kulečník. Hosté mohou relaxovat také v sauně. Hotel nabízí komfortní a moderní ubytování s výborným vybavením.",
+    "activities": [
+      "Relaxace",
+      "Sport",
+      "Bowling",
+      "Kulečník"
+    ],
+    "comfort": ["Wifi", "Parkování", "Tělocvična", "Restaurace"]
+  },
+  "Fairmont Grand Hotel Kyiv": {
+    "description": "Fairmont Grand Hotel Kyiv nabízí kombinaci elegance a pohodlí, ideální pro hosty, kteří hledají relaxaci i kulturní průzkum. Lázeňské služby zahrnují masáže, ošetření obličeje a tělové procedury.",
+    "activities": [
+      "Relaxace"
+    ],
+    "comfort": ["Wifi", "Parkování", "Spa", "Restaurace", "Bar"]
+  },
+  "Lisotel": {
+    "description": "Lisotel je rekreační středisko nedaleko Kyjeva, umístěné v borovém lese na břehu řeky Ros. Hlavním rysem našeho komplexu je láska k ukrajinské historii a tradicím.",
+    "activities": [
+      "Relaxační atmosféra hluboko v borovém lese",
+      "Různé umělecké a řemeslné dílny",
+      "Rybaření nebo veslování na jezeře",
+      "Vynikající ukrajinská kuchyně",
+      "Návštěva nedaleké farmy",
+      "Různé aktivity pro děti",
+      "Odpočinek v domku u včelího úlu"
+    ],
+    "comfort": [
+      "Wifi",
+      "Parkování",
+      "Bazén",
+      "Restaurace",
+      "Domácí mazlíčci",
+      "Jezero",
+      "Krb"
+    ]
+  },
+  "Opera Hotel": {
+    "description": "Opera Hotel kombinuje luxus a kulturní kouzlo a nabízí jedinečné tematické apartmá a komplexní lázeňské služby. Vrcholem pro znalce je oceňovaný vinný lístek hotelu.",
+    "activities": [
+      "Relaxace"
+    ],
+    "comfort": ["Wifi", "Parkování", "Spa", "Restaurace"]
   }
 }

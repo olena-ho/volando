@@ -1,17 +1,451 @@
 {
   "Equitana Hotel Resort": {
     "description": "The most beautiful view in the world is from the back of a horse. It's true. Don't be afraid and try horse riding with us. At our riding arena, we organize competitions such as the Czech Republic Championship in show jumping, but we also offer our services to absolute beginners in horse riding. Small children, parents, or even everyone together can enjoy a ride on horseback.",
-    "activities": ["Outdoors", "Sport","horse-riding", "spa", "bowling", "billiard", "minigolf", "jogging track", "fishing"],
+    "activities": [
+      "Outdoors",
+      "Sport",
+      "horse-riding",
+      "spa",
+      "bowling",
+      "billiard",
+      "minigolf",
+      "jogging track",
+      "fishing"
+    ],
     "comfort": ["Free Wi-Fi", "Parking", "Wellness and SPA", "Restaurant"]
   },
   "Hotel Kouty": {
     "description": "The hotel is situated in a 10 hectare forest area with its own 2.5 hectare pond, in a picturesque valley at the foot of Melechov Hill. In the vicinity of the cottages flows a stream that feeds a trout pond with one of the cleanest waters in the Czech Republic. There are two tennis courts with artificial surface, playground, trampoline, beach volleyball court, gym, table tennis and sauna. Our little guests have at their disposal a playground and a trampoline. A few hundred meters away, there is a private fishing district in the village of Kouty – Homole Pond. You can catch trout, carp, or zander catfish. Allowances can be picked up at the hotel reception by prior arrangement.",
-    "activities": ["Outdoors","tennis", "beach volleyball", "paddleboard", "yoga"],
+    "activities": [
+      "Outdoors",
+      "tennis",
+      "beach volleyball",
+      "paddleboard",
+      "yoga"
+    ],
     "comfort": ["Free Wi-Fi", "Parking", "Cedar sauna", "Restaurant"]
   },
   "Golf Resort Olomouc": {
     "description": "A four-star hotel ideal for golf enthusiasts, offering rooms with a view of the championship course. The resort provides a rich breakfast buffet, free Wi-Fi, parking, and pet-friendly accommodations.",
     "activities": ["outdoors", "golf"],
     "comfort": ["wifi", "parking", "pets", "restaurant", "gym", "club rentals"]
+  },
+  "Caribe Bay": {
+    "description": "Caribe Bay is a Caribbean-themed water park offering a variety of attractions, including slides, pools, and live shows. It's a popular destination for family fun and water-based activities.",
+    "activities": ["kids", "aquapark"],
+    "comfort": ["pool", "restaurant", "wifi"]
+  },
+  "Six Senses Douro Valley": {
+    "description": "This luxurious resort in the Douro Valley offers a blend of relaxation and activities, including cooking classes, wine tasting, and water sports. It is nestled in a picturesque vineyard setting.",
+    "activities": [
+      "art",
+      "painting",
+      "sport",
+      "water sports",
+      "cooking masterclass",
+      "port wine tasting"
+    ],
+    "comfort": ["wifi", "restaurant", "pool", "wine cellar"]
+  },
+  "The Boulders Resort": {
+    "description": "Located in the Sonoran Desert, this resort offers unique outdoor adventures, including golf on its renowned courses, rock climbing, and hot air balloon rides.",
+    "activities": [
+      "golf",
+      "hot air balloons",
+      "rock climbing",
+      "outdoors",
+      "sport"
+    ],
+    "comfort": ["wifi", "gym", "restaurant"]
+  },
+  "The Residences at Chevy Chase": {
+    "description": "A unique residence offering an unusual activity of pillow fighting for $60, among other luxury amenities.",
+    "activities": ["pillow fighting", "relax"],
+    "comfort": ["gym", "library", "pet"]
+  },
+  "Loews Coronado Bay Resort": {
+    "description": "Loews Coronado Bay Resort offers unique experiences including surfing lessons for dogs. Located on a private 15-acre peninsula, the resort is a tranquil waterfront oasis featuring stunning views of the Pacific Ocean and the San Diego skyline.",
+    "activities": ["surfing for dogs", "outdoors", "sport"],
+    "comfort": ["wifi", "parking", "pool", "restaurant"]
+  },
+  "Obriy Village": {
+    "description": "Obriy Village offers unforgettable experiences in traditional Ukrainian hot tubs and horse riding through the picturesque surroundings of Opishnya. It's a place where you can truly appreciate the beauty of Ukrainian nature and hospitality.",
+    "activities": [
+      "traditional Ukrainian hot tubs",
+      "horse riding",
+      "relax",
+      "outdoors",
+      "sport"
+    ],
+    "comfort": ["wifi", "parking", "restaurant", "spa"]
+  },
+  "Concept Stay Sirimiri": {
+    "description": "Concept Stay Sirimiri offers a unique stay with activities like horse riding and relaxing in hot tubs, set in the beautiful Carpathian Mountains. This retreat is perfect for those looking to connect with nature and unwind.",
+    "activities": ["horse riding", "hot tubs", "relax", "outdoors", "sport"],
+    "comfort": ["wifi", "parking", "restaurant", "spa"]
+  },
+  "Scandi Eco Park": {
+    "description": "Scandi Eco Park offers a variety of outdoor and therapeutic activities including pet therapy, husky dog interactions, horse riding, bikejoring, and trekking. It's an eco-friendly destination designed for nature lovers.",
+    "activities": [
+      "kids",
+      "sport",
+      "outdoors",
+      "pet therapy",
+      "husky dogs",
+      "horse riding",
+      "bikejoring",
+      "trekking"
+    ],
+    "comfort": ["wifi", "parking", "restaurant", "spa"]
+  },
+  "Aves Travel": {
+    "description": "Aves Travel offers curated stays at various hot spring resorts across Ukraine, providing rejuvenating experiences in natural thermal waters. These resorts are perfect for relaxation and health benefits.",
+    "activities": ["hot springs", "relax"],
+    "comfort": ["wifi", "parking", "restaurant", "spa"]
+  },
+  "The Manta Resort": {
+    "description": "The Manta Resort offers an extraordinary experience with its underwater room, providing stunning views of the marine life in the crystal-clear waters of the Indian Ocean. It's a unique and luxurious escape on Pemba Island.",
+    "activities": ["underwater hotel", "outdoors", "relax"],
+    "comfort": ["wifi", "parking", "restaurant", "spa"]
+  },
+  "Poseidon Undersea Resorts": {
+    "description": "Poseidon Undersea Resorts offers a unique experience of staying underwater in luxury suites, surrounded by the vibrant marine life of the Fijian islands. It's an unparalleled underwater adventure.",
+    "activities": ["underwater hotel", "relax", "outdoors"],
+    "comfort": ["wifi", "restaurant", "spa"]
+  },
+  "Icehotel": {
+    "description": "The Icehotel in Sweden is a unique hotel built entirely out of ice and snow. Guests can stay in rooms sculpted by artists from around the world, offering an unforgettable Arctic experience.",
+    "activities": ["ice hotel", "art"],
+    "comfort": ["wifi", "restaurant", "bar"]
+  },
+  "Treehotel": {
+    "description": "Treehotel in Sweden offers unique treehouse accommodations, each designed by different architects. Guests can enjoy the beautiful forest surroundings and stunning views from their treetop rooms.",
+    "activities": ["outdoors", "relax"],
+    "comfort": ["wifi", "restaurant", "sauna"]
+  },
+  "Luna Salada Hotel": {
+    "description": "Luna Salada Hotel is built entirely from salt blocks, offering guests a unique stay on the edge of the world's largest salt flat. The hotel provides stunning views and a truly unique experience.",
+    "activities": ["salt hotel", "relax"],
+    "comfort": ["wifi", "restaurant", "spa"]
+  },
+  "Happy Guests Lodge": {
+    "description": "Happy Guests Lodge offers a unique experience where guests can have a fish companion in their room for £5. It's a cozy and friendly lodge located in the picturesque Cheshire countryside.",
+    "activities": ["fish companion for £5", "relax"],
+    "comfort": ["wifi", "parking", "restaurant", "pets"]
+  },
+  "Hotel Divorce": {
+    "description": "Hotel Divorce offers a unique service for couples seeking an amicable divorce. The hotel provides legal and psychological support to help couples separate smoothly.",
+    "activities": ["divorce hotel", "relax"],
+    "comfort": ["wifi", "restaurant", "spa", "legal services"]
+  },
+  "Protea Hotel by Marriott Polokwane Ranch Resort": {
+    "description": "Protea Hotel by Marriott Polokwane Ranch Resort offers guests the extraordinary opportunity to walk with lions. The resort provides a blend of luxury accommodation and thrilling wildlife experiences.",
+    "activities": ["walk with lions", "outdoors"],
+    "comfort": ["wifi", "restaurant", "spa", "pool"]
+  },
+  "V8 Hotel Classic Motorworld Region Stuttgart": {
+    "description": "Located on the old Stuttgart airfield, this hotel is perfect for automobile enthusiasts. The hotel features uniquely designed suites with automotive decor, including original car parts mounted on the walls.",
+    "activities": ["relax", "art"],
+    "comfort": ["restaurant", "bar", "gym"]
+  },
+  "Masseria Cervarolo": {
+    "description": "Originally a 16th-century family farm, this hotel offers a relaxing atmosphere with a mix of historical charm and modern comfort. Guests can enjoy various activities and explore the nearby villages.",
+    "activities": ["art", "outdoors", "relax"],
+    "comfort": ["spa", "pool", "restaurant", "garden"]
+  },
+  "Electra Palace Hotel": {
+    "description": "Situated in the heart of Thessaloniki, this hotel offers stunning sea views and cultural experiences, including viewing works of art displayed on the property.",
+    "activities": ["art", "outdoors", "relax"],
+    "comfort": ["pool", "restaurant"]
+  },
+  "Gaylord Palms and Convention Center": {
+    "description": "This hotel features a unique atrium with alligators and snakes, as well as a variety of seasonal activities such as scavenger hunts and cookie decorating.",
+    "activities": [
+      "kids",
+      "sport",
+      "outdoors",
+      "ice skating",
+      "surfing lessons"
+    ],
+    "comfort": ["spa", "restaurant", "pool"]
+  },
+  "Treebones Resort": {
+    "description": "A quirky, eco-friendly resort offering glamping-style accommodation with spectacular views of Big Sur.",
+    "activities": [
+      "glamping in yurts",
+      "private decks with scenic views",
+      "outdoors",
+      "art",
+      "relax"
+    ],
+    "comfort": ["restaurant", "pets", "Organic garden", "Hiking trails"]
+  },
+  "Hotel Max": {
+    "description": "Located in downtown Seattle, this hotel is known for its artistic and musical theme, featuring original artwork and iconic photographs throughout the property.",
+    "activities": ["art"],
+    "comfort": ["restaurant", "gym"]
+  },
+  "Grand Velas Riviera Maya": {
+    "description": "A luxurious all-inclusive resort offering a variety of activities including salsa dancing classes and aquafit sessions.",
+    "activities": ["art", "sport"],
+    "comfort": ["spa", "pool", "restaurant"]
+  },
+  "W Barcelona": {
+    "description": "Situated along the beachfront, this hotel offers breathtaking views of the Mediterranean Sea and hosts salsa nights for guests to enjoy.",
+    "activities": ["yoga", "relax", "salsa nights"],
+    "comfort": ["beach", "pool", "restaurant"]
+  },
+  "Hotel del Coronado": {
+    "description": "Located on the stunning shores of Coronado Island, this historic hotel offers a wide range of activities including beach yoga, surfing lessons, bicycle rentals, and beach bonfires.",
+    "activities": ["yoga", "sport", "outdoors"],
+    "comfort": ["restaurant", "spa", "beach"]
+  },
+  "Amangiri": {
+    "description": "Set amidst the stark beauty of the Utah desert, Amangiri offers luxurious accommodations and a range of activities including stargazing, hot air ballooning, hiking, and horseback riding.",
+    "activities": [
+      "outdoors",
+      "sport",
+      "relax",
+      "stargazing",
+      "hot air ballooning",
+      "hiking",
+      "horseback riding"
+    ],
+    "comfort": ["spa", "pool", "restaurant"]
+  },
+  "Soneva Fushi": {
+    "description": "Nestled within the pristine beauty of the Maldives, Soneva Fushi offers luxurious villas and a host of unique activities including snorkeling, diving, private cinema screenings, and chocolate-making classes.",
+    "activities": [
+      "snorkeling",
+      "outdoors",
+      "diving",
+      "art",
+      "private cinema screenings",
+      "chocolate-making classes"
+    ],
+    "comfort": ["spa", "restaurant", "beach"]
+  },
+  "Fogo Island Inn": {
+    "description": "Perched on the dramatic cliffs of Fogo Island, this award-winning inn offers breathtaking views and a range of activities including iceberg watching, boat tours, artist-in-residence programs, and berry picking.",
+    "activities": [
+      "iceberg watching",
+      "boat tours",
+      "artist-in-residence programs",
+      "berry picking",
+      "art",
+      "outdoors"
+    ],
+    "comfort": ["restaurant", "spa", "library"]
+  },
+  "Kakslauttanen Arctic Resort": {
+    "description": "Located in the Finnish Lapland, Kakslauttanen Arctic Resort offers unique accommodations in glass igloos and log cabins. Guests can enjoy activities such as aurora hunting, husky sledding, ice fishing, and snowmobiling.",
+    "activities": [
+      "aurora hunting",
+      "outdoors",
+      "husky sledding",
+      "ice fishing",
+      "kids",
+      "snowmobiling"
+    ],
+    "comfort": ["spa", "restaurant"]
+  },
+  "Whitepod Eco-Luxury Hotel": {
+    "description": "Nestled in the Swiss Alps, Whitepod Eco-Luxury Hotel offers unique geodesic dome accommodations and a range of activities including skiing, snowshoeing, yoga, and stargazing.",
+    "activities": [
+      "skiing",
+      "sport",
+      "outdoors",
+      "snowshoeing",
+      "yoga",
+      "stargazing"
+    ],
+    "comfort": ["restaurant", "spa"]
+  },
+  "Amilla Fushi": {
+    "description": "Situated in the Maldives, Amilla Fushi offers luxurious overwater and beachfront villas, as well as unique activities such as submarine tours, private island picnics, sunset fishing, and underwater dining experiences.",
+    "activities": [
+      "outdoors",
+      "submarine tours",
+      "private island picnics",
+      "sunset fishing",
+      "underwater dining"
+    ],
+    "comfort": ["spa", "restaurant", "beach"]
+  },
+  "Longitude 131°": {
+    "description": "Located near Uluru-Kata Tjuta National Park, Longitude 131° offers luxury tented accommodation with unparalleled views of Uluru. Guests can enjoy sunrise tours of Uluru, camel treks, and indigenous cultural experiences.",
+    "activities": [
+      "uluru sunrise tours",
+      "camel treks",
+      "indigenous cultural experiences",
+      "art",
+      "outdoors"
+    ],
+    "comfort": ["restaurant", "spa", "pool"]
+  },
+  "Soneva Kiri": {
+    "description": "Located on the remote island of Koh Kood, Soneva Kiri offers luxurious villas and unique dining experiences such as treepod dining and private beach dinners. Guests can also enjoy snorkeling and stargazing in this pristine paradise.",
+    "activities": [
+      "treepod dining",
+      "private beach dinners",
+      "snorkeling",
+      "stargazing",
+      "relax",
+      "outdoors"
+    ],
+    "comfort": ["spa", "pool"]
+  },
+  "The Singular Patagonia": {
+    "description": "Set against the stunning backdrop of the Patagonian landscape, The Singular Patagonia offers a range of outdoor activities including hiking, horseback riding, birdwatching, and glacier tours. Guests can immerse themselves in the natural beauty of southern Chile.",
+    "activities": [
+      "outdoors",
+      "sport",
+      "hiking",
+      "horseback riding",
+      "birdwatching",
+      "glacier tours"
+    ],
+    "comfort": ["restaurant", "spa", "pool"]
+  },
+  "Explora Rapa Nui": {
+    "description": "Located on Easter Island, Explora Rapa Nui offers explorations of the island's archaeological sites, volcanic landscapes, and pristine beaches. Guests can enjoy activities such as hiking, horseback riding, biking, and stargazing.",
+    "activities": [
+      "outdoors",
+      "sport",
+      "hiking",
+      "horseback riding",
+      "biking",
+      "stargazing"
+    ],
+    "comfort": ["restaurant", "spa", "pool"]
+  },
+  "Amangani": {
+    "description": "Located in the Grand Teton Mountains, Wyoming, USA, Amangani offers opportunities for mountaineering, skiing, or simply enjoying the mountain views.",
+    "activities": [
+      "sport",
+      "mountaineering",
+      "skiing",
+      "mountain views",
+      "outdoors"
+    ],
+    "comfort": ["restaurant", "spa", "gym"]
+  },
+  "Southern Ocean Lodge": {
+    "description": "Situated on Kangaroo Island near South Australia, Southern Ocean Lodge offers opportunities for wildlife exploration, encountering kangaroos and other local residents, as well as wine tours to local wineries.",
+    "activities": ["wildlife exploration", "relax", "wine tours", "outdoors"],
+    "comfort": ["restaurant", "spa", "library"]
+  },
+  "Explora Patagonia": {
+    "description": "Located in Patagonia, Chile, Explora Patagonia is perfect for nature lovers. You can explore canyons, forests, and lakes during day trips, and enjoy the comfort of the hotel in the evenings.",
+    "activities": [
+      "canyon exploration",
+      "forest hikes",
+      "lake excursions",
+      "outdoors"
+    ],
+    "comfort": ["restaurant", "spa", "bar"]
+  },
+  "The Brando": {
+    "description": "Located on Tetiaroa Private Island in French Polynesia, The Brando offers a range of water activities including snorkeling, kayaking, and paddleboarding in the crystal-clear waters of the South Pacific.",
+    "activities": [
+      "snorkeling",
+      "kayaking",
+      "paddleboarding",
+      "outdoors",
+      "sport"
+    ],
+    "comfort": ["restaurant", "spa", "beach"]
+  },
+  "Ladera Resort": {
+    "description": "Perched on a volcanic ridge overlooking the Pitons in St Lucia, Ladera Resort offers adventurous activities such as ziplining, hiking, and visits to the nearby sulphur springs.",
+    "activities": ["ziplining", "hiking", "sulphur springs visit", "outdoors"],
+    "comfort": ["restaurant", "spa", "pool"]
+  },
+  "The Datai Langkawi": {
+    "description": "Nestled in the heart of an ancient rainforest in Langkawi, Malaysia, The Datai Langkawi offers guests the chance to experience the wonders of nature with rainforest walks, guided nature tours, and beach yoga sessions.",
+    "activities": [
+      "rainforest walks",
+      "guided nature tours",
+      "beach yoga",
+      "outdoors",
+      "relax",
+      "golf"
+    ],
+    "comfort": ["restaurant", "spa"]
+  },
+  "Amanwana": {
+    "description": "Located on Moyo Island in Indonesia, Amanwana offers guests the opportunity to explore pristine jungles with jungle trekking, as well as underwater adventures with diving and snorkeling in the surrounding coral reefs.",
+    "activities": [
+      "outdoors",
+      "jungle trekking",
+      "diving",
+      "snorkeling",
+      "sport"
+    ],
+    "comfort": ["restaurant", "spa", "beach"]
+  },
+  "Singita Lebombo Lodge": {
+    "description": "Located in the Kruger National Park, South Africa, Singita Lebombo Lodge offers unforgettable safari experiences including safari drives, bush walks, and stargazing sessions in the African wilderness.",
+    "activities": [
+      "safari drives",
+      "bush walks",
+      "stargazing",
+      "outdoors",
+      "relax"
+    ],
+    "comfort": ["restaurant", "spa", "pool"]
+  },
+  "Hotel France": {
+    "description": "Located in the heart of Vinnytsia, Hotel France offers elegant accommodations with a restaurant, free Wi-Fi, and various activities for guests, including cycling and walking tours. The hotel also features live performances and has a historical charm.",
+    "activities": [
+      "outdoors",
+      "sport",
+      "art",
+      "cycling",
+      "Live music/performance",
+      "Walking tours"
+    ],
+    "comfort": ["restaurant", "parking", "wifi", "bar"]
+  },
+  "Safari-Club": {
+    "description": "The Safari-Club Hotel provides a unique experience with a swimming pool, spa services, and horseback riding facilities. It's ideal for those looking to combine relaxation with adventure. The hotel is situated in a serene environment with beautiful natural surroundings.",
+    "activities": ["pool", "sport", "horseback riding"],
+    "comfort": ["wifi", "parking", "spa", "restaurant", "gym"]
+  },
+  "Fenix Town": {
+    "description": "Fenix Town is a modern hotel featuring a variety of activities such as a fitness center, bowling, and billiard. Guests can also relax in the sauna. The hotel offers a comfortable and contemporary stay with excellent facilities.",
+    "activities": ["relax", "sport", "bowling", "billiard"],
+    "comfort": ["wifi", "parking", "gym", "restaurant"]
+  },
+  "Fairmont Grand Hotel Kyiv": {
+    "description": "Fairmont Grand Hotel Kyiv offers a mix of elegance and comfort, perfect for guests seeking both relaxation and cultural exploration. The spa services include massages, facials, and body treatments.",
+    "activities": ["relax"],
+    "comfort": ["wifi", "parking", "spa", "restaurant", "bar"]
+  },
+  "Lisotel": {
+    "description": "Lisotel is a recreation center near Kyiv, located in the pine forest on the banks of the Ros River. The main feature of our complex is our love for the Ukrainian history and traditions.",
+    "activities": [
+      "relaxing atmosphere deep in a pine forest",
+      "different art and craft workshops",
+      "fishing or rowing on a lake",
+      "delicious Ukrainian cuisine",
+      "visiting a nearby farm",
+      "various activities for kids",
+      "relaxing in a house near a beehive"
+    ],
+    "comfort": [
+      "wifi",
+      "parking",
+      "pool",
+      "restaurant",
+      "pets",
+      "lake",
+      "fireplace"
+    ]
+  },
+  "Opera Hotel": {
+    "description": "Opera Hotel combines luxury and cultural charm, offering unique themed suites and comprehensive spa services. The hotel's award-winning wine list is a highlight for connoisseurs.",
+    "activities": ["relax"],
+    "comfort": ["wifi", "parking", "spa", "restaurant"]
   }
 }

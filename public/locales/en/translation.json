@@ -23,5 +23,8 @@
   "4.5": "4.5+ stars",
   "4": "4+ stars",
   "3": "3+ stars",
-  "any": "any rating"
+  "any": "any rating",
+  "activities": "Aktivities",
+  "address": "Address",
+  "description": "Description"
 }

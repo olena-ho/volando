@@ -828,7 +828,7 @@ const hotels = [
     "description": "Lisotel is a recreation center near Kyiv, located in the pine forest on the banks of the Ros River. The main feature of our complex is our love for the Ukrainian history and traditions.",
     "comfort": ["wifi", "parking", "pool", "restaurant", "pets", "lake", "fireplace"],
     "web": "https://lisotel.com.ua/en/",
-    "images": []
+    "images": ["/assets/Lisotel/motanka.png", "/assets/Lisotel/restaurant.png", "/assets/Lisotel/makoviy.png", "/assets/Lisotel/lake.png", "/assets/Lisotel/baking.png", "/assets/Lisotel/horse.png", "/assets/Lisotel/painting.png"]
   },
   {
     "name": "Opera Hotel",
