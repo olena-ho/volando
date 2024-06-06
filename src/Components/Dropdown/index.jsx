@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useTranslation } from "react-i18next";
 import "./style.css";
 
 export const Dropdown = ({ title, options, onChange }) => {
-  const { t, i18n } = useTranslation();
   const [show, setShow] = useState(false);
   const [checkedOptions, setCheckedOptions] = useState([]);
   const dropdownRef = useRef(null);
@@ -19,10 +17,6 @@ export const Dropdown = ({ title, options, onChange }) => {
       setTimeout(() => onChange(newCheckedOptions), 0);
       return newCheckedOptions;
     });
-  };
-
-  const handleApply = () => {
-    setShow(false);
     console.log(checkedOptions);
   };
 
@@ -56,9 +50,6 @@ export const Dropdown = ({ title, options, onChange }) => {
             {option.value}
           </label>
         ))}
-        <button className="apply-button" onClick={handleApply}>
-          {t("applyB")}
-        </button>
       </div>
     </div>
   );

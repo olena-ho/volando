@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import "../Dropdown/style.css";
 
 export const CountriesInput = ({ placeholder, onChange }) => {
-  const { t, i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
   const [show, setShow] = useState(false);
   const [locCode, setLocCode] = useState([]);
   const [inputValue, setInputValue] = useState("");
@@ -41,9 +41,9 @@ export const CountriesInput = ({ placeholder, onChange }) => {
     loadCountries();
   }, [i18n.language, i18n]);
 
-  useEffect(() => {
-    console.log(countries);
-  }, [countries]);
+  // useEffect(() => {
+  //   console.log(countries);
+  // }, [countries]);
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -57,26 +57,30 @@ export const CountriesInput = ({ placeholder, onChange }) => {
     setInputValue("");
     setShow(true);
     setShowAutocomplete(false);
+    onChange([...locCode, country.key]);
   };
 
   const handleRemove = (index) => {
-    setLocCode((prevLocCode) => prevLocCode.filter((_, i) => i !== index));
-    setUserInputValue((prevValues) => prevValues.filter((_, i) => i !== index));
+    const newLocCode = locCode.filter((_, i) => i !== index);
+    const newUserInputValue = userInputValue.filter((_, i) => i !== index);
+    setLocCode(newLocCode);
+    setUserInputValue(newUserInputValue);
+    onChange(newLocCode);
   };
 
-
-  const handleApply = () => {
-    setShow(false);
-    const inputString = userInputValue.join(", ");
-    setInputValue(inputString);
-    onChange(locCode); // Pass the updated locCode to the parent component
-    console.log(locCode);
-  };
+  // const handleApply = () => {
+  //   setShow(false);
+  //   const inputString = userInputValue.join(", ");
+  //   setInputValue(inputString);
+  //   onChange(locCode); // Pass the updated locCode to the parent component
+  //   console.log(locCode);
+  // };
 
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setShow(false);
       setShowAutocomplete(false);
+      setInputValue(userInputValue.join(", "));
     }
   };
 
@@ -85,7 +89,7 @@ export const CountriesInput = ({ placeholder, onChange }) => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [userInputValue]);
 
   const filteredCountries = countries.filter((country) =>
     country.name.toLowerCase().includes(inputValue.toLowerCase())
@@ -102,9 +106,13 @@ export const CountriesInput = ({ placeholder, onChange }) => {
         id="location"
         value={inputValue}
         placeholder={placeholder}
-        onFocus={() => setShow(true)}
+        onFocus={() => {
+          setInputValue("");
+          setShow(locCode.length > 0);
+        }}
         onChange={handleInputChange}
         className="dropdown-button"
+        autoComplete="off"
       />
       {showAutocomplete && inputValue && (
         <div className="autocomplete-list">
@@ -135,9 +143,6 @@ export const CountriesInput = ({ placeholder, onChange }) => {
             </div>
           ))}
         </div>
-        <button className="apply-button" onClick={handleApply}>
-          {t("applyB")}
-        </button>
       </div>
     </div>
   );
