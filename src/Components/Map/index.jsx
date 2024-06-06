@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GoogleMap, InfoWindow, LoadScript, Marker } from '@react-google-maps/api';
+import { GoogleMap, InfoWindow, LoadScript, Marker, DirectionsService } from '@react-google-maps/api';
 
 const containerStyle = {
   width: '100%',
@@ -22,6 +22,7 @@ const handleMapLoad = (map) => {
 const Map = ({ hotels }) => {
   const [currentLocation, setCurrentLocation] = useState(null);
   const [displayInfo, setDisplayInfo] = useState(null);
+  const [directions, setDirections] = useState(null);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -46,6 +47,14 @@ const Map = ({ hotels }) => {
   const handleMarkerClick = (i) => {
     setDisplayInfo(i);
   };
+
+  const directionCallback = (responce, status) => {
+    if (status === 'OK') {
+      setDirections(responce);
+    } else {
+      console.error('Di')
+    }
+  }
 
   return (
     <>

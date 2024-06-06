@@ -11,7 +11,7 @@ export const SearchResults = () => {
 
   return (
     <>
-      <SearchBar />
+      <SearchBar onSearch={handleSearch} /> {/* Ensure onSearch is passed */}
       <div className="search-results-container">
         <div className="filters-applied">Filters Applied</div>
         <Card hotels={filteredHotels} />
