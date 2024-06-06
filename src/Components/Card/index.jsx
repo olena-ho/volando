@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import './style.css';
 
 export const Card = ({ hotels }) => {
-  const { t, i18n } = useTranslation(['details']);
+  const { t, i18n } = useTranslation(['details', 'translation']);
   const [details, setDetails] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -47,7 +47,7 @@ export const Card = ({ hotels }) => {
             return null;
           }
 
-          const { activities = [], images = [], address = '', rating = '' } = hotelDetails;
+          const { activities = [] } = hotelDetails;
 
           return (
             <div key={index} className="hotel-card">
@@ -59,17 +59,17 @@ export const Card = ({ hotels }) => {
                   <div className="details-list">
                     <div>
                       <p>
-                        Activities: {activities.join(', ')}
+                      {t('translation:activities')}: {activities.join(', ')}
                       </p>
                     </div>
                   </div>
                 </div>
                 <div className="details-container">
                   <p className="hotel-address">
-                    {t('address')}: {hotel.address}
+                  {t('translation:address')}: {hotel.address}
                   </p>
                   <p className="hotel-rating">
-                    {t('rating')}: {hotel.rating}
+                  {t('translation:rating')}: {hotel.rating}
                   </p>
                 </div>
               </div>
