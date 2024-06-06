@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState, useMemo, useRef } from 'react';
 import {
   GoogleMap,
   InfoWindow,
@@ -34,6 +34,8 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
   const [currentLocation, setCurrentLocation] = useState(null); // State to store the current location of the user
   const [displayInfo, setDisplayInfo] = useState(null); // State to store the hotel info to display in InfoWindow
   const [directions, setDirections] = useState(null); // State to store directions
+  const [showDirections, setShowDirections] = useState(false); // State to manage whether to show directions or not
+  const mapRef = useRef(null); // Ref for the map object
 
   // Get user's current location
   useEffect(() => {
@@ -56,22 +58,29 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
     }
   }, []);
 
-  // Center map on selected hotel
+  // Center map on selected hotel with a custom zoom level
   useEffect(() => {
-    if (selectedHotel) {
-      setCurrentLocation({
-        lat: selectedHotel.location.latitude,
-        lng: selectedHotel.location.longitude,
-      });
+    if (selectedHotel && mapRef.current) {
+      const map = mapRef.current;
+      const { latitude, longitude } = selectedHotel.location;
+      map.setCenter({ lat: latitude, lng: longitude });
+      map.setZoom(12); // Set a custom zoom level
+      setShowDirections(false);
     }
   }, [selectedHotel]);
 
   // Handle marker click event
   const handleMarkerClick = (hotel) => {
     setDisplayInfo(hotel); // Show info window for the selected hotel
-    setDirections(null)}; // Clear previous directions
+  };
 
-    // Callback function for DirectionsService
+// Handle get directions click event
+const handleGetDirectionsClick = (hotel) => {
+  setShowDirections(true); // Show directions
+  setDisplayInfo(null); // Hide info window
+};
+
+  // Callback function for DirectionsService
   const directionCallback = (response, status) => {
     if (status === 'OK') {
       setDirections(response); // Store the directions response
@@ -84,14 +93,14 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
   const currentLocationMarker = useMemo(
     () =>
       currentLocation && (
-        <Marker key="currentLocation" position={currentLocation}  icon={{
+        <Marker key="currentLocation" position={currentLocation} icon={{
           url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
         }} />
       ),
     [currentLocation],
   );
 
-    // Memorized hotel markers
+  // Memorized hotel markers
   const hotelMarkers = useMemo(
     () =>
       hotels.map((hotel) => (
@@ -116,7 +125,7 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
           )}
         </Marker>
       )),
-    [hotels, displayInfo, onHotelSelect],
+    [hotels, displayInfo],
   );
 
   return (
@@ -129,12 +138,15 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
           mapContainerStyle={containerStyle}
           center={currentLocation || defaultCenter}
           zoom={10}
-          onLoad={handleMapLoad}
+          onLoad={(map) => {
+            handleMapLoad(map);
+            mapRef.current = map; // Set map ref when map is loaded
+          }}
         >
           {currentLocationMarker}
           {hotelMarkers}
 
-          {currentLocation && selectedHotel && (
+          {currentLocation && selectedHotel && showDirections && (
             <DirectionsService
               options={{
                 origin: currentLocation,

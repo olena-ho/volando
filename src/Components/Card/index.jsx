@@ -3,17 +3,18 @@ import { useTranslation } from 'react-i18next';
 import './style.css';
 
 export const Card = ({ hotels, onHotelClick }) => {
-  const { t, i18n } = useTranslation(['details', 'translation']);
-  const [details, setDetails] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const { t, i18n } = useTranslation(['details', 'translation']); // Hook for translations
+  const [details, setDetails] = useState(null); // State to store hotel details
+  const [isLoading, setIsLoading] = useState(true); // State to manage loading status
 
+  // Load hotel details based on current language
   useEffect(() => {
     const loadDetails = async () => {
       try {
         const response = await fetch(`/locales/${i18n.language}/details.json`);
         const data = await response.json();
         console.log('Loaded details:', data);
-        setDetails(data);
+        setDetails(data);  // Set details state
       } catch (error) {
         console.error('Error loading details:', error);
       } finally {
@@ -22,8 +23,9 @@ export const Card = ({ hotels, onHotelClick }) => {
     };
 
     loadDetails();
-  }, [i18n.language]);
+  }, [i18n.language]); // Re-fetch details when language changes 
 
+  // Log details state updates
   useEffect(() => {
     console.log('Details state updated:', details);
   }, [details]);

@@ -6,10 +6,11 @@ import './style.css';
 import { Card } from '../../components/Card';
 
 export const SearchResults = () => {
-  const location = useLocation();
-  const filteredHotels = location.state?.filteredHotels || [];
-  const [selectedHotel, setSelectedHotel] = useState(null);
+  const location = useLocation(); // Hook to access location object
+  const filteredHotels = location.state?.filteredHotels || []; // Retrieve filtered hotels from location state or set to empty array
+  const [selectedHotel, setSelectedHotel] = useState(null); // State to store selected hotel
 
+  // Handle hotel click event
   const handleHotelClick = (hotel) => {
     setSelectedHotel(hotel);
   };
