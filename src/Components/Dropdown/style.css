@@ -52,6 +52,7 @@
   overflow-y: auto;
   width: max-content;
   min-width: 200px;
+  max-width: 300px;
   border-radius: 5px;
   border: 1px solid #ddd;
 }
