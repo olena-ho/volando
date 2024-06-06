@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import './style.css';
+import "./style.css";
 
 export const Dropdown = ({ title, options, onChange }) => {
   const { t, i18n } = useTranslation();
@@ -12,11 +12,11 @@ export const Dropdown = ({ title, options, onChange }) => {
 
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
-    setCheckedOptions(prev => {
-      const newCheckedOptions = checked 
+    setCheckedOptions((prev) => {
+      const newCheckedOptions = checked
         ? [...prev, name]
-        : prev.filter(option => option !== name);
-        setTimeout(() => onChange(newCheckedOptions), 0);
+        : prev.filter((option) => option !== name);
+      setTimeout(() => onChange(newCheckedOptions), 0);
       return newCheckedOptions;
     });
   };
@@ -33,9 +33,9 @@ export const Dropdown = ({ title, options, onChange }) => {
   };
 
   useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -44,8 +44,8 @@ export const Dropdown = ({ title, options, onChange }) => {
       <button className="dropdown-button" onClick={toggleDropdown}>
         {title} &#9662;
       </button>
-      <div className={`dropdown-content ${show ? 'show' : ''}`}>
-        {options.map(option => (
+      <div className={`dropdown-content ${show ? "show" : ""}`}>
+        {options.map((option) => (
           <label className="checkbox-label" key={option.key}>
             <input
               type="checkbox"
@@ -56,7 +56,9 @@ export const Dropdown = ({ title, options, onChange }) => {
             {option.value}
           </label>
         ))}
-        <button className="apply-button" onClick={handleApply}>{t("applyB")}</button>
+        <button className="apply-button" onClick={handleApply}>
+          {t("applyB")}
+        </button>
       </div>
     </div>
   );
