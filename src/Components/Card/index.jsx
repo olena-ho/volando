@@ -31,7 +31,6 @@ export const Card = ({ hotels, onHotelClick }) => {
   }, [details]);
 
   return (
-    <section>
       <div className="container-card">
         {hotels.map((hotel, index) => {
           if (isLoading) {
@@ -83,6 +82,5 @@ export const Card = ({ hotels, onHotelClick }) => {
           );
         })}
       </div>
-    </section>
   );
 };
