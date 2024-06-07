@@ -4,6 +4,7 @@
   gap: 10px; }
 
   .hotel-card {
+    position: relative;
     display: flex;
     flex-direction: row; 
     border: 1px solid #ccc;
@@ -92,3 +93,8 @@ border-radius: 40px;
   }
 }
 
+.favorite-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

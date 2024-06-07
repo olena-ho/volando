@@ -6,6 +6,7 @@ import { HomePage } from "./pages/HomePage";
 import { SearchResults } from "./pages/SearchResults";
 import './i18n';
 import './global.css';
+import { Favorites } from "./pages/Favorites";
 
 
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
         path: "/search-results",
         element: <SearchResults />,
       },
+      {
+        path: "/favorites",
+        element: <Favorites />,
+      }
     ],
   },
 ]);
