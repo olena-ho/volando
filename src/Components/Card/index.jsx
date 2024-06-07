@@ -76,7 +76,10 @@ export const Card = ({ hotels, onHotelClick }) => {
                   <p className="hotel-rating">
                   {t('translation:ratingP')}: {hotel.rating}
                   </p>
-                </div>
+                </div>      
+              </div>
+              <div className="favorite-container">
+              <img src="/favorites.png" alt="Favorite Icon" className="favorite-icon" width="20" height="20" />
               </div>
             </div>
           );

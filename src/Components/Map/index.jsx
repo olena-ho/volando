@@ -4,14 +4,15 @@ import {
   InfoWindow,
   LoadScript,
   Marker,
-  DirectionsService,
-  DirectionsRenderer,
 } from '@react-google-maps/api';
+import { MapSideBar } from '../MapSideBar';
+import './style.css'; // Import styles
+import { use } from 'i18next';
 
 // Container style for the Google Map
 const containerStyle = {
   width: '100%',
-  height: '100%',
+  height: '100vh',
 };
 
 // Default center location for the map
@@ -35,6 +36,7 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
   const [displayInfo, setDisplayInfo] = useState(null); // State to store the hotel info to display in InfoWindow
   const [directions, setDirections] = useState(null); // State to store directions
   const [showDirections, setShowDirections] = useState(false); // State to manage whether to show directions or not
+  const [isLargeMap, setIsLargeMap] = useState(false); // State to manage map size
   const mapRef = useRef(null); // Ref for the map object
 
   // Get user's current location
@@ -65,28 +67,13 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
       const { latitude, longitude } = selectedHotel.location;
       map.setCenter({ lat: latitude, lng: longitude });
       map.setZoom(12); // Set a custom zoom level
-      setShowDirections(false);
     }
   }, [selectedHotel]);
 
   // Handle marker click event
   const handleMarkerClick = (hotel) => {
     setDisplayInfo(hotel); // Show info window for the selected hotel
-  };
-
-// Handle get directions click event
-const handleGetDirectionsClick = (hotel) => {
-  setShowDirections(true); // Show directions
-  setDisplayInfo(null); // Hide info window
-};
-
-  // Callback function for DirectionsService
-  const directionCallback = (response, status) => {
-    if (status === 'OK') {
-      setDirections(response); // Store the directions response
-    } else {
-      console.error('Directions request failed due to ' + status);
-    }
+    onHotelSelect(hotel);
   };
 
   // Memorized current location marker
@@ -113,7 +100,13 @@ const handleGetDirectionsClick = (hotel) => {
           onClick={() => handleMarkerClick(hotel)}
         >
           {displayInfo === hotel && (
-            <InfoWindow onCloseClick={() => setDisplayInfo(null)}>
+            <InfoWindow
+              position={{
+                lat: hotel.location.latitude,
+                lng: hotel.location.longitude,
+              }}
+              onCloseClick={() => setDisplayInfo(null)}
+            >
               <div>
                 <h3>{hotel.name}</h3>
                 <p>{`${hotel.description.substring(0, 12)}...`}</p>
@@ -125,7 +118,7 @@ const handleGetDirectionsClick = (hotel) => {
           )}
         </Marker>
       )),
-    [hotels, displayInfo],
+    [hotels, displayInfo, onHotelSelect],
   );
 
   return (
@@ -134,34 +127,35 @@ const handleGetDirectionsClick = (hotel) => {
         googleMapsApiKey="AIzaSyBiJG97_IYoMHOFyLB-JmGfXWGQa9ocJ24"
         onError={handleLoadError}
       >
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={currentLocation || defaultCenter}
-          zoom={10}
-          onLoad={(map) => {
-            handleMapLoad(map);
-            mapRef.current = map; // Set map ref when map is loaded
-          }}
-        >
-          {currentLocationMarker}
-          {hotelMarkers}
-
-          {currentLocation && selectedHotel && showDirections && (
-            <DirectionsService
-              options={{
-                origin: currentLocation,
-                destination: {
-                  lat: selectedHotel.location.latitude,
-                  lng: selectedHotel.location.longitude,
-                },
-                travelMode: 'DRIVING',
-              }}
-              callback={directionCallback}
-            />
+        <div className={`map-container ${isLargeMap ? 'large' : ''}`}>
+          {isLargeMap && (
+            <div className="map-sidebar">
+              <MapSideBar
+                currentLocation={currentLocation}
+                selectedHotel={selectedHotel}
+                showDirections={showDirections}
+                setShowDirections={setShowDirections}
+                directions={directions}
+                setDirections={setDirections}
+              />
+            </div>
           )}
-
-          {directions && <DirectionsRenderer directions={directions} />}
-        </GoogleMap>
+          <div className="map-content">
+            <GoogleMap
+              mapContainerStyle={containerStyle}
+              center={currentLocation || defaultCenter}
+              zoom={10}
+              onLoad={(map) => {
+                handleMapLoad(map);
+                mapRef.current = map; // Set map ref when map is loaded
+              }}
+              onClick={() => setIsLargeMap(!isLargeMap)} // Toggle map size on click
+            >
+              {currentLocationMarker}
+              {hotelMarkers}
+            </GoogleMap>
+          </div>
+        </div>
       </LoadScript>
     </>
   );

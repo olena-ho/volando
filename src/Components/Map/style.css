@@ -1,0 +1,36 @@
+.map-container {
+  display: flex;
+  height: 100vh;
+}
+
+.map-container.large .map-sidebar {
+ display: block;
+}
+
+.map-sidebar {
+  display: none;
+  width: 300px;
+  background: #f9f9f9;
+  overflow: auto;
+  padding: 20px;
+}
+
+.map-container.large .map {
+  width: 80%;
+}
+
+.map-content {
+  flex-grow: 1;
+}
+
+.map {
+  width: 80%;
+}
+
+.map-sidebar.small {
+  display: none;
+}
+
+.container-bar {
+  padding: 10px;
+}
