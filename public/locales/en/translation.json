@@ -30,5 +30,6 @@
   "home-text1": "choose your favorite activities...",
   "home-text2": "choose a destination...",
   "home-text3": "enjoy your perfect adventure!",
-  "any-price": "any price"
+  "any-price": "any price",
+  "alert-param": "Please select at least one country or activity"  
 }

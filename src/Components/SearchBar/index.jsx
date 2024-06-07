@@ -36,7 +36,7 @@ export const SearchBar = ({ onSearch }) => {
     const { activities, locCode, comfort, price, rating } = filters;
 
     if (activities.length === 0 && locCode.length === 0) {
-      alert("Please select at least one activity or a location.");
+      alert(t("alert-param"));
       return;
     }
 
