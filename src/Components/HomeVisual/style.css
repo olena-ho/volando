@@ -1,14 +1,40 @@
 .main-page__visual {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   padding-top: 45px;
 }
 
+.visual-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .main-page__image {
   height: 200px;
 }
 
+.main-page__image:last-child {
+  padding-right: 60px;
+  height: 220px;
+}
+
 .main-page__image--s {
   height: 70px;
+  padding-right: 20px;
+}
+
+.visual-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.visual-text__item {
+  width: 234px;
+  text-align: center;
+  font-weight: 600;
+  color: darkgray;
+}
+
+.visual-text__item:last-child {
+  padding-right: 20px;
 }
