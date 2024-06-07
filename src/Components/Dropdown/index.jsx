@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./style.css";
+import icon from "./img/down-icon.png"
 
 export const Dropdown = ({ title, options, onChange }) => {
   const [show, setShow] = useState(false);
@@ -36,7 +37,7 @@ export const Dropdown = ({ title, options, onChange }) => {
   return (
     <div className="dropdown-wrapper" ref={dropdownRef}>
       <button className="dropdown-button" onClick={toggleDropdown}>
-        {title} &#9662;
+        {title} <img src={icon} alt="down-icon" className="down-icon"/> 
       </button>
       <div className={`dropdown-content ${show ? "show" : ""}`}>
         {options.map((option) => (
