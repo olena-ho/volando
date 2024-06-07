@@ -33,25 +33,40 @@ export const SearchBar = ({ onSearch }) => {
   };
 
   const handleSearch = () => {
+    const { activities, locCode, comfort, price, rating } = filters;
+
+    if (activities.length === 0 && locCode.length === 0) {
+      alert("Please select at least one activity or a location.");
+      return;
+    }
+
     const filteredHotels = hotels.filter((hotel) => {
-      const matchesActivities = filters.activities.every((activity) =>
-        hotel.activities.includes(activity)
-      );
-      const matchesComfort = filters.comfort.every((comfort) =>
-        hotel.comfort.includes(comfort)
-      );
-      const matchesPrice = filters.price.includes(hotel.price);
+      const matchesActivities =
+        activities.length === 0 ||
+        activities.some((activity) => hotel.activities.includes(activity));
+
+      const matchesLocation =
+        locCode.length === 0 || locCode.includes(hotel["loc-code"]);
+
+      const matchesComfort =
+        comfort.length === 0 || comfort.some((c) => hotel.comfort.includes(c));
+
+      const matchesPrice =
+        price.length === 0 ||
+        price.includes("any-price") ||
+        price.includes(hotel.price);
+
       const matchesRating =
-        filters.rating.includes("any") ||
-        filters.rating.some((rating) => hotel.rating >= parseFloat(rating));
-      const matchesLocation = filters.locCode.includes(hotel["loc-code"]);
+        rating.length === 0 ||
+        rating.includes("any") ||
+        rating.some((r) => hotel.rating >= parseFloat(r));
 
       return (
         matchesActivities &&
+        matchesLocation &&
         matchesComfort &&
         matchesPrice &&
-        matchesRating &&
-        matchesLocation
+        matchesRating
       );
     });
 
@@ -95,6 +110,7 @@ export const SearchBar = ({ onSearch }) => {
       <Dropdown
         title={t("priceP")}
         options={[
+          { key: "any-price", value: t("any-price") },
           { key: "budget", value: t("budget") },
           { key: "midrange", value: t("midrange") },
           { key: "luxury", value: t("luxury") },
@@ -106,10 +122,10 @@ export const SearchBar = ({ onSearch }) => {
       <Dropdown
         title={t("ratingP")}
         options={[
+          { key: "any", value: t("any") },
           { key: "4.5", value: t("4.5") },
           { key: "4", value: t("4") },
           { key: "3", value: t("3") },
-          { key: "any", value: t("any") },
         ]}
         onChange={(newCheckedOptions) =>
           handleFilterChange("rating", newCheckedOptions)
