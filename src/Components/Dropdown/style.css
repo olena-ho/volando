@@ -14,10 +14,17 @@
   border-radius: 5px;
   padding: 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .dropdown-button:hover {
   color: #00aaff;
+}
+
+.down-icon {
+  margin-left: 10px;
+  width: 12px;
 }
 
 .autocomplete-list {
@@ -52,6 +59,7 @@
   overflow-y: auto;
   width: max-content;
   min-width: 200px;
+  max-width: 300px;
   border-radius: 5px;
   border: 1px solid #ddd;
 }

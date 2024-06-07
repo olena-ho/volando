@@ -1,26 +1,27 @@
 .container-card {
   display: flex;
   flex-direction: column;
-  gap: 10px; }
+  gap: 10px;
+}
 
-  .hotel-card {
-    position: relative;
-    display: flex;
-    flex-direction: row; 
-    border: 1px solid #ccc;
-    padding: 10px;
-    gap: 10px; 
-    max-width: 700px; /* Limiting the width */
-    width: 100%; /* Ensuring responsiveness */
-  }
+.hotel-card {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 10px;
+  max-width: 700px; /* Limiting the width */
+  width: 100%; /* Ensuring responsiveness */
+  transition: transform 0.2s;
+}
 
-  .hotel-card:hover,
-  .hotel-card:focus {
-cursor: pointer;
-background-color: cornflowerblue;
-border-radius: 40px;
-
-  }
+.hotel-card:hover,
+.hotel-card:focus {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.01);
+}
 
 .hotel-info {
   display: flex;
@@ -58,7 +59,6 @@ border-radius: 40px;
 .hotel-card img {
   max-width: 150px;
   height: auto;
-
 }
 
 .hotel-card h2 {

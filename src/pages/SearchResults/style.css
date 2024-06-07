@@ -1,11 +1,14 @@
 .search-results-container {
   display: flex;
   height: 100%;
+  gap: 10px;
 }
 
 .filters-applied {
   flex-basis: 20%;
-  background-color: antiquewhite;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #ddd;
+  padding: 10px;
 }
 .search-cards {
   flex-basis: 40%;
@@ -14,4 +17,7 @@
 .map-container {
   width: 100%;
   height: 465px;
+  border-radius: 10px 0 0 10px;
+  position: sticky;
+  top: 0;
 }
