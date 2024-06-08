@@ -79,6 +79,7 @@ export const CountriesInput = ({ placeholder, onChange }) => {
     };
   }, [userInputValue]);
 
+  //enabling autocomplete when a user types smth into the input regardless of the letter case
   const filteredCountries = countries.filter((country) =>
     country.name.toLowerCase().includes(inputValue.toLowerCase())
   );
@@ -97,6 +98,10 @@ export const CountriesInput = ({ placeholder, onChange }) => {
     }
   };
 
+  const handleHover = () => {
+    const inputElement = document.getElementById("location");
+  };
+
   return (
     <div className="dropdown-wrapper" ref={dropdownRef}>
       <input
@@ -112,6 +117,8 @@ export const CountriesInput = ({ placeholder, onChange }) => {
         onKeyDown={handleKeyDown} 
         className="dropdown-button"
         autoComplete="off"
+        onMouseEnter={() => handleHover(true)}
+        onMouseLeave={() => handleHover(false)}
       />
       {showAutocomplete && inputValue && (
         <div className="autocomplete-list">

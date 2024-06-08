@@ -1,5 +1,5 @@
 {
-  "activitiesP": "Aktivity / Koníčky",
+  "activitiesP": "Aktivity / Koníčky *",
   "comfortP": "Pohodlí",
   "priceP": "Cena",
   "ratingP": "Hodnocení od hostů",
@@ -31,5 +31,5 @@
   "home-text2": "vyber si destinaci...",
   "home-text3": "užij si dokonalé dobrodružství!",
   "any-price": "libovolná cena",
-  "alert-param": "Vyber, prosím, alespoň jednu zemi nebo aktivitu"  
+  "alert-param": "Vyber, prosím, alespoň jednu aktivitu"  
 }

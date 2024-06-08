@@ -1,4 +1,3 @@
-// Dropdown.js
 import React, { useState, useEffect, useRef } from "react";
 import "./style.css";
 import icon from "./img/down-icon.png";

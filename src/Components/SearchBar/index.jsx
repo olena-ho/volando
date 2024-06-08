@@ -104,10 +104,6 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
 
   const navigate = useNavigate();
 
-  // const onSearch = (filteredHotels) => {
-  //   navigate("/search-results", { state: { filteredHotels } });
-  // };
-
   return (
     <div className="search-bar-wrapper">
       <Dropdown

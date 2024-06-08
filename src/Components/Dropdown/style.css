@@ -27,6 +27,11 @@
   width: 12px;
 }
 
+.dropdown-wrapper input.dropdown-button:hover::placeholder {
+  color: #00aaff;
+}
+
+
 .autocomplete-list {
   position: absolute;
   background-color: white;
