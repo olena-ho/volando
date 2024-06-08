@@ -1,8 +1,10 @@
+// Dropdown.js
 import React, { useState, useEffect, useRef } from "react";
 import "./style.css";
-import icon from "./img/down-icon.png"
+import icon from "./img/down-icon.png";
+import { DropdownContent } from "../DropdownContent";
 
-export const Dropdown = ({ title, options, onChange }) => {
+export const Dropdown = ({ title, options, onChange, large = false }) => {
   const [show, setShow] = useState(false);
   const [checkedOptions, setCheckedOptions] = useState([]);
   const dropdownRef = useRef(null);
@@ -18,7 +20,6 @@ export const Dropdown = ({ title, options, onChange }) => {
       setTimeout(() => onChange(newCheckedOptions), 0);
       return newCheckedOptions;
     });
-    console.log(checkedOptions);
   };
 
   const handleClickOutside = (event) => {
@@ -39,19 +40,13 @@ export const Dropdown = ({ title, options, onChange }) => {
       <button className="dropdown-button" onClick={toggleDropdown}>
         {title} <img src={icon} alt="down-icon" className="down-icon"/> 
       </button>
-      <div className={`dropdown-content ${show ? "show" : ""}`}>
-        {options.map((option) => (
-          <label className="checkbox-label" key={option.key}>
-            <input
-              type="checkbox"
-              name={option.key}
-              checked={checkedOptions.includes(option.key)}
-              onChange={handleCheckboxChange}
-            />
-            {option.value}
-          </label>
-        ))}
-      </div>
+      <DropdownContent
+        options={options}
+        checkedOptions={checkedOptions}
+        onCheckboxChange={handleCheckboxChange}
+        show={show}
+        large={large}
+      />
     </div>
   );
 };

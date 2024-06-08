@@ -1,20 +1,18 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { HomeVisual } from "../../components/HomeVisual";
 import { SearchBar } from "../../components/SearchBar";
 import "./style.css";
+import { SearchResults } from "../../components/SearchResults";
 
 export const HomePage = () => {
-  // const navigate = useNavigate();
-
-  // const handleSearchHP = (filteredHotels) => {
-  //   navigate("/search-results", { state: { filteredHotels } });
-  // };
-
+  const [foundHotelsIds, setFoundHotelsIds] = useState([]);
+  console.log(foundHotelsIds);
   return (
     <div className="main-page__container">
-      <SearchBar />
-      <HomeVisual />
+    
+      <SearchBar onSearch={setFoundHotelsIds} />
+      {foundHotelsIds.length > 0 ?  
+      <SearchResults foundHotelsIds={foundHotelsIds} /> : <HomeVisual />}
     </div>
   );
 };

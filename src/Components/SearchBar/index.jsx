@@ -6,7 +6,7 @@ import "./style.css";
 import { CountriesInput } from "../CountriesInput";
 import hotels from "../../api/hotels";
 
-export const SearchBar = () => {
+export const SearchBar = ({onSearch}) => {
   const { t, i18n } = useTranslation();
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -50,7 +50,7 @@ export const SearchBar = () => {
         locCode.length === 0 || locCode.includes(hotel["loc-code"]);
 
       const matchesComfort =
-        comfort.length === 0 || comfort.some((c) => hotel.comfort.includes(c));
+        comfort.length === 0 || comfort.some((c) => hotel.comfort.includes(c)); //use some here instead of every because we currently don't have a large amount of hotels and we want to show more results
 
       const matchesPrice =
         price.length === 0 ||
@@ -72,15 +72,15 @@ export const SearchBar = () => {
     });
 
     console.log(filteredHotels);
-    onSearch(filteredHotels);
+    onSearch(filteredHotels.map((hotel) => hotel.id));
   };
 
   const navigate = useNavigate();
 
-  const onSearch = (filteredHotels) => {
-    navigate("/search-results", { state: { filteredHotels } });
-  };
-  
+  // const onSearch = (filteredHotels) => {
+  //   navigate("/search-results", { state: { filteredHotels } });
+  // };
+
   return (
     <div className="search-bar-wrapper">
       <Dropdown
@@ -95,6 +95,7 @@ export const SearchBar = () => {
         onChange={(newCheckedOptions) =>
           handleFilterChange("activities", newCheckedOptions)
         }
+        large={true}
       />
       <CountriesInput
         placeholder={t("locationP")}
