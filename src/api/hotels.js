@@ -71,7 +71,7 @@ const hotels = [
       'A four-star hotel ideal for golf enthusiasts, offering rooms with a view of the championship course. The resort provides a rich breakfast buffet, free Wi-Fi, parking, and pet-friendly accommodations.',
     comfort: ['wifi', 'parking', 'pets', 'restaurant', 'gym', 'club rentals'],
     web: 'https://www.golfolomouc.cz/en/hotel/hotel',
-    images: ['../ass'],
+    images: [],
   },
   {
     id: 4,

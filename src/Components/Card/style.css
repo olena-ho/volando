@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 50vw;
 }
 
 .hotel-card {
@@ -12,8 +13,6 @@
   border-radius: 10px;
   padding: 10px;
   gap: 10px;
-  max-width: 700px;
-  /* Limiting the width */
   width: 100%;
   /* Ensuring responsiveness */
   transition: transform 0.2s;

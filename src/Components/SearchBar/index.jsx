@@ -77,6 +77,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
       const filterResult = getFilterResult(hotel, filters);
       return Object.values(filterResult).every((value) => value === true);
     });
+    
     const alternativeHotels = hotels.filter((hotel) => {
       const filterResult = getFilterResult(hotel, filters);
       // const newFilterResult = Object.entries(filterResult).reduce(
