@@ -7,11 +7,13 @@ import logo from "./img/logo.svg";
 import favorites from "./img/heart.svg";
 import info from "./img/info-2.png";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const { i18n } = useTranslation();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [currentLang, setCurrentLang] = useState("cs");
+  const navigate = useNavigate();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -35,6 +37,8 @@ export const Header = () => {
         return cs;
     }
   };
+
+
 
   return (
     <div className="header">
@@ -73,7 +77,7 @@ export const Header = () => {
             </div>
           )}
         </div>
-        <img src={favorites} alt="favorites" className="header__icon" />
+        <img src={favorites} alt="favorites" onClick={() => navigate("/favorites")} className="header__icon" />
         <img src={info} alt="info" className="header__icon" />
       </div>
     </div>

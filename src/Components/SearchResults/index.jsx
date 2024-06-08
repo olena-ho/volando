@@ -15,21 +15,19 @@ export const SearchResults = ({ foundHotelsIds, alternativeHotelsFound }) => {
   );
 
   return (
-    <>
-      <div className="search-results-container">
-        <Card
+    <div className="search-results-container">
+      <Card
+        hotels={filteredHotels}
+        alternativeHotelsFound={alternativeHotelsFound}
+        onHotelClick={setSelectedHotel}
+      />
+      <div className="map-container">
+        <Map
           hotels={filteredHotels}
-          alternativeHotelsFound={alternativeHotelsFound}
-          onHotelClick={setSelectedHotel}
+          selectedHotel={selectedHotel}
+          onHotelSelect={setSelectedHotel}
         />
-        <div className="map-container">
-          <Map
-            hotels={filteredHotels}
-            selectedHotel={selectedHotel}
-            onHotelSelect={setSelectedHotel}
-          />
-        </div>
       </div>
-    </>
+    </div>
   );
 };
