@@ -11,7 +11,7 @@ import { use } from 'i18next';
 
 // Container style for the Google Map
 const containerStyle = {
-  width: '100%',
+  width: '300px',
   height: '100vh',
 };
 
@@ -123,6 +123,7 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
 
   return (
     <>
+
       <LoadScript
         googleMapsApiKey="AIzaSyBiJG97_IYoMHOFyLB-JmGfXWGQa9ocJ24"
         onError={handleLoadError}
