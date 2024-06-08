@@ -5,15 +5,15 @@ import { SearchBar } from "../../components/SearchBar";
 import "./style.css";
 
 export const HomePage = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleSearch = (filteredHotels) => {
-    navigate("/search-results", { state: { filteredHotels } });
-  };
+  // const handleSearchHP = (filteredHotels) => {
+  //   navigate("/search-results", { state: { filteredHotels } });
+  // };
 
   return (
     <div className="main-page__container">
-      <SearchBar onSearch={handleSearch} />
+      <SearchBar />
       <HomeVisual />
     </div>
   );
