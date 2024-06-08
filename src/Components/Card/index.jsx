@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './style.css';
 
-export const Card = ({ hotels, onHotelClick }) => {
+export const Card = ({ hotels, onHotelClick,onAddToFavorites }) => {
   const { t, i18n } = useTranslation(['details', 'translation']); // Hook for translations
   const [details, setDetails] = useState(null); // State to store hotel details
   const [isLoading, setIsLoading] = useState(true); // State to manage loading status
@@ -30,13 +30,7 @@ export const Card = ({ hotels, onHotelClick }) => {
     console.log('Details state updated:', details);
   }, [details]);
 
-  const onAddToFavorites = (id) => {
-    const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    console.log(storedFavorites);
-    const newFavorites = storedFavorites.includes(id) ? storedFavorites.filter(item => item !== id) : [...storedFavorites, id];
-    localStorage.setItem('favorites', JSON.stringify(newFavorites));
 
-  };
 
   return (
     <div className="container-card">
