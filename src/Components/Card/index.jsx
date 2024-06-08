@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './style.css';
 
-export const Card = ({ hotels, onHotelClick }) => {
+export const Card = ({ hotels, onHotelClick, alternativeHotelsFound }) => {
   const { t, i18n } = useTranslation(['details', 'translation']); // Hook for translations
   const [details, setDetails] = useState(null); // State to store hotel details
   const [isLoading, setIsLoading] = useState(true); // State to manage loading status
@@ -31,7 +31,8 @@ export const Card = ({ hotels, onHotelClick }) => {
   }, [details]);
 
   return (
-      <div className="container-card">
+    <div className="container-card">
+      {alternativeHotelsFound ? <p>These are alternatives</p> : null}
         {hotels.map((hotel, index) => {
           if (isLoading) {
             return <p key={index}>Loading...</p>;
@@ -42,7 +43,6 @@ export const Card = ({ hotels, onHotelClick }) => {
           }
 
           const hotelDetails = details[hotel.name];
-          console.log('Hotel details:', hotel.name, hotelDetails);
 
           if (!hotelDetails) {
             return null;

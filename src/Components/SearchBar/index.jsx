@@ -6,7 +6,39 @@ import "./style.css";
 import { CountriesInput } from "../CountriesInput";
 import hotels from "../../api/hotels";
 
-export const SearchBar = ({onSearch}) => {
+const getFilterResult = (hotel, filters) => {
+  const { activities, locCode, comfort, price, rating } = filters;
+
+  const matchesActivities = activities.some((activity) =>
+    hotel.activities.includes(activity)
+  );
+
+  const matchesLocation =
+    locCode.length === 0 || locCode.includes(hotel["loc-code"]);
+
+  const matchesComfort =
+    comfort.length === 0 || comfort.every((c) => hotel.comfort.includes(c));
+
+  const matchesPrice =
+    price.length === 0 ||
+    price.includes("any-price") ||
+    price.includes(hotel.price);
+
+  const matchesRating =
+    rating.length === 0 ||
+    rating.includes("any") ||
+    rating.some((r) => hotel.rating >= parseFloat(r));
+
+  return {
+    matchesActivities,
+    matchesLocation,
+    matchesComfort,
+    matchesPrice,
+    matchesRating,
+  };
+};
+
+export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
   const { t, i18n } = useTranslation();
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -36,43 +68,37 @@ export const SearchBar = ({onSearch}) => {
   const handleSearch = () => {
     const { activities, locCode, comfort, price, rating } = filters;
 
-    if (activities.length === 0 && locCode.length === 0) {
+    if (activities.length === 0) {
       alert(t("alert-param"));
       return;
     }
 
     const filteredHotels = hotels.filter((hotel) => {
-      const matchesActivities =
-        activities.length === 0 ||
-        activities.some((activity) => hotel.activities.includes(activity));
+      const filterResult = getFilterResult(hotel, filters);
+      return Object.values(filterResult).every((value) => value === true);
+    });
+    const alternativeHotels = hotels.filter((hotel) => {
+      const filterResult = getFilterResult(hotel, filters);
+      // const newFilterResult = Object.entries(filterResult).reduce(
+      //   (acc, [key, value]) => {
+      //     if (value) acc[key] = value;
+      //     return acc;
+      //   },
+      //   {}
+      // );
 
-      const matchesLocation =
-        locCode.length === 0 || locCode.includes(hotel["loc-code"]);
-
-      const matchesComfort =
-        comfort.length === 0 || comfort.some((c) => hotel.comfort.includes(c)); //use some here instead of every because we currently don't have a large amount of hotels and we want to show more results
-
-      const matchesPrice =
-        price.length === 0 ||
-        price.includes("any-price") ||
-        price.includes(hotel.price);
-
-      const matchesRating =
-        rating.length === 0 ||
-        rating.includes("any") ||
-        rating.some((r) => hotel.rating >= parseFloat(r));
-
-      return (
-        matchesActivities &&
-        matchesLocation &&
-        matchesComfort &&
-        matchesPrice &&
-        matchesRating
-      );
+      return filterResult.matchesActivities;
     });
 
-    console.log(filteredHotels);
-    onSearch(filteredHotels.map((hotel) => hotel.id));
+    setAlternativeHotelsFound(filteredHotels.length === 0);
+
+    console.log(`Perfect: ${filteredHotels}`);
+    console.log(`Alternative: ${alternativeHotels}`);
+    onSearch(
+      (filteredHotels.length > 0 ? filteredHotels : alternativeHotels).map(
+        (hotel) => hotel.id
+      )
+    );
   };
 
   const navigate = useNavigate();
