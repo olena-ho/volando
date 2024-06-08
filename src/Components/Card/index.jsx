@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './style.css';
 
-export const Card = ({ hotels, onHotelClick,onAddToFavorites }) => {
+export const Card = ({ hotels, onHotelClick, onRemoveFromFavorites }) => {
   const { t, i18n } = useTranslation(['details', 'translation']); // Hook for translations
   const [details, setDetails] = useState(null); // State to store hotel details
   const [isLoading, setIsLoading] = useState(true); // State to manage loading status
@@ -30,7 +30,18 @@ export const Card = ({ hotels, onHotelClick,onAddToFavorites }) => {
     console.log('Details state updated:', details);
   }, [details]);
 
+  const onAddToFavorites = (id) => {
+    const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const newFavorites = storedFavorites.includes(id)
+      ? storedFavorites.filter((item) => item !== id)
+      : [...storedFavorites, id];
+    localStorage.setItem('favorites', JSON.stringify(newFavorites));
+  };
 
+  const isFavorite = (id) => {
+    const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    return storedFavorites.includes(id);
+  };
 
   return (
     <div className="container-card">
@@ -81,14 +92,21 @@ export const Card = ({ hotels, onHotelClick,onAddToFavorites }) => {
               </div>
             </div>
             <div className="favorite-container">
-              <img
-                src="/favorites.png"
-                alt="Favorite Icon"
-                onClick={() => onAddToFavorites(hotel.id)}
-                className="favorite-icon"
-                width="20"
-                height="20"
-              />
+              <button
+                className={`add-heart ${
+                  isFavorite(hotel.id) ? 'active' : 'inactive'
+                }`}
+                onClick={
+(e) => {
+  e.stopPropagation();
+  if (isFavorite(hotel.id)) {
+    onRemoveFromFavorites(hotel.id);
+  } else {
+    onAddToFavorites(hotel.id);
+  }
+}
+                }
+              ></button>
             </div>
           </div>
         );

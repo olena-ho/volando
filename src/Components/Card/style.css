@@ -5,14 +5,17 @@
 }
 
 .hotel-card {
+  position: relative;
   display: flex;
   flex-direction: row;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 10px;
   gap: 10px;
-  max-width: 700px; /* Limiting the width */
-  width: 100%; /* Ensuring responsiveness */
+  max-width: 700px;
+  /* Limiting the width */
+  width: 100%;
+  /* Ensuring responsiveness */
   transition: transform 0.2s;
 }
 
@@ -66,7 +69,6 @@
   font-size: 1.5em;
 }
 
-/* Респонсивні стилі для екранів меншого розміру */
 @media (max-width: 768px) {
   .hotel-card {
     flex-direction: column;
@@ -82,7 +84,6 @@
   }
 }
 
-/* Респонсивні стилі для екранів дуже маленького розміру */
 @media (max-width: 480px) {
   .hotel-card h2 {
     font-size: 1em;
@@ -97,4 +98,25 @@
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.add-heart {
+  position: relative;
+}
+
+.add-heart::before {
+  content: url(../../../public/favorites.png);
+  animation: zoomIn 0.5s ease;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center center;
+}
+
+.add-heart.active:hover::before {
+  content: '❤️';
+  animation: zoomIn 0.5s ease;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center center;
+
 }
