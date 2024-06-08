@@ -13,11 +13,13 @@ export const SearchResults = ({foundHotelsIds}) => {
 
   const filteredHotels = hotelsData.filter((hotel) => foundHotelsIds.includes(hotel.id));
 
+
   return (
     <>
       <div className="search-results-container">
         <div className="filters-applied">Filters Applied</div>
-        <Card hotels={filteredHotels} onHotelClick={setSelectedHotel} />
+        <Card hotels={filteredHotels} onHotelClick={setSelectedHotel}
+/>
         <div className="map-container">
           <Map
             hotels={filteredHotels}
