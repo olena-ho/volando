@@ -129,7 +129,7 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
         onError={handleLoadError}
       >
         <div className={`map-container ${isLargeMap ? 'large' : ''}`}>
-          {isLargeMap && (
+          
             <div className="map-sidebar">
               <MapSideBar
                 currentLocation={currentLocation}
@@ -140,7 +140,7 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
                 setDirections={setDirections}
               />
             </div>
-          )}
+ 
           <div className="map-content">
             <GoogleMap
               mapContainerStyle={containerStyle}

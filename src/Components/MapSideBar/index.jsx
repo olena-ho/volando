@@ -1,32 +1,7 @@
 import React, { useEffect } from 'react';
-import {
-  DirectionsService,
-  DirectionsRenderer,
-} from '@react-google-maps/api';
 import '../Map/style.css';
 
-export const MapSideBar = ({ currentLocation, selectedHotel, showDirections, setShowDirections, directions, setDirections }) => {
-
-  // Handle get directions click event
-  const handleGetDirectionsClick = () => {
-    setShowDirections(true); // Show directions
-  };
-
-  // Callback function for DirectionsService
-  const directionCallback = (response, status) => {
-    if (status === 'OK') {
-      setDirections(response); // Store the directions response
-    } else {
-      console.error('Directions request failed due to ' + status);
-    }
-  };
-
-  useEffect(() => {
-    if (showDirections && currentLocation && selectedHotel) {
-      // Trigger DirectionsService when showDirections is true
-      setDirections(null); // Reset previous directions
-    }
-  }, [showDirections, currentLocation, selectedHotel]);
+export const MapSideBar = ({ currentLocation, selectedHotel }) => {
 
   if (!selectedHotel) {
     return <div className="container-bar">Select a hotel to see route information</div>;
@@ -43,27 +18,6 @@ export const MapSideBar = ({ currentLocation, selectedHotel, showDirections, set
         <h3>End Address:</h3>
         <p>{selectedHotel.address}</p>
       </div>
-      <button onClick={handleGetDirectionsClick}>
-        Get Directions
-      </button>
-      {showDirections && (
-        <>
-          <DirectionsService
-            options={{
-              origin: currentLocation,
-              destination: {
-                lat: selectedHotel.location.latitude,
-                lng: selectedHotel.location.longitude,
-              },
-              travelMode: 'DRIVING',
-            }}
-            callback={directionCallback}
-          />
-          {directions && (
-            <DirectionsRenderer directions={directions} />
-          )}
-        </>
-      )}
     </div>
   );
 };
