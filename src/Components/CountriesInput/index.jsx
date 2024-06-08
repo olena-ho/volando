@@ -10,7 +10,7 @@ export const CountriesInput = ({ placeholder, onChange }) => {
   const [userInputValue, setUserInputValue] = useState([]);
   const [showAutocomplete, setShowAutocomplete] = useState(false);
   const [countries, setCountries] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -24,7 +24,6 @@ export const CountriesInput = ({ placeholder, onChange }) => {
         console.error(
           `No country translations found for language: ${i18n.language}`
         );
-        setIsLoading(false);
         return;
       }
 
@@ -35,20 +34,16 @@ export const CountriesInput = ({ placeholder, onChange }) => {
         })
       );
       setCountries(translatedCountries);
-      setIsLoading(false);
     };
 
     loadCountries();
   }, [i18n.language, i18n]);
 
-  // useEffect(() => {
-  //   console.log(countries);
-  // }, [countries]);
-
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
     setShowAutocomplete(true);
     setShow(false);
+    setHighlightedIndex(-1); 
   };
 
   const handleSelect = (country) => {
@@ -57,6 +52,7 @@ export const CountriesInput = ({ placeholder, onChange }) => {
     setInputValue("");
     setShow(true);
     setShowAutocomplete(false);
+    setHighlightedIndex(-1); 
     onChange([...locCode, country.key]);
   };
 
@@ -67,14 +63,6 @@ export const CountriesInput = ({ placeholder, onChange }) => {
     setUserInputValue(newUserInputValue);
     onChange(newLocCode);
   };
-
-  // const handleApply = () => {
-  //   setShow(false);
-  //   const inputString = userInputValue.join(", ");
-  //   setInputValue(inputString);
-  //   onChange(locCode); // Pass the updated locCode to the parent component
-  //   console.log(locCode);
-  // };
 
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -95,9 +83,19 @@ export const CountriesInput = ({ placeholder, onChange }) => {
     country.name.toLowerCase().includes(inputValue.toLowerCase())
   );
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  const handleKeyDown = (event) => {
+    if (event.key === "ArrowDown") {
+      setHighlightedIndex((prevIndex) =>
+        prevIndex < filteredCountries.length - 1 ? prevIndex + 1 : prevIndex
+      );
+    } else if (event.key === "ArrowUp") {
+      setHighlightedIndex((prevIndex) =>
+        prevIndex > 0 ? prevIndex - 1 : prevIndex
+      );
+    } else if (event.key === "Enter" && highlightedIndex >= 0) {
+      handleSelect(filteredCountries[highlightedIndex]);
+    }
+  };
 
   return (
     <div className="dropdown-wrapper" ref={dropdownRef}>
@@ -111,6 +109,7 @@ export const CountriesInput = ({ placeholder, onChange }) => {
           setShow(locCode.length > 0);
         }}
         onChange={handleInputChange}
+        onKeyDown={handleKeyDown} 
         className="dropdown-button"
         autoComplete="off"
       />
@@ -119,7 +118,9 @@ export const CountriesInput = ({ placeholder, onChange }) => {
           {filteredCountries.map((country, index) => (
             <div
               key={index}
-              className="autocomplete-item"
+              className={`autocomplete-item ${
+                highlightedIndex === index ? "highlighted" : ""
+              }`}
               onClick={() => handleSelect(country)}
             >
               {country.name}

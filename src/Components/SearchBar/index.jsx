@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Dropdown } from "../Dropdown";
 import "./style.css";
 import { CountriesInput } from "../CountriesInput";
 import hotels from "../../api/hotels";
 
-export const SearchBar = ({ onSearch }) => {
+export const SearchBar = () => {
   const { t, i18n } = useTranslation();
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -36,7 +37,7 @@ export const SearchBar = ({ onSearch }) => {
     const { activities, locCode, comfort, price, rating } = filters;
 
     if (activities.length === 0 && locCode.length === 0) {
-      alert("Please select at least one activity or a location.");
+      alert(t("alert-param"));
       return;
     }
 
@@ -74,6 +75,12 @@ export const SearchBar = ({ onSearch }) => {
     onSearch(filteredHotels);
   };
 
+  const navigate = useNavigate();
+
+  const onSearch = (filteredHotels) => {
+    navigate("/search-results", { state: { filteredHotels } });
+  };
+  
   return (
     <div className="search-bar-wrapper">
       <Dropdown
