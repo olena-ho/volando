@@ -13,7 +13,7 @@
   "relax": "Relaxace",
   "wifi": "Wi-Fi",
   "parking": "Parkování zdarma",
-  "pets": "Domácí zvířata povolena",
+  "pets": "Domácí mazlíčci povoleni",
   "pool": "Bazén",
   "gym": "Fitness centrum",
   "kitchen": "Kuchyň",
@@ -31,5 +31,8 @@
   "home-text2": "vyber si destinaci...",
   "home-text3": "užij si dokonalé dobrodružství!",
   "any-price": "libovolná cena",
-  "alert-param": "Vyber, prosím, alespoň jednu aktivitu"
+  "alert-param": "Vyber, prosím, alespoň jednu aktivitu",
+  "hiking": "Turistika",
+  "cycling": "Cyklistika",
+  "fishing": "Rybaření"
 }

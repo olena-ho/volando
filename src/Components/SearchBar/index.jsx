@@ -77,7 +77,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
       const filterResult = getFilterResult(hotel, filters);
       return Object.values(filterResult).every((value) => value === true);
     });
-    
+
     const alternativeHotels = hotels.filter((hotel) => {
       const filterResult = getFilterResult(hotel, filters);
       // const newFilterResult = Object.entries(filterResult).reduce(
@@ -109,11 +109,49 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
       <Dropdown
         title={t("activitiesP")}
         options={[
-          { key: "outdoors", value: t("outdoors") },
-          { key: "sport", value: t("sport") },
-          { key: "art", value: t("art") },
-          { key: "relax", value: t("relax") },
-          { key: "kids", value: t("kids") },
+          {
+            key: "outdoors",
+            value: t("outdoors"),
+            subcategories: [
+              { key: "hiking", value: t("hiking") },
+              { key: "cycling", value: t("cycling") },
+              { key: "fishing", value: t("fishing") },
+            ],
+          },
+          {
+            key: "sport",
+            value: t("sport"),
+            subcategories: [
+              { key: "tennis", value: t("tennis") },
+              { key: "golf", value: t("golf") },
+              { key: "skiing", value: t("skiing") },
+            ],
+          },
+          {
+            key: "art",
+            value: t("art"),
+            subcategories: [
+              { key: "architecture", value: t("architecture") },
+              { key: "pottery", value: t("pottery") },
+              { key: "painting", value: t("painting") },
+            ],
+          },
+          {
+            key: "relax",
+            value: t("relax"),
+            subcategories: [
+              { key: "spa", value: t("spa") },
+              { key: "massage", value: t("massage") },
+              { key: "yoga", value: t("yoga") },
+            ],
+          },
+          {
+            key: "kids", value: t("kids"),
+            subcategories: [
+              { key: "playground", value: t("playground") },
+              { key: "kids-club", value: t("kids-club") },
+            ],
+           },
         ]}
         onChange={(newCheckedOptions) =>
           handleFilterChange("activities", newCheckedOptions)

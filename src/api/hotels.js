@@ -585,7 +585,7 @@ const hotels = [
       'sport',
       'relax',
       'stargazing',
-      'hot air ballooning',
+      'hot-air-ballooning',
       'hiking',
       'horseback riding',
     ],
@@ -597,8 +597,6 @@ const hotels = [
     },
     rating: 4.9,
     price: 'luxury',
-    description:
-      'Set amidst the stark beauty of the Utah desert, Amangiri offers luxurious accommodations and a range of activities including stargazing, hot air ballooning, hiking, and horseback riding.',
     comfort: ['spa', 'pool', 'restaurant'],
     web: 'https://www.aman.com/resorts/amangiri',
     images: [],

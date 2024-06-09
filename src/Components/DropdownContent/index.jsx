@@ -1,8 +1,6 @@
-import React from "react";
-
-export const DropdownContent = ({ options, checkedOptions, onCheckboxChange, show, large }) => {
+export const DropdownContent = ({ options, checkedOptions, onCheckboxChange, show }) => {
   return (
-    <div className={`dropdown-content ${show ? "show" : ""} ${large ? "dropdown-content--large" : ""}`}>
+    <div className={`dropdown-content ${show ? "show" : ""}`}>
       {options.map((option) => (
         <label className="checkbox-label" key={option.key}>
           <input
