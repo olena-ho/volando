@@ -7,7 +7,6 @@
 
 .hotel-card {
   position: relative;
-  display: flex;
   flex-direction: row;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -118,4 +117,33 @@
   background-size: 70%;
   background-position: center center;
 
+}
+
+.add-heart.active:hover::before {
+  content: '❤️';
+  animation: zoomIn 0.5s ease;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center center;
+}
+
+.arrow-details::before {
+  content: url(../../../public/arrow-down.png);
+  animation: zoomIn 0.5s ease;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center center;
+}
+
+.arrow-details.active:hover::before {
+  content: url(../../../public/arrow-up.png);
+  animation: zoomIn 0.5s ease;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center center;
+}
+
+.additional-container {
+  margin-top: 10px;
+  /* Space between the main content and additional content */
 }
