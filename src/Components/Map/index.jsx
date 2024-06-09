@@ -7,7 +7,6 @@ import {
 } from '@react-google-maps/api';
 import { MapSideBar } from '../MapSideBar';
 import './style.css'; // Import styles
-import { use } from 'i18next';
 
 // Container style for the Google Map
 const containerStyle = {
@@ -80,9 +79,13 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
   const currentLocationMarker = useMemo(
     () =>
       currentLocation && (
-        <Marker key="currentLocation" position={currentLocation} icon={{
-          url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-        }} />
+        <Marker
+          key="currentLocation"
+          position={currentLocation}
+          icon={{
+            url: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+          }}
+        />
       ),
     [currentLocation],
   );
@@ -120,12 +123,11 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
       )),
     [hotels, displayInfo, onHotelSelect],
   );
-
+  console.log(__GOOGLE_MAPS_API_KEY__);
   return (
     <>
-
       <LoadScript
-        googleMapsApiKey="AIzaSyBiJG97_IYoMHOFyLB-JmGfXWGQa9ocJ24"
+        googleMapsApiKey={__GOOGLE_MAPS_API_KEY__}
         onError={handleLoadError}
       >
         <div className={`map-container ${isLargeMap ? 'large' : ''}`}>

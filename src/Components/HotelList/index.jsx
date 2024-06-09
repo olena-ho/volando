@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './style.css';
 import { HotelCard } from '../HotelCard';
-import { HotelDetails } from '../HotelDetails';
 
 export const HotelList = ({ hotels, ...props }) => {
   const { i18n } = useTranslation(['details', 'translation']); // Hook for translations
@@ -63,21 +62,19 @@ export const HotelList = ({ hotels, ...props }) => {
         <p>No details available</p>
       ) : (
         hotels.map((hotel) => {
-          const isHotelDetailsOpened = openedHotelsDetails.includes(hotel.id)
+          const isHotelDetailsOpened = openedHotelsDetails.includes(hotel.id);
+          const hotelDetails = details[hotel.name] || {};
           return (
-            <>
-              <HotelCard
-                key={hotel.id}
-                hotel={hotel}
-                activities={details[hotel.name].activities}
-                onAddToFavorites={onAddToFavorites}
-                isFavorite={isFavorite}
-                handleOpenHotelDetails={handleOpenHotelDetails}
-                isHotelDetailsOpened={isHotelDetailsOpened}
-                {...props}
-              />
-           {isHotelDetailsOpened && <HotelDetails/>}
-            </>
+            <HotelCard
+              key={hotel.id}
+              hotel={hotel}
+              hotelDetails={hotelDetails}
+              onAddToFavorites={onAddToFavorites}
+              isFavorite={isFavorite}
+              handleOpenHotelDetails={handleOpenHotelDetails}
+              isHotelDetailsOpened={isHotelDetailsOpened}
+              {...props}
+            />
           );
         })
       )}

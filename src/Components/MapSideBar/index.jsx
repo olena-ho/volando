@@ -5,12 +5,7 @@ import {
 } from '@react-google-maps/api';
 import '../Map/style.css';
 
-export const MapSideBar = ({ currentLocation, selectedHotel, showDirections, setShowDirections, directions, setDirections }) => {
-
-  // Handle get directions click event
-  const handleGetDirectionsClick = () => {
-    setShowDirections(true); // Show directions
-  };
+export const MapSideBar = ({ currentLocation, selectedHotel}) => {
 
   // Callback function for DirectionsService
   const directionCallback = (response, status) => {
