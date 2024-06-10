@@ -13,11 +13,14 @@ export const HotelCard = ({
   isHotelDetailsOpened,
 }) => {
   const { t } = useTranslation(['details', 'translation']); // Hook for translations
+
   return (
     <div className="hotel-card" onClick={() => onHotelClick(hotel)}>
       <div className="hotel-info--wrapper">
-        <img src={hotel.images[0]} alt={hotel.name} />
-
+        <img
+          src={hotel.images[0]?.small || 'default-image-path.jpg'} // Add default image path
+          alt={hotel.name}
+        />
         <div className="hotel-info">
           <h2>{hotel.name}</h2>
           <div className="activities-container">

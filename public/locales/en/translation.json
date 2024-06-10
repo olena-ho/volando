@@ -31,5 +31,10 @@
   "home-text2": "choose a destination...",
   "home-text3": "enjoy your perfect adventure!",
   "any-price": "any price",
-  "alert-param": "Please select at least one activity"  
+  "alert-param": "Please select at least one activity",
+  "photos": "Photos",
+  "reviews": "Reviews",
+  "your-name": "Name",
+  "your-review": "Write your review",
+  "submit": "Submit"  
 }

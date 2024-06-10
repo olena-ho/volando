@@ -27,7 +27,25 @@ const hotels = [
       "The most beautiful view in the world is from the back of a horse. It's true. Don't be afraid and try horse riding with us. At our riding arena, we organize competitions such as the Czech Republic Championship in show jumping, but we also offer our services to absolute beginners in horse riding. Small children, parents, or even everyone together can enjoy a ride on horseback.",
     comfort: ['wifi', 'parking', 'pool', 'restaurant'],
     web: 'http://www.equitana.cz',
-    images: ['/assets/Equitana/horse-kid.jpg'],
+    images: [
+      {
+        small: '/assets/Equitana/horse-kid-small.jpg',
+        large: '/assets/Equitana/horse-kid.jpg',
+      },
+      {
+        small: '/assets/Equitana/horse-ocean-small.jpg',
+        large: '/assets/Equitana/horse-ocean.jpg',
+      },
+      {
+        small: '/assets/Equitana/horse-passion-small.jpg',
+        large: '/assets/Equitana/horse-passion.jpg',
+      },
+    ],
+    defaultReviews: [
+      { name: 'Jan', date: '01.06.2023 10:00', text: 'Velmi pěkný hotel!' },
+      { name: 'Олена', date: '02.06.2023 12:00', text: 'Чудове обслуговування.' },
+      { name: 'John', date: '03.06.2023 14:00', text: 'Convenient location.' },
+    ]
   },
   {
     id: 2,
@@ -54,6 +72,11 @@ const hotels = [
     comfort: ['wifi', 'parking', 'sauna', 'restaurant'],
     web: 'http://www.hotelkouty.cz',
     images: [],
+    defaultReviews: [
+      { name: 'Petr', date: '01.06.2023 10:00', text: 'Úžasný hotel!' },
+      { name: 'Іван', date: '02.06.2023 12:00', text: 'Дуже гарне місце.' },
+      { name: 'Michael', date: '03.06.2023 14:00', text: 'Nice amenities.' },
+    ]
   },
   {
     id: 3,
@@ -72,14 +95,18 @@ const hotels = [
     comfort: ['wifi', 'parking', 'pets', 'restaurant', 'gym', 'club rentals'],
     web: 'https://www.golfolomouc.cz/en/hotel/hotel',
     images: [],
+    defaultReviews: [
+      { name: 'Tomas', date: '01.06.2023 10:00', text: 'Skvělý golfový resort!' },
+      { name: 'Оксана', date: '02.06.2023 12:00', text: 'Чудовий сервіс.' },
+      { name: 'Jessica', date: '03.06.2023 14:00', text: 'Great location for golf.' },
+    ]
   },
   {
     id: 4,
     name: 'Caribe Bay',
     activities: ['kids', 'aquapark'],
     'loc-code': 'it-c',
-    address:
-      'Via Michelangelo Buonarroti, 15, 30016 Lido di Jesolo, Venice, Italy',
+    address: 'Via Michelangelo Buonarroti, 15, 30016 Lido di Jesolo, Venice, Italy',
     location: {
       latitude: 45.5128,
       longitude: 12.6446,
@@ -91,6 +118,11 @@ const hotels = [
     comfort: ['pool', 'restaurant', 'wifi'],
     web: 'https://www.caribebay.it/en',
     images: [],
+    defaultReviews: [
+      { name: 'Luca', date: '01.06.2023 10:00', text: 'Fantastico parco acquatico!' },
+      { name: 'Марія', date: '02.06.2023 12:00', text: 'Дуже весело для дітей.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Great family spot.' },
+    ]
   },
   {
     id: 5,
@@ -116,6 +148,11 @@ const hotels = [
     comfort: ['wifi', 'restaurant', 'pool', 'wine cellar'],
     web: 'https://www.sixsenses.com/en/resorts/douro-valley/experiences/',
     images: [],
+    defaultReviews: [
+      { name: 'João', date: '01.06.2023 10:00', text: 'Resort maravilhoso!' },
+      { name: 'Ірина', date: '02.06.2023 12:00', text: 'Прекрасне місце.' },
+      { name: 'Sophia', date: '03.06.2023 14:00', text: 'Beautiful setting.' },
+    ]
   },
   {
     id: 6,
@@ -140,6 +177,11 @@ const hotels = [
     comfort: ['wifi', 'gym', 'restaurant'],
     web: 'https://www.theboulders.com/outdoor-adventures/',
     images: [],
+    defaultReviews: [
+      { name: 'James', date: '01.06.2023 10:00', text: 'Amazing resort!' },
+      { name: 'Анна', date: '02.06.2023 12:00', text: 'Дуже цікаві активності.' },
+      { name: 'Thomas', date: '03.06.2023 14:00', text: 'Great desert experience.' },
+    ]
   },
   {
     id: 7,
@@ -158,6 +200,11 @@ const hotels = [
     comfort: ['gym', 'library', 'pet'],
     web: 'https://www.theresidenceschevychase.com/',
     images: [],
+    defaultReviews: [
+      { name: 'Michael', date: '01.06.2023 10:00', text: 'Unique experience!' },
+      { name: 'Олексій', date: '02.06.2023 12:00', text: 'Дуже незвично.' },
+      { name: 'Sarah', date: '03.06.2023 14:00', text: 'Interesting concept.' },
+    ]
   },
   {
     id: 8,
@@ -176,6 +223,11 @@ const hotels = [
     comfort: ['wifi', 'parking', 'pool', 'restaurant'],
     web: 'https://www.loewshotels.com/coronado-bay-resort',
     images: [],
+    defaultReviews: [
+      { name: 'David', date: '01.06.2023 10:00', text: 'Lovely resort!' },
+      { name: 'Ігор', date: '02.06.2023 12:00', text: 'Чудові краєвиди.' },
+      { name: 'Emma', date: '03.06.2023 14:00', text: 'Great for pets.' },
+    ]
   },
   {
     id: 9,
@@ -200,6 +252,11 @@ const hotels = [
     comfort: ['wifi', 'parking', 'restaurant', 'spa'],
     web: 'https://obriyvillage.com/',
     images: [],
+    defaultReviews: [
+      { name: 'Михайло', date: '01.06.2023 10:00', text: 'Дуже гарне місце!' },
+      { name: 'Kateřina', date: '02.06.2023 12:00', text: 'Vynikající servis.' },
+      { name: 'Andrew', date: '03.06.2023 14:00', text: 'Wonderful experience.' },
+    ]
   },
   {
     id: 10,
@@ -218,6 +275,11 @@ const hotels = [
     comfort: ['wifi', 'parking', 'restaurant', 'spa'],
     web: 'https://en.concept-stay.com/sirimiri',
     images: [],
+    defaultReviews: [
+      { name: 'Олександр', date: '01.06.2023 10:00', text: 'Прекрасне місце!' },
+      { name: 'Jan', date: '02.06.2023 12:00', text: 'Velmi pěkný hotel.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Great retreat.' },
+    ]
   },
   {
     id: 11,
@@ -245,6 +307,11 @@ const hotels = [
     comfort: ['wifi', 'parking', 'restaurant', 'spa'],
     web: 'https://www.facebook.com/scandi.eco.park/',
     images: [],
+    defaultReviews: [
+      { name: 'Микола', date: '01.06.2023 10:00', text: 'Дуже гарний парк!' },
+      { name: 'Petr', date: '02.06.2023 12:00', text: 'Skvělý zážitek.' },
+      { name: 'Alice', date: '03.06.2023 14:00', text: 'Lovely place.' },
+    ]
   },
   {
     id: 12,
@@ -263,6 +330,11 @@ const hotels = [
     comfort: ['wifi', 'parking', 'restaurant', 'spa'],
     web: 'https://www.avestravel.com.ua/hotel_list/goteli-z-garjachimi-dzherelami-v-ukraini/',
     images: [],
+    defaultReviews: [
+      { name: 'Ірина', date: '01.06.2023 10:00', text: 'Чудові курорти!' },
+      { name: 'Eva', date: '02.06.2023 12:00', text: 'Skvělá místa.' },
+      { name: 'Hannah', date: '03.06.2023 14:00', text: 'Relaxing experience.' },
+    ]
   },
   {
     id: 13,
@@ -281,6 +353,11 @@ const hotels = [
     comfort: ['wifi', 'parking', 'restaurant', 'spa'],
     web: 'https://themantaresort.com/',
     images: [],
+    defaultReviews: [
+      { name: 'Amani', date: '01.06.2023 10:00', text: 'A place like no other!' },
+      { name: 'Олексій', date: '02.06.2023 12:00', text: 'Дуже унікальне місце.' },
+      { name: 'Jessica', date: '03.06.2023 14:00', text: 'Incredible stay.' },
+    ]
   },
   {
     id: 14,
@@ -299,6 +376,11 @@ const hotels = [
     comfort: ['wifi', 'restaurant', 'spa'],
     web: 'https://www.poseidonresorts.com/',
     images: [],
+    defaultReviews: [
+      { name: 'Manasa', date: '01.06.2023 10:00', text: 'Absolutely breathtaking!' },
+      { name: 'Юлія', date: '02.06.2023 12:00', text: 'Дуже гарно під водою.' },
+      { name: 'Robert', date: '03.06.2023 14:00', text: 'Unique experience.' },
+    ]
   },
   {
     id: 15,
@@ -317,6 +399,11 @@ const hotels = [
     comfort: ['wifi', 'restaurant', 'bar'],
     web: 'https://www.icehotel.com/',
     images: [],
+    defaultReviews: [
+      { name: 'Lars', date: '01.06.2023 10:00', text: 'Fantastiskt ishotell!' },
+      { name: 'Наталія', date: '02.06.2023 12:00', text: 'Дуже цікаве місце.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Unforgettable stay.' },
+    ]
   },
   {
     id: 16,
@@ -335,6 +422,11 @@ const hotels = [
     comfort: ['wifi', 'restaurant', 'sauna'],
     web: 'https://treehotel.se/',
     images: [],
+    defaultReviews: [
+      { name: 'Anders', date: '01.06.2023 10:00', text: 'Underbart hotell!' },
+      { name: 'Марія', date: '02.06.2023 12:00', text: 'Дуже гарні будиночки.' },
+      { name: 'Thomas', date: '03.06.2023 14:00', text: 'Amazing views.' },
+    ]
   },
   {
     id: 17,
@@ -353,6 +445,11 @@ const hotels = [
     comfort: ['wifi', 'restaurant', 'spa'],
     web: 'https://lunasaladahotel.com.bo/',
     images: [],
+    defaultReviews: [
+      { name: 'Carlos', date: '01.06.2023 10:00', text: 'Hotel increíble!' },
+      { name: 'Іван', date: '02.06.2023 12:00', text: 'Дуже унікальне місце.' },
+      { name: 'Alice', date: '03.06.2023 14:00', text: 'Unique experience.' },
+    ]
   },
   {
     id: 18,
@@ -371,6 +468,11 @@ const hotels = [
     comfort: ['wifi', 'parking', 'restaurant', 'pets'],
     web: 'http://www.happyguestslodge.co.uk/',
     images: [],
+    defaultReviews: [
+      { name: 'James', date: '01.06.2023 10:00', text: 'Lovely place!' },
+      { name: 'Олена', date: '02.06.2023 12:00', text: 'Дуже затишно.' },
+      { name: 'Sarah', date: '03.06.2023 14:00', text: 'Nice countryside.' },
+    ]
   },
   {
     id: 19,
@@ -389,6 +491,11 @@ const hotels = [
     comfort: ['wifi', 'restaurant', 'spa', 'legal services'],
     web: 'https://www.carlton.nl/hotel-ambassador-den-haag',
     images: [],
+    defaultReviews: [
+      { name: 'Hendrik', date: '01.06.2023 10:00', text: 'Bijzonder concept!' },
+      { name: 'Петро', date: '02.06.2023 12:00', text: 'Незвичайна концепція.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Unique services.' },
+    ]
   },
   {
     id: 20,
@@ -408,6 +515,11 @@ const hotels = [
     comfort: ['wifi', 'restaurant', 'spa', 'pool'],
     web: 'https://www.marriott.com/en-us/hotels/ptgra-protea-hotel-polokwane-ranch-resort/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0',
     images: [],
+    defaultReviews: [
+      { name: 'Sipho', date: '01.06.2023 10:00', text: 'Incredible adventure!' },
+      { name: 'Юрій', date: '02.06.2023 12:00', text: 'Дуже цікаве місце.' },
+      { name: 'Michael', date: '03.06.2023 14:00', text: 'Unique wildlife experience.' },
+    ]
   },
   {
     id: 21,
@@ -426,6 +538,11 @@ const hotels = [
     comfort: ['restaurant', 'bar', 'gym'],
     web: 'https://www.v8hotel.de/',
     images: [],
+    defaultReviews: [
+      { name: 'Hans', date: '01.06.2023 10:00', text: 'Tolles Autohotel!' },
+      { name: 'Микола', date: '02.06.2023 12:00', text: 'Чудовий дизайн.' },
+      { name: 'John', date: '03.06.2023 14:00', text: 'Great for car lovers.' },
+    ]
   },
   {
     id: 22,
@@ -444,6 +561,11 @@ const hotels = [
     comfort: ['spa', 'pool', 'restaurant', 'garden'],
     web: 'https://www.booking.com',
     images: [],
+    defaultReviews: [
+      { name: 'Giuseppe', date: '01.06.2023 10:00', text: 'Bellissima masseria!' },
+      { name: 'Олександра', date: '02.06.2023 12:00', text: 'Дуже гарне місце.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Charming and relaxing.' },
+    ]
   },
   {
     id: 23,
@@ -462,6 +584,11 @@ const hotels = [
     comfort: ['pool', 'restaurant'],
     web: 'https://www.booking.com',
     images: [],
+    defaultReviews: [
+      { name: 'Nikos', date: '01.06.2023 10:00', text: 'Υπέροχο ξενοδοχείο!' },
+      { name: 'Оксана', date: '02.06.2023 12:00', text: 'Чудовий вид.' },
+      { name: 'Alice', date: '03.06.2023 14:00', text: 'Beautiful location.' },
+    ]
   },
   {
     id: 24,
@@ -479,6 +606,11 @@ const hotels = [
     comfort: ['spa', 'restaurant', 'pool'],
     web: 'https://www.marriott.com/en-us/hotels/mcogp-gaylord-palms-resort-and-convention-center/overview/',
     images: [],
+    defaultReviews: [
+      { name: 'James', date: '01.06.2023 10:00', text: 'Fantastic resort!' },
+      { name: 'Олена', date: '02.06.2023 12:00', text: 'Дуже весело для дітей.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Great for families.' },
+    ]
   },
   {
     id: 25,
@@ -493,8 +625,8 @@ const hotels = [
     'loc-code': 'us-c',
     address: '71895 CA-1, Big Sur, CA 93920, USA',
     location: {
-      latitude: 35.9643,
-      longitude: -121.537,
+      latitude: 35.884400545437344,
+      longitude: -121.45530280388468,
     },
     rating: 4.5,
     price: 'budget',
@@ -503,6 +635,11 @@ const hotels = [
     comfort: ['restaurant', 'pets', 'Organic garden', 'Hiking trails'],
     web: 'https://www.treebonesresort.com/',
     images: [],
+    defaultReviews: [
+      { name: 'Michael', date: '01.06.2023 10:00', text: 'Amazing glamping!' },
+      { name: 'Ігор', date: '02.06.2023 12:00', text: 'Прекрасні краєвиди.' },
+      { name: 'Sarah', date: '03.06.2023 14:00', text: 'Eco-friendly and fun.' },
+    ]
   },
   {
     id: 26,
@@ -521,6 +658,11 @@ const hotels = [
     comfort: ['restaurant', 'gym'],
     web: 'https://www.creativetravelguide.com',
     images: [],
+    defaultReviews: [
+      { name: 'James', date: '01.06.2023 10:00', text: 'Fantastic art hotel!' },
+      { name: 'Андрій', date: '02.06.2023 12:00', text: 'Чудовий дизайн.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Great artistic vibe.' },
+    ]
   },
   {
     id: 27,
@@ -540,6 +682,11 @@ const hotels = [
     comfort: ['spa', 'pool', 'restaurant'],
     web: 'https://www.grandvelas.com',
     images: [],
+    defaultReviews: [
+      { name: 'Carlos', date: '01.06.2023 10:00', text: 'Resort increíble!' },
+      { name: 'Тетяна', date: '02.06.2023 12:00', text: 'Дуже гарне місце.' },
+      { name: 'Alice', date: '03.06.2023 14:00', text: 'Luxurious stay.' },
+    ]
   },
   {
     id: 28,
@@ -558,6 +705,11 @@ const hotels = [
     comfort: ['beach', 'pool', 'restaurant'],
     web: 'https://www.marriott.com',
     images: [],
+    defaultReviews: [
+      { name: 'Javier', date: '01.06.2023 10:00', text: '¡Hotel impresionante!' },
+      { name: 'Олена', date: '02.06.2023 12:00', text: 'Чудове місце біля моря.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Beautiful beachfront.' },
+    ]
   },
   {
     id: 29,
@@ -576,6 +728,11 @@ const hotels = [
     comfort: ['restaurant', 'spa', 'beach'],
     web: 'https://hoteldel.com/',
     images: [],
+    defaultReviews: [
+      { name: 'James', date: '01.06.2023 10:00', text: 'Amazing historic hotel!' },
+      { name: 'Іван', date: '02.06.2023 12:00', text: 'Дуже гарний готель.' },
+      { name: 'Sarah', date: '03.06.2023 14:00', text: 'Beautiful beachfront.' },
+    ]
   },
   {
     id: 30,
@@ -602,6 +759,11 @@ const hotels = [
     comfort: ['spa', 'pool', 'restaurant'],
     web: 'https://www.aman.com/resorts/amangiri',
     images: [],
+    defaultReviews: [
+      { name: 'Michael', date: '01.06.2023 10:00', text: 'Unbelievable desert retreat!' },
+      { name: 'Олександр', date: '02.06.2023 12:00', text: 'Неймовірне місце.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Beautiful surroundings.' },
+    ]
   },
   {
     id: 31,
@@ -627,6 +789,11 @@ const hotels = [
     comfort: ['spa', 'restaurant', 'beach'],
     web: 'https://www.soneva.com/soneva-fushi/',
     images: [],
+    defaultReviews: [
+      { name: 'Ahmed', date: '01.06.2023 10:00', text: 'Paradise on earth!' },
+      { name: 'Ірина', date: '02.06.2023 12:00', text: 'Прекрасне місце для відпочинку.' },
+      { name: 'Sarah', date: '03.06.2023 14:00', text: 'Unforgettable experience.' },
+    ]
   },
   {
     id: 32,
@@ -652,6 +819,11 @@ const hotels = [
     comfort: ['restaurant', 'spa', 'library'],
     web: 'https://www.fogoislandinn.ca/',
     images: [],
+    defaultReviews: [
+      { name: 'Liam', date: '01.06.2023 10:00', text: 'Amazing views!' },
+      { name: 'Олексій', date: '02.06.2023 12:00', text: 'Дуже гарні краєвиди.' },
+      { name: 'Jessica', date: '03.06.2023 14:00', text: 'Stunning experience.' },
+    ]
   },
   {
     id: 33,
@@ -677,6 +849,11 @@ const hotels = [
     comfort: ['spa', 'restaurant'],
     web: 'https://www.kakslauttanen.fi/',
     images: [],
+    defaultReviews: [
+      { name: 'Jari', date: '01.06.2023 10:00', text: 'Upea kokemus!' },
+      { name: 'Олена', date: '02.06.2023 12:00', text: 'Чудові враження.' },
+      { name: 'Sarah', date: '03.06.2023 14:00', text: 'Amazing igloos.' },
+    ]
   },
   {
     id: 34,
@@ -702,6 +879,11 @@ const hotels = [
     comfort: ['restaurant', 'spa'],
     web: 'https://www.whitepod.com/',
     images: [],
+    defaultReviews: [
+      { name: 'Hans', date: '01.06.2023 10:00', text: 'Einzigartige Erfahrung!' },
+      { name: 'Андрій', date: '02.06.2023 12:00', text: 'Дуже незвичайне місце.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Unique pods.' },
+    ]
   },
   {
     id: 35,
@@ -726,6 +908,11 @@ const hotels = [
     comfort: ['spa', 'restaurant', 'beach'],
     web: 'https://www.amilla.com/',
     images: [],
+    defaultReviews: [
+      { name: 'Ahmed', date: '01.06.2023 10:00', text: 'Perfect getaway!' },
+      { name: 'Ірина', date: '02.06.2023 12:00', text: 'Прекрасне місце для відпочинку.' },
+      { name: 'Sarah', date: '03.06.2023 14:00', text: 'Beautiful villas.' },
+    ]
   },
   {
     id: 36,
@@ -750,6 +937,11 @@ const hotels = [
     comfort: ['restaurant', 'spa', 'pool'],
     web: 'https://longitude131.com.au/',
     images: [],
+    defaultReviews: [
+      { name: 'Liam', date: '01.06.2023 10:00', text: 'Amazing views!' },
+      { name: 'Олександр', date: '02.06.2023 12:00', text: 'Неймовірні краєвиди.' },
+      { name: 'Jessica', date: '03.06.2023 14:00', text: 'Unique experience.' },
+    ]
   },
   {
     id: 37,
@@ -775,6 +967,11 @@ const hotels = [
     comfort: ['spa', 'pool'],
     web: 'https://www.soneva.com/soneva-kiri/',
     images: [],
+    defaultReviews: [
+      { name: 'Somchai', date: '01.06.2023 10:00', text: 'Paradise on earth!' },
+      { name: 'Олексій', date: '02.06.2023 12:00', text: 'Райське місце.' },
+      { name: 'Jessica', date: '03.06.2023 14:00', text: 'Unforgettable stay.' },
+    ]
   },
   {
     id: 38,
@@ -801,6 +998,11 @@ const hotels = [
     comfort: ['restaurant', 'spa', 'pool'],
     web: 'https://www.thesingular.com/patagonia/',
     images: [],
+    defaultReviews: [
+      { name: 'Carlos', date: '01.06.2023 10:00', text: 'Increíble experiencia!' },
+      { name: 'Михайло', date: '02.06.2023 12:00', text: 'Дуже гарне місце.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Beautiful scenery.' },
+    ]
   },
   {
     id: 39,
@@ -826,6 +1028,11 @@ const hotels = [
     comfort: ['restaurant', 'spa', 'pool'],
     web: 'https://www.explora.com/hotels-and-travesias/easter-island/explora-rapa-nui/',
     images: [],
+    defaultReviews: [
+      { name: 'Pedro', date: '01.06.2023 10:00', text: '¡Asombroso lugar!' },
+      { name: 'Ірина', date: '02.06.2023 12:00', text: 'Прекрасне місце для пригод.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Fascinating island.' },
+    ]
   },
   {
     id: 40,
@@ -850,6 +1057,11 @@ const hotels = [
     comfort: ['restaurant', 'spa', 'gym'],
     web: 'https://www.aman.com/resorts/amangani',
     images: [],
+    defaultReviews: [
+      { name: 'Michael', date: '01.06.2023 10:00', text: 'Fantastic mountain retreat!' },
+      { name: 'Іван', date: '02.06.2023 12:00', text: 'Чудове місце в горах.' },
+      { name: 'Sarah', date: '03.06.2023 14:00', text: 'Beautiful scenery.' },
+    ]
   },
   {
     id: 41,
@@ -869,6 +1081,11 @@ const hotels = [
     comfort: ['restaurant', 'spa', 'library'],
     web: 'https://southernoceanlodge.com.au/',
     images: [],
+    defaultReviews: [
+      { name: 'Liam', date: '01.06.2023 10:00', text: 'Amazing wildlife!' },
+      { name: 'Оксана', date: '02.06.2023 12:00', text: 'Чудова природа.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Unique experience.' },
+    ]
   },
   {
     id: 42,
@@ -892,6 +1109,11 @@ const hotels = [
     comfort: ['restaurant', 'spa', 'bar'],
     web: 'https://www.explora.com/patagonia/',
     images: [],
+    defaultReviews: [
+      { name: 'Carlos', date: '01.06.2023 10:00', text: 'Increíble aventura!' },
+      { name: 'Петро', date: '02.06.2023 12:00', text: 'Чудове місце для відпочинку.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Beautiful landscapes.' },
+    ]
   },
   {
     id: 43,
@@ -916,6 +1138,11 @@ const hotels = [
     comfort: ['restaurant', 'spa', 'beach'],
     web: 'https://thebrando.com/',
     images: [],
+    defaultReviews: [
+      { name: 'Teva', date: '01.06.2023 10:00', text: 'Paradise island!' },
+      { name: 'Юлія', date: '02.06.2023 12:00', text: 'Райське місце.' },
+      { name: 'Sarah', date: '03.06.2023 14:00', text: 'Beautiful waters.' },
+    ]
   },
   {
     id: 44,
@@ -934,6 +1161,11 @@ const hotels = [
     comfort: ['restaurant', 'spa', 'pool'],
     web: 'https://www.ladera.com/',
     images: [],
+    defaultReviews: [
+      { name: 'Jamal', date: '01.06.2023 10:00', text: 'Amazing adventure!' },
+      { name: 'Олексій', date: '02.06.2023 12:00', text: 'Дуже цікаві пригоди.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Beautiful scenery.' },
+    ]
   },
   {
     id: 45,
@@ -959,6 +1191,11 @@ const hotels = [
     comfort: ['restaurant', 'spa'],
     web: 'https://www.thedatai.com/langkawi/',
     images: [],
+    defaultReviews: [
+      { name: 'Zain', date: '01.06.2023 10:00', text: 'Incredible nature!' },
+      { name: 'Ірина', date: '02.06.2023 12:00', text: 'Прекрасна природа.' },
+      { name: 'Sarah', date: '03.06.2023 14:00', text: 'Beautiful surroundings.' },
+    ]
   },
   {
     id: 46,
@@ -983,6 +1220,11 @@ const hotels = [
     comfort: ['restaurant', 'spa', 'beach'],
     web: 'https://www.aman.com/resorts/amanwana',
     images: [],
+    defaultReviews: [
+      { name: 'Budi', date: '01.06.2023 10:00', text: 'Wonderful adventure!' },
+      { name: 'Олена', date: '02.06.2023 12:00', text: 'Дуже цікаві пригоди.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Beautiful island.' },
+    ]
   },
   {
     id: 47,
@@ -1007,6 +1249,11 @@ const hotels = [
     comfort: ['restaurant', 'spa', 'pool'],
     web: 'https://singita.com/lebombo-lodge/',
     images: [],
+    defaultReviews: [
+      { name: 'Sipho', date: '01.06.2023 10:00', text: 'Amazing safari!' },
+      { name: 'Петро', date: '02.06.2023 12:00', text: 'Чудові пригоди.' },
+      { name: 'Emily', date: '03.06.2023 14:00', text: 'Unique experience.' },
+    ]
   },
   {
     id: 48,
@@ -1032,6 +1279,11 @@ const hotels = [
     comfort: ['restaurant', 'parking', 'wifi', 'bar'],
     web: 'http://www.hotelfrance.com',
     images: [],
+    defaultReviews: [
+      { name: 'Василь', date: '01.06.2023 10:00', text: 'Чудовий готель!' },
+      { name: 'Eva', date: '02.06.2023 12:00', text: 'Skvělá poloha.' },
+      { name: 'John', date: '03.06.2023 14:00', text: 'Great location.' },
+    ]
   },
   {
     id: 49,
@@ -1050,6 +1302,11 @@ const hotels = [
     comfort: ['wifi', 'parking', 'spa', 'restaurant', 'gym'],
     web: 'http://www.safari-club.com',
     images: [],
+    defaultReviews: [
+      { name: 'Василь', date: '01.06.2023 10:00', text: 'Чудове місце!' },
+      { name: 'Eva', date: '02.06.2023 12:00', text: 'Skvělý zážitek.' },
+      { name: 'John', date: '03.06.2023 14:00', text: 'Nice amenities.' },
+    ]
   },
   {
     id: 50,
@@ -1068,6 +1325,11 @@ const hotels = [
     comfort: ['wifi', 'parking', 'gym', 'restaurant'],
     web: 'http://www.fenixtown.com',
     images: [],
+    defaultReviews: [
+      { name: 'Ігор', date: '01.06.2023 10:00', text: 'Чудовий готель!' },
+      { name: 'Eva', date: '02.06.2023 12:00', text: 'Velmi dobré služby.' },
+      { name: 'John', date: '03.06.2023 14:00', text: 'Nice facilities.' },
+    ]
   },
   {
     id: 51,
@@ -1086,6 +1348,11 @@ const hotels = [
     comfort: ['wifi', 'parking', 'spa', 'restaurant', 'bar'],
     web: 'https://www.fairmont.com/kyiv/',
     images: [],
+    defaultReviews: [
+      { name: 'Ірина', date: '01.06.2023 10:00', text: 'Розкішний готель!' },
+      { name: 'Eva', date: '02.06.2023 12:00', text: 'Úžasný zážitek.' },
+      { name: 'John', date: '03.06.2023 14:00', text: 'Luxurious experience.' },
+    ]
   },
   {
     id: 52,
@@ -1120,6 +1387,11 @@ const hotels = [
       '/assets/Lisotel/horse.png',
       '/assets/Lisotel/painting.png',
     ],
+    defaultReviews: [
+      { name: 'Василь', date: '01.06.2023 10:00', text: 'Прекрасний відпочинок!' },
+      { name: 'Eva', date: '02.06.2023 12:00', text: 'Úžasné místo.' },
+      { name: 'John', date: '03.06.2023 14:00', text: 'Wonderful stay.' },
+    ]
   },
   {
     id: 53,
@@ -1138,6 +1410,11 @@ const hotels = [
     comfort: ['wifi', 'parking', 'spa', 'restaurant'],
     web: 'https://opera-hotel.com/',
     images: [],
+    defaultReviews: [
+      { name: 'Ірина', date: '01.06.2023 10:00', text: 'Прекрасний готель!' },
+      { name: 'Eva', date: '02.06.2023 12:00', text: 'Úžasné služby.' },
+      { name: 'John', date: '03.06.2023 14:00', text: 'Luxury and charm.' },
+    ]
   },
 ];
 

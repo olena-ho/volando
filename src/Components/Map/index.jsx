@@ -5,7 +5,6 @@ import {
   LoadScript,
   Marker,
 } from '@react-google-maps/api';
-import { MapSideBar } from '../MapSideBar';
 import './style.css'; // Import styles
 
 // Container style for the Google Map
@@ -131,17 +130,6 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
         onError={handleLoadError}
       >
         <div className={`map-container ${isLargeMap ? 'large' : ''}`}>
-          
-            <div className="map-sidebar">
-              <MapSideBar
-                currentLocation={currentLocation}
-                selectedHotel={selectedHotel}
-                showDirections={showDirections}
-                setShowDirections={setShowDirections}
-                directions={directions}
-                setDirections={setDirections}
-              />
-            </div>
  
           <div className="map-content">
             <GoogleMap
