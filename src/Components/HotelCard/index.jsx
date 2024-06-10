@@ -74,6 +74,7 @@ export const HotelCard = ({
             images={hotel.images}
             web={hotel.web}
             defaultReviews={hotel.defaultReviews}
+            hotelId={hotel.id}
           />
         </div>
       )}

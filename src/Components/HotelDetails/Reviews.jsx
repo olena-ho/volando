@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import hotels from '../../api/hotels.js';
 
-export const Reviews = ({ hotelId }) => {
+export const Reviews = ({ hotelId, defaultReviews }) => {
   const [reviews, setReviews] = useState([]);
   const [newReview, setNewReview] = useState({ name: '', text: '' });
   const { t } = useTranslation();
+  console.log({defaultReviews});
 
   useEffect(() => {
     console.log('hotelId:', hotelId);
@@ -15,11 +16,9 @@ export const Reviews = ({ hotelId }) => {
       setReviews(storedReviews[hotelId]);
       console.log('Loaded reviews from localStorage:', storedReviews[hotelId]);
     } else {
-      const hotel = hotels.find(hotel => hotel.id === hotelId);
-      if (hotel) {
-        setReviews(hotel.defaultReviews);
-        console.log('Loaded default reviews:', hotel.defaultReviews);
-      }
+     setReviews(defaultReviews);
+
+     console.log('Loaded default reviews: ', defaultReviews);
     }
   }, [hotelId]);
 
