@@ -7,6 +7,9 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: fit-content;
   margin: 20px auto 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .search-button {

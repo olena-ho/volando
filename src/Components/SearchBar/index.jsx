@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Dropdown } from "../Dropdown";
 import { CountriesInput } from "../CountriesInput";
+import { filterHotels } from "../../utils/filterHotels";
 import "./style.css";
 import hotels from "../../api/hotels";
 import outdoorsImg from "../LargeDropdownContent/img/cycling.png";
@@ -11,38 +12,6 @@ import kidsImg from "../LargeDropdownContent/img/playground.png";
 import artImg from "../LargeDropdownContent/img/hobby.png";
 import relaxImg from "../LargeDropdownContent/img/beach.png";
 import indoorsImg from "../LargeDropdownContent/img/pool.png";
-
-const getFilterResult = (hotel, filters) => {
-  const { activities, locCode, comfort, price, rating } = filters;
-
-  const matchesActivities = activities.some((activity) =>
-    hotel.activities.includes(activity)
-  );
-
-  const matchesLocation =
-    locCode.length === 0 || locCode.includes(hotel["loc-code"]);
-
-  const matchesComfort =
-    comfort.length === 0 || comfort.every((c) => hotel.comfort.includes(c));
-
-  const matchesPrice =
-    price.length === 0 ||
-    price.includes("any-price") ||
-    price.includes(hotel.price);
-
-  const matchesRating =
-    rating.length === 0 ||
-    rating.includes("any") ||
-    rating.some((r) => hotel.rating >= parseFloat(r));
-
-  return {
-    matchesActivities,
-    matchesLocation,
-    matchesComfort,
-    matchesPrice,
-    matchesRating,
-  };
-};
 
 export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
   const { t } = useTranslation();
@@ -66,7 +35,6 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
       : [],
   });
 
-  console.log(filters);
   useEffect(() => {
     //a variable to store the filters that are not empty
     const activeFilters = Object.entries(filters).reduce(
@@ -76,6 +44,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
       },
       {}
     );
+
     const urlParam = new URLSearchParams(activeFilters).toString();
     setSearchParams(urlParam);
   }, [filters]);
@@ -95,36 +64,17 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
   };
 
   const handleSearch = () => {
-    const { activities, locCode, comfort, price, rating } = filters;
+    const { filteredHotels, alternativeHotels } = filterHotels(hotels, filters);
 
-    if (activities.length === 0) {
+    if (filters.activities.length === 0) {
       alert(t("alert-param"));
       return;
     }
 
-    const filteredHotels = hotels.filter((hotel) => {
-      const filterResult = getFilterResult(hotel, filters);
-      return Object.values(filterResult).every((value) => value === true);
-    });
-    //providing alternative search results in case there isn't a hotel that matches all the params
-    const alternativeHotels = hotels.filter((hotel) => {
-      const filterResult = getFilterResult(hotel, filters);
-
-      return filterResult.matchesActivities;
-    });
+    onSearch(filters);
 
     setAlternativeHotelsFound(filteredHotels.length === 0);
-
-    console.log(`Perfect: ${filteredHotels}`);
-    console.log(`Alternative: ${alternativeHotels}`);
-    onSearch(
-      (filteredHotels.length > 0 ? filteredHotels : alternativeHotels).map(
-        (hotel) => hotel.id
-      )
-    );
   };
-
-  const navigate = useNavigate();
 
   return (
     <div className="search-bar-wrapper">
@@ -199,6 +149,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
             ],
           },
         ]}
+        selectedOptions={filters.activities}
         onChange={(newCheckedOptions) =>
           handleFilterChange("activities", newCheckedOptions)
         }
@@ -206,6 +157,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
       />
       <CountriesInput
         placeholder={t("locationP")}
+        selectedOptions={filters.locCode}
         onChange={handleLocationChange}
       />
       <Dropdown
@@ -219,6 +171,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
           { key: "gym", value: t("gym") },
           { key: "kitchen", value: t("kitchen") },
         ]}
+        selectedOptions={filters.comfort}
         onChange={(newCheckedOptions) =>
           handleFilterChange("comfort", newCheckedOptions)
         }
@@ -231,6 +184,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
           { key: "midrange", value: t("midrange") },
           { key: "luxury", value: t("luxury") },
         ]}
+        selectedOptions={filters.price}
         onChange={(newCheckedOptions) =>
           handleFilterChange("price", newCheckedOptions)
         }
@@ -243,14 +197,15 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
           { key: "4", value: t("4") },
           { key: "3", value: t("3") },
         ]}
+        selectedOptions={filters.rating}
         onChange={(newCheckedOptions) =>
           handleFilterChange("rating", newCheckedOptions)
         }
       />
-
+{/* 
       <button className="search-button" onClick={handleSearch}>
         {t("searchB")}
-      </button>
+      </button> */}
     </div>
   );
 };
