@@ -13,6 +13,16 @@ export const HomePage = () => {
   const [searchParams] = useSearchParams();
 
   const handleSearch = (filters) => {
+    const hasNoFilters = Object.values(filters).every(
+      (filter) => filter.length === 0
+    );
+
+    if (hasNoFilters) {
+      setFoundHotelsIds([]);
+      setAlternativeHotelsFound(false);
+      return;
+    }
+
     const { filteredHotels, alternativeHotels } = filterHotels(hotels, filters);
 
     setAlternativeHotelsFound(filteredHotels.length === 0);
@@ -26,11 +36,21 @@ export const HomePage = () => {
 
   useEffect(() => {
     const initialFilters = {
-      activities: searchParams.get("activities") ? searchParams.get("activities").split(",") : [],
-      locCode: searchParams.get("locCode") ? searchParams.get("locCode").split(",") : [],
-      comfort: searchParams.get("comfort") ? searchParams.get("comfort").split(",") : [],
-      price: searchParams.get("price") ? searchParams.get("price").split(",") : [],
-      rating: searchParams.get("rating") ? searchParams.get("rating").split(",") : [],
+      activities: searchParams.get("activities")
+        ? searchParams.get("activities").split(",")
+        : [],
+      locCode: searchParams.get("locCode")
+        ? searchParams.get("locCode").split(",")
+        : [],
+      comfort: searchParams.get("comfort")
+        ? searchParams.get("comfort").split(",")
+        : [],
+      price: searchParams.get("price")
+        ? searchParams.get("price").split(",")
+        : [],
+      rating: searchParams.get("rating")
+        ? searchParams.get("rating").split(",")
+        : [],
     };
 
     if (
@@ -41,6 +61,9 @@ export const HomePage = () => {
       initialFilters.rating.length > 0
     ) {
       handleSearch(initialFilters);
+    } else {
+      setFoundHotelsIds([]);
+      setAlternativeHotelsFound(false);
     }
   }, [searchParams]);
 

@@ -1,6 +1,13 @@
 export const getFilterResult = (hotel, filters) => {
-  const { activities, locCode, comfort, price, rating } = filters;
+  const {
+    activities = [],
+    locCode = [],
+    comfort = [],
+    price = [],
+    rating = []
+  } = filters;
 
+  //the user has to select at least one activity or location
   const matchesActivities =
     activities.length === 0 ||
     activities.some((activity) => hotel.activities.includes(activity));
@@ -8,6 +15,7 @@ export const getFilterResult = (hotel, filters) => {
   const matchesLocation =
     locCode.length === 0 || locCode.includes(hotel["loc-code"]);
 
+  //other parameters are optional
   const matchesComfort =
     comfort.length === 0 || comfort.every((c) => hotel.comfort.includes(c));
 

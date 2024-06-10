@@ -47,6 +47,10 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
 
     const urlParam = new URLSearchParams(activeFilters).toString();
     setSearchParams(urlParam);
+    // when we unselect previously selected filters, call onSearch with empty filters
+    if (Object.keys(activeFilters).length === 0) {
+      onSearch({});
+    }
   }, [filters]);
 
   const handleFilterChange = (category, newCheckedOptions) => {
@@ -65,6 +69,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
 
   const handleSearch = () => {
     const { filteredHotels, alternativeHotels } = filterHotels(hotels, filters);
+    //the user has to select at least one activity or location
     if (filters.activities.length === 0 && filters.locCode.length === 0) {
       alert(t("alert-param"));
       return;
