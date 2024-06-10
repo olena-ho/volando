@@ -28,8 +28,7 @@ const tabs = [
 export const HotelDetails = ({ hotelDetails, images, web }) => {
   const [selectedTab, setSelectedTab] = useState(tabs[0].id);
   const { t } = useTranslation(['details', 'translation']);
-  
-  console.log("Hotel Details:", hotelDetails);
+  console.log(selectedTab);
 
   const getContent = () => {
     switch (selectedTab) {
@@ -38,15 +37,21 @@ export const HotelDetails = ({ hotelDetails, images, web }) => {
           <Description hotelDetails={hotelDetails} images={images} web={web} />
         );
       case 'reviews':
-        return <Reviews hotelId={hotelDetails.id} />;
+        return (
+          <Reviews
+            hotelId={hotelDetails.id}
+            defaultReviews={hotelDetails.defaultReviews}
+          />
+        );
       case 'photos':
         return <Photos images={images} />;
       case 'comfort':
-        return <Comfort hotelDetails={hotelDetails} />;
+        return <Comfort />;
       default:
-        return null;
+        break;
     }
   };
+
   return (
     <>
       <div className="tabs-container">
