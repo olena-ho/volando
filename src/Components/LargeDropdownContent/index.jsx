@@ -20,7 +20,7 @@ export const LargeDropdownContent = ({
               alt={category.value}
               className="category-image"
             />
-            <div className="category-title">{category.value}</div>
+            <h3 className="category-title">{category.value}</h3>
           </div>
           <div className="subcategory-list">
             {category.subcategories.map((subcategory) => (

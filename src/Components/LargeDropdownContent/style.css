@@ -1,7 +1,8 @@
 
 .dropdown-content--large {
   flex-wrap: wrap;
-  max-width: 800px; 
+  max-width: 896px;
+  transform: translateX(-30px);
 }
 
 .dropdown-content--large.show {
@@ -10,7 +11,7 @@
 
 .category-section {
   padding: 10px;
-  min-width: 33%;
+  width: 33%;
 }
 
 .category-header {
@@ -22,15 +23,17 @@
 .category-image {
   width: 50px; 
   height: 50px; 
-  margin-right: 10px;
+  margin-right: 12px;
 }
 
 .category-title {
   font-weight: bold;
+  font-size: 16px;
+  color: darkgray;
 }
 
 .subcategory-list {
-  margin-left: 40px; 
+  margin-left: 60px; 
 }
 
 .subcategory {

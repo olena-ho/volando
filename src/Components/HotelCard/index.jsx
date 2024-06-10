@@ -1,6 +1,6 @@
-import { useTranslation } from 'react-i18next';
-import { HotelDetails } from '../HotelDetails';
-import './style.css';
+import { useTranslation } from "react-i18next";
+import { HotelDetails } from "../HotelDetails";
+import "./style.css";
 
 export const HotelCard = ({
   hotel,
@@ -12,11 +12,16 @@ export const HotelCard = ({
   handleOpenHotelDetails,
   isHotelDetailsOpened,
 }) => {
-  const { t } = useTranslation(['details', 'translation']); // Hook for translations
+  const { t } = useTranslation(["details", "translation"]); // Hook for translations
   return (
     <div className="hotel-card" onClick={() => onHotelClick(hotel)}>
       <div className="hotel-info--wrapper">
-        <img src={hotel.images[0]} alt={hotel.name} />
+        <img
+          src={
+            hotel.images[0] ? hotel.images[0] : "/assets/img-placeholder.png"
+          }
+          alt={hotel.name}
+        />
 
         <div className="hotel-info">
           <h2>{hotel.name}</h2>
@@ -24,25 +29,25 @@ export const HotelCard = ({
             <div className="details-list">
               <div>
                 <p>
-                  {t('translation:activities')}:{' '}
-                  {hotelDetails.activities.join(', ')}
+                  {t("translation:activities")}:{" "}
+                  {hotelDetails.activities.join(", ")}
                 </p>
               </div>
             </div>
           </div>
           <div className="details-container">
             <p className="hotel-address">
-              {t('translation:address')}: {hotel.address}
+              {t("translation:address")}: {hotel.address}
             </p>
             <p className="hotel-rating">
-              {t('translation:ratingP')}: {hotel.rating}
+              {t("translation:ratingP")}: {hotel.rating}
             </p>
           </div>
         </div>
         <div className="favorite-container">
           <button
             className={`add-heart ${
-              isFavorite(hotel.id) ? 'active' : 'inactive'
+              isFavorite(hotel.id) ? "active" : "inactive"
             }`}
             onClick={(e) => {
               e.stopPropagation();
@@ -55,7 +60,7 @@ export const HotelCard = ({
           ></button>
           <button
             className={`arrow-details ${
-              isHotelDetailsOpened ? 'active' : 'inactive'
+              isHotelDetailsOpened ? "active" : "inactive"
             }`}
             onClick={(e) => {
               e.stopPropagation();

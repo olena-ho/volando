@@ -50,7 +50,13 @@
   },
   "The Boulders Resort": {
     "description": "Tento resort se nachází v poušti Sonoran a nabízí jedinečné outdoorové dobrodružství, včetně golfu na jeho renomovaných hřištích, skalního lezení a jízd horkovzdušným balonem.",
-    "activities": ["Golf", "Horkovzdušné balóny", "Skalní lezení", "Venku", "Sport"],
+    "activities": [
+      "Golf",
+      "Horkovzdušné balóny",
+      "Skalní lezení",
+      "Venku",
+      "Sport"
+    ],
     "comfort": ["Wifi", "Tělocvična", "Restaurace"]
   },
   "The Residences at Chevy Chase": {
@@ -155,13 +161,7 @@
   },
   "Gaylord Palms and Convention Center": {
     "description": "Tento hotel má jedinečné atrium s aligátory a hady, stejně jako řadu sezónních aktivit, jako jsou honby za pokladem a zdobení cukroví.",
-    "activities": [
-      "Děti",
-      "Sport",
-      "Venku",
-      "Bruslení",
-      "Surfování"
-    ],
+    "activities": ["Děti", "Sport", "Venku", "Bruslení", "Surfování"],
     "comfort": ["Spa", "Restaurace", "Bazén"]
   },
   "Treebones Resort": {
@@ -173,7 +173,12 @@
       "Umění",
       "Relaxace"
     ],
-    "comfort": ["Restaurace", "Mazlíčci", "Organická zahrada", "Turistické stezky"]
+    "comfort": [
+      "Restaurace",
+      "Mazlíčci",
+      "Organická zahrada",
+      "Turistické stezky"
+    ]
   },
   "Hotel Max": {
     "description": "Tento hotel se nachází v centru Seattlu a je známý svým uměleckým a hudebním tématem, s originálními uměleckými díly a ikonickými fotografiemi v celém objektu.",
@@ -244,7 +249,7 @@
     ],
     "comfort": ["Spa", "Restaurace"]
   },
-  "Whitepod Eco-Luxury Hotel": {  
+  "Whitepod Eco-Luxury Hotel": {
     "description": "Whitepod Eco-Luxury Hotel se nachází v швейcarských Alpách (Švýcarské Alpy) a nabízí ubytování v jedinečných geodetických domech a řadu aktivit, včetně lyžování, sněžného chození, jógy a pozorování hvězd.",
     "activities": [
       "Lyžování",
@@ -414,28 +419,17 @@
   },
   "Safari-Club": {
     "description": "Hotel Safari-Club nabízí jedinečný zážitek s plaveckým bazénem, lázeňskými službami a možnostmi jízdy na koni. Je ideální pro ty, kteří chtějí spojit relaxaci s dobrodružstvím. Hotel se nachází v klidném prostředí s krásným přírodním okolím.",
-    "activities": [
-      "Bazén",
-      "Sport",
-      "Jízda na koni"
-    ],
+    "activities": ["Bazén", "Sport", "Jízda na koni"],
     "comfort": ["Wifi", "Parkování", "Spa", "Restaurace", "Tělocvična"]
   },
   "Fenix Town": {
     "description": "Fenix Town je moderní hotel s řadou aktivit, jako je fitness centrum, bowling a kulečník. Hosté mohou relaxovat také v sauně. Hotel nabízí komfortní a moderní ubytování s výborným vybavením.",
-    "activities": [
-      "Relaxace",
-      "Sport",
-      "Bowling",
-      "Kulečník"
-    ],
+    "activities": ["Relaxace", "Sport", "Bowling", "Kulečník"],
     "comfort": ["Wifi", "Parkování", "Tělocvična", "Restaurace"]
   },
   "Fairmont Grand Hotel Kyiv": {
     "description": "Fairmont Grand Hotel Kyiv nabízí kombinaci elegance a pohodlí, ideální pro hosty, kteří hledají relaxaci i kulturní průzkum. Lázeňské služby zahrnují masáže, ošetření obličeje a tělové procedury.",
-    "activities": [
-      "Relaxace"
-    ],
+    "activities": ["Relaxace"],
     "comfort": ["Wifi", "Parkování", "Spa", "Restaurace", "Bar"]
   },
   "Lisotel": {
@@ -461,9 +455,22 @@
   },
   "Opera Hotel": {
     "description": "Opera Hotel kombinuje luxus a kulturní kouzlo a nabízí jedinečné tematické apartmá a komplexní lázeňské služby. Vrcholem pro znalce je oceňovaný vinný lístek hotelu.",
-    "activities": [
-      "Relaxace"
-    ],
+    "activities": ["Lázeňské procedury", "Degustace vín"],
+    "comfort": ["Wifi", "Parkování", "Spa", "Restaurace"]
+  },
+  "Hotel Flamingo": {
+    "description": "Hotel Flamingo nabízí komfortní ubytování a tenisové zázemí v krásném pobřežním prostředí. Hosté se mohou věnovat řadě aktivit včetně tenisu, plavání ve venkovním bazénu a poznávání nedalekých pláží.",
+    "activities": ["Tenis", "Dětský klub", "Pláž", "Bazén"],
+    "comfort": ["Wifi", "Parkování", "Restaurace"]
+  },
+  "Novotel Phuket Resort": {
+    "description": "Tento hotel s výhledem na pláž Patong nabízí tenisové kurty, fitness centrum a tři stupňovité bazény. Je to skvělá volba pro ty, kteří si chtějí užít tenis i rušný život Phuketu.",
+    "activities": ["Tenis", "Pláž", "Bazén"],
+    "comfort": ["Wifi", "Parkování", "Restaurace", "Tělocvična", "Bazén"]
+  },
+  "Hotel Panorama": {
+    "description": "Hotel Panorama se nachází v Plzni a nabízí tenisové kurty, wellness centrum a komfortní pokoje. Hotel se také nachází v blízkosti centra města, takže je vhodný pro poznávání místních zajímavostí",
+    "activities": ["Tenis", "Wellness centrum"],
     "comfort": ["Wifi", "Parkování", "Spa", "Restaurace"]
   }
 }

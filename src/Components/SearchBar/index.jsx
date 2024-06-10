@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Dropdown } from "../Dropdown";
 import "./style.css";
 import { CountriesInput } from "../CountriesInput";
 import hotels from "../../api/hotels";
+import { useSearchParams } from "react-router-dom";
+import outdoorsImg from "../LargeDropdownContent/img/cycling.png";
+import sportImg from "../LargeDropdownContent/img/sports.png";
+import kidsImg from "../LargeDropdownContent/img/playground.png";
+import artImg from "../LargeDropdownContent/img/hobby.png";
+import relaxImg from "../LargeDropdownContent/img/beach.png";
+import indoorsImg from "../LargeDropdownContent/img/pool.png";
 
 const getFilterResult = (hotel, filters) => {
   const { activities, locCode, comfort, price, rating } = filters;
@@ -39,17 +46,30 @@ const getFilterResult = (hotel, filters) => {
 };
 
 export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
-  const { t, i18n } = useTranslation();
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+  const { t } = useTranslation();
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const [filters, setFilters] = useState({
+    // searchParams.get("activities").split(",") ||
     activities: [],
     locCode: [],
     comfort: [],
     price: [],
     rating: [],
   });
+console.log(filters)
+  useEffect(() => {
+    //create a varieble to store the filters that are not empty
+
+    const activeFilters = Object.entries(filters).reduce((acc, [key, value]) => { 
+      if (value.length > 0) acc[key] = value;
+      return acc;
+    }, {});
+
+    const urlParam = new URLSearchParams(activeFilters).toString();
+
+    setSearchParams(urlParam);
+  }, [filters]);
 
   const handleFilterChange = (category, newCheckedOptions) => {
     setFilters((prevFilters) => ({
@@ -112,33 +132,43 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
           {
             key: "outdoors",
             value: t("outdoors"),
+            image: outdoorsImg,
             subcategories: [
               { key: "hiking", value: t("hiking") },
               { key: "cycling", value: t("cycling") },
               { key: "fishing", value: t("fishing") },
+              { key: "surfing", value: t("surfing") },
+              { key: "minigolf", value: t("minigolf") },
+              { key: "beach-volleyball", value: t("beach-volleyball") },
             ],
           },
           {
             key: "sport",
             value: t("sport"),
+            image: sportImg,
             subcategories: [
               { key: "tennis", value: t("tennis") },
               { key: "golf", value: t("golf") },
               { key: "skiing", value: t("skiing") },
+              { key: "horse-riding", value: t("horse-riding") },
+              { key: "water-sports", value: t("water-sports") },
             ],
           },
           {
             key: "art",
             value: t("art"),
+            image: artImg,
             subcategories: [
-              { key: "architecture", value: t("architecture") },
-              { key: "pottery", value: t("pottery") },
+              { key: "crafts", value: t("crafts") },
               { key: "painting", value: t("painting") },
+              { key: "cooking-masterclass", value: t("cooking-masterclass") },
+              { key: "wine-tasting", value: t("wine-tasting") },
             ],
           },
           {
             key: "relax",
             value: t("relax"),
+            image: relaxImg,
             subcategories: [
               { key: "spa", value: t("spa") },
               { key: "massage", value: t("massage") },
@@ -146,12 +176,26 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
             ],
           },
           {
-            key: "kids", value: t("kids"),
+            key: "indoors",
+            value: t("indoors"),
+            image: indoorsImg,
+            subcategories: [
+              { key: "bowling", value: t("bowling") },
+              { key: "billiard", value: t("billiard") },
+              { key: "boardgames", value: t("boardgames") },
+              { key: "casino", value: t("casino") }
+            ],
+          },
+          {
+            key: "kids",
+            value: t("kids"),
+            image: kidsImg,
             subcategories: [
               { key: "playground", value: t("playground") },
               { key: "kids-club", value: t("kids-club") },
+              { key: "aquapark", value: t("aquapark") },
             ],
-           },
+          },
         ]}
         onChange={(newCheckedOptions) =>
           handleFilterChange("activities", newCheckedOptions)
@@ -169,6 +213,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
           { key: "parking", value: t("parking") },
           { key: "pets", value: t("pets") },
           { key: "pool", value: t("pool") },
+          { key: "beach", value: t("beach") },
           { key: "gym", value: t("gym") },
           { key: "kitchen", value: t("kitchen") },
         ]}
