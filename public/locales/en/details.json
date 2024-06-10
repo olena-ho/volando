@@ -462,5 +462,10 @@
     "description": "Hotel Panorama is located in Pilsen and offers tennis courts, a wellness center and comfortable rooms. The hotel is also located near the city center, making it convenient for exploring the local attractions",
     "activities": ["Tennis", "Wellness center"],
     "comfort": ["Wifi", "Free parking", "Spa center", "Restaurant"]
+  },
+  "Hôtel de Paris Monte-Carlo": {
+    "description": "The Hôtel de Paris Monte-Carlo is an iconic luxury hotel located in the heart of Monaco. The hotel features an on-premises casino, a world-class spa, exquisite dining options, and luxury shopping. It is renowned for its elegance and sophistication, offering guests a truly memorable stay.",
+    "activities": ["Spa", "Swimming", "Casino", "Shopping"],
+    "comfort": ["Wifi", "Valet-parking", "Wellness Sky Club", "Restaurant"]
   }
 }

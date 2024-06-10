@@ -1111,7 +1111,32 @@ const hotels = [
     comfort: ["wifi", "parking", "restaurant"],
     web: "http://www.panorama-pm.cz/",
     images: [],
+  },
+  {
+    "id": 57,
+    "name": "Hôtel de Paris Monte-Carlo",
+    "activities": [
+      "outdoors",
+      "sport",
+      "spa",
+      "relax",
+      "casino",
+      "gourmet-dining",
+    ],
+    "loc-code": "mc-c",
+    "address": "Place du Casino, 98000 Monaco",
+    "location": {
+      "latitude": 43.7384,
+      "longitude": 7.4286
+    },
+    "rating": 5,
+    "price": "luxury",
+    "description": "The Hôtel de Paris Monte-Carlo is an iconic luxury hotel located in the heart of Monaco. The hotel features an on-premises casino, a world-class spa, exquisite dining options, and luxury shopping. It is renowned for its elegance and sophistication, offering guests a truly memorable stay.",
+    "comfort": ["wifi", "valet-parking", "pool", "restaurant", "spa", "fitness-center"],
+    "web": "https://www.montecarlosbm.com/en/hotel-monaco/hotel-paris-monte-carlo",
+    images: [],
   }
+  
 ];
 
 export default hotels;

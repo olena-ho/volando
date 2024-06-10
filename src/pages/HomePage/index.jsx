@@ -1,18 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { HomeVisual } from "../../components/HomeVisual";
 import { SearchBar } from "../../components/SearchBar";
-import "./style.css";
 import { SearchResults } from "../../components/SearchResults";
+import hotels from "../../api/hotels";
+import { filterHotels } from "../../utils/filterHotels";
+import "./style.css";
 
 export const HomePage = () => {
   const [foundHotelsIds, setFoundHotelsIds] = useState([]);
   const [alternativeHotelsFound, setAlternativeHotelsFound] = useState(false);
+  const [searchParams] = useSearchParams();
 
-  console.log(foundHotelsIds);
+  const handleSearch = (filters) => {
+    const { filteredHotels, alternativeHotels } = filterHotels(hotels, filters);
+
+    setAlternativeHotelsFound(filteredHotels.length === 0);
+
+    setFoundHotelsIds(
+      (filteredHotels.length > 0 ? filteredHotels : alternativeHotels).map(
+        (hotel) => hotel.id
+      )
+    );
+  };
+
+  useEffect(() => {
+    const initialFilters = {
+      activities: searchParams.get("activities") ? searchParams.get("activities").split(",") : [],
+      locCode: searchParams.get("locCode") ? searchParams.get("locCode").split(",") : [],
+      comfort: searchParams.get("comfort") ? searchParams.get("comfort").split(",") : [],
+      price: searchParams.get("price") ? searchParams.get("price").split(",") : [],
+      rating: searchParams.get("rating") ? searchParams.get("rating").split(",") : [],
+    };
+
+    if (
+      initialFilters.activities.length > 0 ||
+      initialFilters.locCode.length > 0 ||
+      initialFilters.comfort.length > 0 ||
+      initialFilters.price.length > 0 ||
+      initialFilters.rating.length > 0
+    ) {
+      handleSearch(initialFilters);
+    }
+  }, [searchParams]);
+
   return (
     <div className="main-page__container">
       <SearchBar
-        onSearch={setFoundHotelsIds}
+        onSearch={handleSearch}
         setAlternativeHotelsFound={setAlternativeHotelsFound}
       />
       {foundHotelsIds.length > 0 ? (

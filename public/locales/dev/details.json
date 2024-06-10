@@ -480,5 +480,10 @@
     "description": "Hotel Panorama se nachází v Plzni a nabízí tenisové kurty, wellness centrum a komfortní pokoje. Hotel se také nachází v blízkosti centra města, takže je vhodný pro poznávání místních zajímavostí",
     "activities": ["Tenis", "Wellness centrum"],
     "comfort": ["Wifi", "Parkování", "Spa", "Restaurace"]
+  },
+  "Hôtel de Paris Monte-Carlo": {
+    "description": "Hôtel de Paris Monte-Carlo je ikonický luxusní hotel v centru Monaka. Hotel nabízí kasino přímo v hotelu, prvotřídní lázně, vynikající restaurace a luxusní nákupní možnosti. Je proslulý svou elegancí a sofistikovaností a nabízí hostům skutečně nezapomenutelný pobyt.",
+    "activities": ["Wellness", "Plavaní", "Kasino", "Nákupy"],
+    "comfort": ["Wifi", "Parkování s obsluhou", "Wellness Sky Club", "Restaurace"]
   }
 }

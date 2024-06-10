@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Dropdown } from "../Dropdown";
-import "./style.css";
 import { CountriesInput } from "../CountriesInput";
+import "./style.css";
 import hotels from "../../api/hotels";
-import { useSearchParams } from "react-router-dom";
 import outdoorsImg from "../LargeDropdownContent/img/cycling.png";
 import sportImg from "../LargeDropdownContent/img/sports.png";
 import kidsImg from "../LargeDropdownContent/img/playground.png";
@@ -50,24 +49,34 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [filters, setFilters] = useState({
-    // searchParams.get("activities").split(",") ||
-    activities: [],
-    locCode: [],
-    comfort: [],
-    price: [],
-    rating: [],
+    activities: searchParams.get("activities")
+      ? searchParams.get("activities").split(",")
+      : [],
+    locCode: searchParams.get("locCode")
+      ? searchParams.get("locCode").split(",")
+      : [],
+    comfort: searchParams.get("comfort")
+      ? searchParams.get("comfort").split(",")
+      : [],
+    price: searchParams.get("price")
+      ? searchParams.get("price").split(",")
+      : [],
+    rating: searchParams.get("rating")
+      ? searchParams.get("rating").split(",")
+      : [],
   });
-console.log(filters)
+
+  console.log(filters);
   useEffect(() => {
-    //create a varieble to store the filters that are not empty
-
-    const activeFilters = Object.entries(filters).reduce((acc, [key, value]) => { 
-      if (value.length > 0) acc[key] = value;
-      return acc;
-    }, {});
-
+    //a variable to store the filters that are not empty
+    const activeFilters = Object.entries(filters).reduce(
+      (acc, [key, value]) => {
+        if (value.length > 0) acc[key] = value;
+        return acc;
+      },
+      {}
+    );
     const urlParam = new URLSearchParams(activeFilters).toString();
-
     setSearchParams(urlParam);
   }, [filters]);
 
@@ -97,16 +106,9 @@ console.log(filters)
       const filterResult = getFilterResult(hotel, filters);
       return Object.values(filterResult).every((value) => value === true);
     });
-
+    //providing alternative search results in case there isn't a hotel that matches all the params
     const alternativeHotels = hotels.filter((hotel) => {
       const filterResult = getFilterResult(hotel, filters);
-      // const newFilterResult = Object.entries(filterResult).reduce(
-      //   (acc, [key, value]) => {
-      //     if (value) acc[key] = value;
-      //     return acc;
-      //   },
-      //   {}
-      // );
 
       return filterResult.matchesActivities;
     });
@@ -183,7 +185,7 @@ console.log(filters)
               { key: "bowling", value: t("bowling") },
               { key: "billiard", value: t("billiard") },
               { key: "boardgames", value: t("boardgames") },
-              { key: "casino", value: t("casino") }
+              { key: "casino", value: t("casino") },
             ],
           },
           {
