@@ -5,12 +5,15 @@ import { SearchBar } from "../../components/SearchBar";
 import { SearchResults } from "../../components/SearchResults";
 import hotels from "../../api/hotels";
 import { filterHotels } from "../../utils/filterHotels";
+import Lottie from "lottie-react";
+import animation from "../../../public/assets/animation/searching-animation.json";
 import "./style.css";
 
 export const HomePage = () => {
   const [foundHotelsIds, setFoundHotelsIds] = useState([]);
   const [alternativeHotelsFound, setAlternativeHotelsFound] = useState(false);
   const [searchParams] = useSearchParams();
+  const [showAnimation, setShowAnimation] = useState(false);
 
   const handleSearch = (filters) => {
     const hasNoFilters = Object.values(filters).every(
@@ -67,13 +70,28 @@ export const HomePage = () => {
     }
   }, [searchParams]);
 
+  useEffect(() => {
+    if (alternativeHotelsFound) {
+      setShowAnimation(true);
+      const timer = setTimeout(() => {
+        setShowAnimation(false);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [alternativeHotelsFound]);
+
   return (
     <div className="main-page__container">
       <SearchBar
         onSearch={handleSearch}
         setAlternativeHotelsFound={setAlternativeHotelsFound}
       />
-      {foundHotelsIds.length > 0 ? (
+      {showAnimation ? (
+        <div className="animation-container">
+          <Lottie animationData={animation} className="animation" />
+        </div>
+      ) : foundHotelsIds.length > 0 ? (
         <SearchResults
           foundHotelsIds={foundHotelsIds}
           alternativeHotelsFound={alternativeHotelsFound}

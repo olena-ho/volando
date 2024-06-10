@@ -11,6 +11,18 @@ header {
   width: 100vw;
 }
 
+.animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Adjust height as needed */
+}
+
+.animation {
+  width: 100%;
+  max-width: 600px; /* Adjust max-width as needed */
+}
+
 .search-results-container {
   display: flex;
 }

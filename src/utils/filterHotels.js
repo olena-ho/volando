@@ -44,6 +44,7 @@ export const filterHotels = (hotels, filters) => {
     return Object.values(filterResult).every((value) => value === true);
   });
 
+  //select the alternative hotels based on the activities the user selected
   const alternativeHotels = hotels.filter((hotel) => {
     const filterResult = getFilterResult(hotel, filters);
     return filterResult.matchesActivities;
