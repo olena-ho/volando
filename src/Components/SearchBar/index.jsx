@@ -65,8 +65,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
 
   const handleSearch = () => {
     const { filteredHotels, alternativeHotels } = filterHotels(hotels, filters);
-
-    if (filters.activities.length === 0) {
+    if (filters.activities.length === 0 && filters.locCode.length === 0) {
       alert(t("alert-param"));
       return;
     }
@@ -202,10 +201,10 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
           handleFilterChange("rating", newCheckedOptions)
         }
       />
-{/* 
+
       <button className="search-button" onClick={handleSearch}>
         {t("searchB")}
-      </button> */}
+      </button>
     </div>
   );
 };

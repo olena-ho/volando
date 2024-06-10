@@ -1,9 +1,9 @@
 export const getFilterResult = (hotel, filters) => {
   const { activities, locCode, comfort, price, rating } = filters;
 
-  const matchesActivities = activities.some((activity) =>
-    hotel.activities.includes(activity)
-  );
+  const matchesActivities =
+    activities.length === 0 ||
+    activities.some((activity) => hotel.activities.includes(activity));
 
   const matchesLocation =
     locCode.length === 0 || locCode.includes(hotel["loc-code"]);
