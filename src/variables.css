@@ -8,8 +8,11 @@
   --volando-light-orange: #FFBF69;
   --volando-green: #2EC4B6;
   --volando-light-green: #CBF3F0;
-  --bold-text-color: #a9a9a9;
   --autocomplete-item-highlight: #f0f0f0;
+
+  /* gradient */
+  --gradient-background: linear-gradient(45deg, #21a1f2, #2EC4B6);
+  
   /* font size */
   --main-font-size: 14px;
   --category-title-font-size: 16px;

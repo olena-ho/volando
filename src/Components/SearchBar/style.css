@@ -19,5 +19,5 @@
 }
 
 .search-button:hover {
-  background-color: #007acc;
+  background: var(--gradient-background);
 }

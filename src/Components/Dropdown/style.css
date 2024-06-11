@@ -51,7 +51,7 @@
 .input-line {
   height: 1px;
   width: 0;
-  background-color: var(--light-grey-color);
+  background: var(--gradient-background);
   position: absolute;
   bottom: 0;
   left: 0;
