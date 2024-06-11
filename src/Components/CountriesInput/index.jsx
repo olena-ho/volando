@@ -12,6 +12,7 @@ export const CountriesInput = ({ placeholder, onChange }) => {
   const [countries, setCountries] = useState([]);
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const dropdownRef = useRef(null);
+  const autocompleteListRef = useRef(null);
 
   useEffect(() => {
     const loadCountries = () => {
@@ -43,7 +44,7 @@ export const CountriesInput = ({ placeholder, onChange }) => {
     setInputValue(event.target.value);
     setShowAutocomplete(true);
     setShow(false);
-    setHighlightedIndex(-1); 
+    setHighlightedIndex(-1);
   };
 
   const handleSelect = (country) => {
@@ -52,7 +53,7 @@ export const CountriesInput = ({ placeholder, onChange }) => {
     setInputValue("");
     setShow(true);
     setShowAutocomplete(false);
-    setHighlightedIndex(-1); 
+    setHighlightedIndex(-1);
     onChange([...locCode, country.key]);
   };
 
@@ -89,10 +90,24 @@ export const CountriesInput = ({ placeholder, onChange }) => {
       setHighlightedIndex((prevIndex) =>
         prevIndex < filteredCountries.length - 1 ? prevIndex + 1 : prevIndex
       );
+      if (autocompleteListRef.current) {
+        const nextIndex = highlightedIndex + 1;
+        const nextItem = autocompleteListRef.current.children[nextIndex];
+        if (nextItem) {
+          nextItem.scrollIntoView({ block: "nearest" });
+        }
+      }
     } else if (event.key === "ArrowUp") {
       setHighlightedIndex((prevIndex) =>
         prevIndex > 0 ? prevIndex - 1 : prevIndex
       );
+      if (autocompleteListRef.current) {
+        const prevIndex = highlightedIndex - 1;
+        const prevItem = autocompleteListRef.current.children[prevIndex];
+        if (prevItem) {
+          prevItem.scrollIntoView({ block: "nearest" });
+        }
+      }
     } else if (event.key === "Enter" && highlightedIndex >= 0) {
       handleSelect(filteredCountries[highlightedIndex]);
     }
@@ -102,6 +117,31 @@ export const CountriesInput = ({ placeholder, onChange }) => {
     const inputElement = document.getElementById("location");
   };
 
+  //the code for the animated line, see later if I can refactor it
+  const handleFocus = (event) => {
+    const inputElement = event.target;
+    const afterElement = inputElement.nextElementSibling;
+    if (afterElement) {
+      afterElement.style.width = "100%";
+    }
+  };
+
+  const handleBlur = (event) => {
+    const inputElement = event.target;
+    const afterElement = inputElement.nextElementSibling;
+    if (afterElement) {
+      afterElement.style.width = "0";
+    }
+  };
+
+  const handleTyping = (event) => {
+    const inputElement = event.target;
+    const afterElement = inputElement.nextElementSibling;
+    if (event.target.value.length > 0 && afterElement) {
+      afterElement.style.width = "0";
+    }
+  };
+
   return (
     <div className="dropdown-wrapper" ref={dropdownRef}>
       <input
@@ -109,19 +149,25 @@ export const CountriesInput = ({ placeholder, onChange }) => {
         id="location"
         value={inputValue}
         placeholder={placeholder}
-        onFocus={() => {
+        onFocus={(event) => {
           setInputValue("");
           setShow(locCode.length > 0);
+          handleFocus(event);
         }}
-        onChange={handleInputChange}
-        onKeyDown={handleKeyDown} 
-        className="dropdown-button"
+        onBlur={handleBlur}
+        onChange={(event) => {
+          handleInputChange(event);
+          handleTyping(event);
+        }}
+        onKeyDown={handleKeyDown}
+        className="dropdown-button text-input"
         autoComplete="off"
         onMouseEnter={() => handleHover(true)}
         onMouseLeave={() => handleHover(false)}
       />
+      <div className="input-line"></div>
       {showAutocomplete && inputValue && (
-        <div className="autocomplete-list">
+        <div className="autocomplete-list" ref={autocompleteListRef}>
           {filteredCountries.map((country, index) => (
             <div
               key={index}

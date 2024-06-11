@@ -33,10 +33,11 @@
 .visual-text__item {
   width: 234px;
   text-align: center;
+  font-size: var(--homepage-message-font-size);
   font-weight: 600;
-  color: darkgray;
+  color: var(--light-grey-color);
 }
 
 .visual-text__item:last-child {
-  padding-right: 20px;
+  padding-right: 9px;
 }
