@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,7 +6,8 @@
 
 html {
   font-family: 'Open Sans', sans-serif;
-  color: #36454F;
+  font-size: var(--main-font-size);
+  color: var(--main-font-color);
 }
 
 body {
@@ -23,4 +24,12 @@ body {
 ul {
   list-style: none;
   padding: 0;
+}
+
+.btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: var(--main-font-size);
 }

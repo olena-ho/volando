@@ -207,7 +207,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
         }
       />
 
-      <button className="search-button" onClick={handleSearch}>
+      <button className="btn search-button" onClick={handleSearch}>
         {t("searchB")}
       </button>
     </div>

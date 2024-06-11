@@ -28,8 +28,8 @@
 
 .category-title {
   font-weight: bold;
-  font-size: 16px;
-  color: darkgray;
+  font-size: var(--category-title-font-size);
+  color: var(--light-grey-color);
 }
 
 .subcategory-list {
@@ -38,7 +38,8 @@
 
 .subcategory {
   width: fit-content;
-  padding: 0;
+  padding: 2px 0;
+  font-size: var(--main-font-size);
 }
 
 .checkbox-label input {

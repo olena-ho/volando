@@ -9,6 +9,8 @@
 }
 
 .dropdown-button {
+  font-size: var(--main-font-size);
+  color: var(--main-font-color);
   background-color: #fff;
   border: none;
   border-radius: 5px;
@@ -20,7 +22,7 @@
 }
 
 .dropdown-button:hover {
-  color: #00aaff;
+  color: var(--volando-bright-blue);
 }
 
 .down-icon {
@@ -28,11 +30,35 @@
   width: 12px;
 }
 
-.dropdown-wrapper input.dropdown-button:hover::placeholder {
-  color: #00aaff;
+/* text input styles */
+.text-input {
+  width: 100%;
+  outline: none;
+  position: relative;
 }
 
+.text-input::placeholder {
+  color: var(--main-font-color);
+}
+.text-input:hover::placeholder {
+  color: var(--volando-bright-blue);
+}
+.text-input:focus::placeholder {
+  color: var(--light-grey-color);
+}
 
+/* line under the location input */
+.input-line {
+  height: 1px;
+  width: 0;
+  background: var(--gradient-background);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 1s ease-in-out;
+}
+
+/* autocomplete styles */
 .autocomplete-list {
   position: absolute;
   background-color: white;
@@ -50,14 +76,12 @@
   cursor: pointer;
 }
 
+.autocomplete-item:hover,
 .autocomplete-item.highlighted {
-  background-color: #e0e0e0;
+  background-color: var(--autocomplete-item-highlight);
 }
 
-.autocomplete-item:hover {
-  background-color: #f0f0f0;
-}
-
+/* dropdown content styles */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -65,7 +89,6 @@
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   height: fit-content;
-  padding: 10px;
   overflow-y: auto;
   width: max-content;
   min-width: 200px;
@@ -82,29 +105,13 @@
   display: block;
   padding: 10px;
   cursor: pointer;
-  margin-bottom: 5px;
 }
 
 .checkbox-label:hover {
   background-color: #f0f0f0;
 }
 
-.apply-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #00aaff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.apply-button:hover {
-  background-color: #007acc;
-}
-
+/* added location box */
 .location-box {
   display: flex;
   flex-wrap: wrap;
