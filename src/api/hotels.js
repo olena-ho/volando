@@ -260,7 +260,7 @@ const hotels = [
   {
     id: 14,
     name: "Poseidon Undersea Resorts",
-    activities: ["underwater hotel", "relax", "outdoors"],
+    activities: ["underwater hotel", "relax"],
     "loc-code": "fj-c",
     address: "Fiji Island",
     location: {
