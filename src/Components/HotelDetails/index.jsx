@@ -24,8 +24,9 @@ const tabs = [
     name: 'comfortP',
   },
 ];
+//to remove later: I added ={} to the props to avoid the error of undefined
 
-export const HotelDetails = ({ hotelDetails, images, web, defaultReviews, hotelId }) => {
+export const HotelDetails = ({ hotelDetails ={}, images, web, defaultReviews, hotelId }) => {
   const [selectedTab, setSelectedTab] = useState(tabs[0].id);
   const { t } = useTranslation(['details', 'translation']);
 

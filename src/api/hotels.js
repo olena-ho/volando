@@ -1891,11 +1891,22 @@ const hotels = [
     },
     rating: 4.2,
     price: 'midrange',
-    description:
-      "The Safari-Club Hotel provides a unique experience with a swimming pool, spa services, and horseback riding facilities. It's ideal for those looking to combine relaxation with adventure. The hotel is situated in a serene environment with beautiful natural surroundings.",
     comfort: ['wifi', 'parking', 'spa', 'restaurant', 'gym'],
     web: 'http://www.safari-club.com',
-    images: [],
+    images: [
+      {
+        small: "/assets/Safari-Club/safari-small.jpg",
+        large: "/assets/Safari-Club/safari.jpg",
+      },
+      {
+        small: "/assets/Safari-Club/horse-kid-small.jpg",
+        large: "/assets/Safari-Club/horse-kid.jpg",
+      },
+      {
+        small: "/assets/Safari-Club/safari-sunset-small.jpg",
+        large: "/assets/Safari-Club/safari-sunset.jpg",
+      },
+    ],
   },
   {
     id: 50,
@@ -1909,11 +1920,26 @@ const hotels = [
     },
     rating: 4.3,
     price: 'budget',
-    description:
-      'Fenix Town is a modern hotel featuring a variety of activities such as a fitness center, bowling, and billiard. Guests can also relax in the sauna. The hotel offers a comfortable and contemporary stay with excellent facilities.',
     comfort: ['wifi', 'parking', 'gym', 'restaurant'],
     web: 'http://www.fenixtown.com',
-    images: [],
+    images: [
+      {
+        small: "/assets/Fenix-Town/billiard-small.jpg",
+        large: "/assets/Fenix-Town/billiard.jpg",
+      },
+      {
+        small: "/assets/Fenix-Town/bowling-small.jpg",
+        large: "/assets/Fenix-Town/bowling.jpg",
+      },
+      {
+        small: "/assets/Fenix-Town/relax-small.jpg",
+        large: "/assets/Fenix-Town/relax.jpg",
+      },
+      {
+        small: "/assets/Fenix-Town/spa-small.jpg",
+        large: "/assets/Fenix-Town/spa.jpg",
+      },
+    ],
   },
   {
     id: 51,
@@ -1927,11 +1953,22 @@ const hotels = [
     },
     rating: 5,
     price: 'luxury',
-    description:
-      'Fairmont Grand Hotel Kyiv offers a mix of elegance and comfort, perfect for guests seeking both relaxation and cultural exploration. The spa services include massages, facials, and body treatments.',
     comfort: ['wifi', 'parking', 'spa', 'restaurant', 'bar'],
     web: 'https://www.fairmont.com/kyiv/',
-    images: [],
+    images: [
+      {
+        small: "/assets/Fairmont-Grand-Hotel-Kyiv/bath-small.jpg",
+        large: "/assets/Fairmont-Grand-Hotel-Kyiv/bath.jpg",
+      },
+      {
+        small: "/assets/Fairmont-Grand-Hotel-Kyiv/massage-small.jpg",
+        large: "/assets/Fairmont-Grand-Hotel-Kyiv/massage.jpg",
+      },
+      {
+        small: "/assets/Fairmont-Grand-Hotel-Kyiv/sauna-small.jpg",
+        large: "/assets/Fairmont-Grand-Hotel-Kyiv/sauna.jpg",
+      },
+    ],
   },
   {
     id: 52,

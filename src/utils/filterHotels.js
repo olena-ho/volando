@@ -4,7 +4,7 @@ export const getFilterResult = (hotel, filters) => {
     locCode = [],
     comfort = [],
     price = [],
-    rating = []
+    rating = [],
   } = filters;
 
   //the user has to select at least one activity or location

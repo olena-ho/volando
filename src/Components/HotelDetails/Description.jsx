@@ -1,10 +1,8 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
-import './style.css';
 
-export const Description = ({ hotelDetails, images, web }) => {
+export const Description = ({ hotelDetails, web }) => {
   const { t } = useTranslation(['details', 'translation']);
-  console.log(hotelDetails);
+
   return (
     <div className="details-container">
       <p>

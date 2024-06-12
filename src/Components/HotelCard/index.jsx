@@ -4,7 +4,7 @@ import "./style.css";
 
 export const HotelCard = ({
   hotel,
-  hotelDetails,
+  hotelDetails = {}, //to remove later: I added ={} to the props to avoid the error of undefined
   onRemoveFromFavorites,
   onHotelClick,
   isFavorite,
@@ -13,6 +13,9 @@ export const HotelCard = ({
   isHotelDetailsOpened,
 }) => {
   const { t } = useTranslation(["details", "translation"]); // Hook for translations
+
+  const { activities = []} = hotelDetails; //due to this destructuring I use address and rating instead of hotelDetails.address and hotelDetails.rating
+
   return (
     <div className="hotel-card" onClick={() => onHotelClick(hotel)}>
       <div className="hotel-info--wrapper">
@@ -32,7 +35,7 @@ export const HotelCard = ({
               <div>
                 <p>
                   {t("translation:activities")}:{" "}
-                  {hotelDetails.activities ? hotelDetails.activities.join(", ") : t("translation:noActivities")}  {/* Check for hotelDetails definition */}
+                  {activities.join(", ")}
                 </p>
               </div>
             </div>
