@@ -1,24 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import localforage from 'localforage';
+import { v4 as uuidv4 } from 'uuid';
+
+const getUserId = () => {
+  let userId = localStorage.getItem('userId');
+  if (!userId) {
+    userId = uuidv4();
+    localStorage.setItem('userId', userId);
+  }
+  return userId;
+};
 
 export const Reviews = ({ hotelId, defaultReviews }) => {
   const [reviews, setReviews] = useState([]);
-  const [newReview, setNewReview] = useState({ name: '', text: '' });
+  const [newReview, setNewReview] = useState({ name: '', text: '', userId: getUserId() });
+  const [editIndex, setEditIndex] = useState(null);
   const { t } = useTranslation();
-  console.log({ defaultReviews });
+  const currentUserId = getUserId();
 
   useEffect(() => {
-    // Load reviews from localStorage
+    // Завантаження відгуків з localStorage
     const loadReviews = async () => {
       const storedReviews = (await localforage.getItem('reviews')) || {};
       if (storedReviews[hotelId]) {
         setReviews(storedReviews[hotelId]);
-        /*  console.log('Loaded reviews from localStorage:', storedReviews[hotelId]); */
       } else {
         setReviews(defaultReviews);
-
-        /* console.log('Loaded default reviews: ', defaultReviews); */
       }
     };
     loadReviews();
@@ -34,18 +42,50 @@ export const Reviews = ({ hotelId, defaultReviews }) => {
     const newReviewWithDate = {
       ...newReview,
       date: new Date().toLocaleString(),
+      userId: currentUserId, // Додавання userId до нового відгуку
     };
 
-    const updatedReviews = [...reviews, newReviewWithDate];
+    let updatedReviews;
+    if (editIndex !== null) {
+      updatedReviews = reviews.map((review, index) => index === editIndex ? newReviewWithDate : review);
+      setEditIndex(null);
+    } else {
+      updatedReviews = [...reviews, newReviewWithDate];
+    }
     setReviews(updatedReviews);
 
-    // Save reviews to localStorage for the specific hotel
-    const storedReviews = await localforage.getItem('reviews') || {};
+    // Збереження відгуків у localStorage для конкретного готелю
+    const storedReviews = (await localforage.getItem('reviews')) || {};
     storedReviews[hotelId] = updatedReviews;
-    await localforage.setItem('reviews',/*  JSON.stringify */(storedReviews));
+    await localforage.setItem('reviews', storedReviews);
 
-    setNewReview({ name: '', text: '' });
-    console.log('New review added:', newReviewWithDate);
+    setNewReview({ name: '', text: '', userId: currentUserId });
+    console.log('Review added/edited:', newReviewWithDate);
+  };
+
+  const handleEdit = (index) => {
+    if (reviews[index].userId === currentUserId) {
+      setNewReview(reviews[index]);
+      setEditIndex(index);
+    } else {
+      console.log('You can only edit your own reviews');
+    }
+  };
+
+  const handleDelete = async (index) => {
+    if (reviews[index].userId === currentUserId) {
+      const updatedReviews = reviews.filter((_, i) => i !== index);
+      setReviews(updatedReviews);
+
+      // Оновлення localforage після видалення відгуку
+      const storedReviews = (await localforage.getItem('reviews')) || {};
+      storedReviews[hotelId] = updatedReviews;
+      await localforage.setItem('reviews', storedReviews);
+
+      console.log('Review deleted: ', index);
+    } else {
+      console.log('You can only delete your own reviews');
+    }
   };
 
   return (
@@ -66,7 +106,7 @@ export const Reviews = ({ hotelId, defaultReviews }) => {
           placeholder={t('translation:your-review')}
           required
         />
-        <button type="submit">{t('translation:submit')}</button>
+        <button type="submit">{editIndex !== null ? t('translation:update') : t('translation:submit')}</button>
       </form>
       <div>
         {reviews.map((review, index) => (
@@ -75,6 +115,12 @@ export const Reviews = ({ hotelId, defaultReviews }) => {
               <strong>{review.name}</strong> ({review.date})
             </p>
             <p>{review.text}</p>
+            {review.userId === currentUserId && (
+              <>
+                <button onClick={() => handleEdit(index)}>{t('translation:edit')}</button>
+                <button onClick={() => handleDelete(index)}>{t('translation:delete')}</button>
+              </>
+            )}
           </div>
         ))}
       </div>

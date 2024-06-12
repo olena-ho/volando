@@ -45,7 +45,7 @@ export const HotelDetails = ({ hotelDetails, images, web, defaultReviews, hotelI
       case 'photos':
         return <Photos images={images} />;
       case 'comfort':
-        return <Comfort />;
+        return <Comfort hotelDetails={hotelDetails}/>;
       default:
         break;
     }

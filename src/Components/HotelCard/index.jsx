@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { HotelDetails } from "../HotelDetails";
+import { HotelDetails } from "../HotelDetails/index.jsx";
 import "./style.css";
 
 export const HotelCard = ({
@@ -32,7 +32,7 @@ export const HotelCard = ({
               <div>
                 <p>
                   {t("translation:activities")}:{" "}
-                  {hotelDetails.activities.join(", ")}
+                  {hotelDetails.activities ? hotelDetails.activities.join(", ") : t("translation:noActivities")}  {/* Check for hotelDetails definition */}
                 </p>
               </div>
             </div>
