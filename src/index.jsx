@@ -4,8 +4,10 @@ import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import { App } from "./components/App";
 import { HomePage } from "./pages/HomePage";
 import './i18n';
+import './variables.css';
 import './global.css';
 import { Favorites } from "./pages/Favorites";
+import { TeamInfo } from "./pages/TeamInfo";
 
 
 const router = createBrowserRouter([
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/favorites",
         element: <Favorites />,
+      },
+      {
+        path: "/team-info",
+        element: <TeamInfo />,
       }
     ],
   },

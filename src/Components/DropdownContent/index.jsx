@@ -1,8 +1,11 @@
-import React from "react";
-
-export const DropdownContent = ({ options, checkedOptions, onCheckboxChange, show, large }) => {
+export const DropdownContent = ({
+  options,
+  checkedOptions,
+  onCheckboxChange,
+  show,
+}) => {
   return (
-    <div className={`dropdown-content ${show ? "show" : ""} ${large ? "dropdown-content--large" : ""}`}>
+    <div className={`dropdown-content ${show ? "show" : ""}`}>
       {options.map((option) => (
         <label className="checkbox-label" key={option.key}>
           <input
@@ -10,7 +13,6 @@ export const DropdownContent = ({ options, checkedOptions, onCheckboxChange, sho
             name={option.key}
             checked={checkedOptions.includes(option.key)}
             onChange={onCheckboxChange}
-
           />
           {option.value}
         </label>

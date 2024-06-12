@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import './style.css';
-import { HotelCard } from '../HotelCard';
+import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { HotelCard } from "../HotelCard";
+import "./style.css";
 
 export const HotelList = ({ hotels, alternativeHotelsFound, ...props }) => {
   const { i18n } = useTranslation(['details', 'translation']); // Hook for translations
@@ -55,7 +55,7 @@ export const HotelList = ({ hotels, alternativeHotelsFound, ...props }) => {
 
   return (
     <div className="container-card">
-      {alternativeHotelsFound ? <p>These are alternatives</p> : null}
+      {alternativeHotelsFound ? <h2>These are alternatives</h2> : null}
       {isLoading && <p>Loading...</p>}
       {!details ? (
         <p>No details available</p>

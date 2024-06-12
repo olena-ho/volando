@@ -13,7 +13,6 @@
   padding: 10px;
   gap: 10px;
   width: 100%;
-  /* Ensuring responsiveness */
   transition: transform 0.2s;
 }
 
@@ -26,6 +25,7 @@
 
 .hotel-info--wrapper {
   display: flex;
+  gap: 20px;
 }
 
 .hotel-info {
@@ -107,7 +107,7 @@
 }
 
 .add-heart::before {
-  content: url(../../../public/favorites.png);
+  content: url(../../../public/heart-grey.png);
   animation: zoomIn 0.5s ease;
   background-repeat: no-repeat;
   background-size: 70%;
@@ -115,16 +115,7 @@
 }
 
 .add-heart.active:hover::before {
-  content: '❤️';
-  animation: zoomIn 0.5s ease;
-  background-repeat: no-repeat;
-  background-size: 70%;
-  background-position: center center;
-
-}
-
-.add-heart.active:hover::before {
-  content: '❤️';
+  content: url(../../../public/heart-orange.png);
   animation: zoomIn 0.5s ease;
   background-repeat: no-repeat;
   background-size: 70%;
@@ -132,7 +123,7 @@
 }
 
 .arrow-details::before {
-  content: url(../../../public/arrow-down.png);
+  content: url(../Dropdown/img/down-icon.png);
   animation: zoomIn 0.5s ease;
   background-repeat: no-repeat;
   background-size: 70%;

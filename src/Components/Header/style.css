@@ -39,3 +39,7 @@
   margin: 10px 0;
   cursor: pointer;
 }
+
+.header__icon {
+  cursor: pointer;
+}

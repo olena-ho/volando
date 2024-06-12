@@ -38,8 +38,6 @@ export const Header = () => {
     }
   };
 
-
-
   return (
     <div className="header">
       <a href="/">
@@ -77,8 +75,17 @@ export const Header = () => {
             </div>
           )}
         </div>
-        <img src={favorites} alt="favorites" onClick={() => navigate("/favorites")} className="header__icon" />
-        <img src={info} alt="info" className="header__icon" />
+        <img
+          src={favorites}
+          alt="favorites"
+          onClick={() => navigate("/favorites")}
+          className="header__icon"
+        />
+        <img
+          src={info}
+          alt="info"
+          onClick={() => navigate("/team-info")}
+          className="header__icon" />
       </div>
     </div>
   );

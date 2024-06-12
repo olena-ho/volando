@@ -1,0 +1,20 @@
+:root {
+  /* colors */
+  --main-font-color: #36454F;
+  --light-grey-color: #a9a9a9;
+  --volando-bright-blue: #21a1f2;
+  --volando-dark-blue: #007ae0;
+  --volando-bright-orange: #FF851F;
+  --volando-light-orange: #FFBF69;
+  --volando-green: #2EC4B6;
+  --volando-light-green: #CBF3F0;
+  --autocomplete-item-highlight: #f0f0f0;
+
+  /* gradient */
+  --gradient-background: linear-gradient(45deg, #21a1f2, #2EC4B6);
+  
+  /* font size */
+  --main-font-size: 14px;
+  --category-title-font-size: 16px;
+  --homepage-message-font-size: 17px;
+}

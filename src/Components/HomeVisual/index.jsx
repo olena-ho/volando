@@ -1,5 +1,5 @@
 import snowboarder from "./img/snowboarder.jpg";
-import geolocation from "./img/geolocation.png";
+import geolocation from "./img/geolocation-s.png";
 import traveler from "./img/traveler.png";
 import { useTranslation } from "react-i18next";
 import "./style.css";

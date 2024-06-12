@@ -13,7 +13,6 @@ export const SearchResults = ({ foundHotelsIds, alternativeHotelsFound }) => {
 
   return (
     <div className="search-results-container">
-      <div className="filters-applied">Filters Applied</div>
       <HotelList
         hotels={filteredHotels}
         onHotelClick={setSelectedHotel}

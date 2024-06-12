@@ -445,7 +445,27 @@
   },
   "Opera Hotel": {
     "description": "Opera Hotel combines luxury and cultural charm, offering unique themed suites and comprehensive spa services. The hotel's award-winning wine list is a highlight for connoisseurs.",
-    "activities": ["relax"],
+    "activities": ["Spa procedures", "wine tasting"],
     "comfort": ["wifi", "parking", "spa", "restaurant"]
+  },
+  "Hotel Flamingo": {
+    "description": "Hotel Flamingo offers comfortable accommodation and tennis facilities in a beautiful coastal setting. Guests can enjoy a range of activities including tennis, swimming in the outdoor pool and exploring the nearby beaches.",
+    "activities": ["Tennis", "Beach", "Swimming pool", "Kids club"],
+    "comfort": ["Wifi", "Free parking", "Restaurant"]
+  },
+  "Novotel Phuket Resort": {
+    "description": "Overlooking Patong Beach, this hotel offers tennis courts, a fitness center and three tiered pools. It is a great choice for those who want to enjoy both tennis and the busy life of Phuket.",
+    "activities": ["Tennis", "Swimming"],
+    "comfort": ["Wifi", "Free parking", "Restaurant", "Gym", "Swimming pool"]
+  },
+  "Hotel Panorama": {
+    "description": "Hotel Panorama is located in Pilsen and offers tennis courts, a wellness center and comfortable rooms. The hotel is also located near the city center, making it convenient for exploring the local attractions",
+    "activities": ["Tennis", "Wellness center"],
+    "comfort": ["Wifi", "Free parking", "Spa center", "Restaurant"]
+  },
+  "Hôtel de Paris Monte-Carlo": {
+    "description": "The Hôtel de Paris Monte-Carlo is an iconic luxury hotel located in the heart of Monaco. The hotel features an on-premises casino, a world-class spa, exquisite dining options, and luxury shopping. It is renowned for its elegance and sophistication, offering guests a truly memorable stay.",
+    "activities": ["Spa", "Swimming", "Casino", "Shopping"],
+    "comfort": ["Wifi", "Valet-parking", "Wellness Sky Club", "Restaurant"]
   }
 }
