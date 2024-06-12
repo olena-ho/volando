@@ -26,6 +26,7 @@ export const HotelCard = ({
               : "/assets/img-placeholder.png"
           }
           alt={hotel.name}
+          className="hotel-card__small-image"
         />
 
         <div className="hotel-info">

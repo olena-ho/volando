@@ -61,7 +61,7 @@
   margin-top: 5px;
 }
 
-.hotel-card img {
+.hotel-card__small-image {
   max-width: 150px;
   height: auto;
 }
