@@ -18,7 +18,9 @@ export const HotelCard = ({
       <div className="hotel-info--wrapper">
         <img
           src={
-            hotel.images[0] ? hotel.images[0] : "/assets/img-placeholder.png"
+            hotel.images && hotel.images.length > 0
+              ? hotel.images[0].small
+              : "/assets/img-placeholder.png"
           }
           alt={hotel.name}
         />
@@ -46,7 +48,7 @@ export const HotelCard = ({
         </div>
         <div className="favorite-container">
           <button
-            className={`add-heart ${
+            className={`add-heart icon ${
               isFavorite(hotel.id) ? "active" : "inactive"
             }`}
             onClick={(e) => {
@@ -59,7 +61,7 @@ export const HotelCard = ({
             }}
           ></button>
           <button
-            className={`arrow-details ${
+            className={`arrow-details icon ${
               isHotelDetailsOpened ? "active" : "inactive"
             }`}
             onClick={(e) => {
