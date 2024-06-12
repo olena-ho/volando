@@ -24,7 +24,18 @@ const hotels = [
     price: "midrange",
     comfort: ["wifi", "parking", "pool", "restaurant", "jogging-track"],
     web: "http://www.equitana.cz",
-    images: ["/assets/Equitana/horse-kid-small.jpg", "/assets/Equitana/horse-kid.jpg", "/assets/Equitana/horse-ocean-small.jpg", "/assets/Equitana/horse-ocean.jpg", "/assets/Equitana/horse-passion-small.jpg", "/assets/Equitana/horse-passion.jpg"],
+    images: [{
+      small: '/assets/Equitana/horse-kid-small.jpg',
+      large: '/assets/Equitana/horse-kid.jpg',
+    },
+    {
+      small: '/assets/Equitana/horse-ocean-small.jpg',
+      large: '/assets/Equitana/horse-ocean.jpg',
+    },
+    {
+      small: '/assets/Equitana/horse-passion-small.jpg',
+      large: '/assets/Equitana/horse-passion.jpg',
+    },],
   },
   {
     id: 2,
@@ -49,7 +60,18 @@ const hotels = [
     price: "midrange",
     comfort: ["wifi", "parking", "sauna", "restaurant"],
     web: "http://www.hotelkouty.cz",
-    images: [],
+    images: [{
+      small: '/assets/Hotel-Kouty/yoga-small.jpg',
+      large: '/assets/Hotel-Kouty/yoga.jpg',
+    },
+    {
+      small: '/assets/Hotel-Kouty/paddleboard-small.jpg',
+      large: '/assets/Hotel-Kouty/paddleboard.jpg',
+    },
+    {
+      small: '/assets/Hotel-Kouty/beach-volleyball-small.jpg',
+      large: '/assets/Hotel-Kouty/beach-volleyball.jpg',
+    },],
   },
   {
     id: 3,
@@ -65,7 +87,18 @@ const hotels = [
     price: "midrange",
     comfort: ["wifi", "parking", "pets", "restaurant", "gym", "club rentals"],
     web: "https://www.golfolomouc.cz/en/hotel/hotel",
-    images: [],
+    images: [{
+      small: '/assets/Golf-Resort-Olomouc/golf-ball-small.jpg',
+      large: '/assets/Golf-Resort-Olomouc/golf-ball.jpg',
+    },
+    {
+      small: '/assets/Golf-Resort-Olomouc/golf-man-small.jpg',
+      large: '/assets/Golf-Resort-Olomouc/golf-man.jpg',
+    },
+    {
+      small: '/assets/Golf-Resort-Olomouc/golf-people-small.jpg',
+      large: '/assets/Golf-Resort-Olomouc/golf-people.jpg',
+    },],
   },
   {
     id: 4,
@@ -82,7 +115,18 @@ const hotels = [
     price: "midrange",
     comfort: ["pool", "restaurant", "wifi"],
     web: "https://www.caribebay.it/en",
-    images: [],
+    images: [{
+      small: '/assets/Caribe-Bay/aqua-fun-small.jpg',
+      large: '/assets/Caribe-Bay/aqua-fun.jpg',
+    },
+    {
+      small: '/assets/Caribe-Bay/aqua-bath-small.jpg',
+      large: '/assets/Caribe-Bay/aqua-bath.jpg',
+    },
+    {
+      small: '/assets/Caribe-Bay/aquapark-small.jpg',
+      large: '/assets/Caribe-Bay/aquapark.jpg',
+    },],
   },
   {
     id: 5,
@@ -105,7 +149,22 @@ const hotels = [
     price: "luxury",
     comfort: ["wifi", "restaurant", "pool", "wine cellar"],
     web: "https://www.sixsenses.com/en/resorts/douro-valley/experiences/",
-    images: [],
+    images: [{
+      small: '/assets/Six-Senses/painting-small.jpg',
+      large: '/assets/Six-Senses/painting.jpg',
+    },
+    {
+      small: '/assets/Six-Senses/master-class-small.jpg',
+      large: '/assets/Six-Senses/master-class.jpg',
+    },
+    {
+      small: '/assets/Six-Senses/vine-small.jpg',
+      large: '/assets/Six-Senses/vine.jpg',
+    },
+    {
+      small: '/assets/Six-Senses/water-activity-small.jpg',
+      large: '/assets/Six-Senses/water-activity.jpg',
+    },],
   },
   {
     id: 6,
@@ -127,7 +186,22 @@ const hotels = [
     price: "luxury",
     comfort: ["wifi", "gym", "restaurant"],
     web: "https://www.theboulders.com/outdoor-adventures/",
-    images: [],
+    images: [{
+      small: '/assets/The-Boulders/fireball-small.jpg',
+      large: '/assets/The-Boulders/fireball.jpg',
+    },
+    {
+      small: '/assets/The-Boulders/fireballs-small.jpg',
+      large: '/assets/The-Boulders/fireballs-small.jpg',
+    },
+    {
+      small: '/assets/The-Boulders/golf-play-small.jpg',
+      large: '/assets/The-Boulders/golf-play.jpg',
+    },
+    {
+      small: '/assets/The-Boulders/rock-small.jpg',
+      large: '/assets/The-Boulders/rock.jpg',
+    },],
   },
   {
     id: 7,
@@ -143,7 +217,18 @@ const hotels = [
     price: "luxury",
     comfort: ["gym", "library", "pet"],
     web: "https://www.theresidenceschevychase.com/",
-    images: [],
+    images: [{
+      small: '/assets/The-Residences-at-Chevy-Chase/pillow-attack-small.jpg',
+      large: '/assets/The-Residences-at-Chevy-Chase/pillow-attack.jpg',
+    },
+    {
+      small: '/assets/The-Residences-at-Chevy-Chase/pillow-happyness-small.jpg',
+      large: '/assets/The-Residences-at-Chevy-Chase/pillow-happyness.jpg',
+    },
+    {
+      small: '/assets/The-Residences-at-Chevy-Chase/pillows-small.jpg',
+      large: '/assets/The-Residences-at-Chevy-Chase/pillows.jpg',
+    },],
   },
   {
     id: 8,
@@ -159,7 +244,15 @@ const hotels = [
     price: "midrange",
     comfort: ["wifi", "parking", "pool", "restaurant"],
     web: "https://www.loewshotels.com/coronado-bay-resort",
-    images: [],
+    images: [{
+      small: '/assets/Loews-Coronado-Bay-Resort/dog-small.jpg',
+      large: '/assets/Loews-Coronado-Bay-Resort/dog.jpg',
+    },
+    {
+      small: '/assets/Loews-Coronado-Bay-Resort/man-and-dog-small.jpg',
+      large: '/assets/Loews-Coronado-Bay-Resort/man-and-dog.jpg',
+    },
+    ],
   },
   {
     id: 9,
@@ -181,7 +274,18 @@ const hotels = [
     price: "budget",
     comfort: ["wifi", "parking", "restaurant", "spa"],
     web: "https://obriyvillage.com/",
-    images: [],
+    images: [{
+      small: '/assets/Obriy-Village/horse-small.jpg',
+      large: '/assets/Obriy-Village/horse.jpg',
+    },
+    {
+      small: '/assets/Obriy-Village/nature-small.jpg',
+      large: '/assets/Obriy-Village/nature.jpg',
+    },
+    {
+      small: '/assets/Obriy-Village/tub-small.jpg',
+      large: '/assets/Obriy-Village/tub.jpg',
+    },],
   },
   {
     id: 10,
@@ -197,7 +301,22 @@ const hotels = [
     price: "midrange",
     comfort: ["wifi", "parking", "restaurant", "spa"],
     web: "https://en.concept-stay.com/sirimiri",
-    images: [],
+    images: [{
+      small: '/assets/Concept-Stay-Sirimiri/hot-tub-small.jpg',
+      large: '/assets/Concept-Stay-Sirimiri/hot-tub.jpg',
+    },
+    {
+      small: '/assets/Concept-Stay-Sirimiri/tub-small.jpg',
+      large: '/assets/Concept-Stay-Sirimiri/tub.jpg',
+    },
+    {
+      small: '/assets/Concept-Stay-Sirimiri/girl-on-horse-small.jpg',
+      large: '/assets/Concept-Stay-Sirimiri/girl-on-horse.jpg',
+    },
+    {
+      small: '/assets/Concept-Stay-Sirimiri/girl-and-horse-small.jpg',
+      large: '/assets/Concept-Stay-Sirimiri/girl-and-horse.jpg',
+    },],
   },
   {
     id: 11,
@@ -223,7 +342,26 @@ const hotels = [
     price: "midrange",
     comfort: ["wifi", "parking", "restaurant", "spa"],
     web: "https://www.facebook.com/scandi.eco.park/",
-    images: [],
+    images: [{
+      small: '/assets/Scandi-Eco-Park/huskey-small.jpg',
+      large: '/assets/Scandi-Eco-Park/huskey.jpg',
+    },
+    {
+      small: '/assets/Scandi-Eco-Park/pet-therapy-small.jpg',
+      large: '/assets/Scandi-Eco-Park/pet-therapy.jpg',
+    },
+    {
+      small: '/assets/Scandi-Eco-Park/bikes-small.jpg',
+      large: '/assets/Scandi-Eco-Park/bikes.jpg',
+    },
+    {
+      small: '/assets/Scandi-Eco-Park/horse-small.jpg',
+      large: '/assets/Scandi-Eco-Park/horse.jpg',
+    },
+    {
+      small: '/assets/Scandi-Eco-Park/trekking-small.jpg',
+      large: '/assets/Scandi-Eco-Park/trekking.jpg',
+    },]
   },
   {
     id: 12,
@@ -239,7 +377,19 @@ const hotels = [
     price: "midrange",
     comfort: ["wifi", "parking", "restaurant", "spa"],
     web: "https://www.avestravel.com.ua/hotel_list/goteli-z-garjachimi-dzherelami-v-ukraini/",
-    images: [],
+    images: [{
+      small: '/assets/Aves-Travel/background-small.jpg',
+      large: '/assets/Aves-Travel/background.jpg',
+    },
+    {
+      small: '/assets/Aves-Travel/man-small.jpg',
+      large: '/assets/Aves-Travel/man.jpg',
+    },
+    {
+      small: '/assets/Aves-Travel/woman-small.jpg',
+      large: '/assets/Aves-Travel/woman.jpg',
+    },
+    ],
   },
   {
     id: 13,
@@ -255,7 +405,18 @@ const hotels = [
     price: "luxury",
     comfort: ["wifi", "parking", "restaurant", "spa"],
     web: "https://themantaresort.com/",
-    images: [],
+    images: [{
+      small: '/assets/The-Manta-Resort/underwater-small.jpg',
+      large: '/assets/The-Manta-Resort/underwater.jpg',
+    },
+    {
+      small: '/assets/The-Manta-Resort/underwater-hotel-small.jpg',
+      large: '/assets/The-Manta-Resort/underwater-hotel.jpg',
+    },
+    {
+      small: '/assets/The-Manta-Resort/nature-small.jpg',
+      large: '/assets/The-Manta-Resort/nature.jpg',
+    },],
   },
   {
     id: 14,
@@ -271,7 +432,18 @@ const hotels = [
     price: "luxury",
     comfort: ["wifi", "restaurant", "spa"],
     web: "https://www.poseidonresorts.com/",
-    images: [],
+    images: [{
+      small: '/assets/The-Manta-Resort/underwater-small.jpg',
+      large: '/assets/The-Manta-Resort/underwater.jpg',
+    },
+    {
+      small: '/assets/The-Manta-Resort/underwater-hotel-small.jpg',
+      large: '/assets/The-Manta-Resort/underwater-hotel.jpg',
+    },
+    {
+      small: '/assets/The-Manta-Resort/nature-small.jpg',
+      large: '/assets/The-Manta-Resort/nature.jpg',
+    },],
   },
   {
     id: 15,
@@ -287,7 +459,18 @@ const hotels = [
     price: "luxury",
     comfort: ["wifi", "restaurant", "bar"],
     web: "https://www.icehotel.com/",
-    images: [],
+    images: [{
+      small: '/assets/Icehotel/ice-small.jpg',
+      large: '/assets/Icehotel/ice.jpg',
+    },
+    {
+      small: '/assets/Icehotel/ice-hotel-small.jpg',
+      large: '/assets/Icehotel/ice-hotel.jpg',
+    },
+    {
+      small: '/assets/Icehotel/ice-hotel-snow-small.jpg',
+      large: '/assets/Icehotel/ice-hotel-snow.jpg',
+    },],
   },
   {
     id: 16,
@@ -303,7 +486,18 @@ const hotels = [
     price: "luxury",
     comfort: ["wifi", "restaurant", "sauna"],
     web: "https://treehotel.se/",
-    images: [],
+    images: [{
+      small: '/assets/Treehotel/tree-modern-house-small.jpg',
+      large: '/assets/Treehotel/tree-modern-house.jpg',
+    },
+    {
+      small: '/assets/Treehotel/treehouse-small.jpg',
+      large: '/assets/Treehotel/treehouse.jpg',
+    },
+    {
+      small: '/assets/Treehotel/tree-happy-house-small.jpg',
+      large: '/assets/Treehotel/tree-happy-house.jpg',
+    },],
   },
   {
     id: 17,
@@ -319,7 +513,22 @@ const hotels = [
     price: "midrange",
     comfort: ["wifi", "restaurant", "spa"],
     web: "https://lunasaladahotel.com.bo/",
-    images: [],
+    images: [{
+      small: '/assets/Luna-Salada-Hotel/salt-small.jpg',
+      large: '/assets/Luna-Salada-Hotel/salt.jpg',
+    },
+    {
+      small: '/assets/Luna-Salada-Hotel/salt-hotel-small.jpg',
+      large: '/assets/Luna-Salada-Hotel/salt-hotel.jpg',
+    },
+    {
+      small: '/assets/Luna-Salada-Hotel/solted-lake-small.jpg',
+      large: '/assets/Luna-Salada-Hotel/solted-lake.jpg',
+    },
+    {
+      small: '/assets/Luna-Salada-Hotel/relax-small.jpg',
+      large: '/assets/Luna-Salada-Hotel/relax.jpg',
+    },],
   },
   {
     id: 18,
@@ -335,7 +544,19 @@ const hotels = [
     price: "budget",
     comfort: ["wifi", "parking", "restaurant", "pets"],
     web: "http://www.happyguestslodge.co.uk/",
-    images: [],
+    images: [{
+      small: '/assets/Happy-Guests-Lodge/friend-fish-small.jpg',
+      large: '/assets/Happy-Guests-Lodge/friend-fish.jpg',
+    },
+    {
+      small: '/assets/Happy-Guests-Lodge/fish-small.jpg',
+      large: '/assets/Happy-Guests-Lodge/fish.jpg',
+    },
+    {
+      small: '/assets/Happy-Guests-Lodge/relax-small.jpg',
+      large: '/assets/Happy-Guests-Lodge/relax.jpg',
+    },
+    ],
   },
   {
     id: 19,
@@ -351,7 +572,18 @@ const hotels = [
     price: "midrange",
     comfort: ["wifi", "restaurant", "spa", "legal services"],
     web: "https://www.carlton.nl/hotel-ambassador-den-haag",
-    images: [],
+    images: [{
+      small: '/assets/Hotel-Divorse/happy-divorce-small.jpg',
+      large: '/assets/Hotel-Divorse/happy-divorce.jpg',
+    },
+    {
+      small: '/assets/Hotel-Divorse/divorce-small.jpg',
+      large: '/assets/Hotel-Divorse/divorce.jpg',
+    },
+    {
+      small: '/assets/Hotel-Divorse/divorce-fun-small.jpg',
+      large: '/assets/Hotel-Divorse/divorce-fun.jpg',
+    },],
   },
   {
     id: 20,
@@ -368,7 +600,18 @@ const hotels = [
     price: "midrange",
     comfort: ["wifi", "restaurant", "spa", "pool"],
     web: "https://www.marriott.com/en-us/hotels/ptgra-protea-hotel-polokwane-ranch-resort/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0",
-    images: [],
+    images: [{
+      small: '/assets/Protea-Hotel-by-Marriott-Polokwane-Ranch-Resort/hepard-small.jpg',
+      large: '/assets/Protea-Hotel-by-Marriott-Polokwane-Ranch-Resort/hepard.jpg',
+    },
+    {
+      small: '/assets/Protea-Hotel-by-Marriott-Polokwane-Ranch-Resort/little-lions-small.jpg',
+      large: '/assets/Protea-Hotel-by-Marriott-Polokwane-Ranch-Resort/little-lions.jpg',
+    },
+    {
+      small: '/assets/Protea-Hotel-by-Marriott-Polokwane-Ranch-Resort/lion-girl-small.jpg',
+      large: '/assets/Protea-Hotel-by-Marriott-Polokwane-Ranch-Resort/lion-girl.jpg',
+    },],
   },
   {
     id: 21,
@@ -384,7 +627,18 @@ const hotels = [
     price: "midrange",
     comfort: ["restaurant", "bar", "gym"],
     web: "https://www.v8hotel.de/",
-    images: [],
+    images: [{
+      small: '/assets/V8-Hotel-Classic-Motorworld-Region-Stuttgart/car-them-small.jpg',
+      large: '/assets/V8-Hotel-Classic-Motorworld-Region-Stuttgart/car-them.jpg',
+    },
+    {
+      small: '/assets/V8-Hotel-Classic-Motorworld-Region-Stuttgart/shoe-shine-small.jpg',
+      large: '/assets/V8-Hotel-Classic-Motorworld-Region-Stuttgart/shoe-shine.jpg',
+    },
+    {
+      small: '/assets/V8-Hotel-Classic-Motorworld-Region-Stuttgart/massage-small.jpg',
+      large: '/assets/V8-Hotel-Classic-Motorworld-Region-Stuttgart/massage.jpg',
+    },],
   },
   {
     id: 22,
@@ -400,7 +654,18 @@ const hotels = [
     price: "midrange",
     comfort: ["spa", "pool", "restaurant", "garden"],
     web: "https://www.booking.com",
-    images: [],
+    images: [{
+      small: '/assets/Masseria-Cervarolo/dinner-small.jpg',
+      large: '/assets/Masseria-Cervarolo/dinner.jpg',
+    },
+    {
+      small: '/assets/Masseria-Cervarolo/cook-small.jpg',
+      large: '/assets/Masseria-Cervarolo/cook.jpg',
+    },
+    {
+      small: '/assets/Masseria-Cervarolo/walking-tours-small.jpg',
+      large: '/assets/Masseria-Cervarolo/walking-tours.jpg',
+    },],
   },
   {
     id: 23,
@@ -416,7 +681,18 @@ const hotels = [
     price: "midrange",
     comfort: ["pool", "restaurant"],
     web: "https://www.booking.com",
-    images: [],
+    images: [{
+      small: '/assets/Electra-Palace-Hotel/art-small.jpg',
+      large: '/assets/Electra-Palace-Hotel/art.jpg',
+    },
+    {
+      small: '/assets/Electra-Palace-Hotel/art-exibition-small.jpg',
+      large: '/assets/Electra-Palace-Hotel/art-exibition.jpg',
+    },
+    {
+      small: '/assets/Electra-Palace-Hotel/rooftop-dining-small.jpg',
+      large: '/assets/Electra-Palace-Hotel/rooftop-dining.jpg',
+    },],
   },
   {
     id: 24,
@@ -438,7 +714,26 @@ const hotels = [
     price: "midrange",
     comfort: ["spa", "restaurant", "pool"],
     web: "https://www.marriott.com/en-us/hotels/mcogp-gaylord-palms-resort-and-convention-center/overview/",
-    images: [],
+    images: [{
+      small: '/assets/Gaylord-Palms-and-Convention-Center/princess-small.jpg',
+      large: '/assets/Gaylord-Palms-and-Convention-Center/princess.jpg',
+    },
+    {
+      small: '/assets/Gaylord-Palms-and-Convention-Center/pirats-small.jpg',
+      large: '/assets/Gaylord-Palms-and-Convention-Center/pirats.jpg',
+    },
+    {
+      small: '/assets/Gaylord-Palms-and-Convention-Center/surfing-lessons-small.jpg',
+      large: '/assets/Gaylord-Palms-and-Convention-Center/surfing-lessons.jpg',
+    },
+    {
+      small: '/assets/Gaylord-Palms-and-Convention-Center/alligator-feeding-small.jpg',
+      large: '/assets/Gaylord-Palms-and-Convention-Center/alligator-feeding.jpg',
+    },
+    {
+      small: '/assets/Gaylord-Palms-and-Convention-Center/ice-skating-small.jpg',
+      large: '/assets/Gaylord-Palms-and-Convention-Center/ice-skating-small.jpg',
+    },],
   },
   {
     id: 25,
@@ -461,7 +756,15 @@ const hotels = [
     price: "budget",
     comfort: ["restaurant", "pets", "Organic garden", "Hiking trails"],
     web: "https://www.treebonesresort.com/",
-    images: [],
+    images: [{
+      small: '/assets/Treebones-Resort/boat-small.jpg',
+      large: '/assets/Treebones-Resort/boat.jpg',
+    },
+    {
+      small: '/assets/Treebones-Resort/yurta-small.jpg',
+      large: '/assets/Treebones-Resort/yurta.jpg',
+    },
+    ],
   },
   {
     id: 26,
@@ -477,7 +780,18 @@ const hotels = [
     price: "midrange",
     comfort: ["restaurant", "gym"],
     web: "https://www.creativetravelguide.com",
-    images: [],
+    images: [{
+      small: '/assets/Hotel-Max/record-players-in-rooms-small.jpg',
+      large: '/assets/Hotel-Max/record-players-in-rooms.jpg',
+    },
+    {
+      small: '/assets/Hotel-Max/exhibition-small.jpg',
+      large: '/assets/Hotel-Max/exhibition.jpg',
+    },
+    {
+      small: '/assets/Hotel-Max/art-small.jpg',
+      large: '/assets/Hotel-Max/art.jpg',
+    },],
   },
   {
     id: 27,
@@ -494,7 +808,18 @@ const hotels = [
     price: "luxury",
     comfort: ["spa", "pool", "restaurant"],
     web: "https://www.grandvelas.com",
-    images: [],
+    images: [{
+      small: '/assets/Grand-Velas-Riviera-Maya/aguafit-small.jpg',
+      large: '/assets/Grand-Velas-Riviera-Maya/aguafit.jpg',
+    },
+    {
+      small: '/assets/Grand-Velas-Riviera-Maya/salsa-small.jpg',
+      large: '/assets/Grand-Velas-Riviera-Maya/salsa.jpg',
+    },
+    {
+      small: '/assets/Grand-Velas-Riviera-Maya/salsa-classes-small.jpg',
+      large: '/assets/Grand-Velas-Riviera-Maya/salsa-classes.jpg',
+    },],
   },
   {
     id: 28,
@@ -510,7 +835,22 @@ const hotels = [
     price: "midrange",
     comfort: ["beach", "pool", "restaurant"],
     web: "https://www.marriott.com",
-    images: [],
+    images: [{
+      small: '/assets/W-Barcelona/salsa-night-small.jpg',
+      large: '/assets/W-Barcelona/salsa-night.jpg',
+    },
+    {
+      small: '/assets/W-Barcelona/salsa-small.jpg',
+      large: '/assets/W-Barcelona/salsa.jpg',
+    },
+    {
+      small: '/assets/W-Barcelona/sunrics-yoga-small.jpg',
+      large: '/assets/W-Barcelona/sunrics-yoga.jpg',
+    },
+    {
+      small: '/assets/W-Barcelona/yoga-small.jpg',
+      large: '/assets/W-Barcelona/yoga.jpg',
+    },],
   },
   {
     id: 29,
@@ -526,7 +866,22 @@ const hotels = [
     price: "luxury",
     comfort: ["restaurant", "spa", "beach"],
     web: "https://hoteldel.com/",
-    images: [],
+    images: [{
+      small: '/assets/Hotel-del-Coronado/yoga-small.jpg',
+      large: '/assets/Hotel-del-Coronado/yoga.jpg',
+    },
+    {
+      small: '/assets/Hotel-del-Coronado/surf-classes-small.jpg',
+      large: '/assets/Hotel-del-Coronado/surf-classes.jpg',
+    },
+    {
+      small: '/assets/Hotel-del-Coronado/rentals-small.jpg',
+      large: '/assets/Hotel-del-Coronado/rentals.jpg',
+    },
+    {
+      small: '/assets/Hotel-del-Coronado/beach-bonfires-small.jpg',
+      large: '/assets/Hotel-del-Coronado/beach-bonfires.jpg',
+    },],
   },
   {
     id: 30,
@@ -550,7 +905,23 @@ const hotels = [
     price: "luxury",
     comfort: ["spa", "pool", "restaurant"],
     web: "https://www.aman.com/resorts/amangiri",
-    images: [],
+    images: [{
+      small: '/assets/Amangiri/hiking-small.jpg',
+      large: '/assets/Amangiri/hiking.jpg',
+    },
+    {
+      small: '/assets/Amangiri/baloon-small.jpg',
+      large: '/assets/Amangiri/baloon.jpg',
+    },
+    {
+      small: '/assets/Amangiri/horseback-riding-small.jpg',
+      large: '/assets/Amangiri/horseback-riding.jpg',
+    },
+    {
+      small: '/assets/Amangiri/stargazing-small.jpg',
+      large: '/assets/Amangiri/stargazing.jpg',
+    },
+    ],
   },
   {
     id: 31,
@@ -573,7 +944,22 @@ const hotels = [
     price: "luxury",
     comfort: ["spa", "restaurant", "beach"],
     web: "https://www.soneva.com/soneva-fushi/",
-    images: [],
+    images: [{
+      small: '/assets/Soneva-Fushi/chocolate-making-small.jpg',
+      large: '/assets/Soneva-Fushi/chocolate-making.jpg',
+    },
+    {
+      small: '/assets/Soneva-Fushi/chocolate-small.jpg',
+      large: '/assets/Soneva-Fushi/chocolate.jpg',
+    },
+    {
+      small: '/assets/Soneva-Fushi/cinema-small.jpg',
+      large: '/assets/Soneva-Fushi/cinema.jpg',
+    },
+    {
+      small: '/assets/Soneva-Fushi/diving-small.jpg',
+      large: '/assets/Soneva-Fushi/diving.jpg',
+    },],
   },
   {
     id: 32,
@@ -596,7 +982,22 @@ const hotels = [
     price: "luxury",
     comfort: ["restaurant", "spa", "library"],
     web: "https://www.fogoislandinn.ca/",
-    images: [],
+    images: [{
+      small: '/assets/Fogo-Island-Inn/berry-picking-small.jpg',
+      large: '/assets/Fogo-Island-Inn/berry-picking.jpg',
+    },
+    {
+      small: '/assets/Fogo-Island-Inn/boat-tour-small.jpg',
+      large: '/assets/Fogo-Island-Inn/boat-tour.jpg',
+    },
+    {
+      small: '/assets/Fogo-Island-Inn/ice-small.jpg',
+      large: '/assets/Fogo-Island-Inn/ice.jpg',
+    },
+    {
+      small: '/assets/Fogo-Island-Inn/artist-small.jpg',
+      large: '/assets/Fogo-Island-Inn/artist.jpg',
+    },],
   },
   {
     id: 33,
@@ -619,7 +1020,22 @@ const hotels = [
     price: "midrange",
     comfort: ["spa", "restaurant"],
     web: "https://www.kakslauttanen.fi/",
-    images: [],
+    images: [{
+      small: '/assets/Kakslauttanen-Arctic-Resort/aurora-small.jpg',
+      large: '/assets/Kakslauttanen-Arctic-Resort/aurora.jpg',
+    },
+    {
+      small: '/assets/Kakslauttanen-Arctic-Resort/fishing-small.jpg',
+      large: '/assets/Kakslauttanen-Arctic-Resort/fishing.jpg',
+    },
+    {
+      small: '/assets/Kakslauttanen-Arctic-Resort/huskey-small.jpg',
+      large: '/assets/Kakslauttanen-Arctic-Resort/huskey.jpg',
+    },
+    {
+      small: '/assets/Kakslauttanen-Arctic-Resort/snowmobile-small.jpg',
+      large: '/assets/Kakslauttanen-Arctic-Resort/snowmobile.jpg',
+    },],
   },
   {
     id: 34,
@@ -642,7 +1058,22 @@ const hotels = [
     price: "luxury",
     comfort: ["restaurant", "spa"],
     web: "https://www.whitepod.com/",
-    images: [],
+    images: [{
+      small: '/assets/Whitepod-Eco-Luxury-Hotel/skiing-small.jpg',
+      large: '/assets/Whitepod-Eco-Luxury-Hotel/skiing.jpg',
+    },
+    {
+      small: '/assets/Whitepod-Eco-Luxury-Hotel/snowshoeing-small.jpg',
+      large: '/assets/Whitepod-Eco-Luxury-Hotel/snowshoeing.jpg',
+    },
+    {
+      small: '/assets/Whitepod-Eco-Luxury-Hotel/stargazing-small.jpg',
+      large: '/assets/Whitepod-Eco-Luxury-Hotel/stargazing.jpg',
+    },
+    {
+      small: '/assets/Whitepod-Eco-Luxury-Hotel/yoga-small.jpg',
+      large: '/assets/Whitepod-Eco-Luxury-Hotel/yoga.jpg',
+    },],
   },
   {
     id: 35,
@@ -664,7 +1095,19 @@ const hotels = [
     price: "luxury",
     comfort: ["spa", "restaurant", "beach"],
     web: "https://www.amilla.com/",
-    images: [],
+    images: [{
+      small: '/assets/Amilla-Fushi/island-small.jpg',
+      large: '/assets/Amilla-Fushi/island.jpg',
+    },
+    {
+      small: '/assets/Amilla-Fushi/submarin-small.jpg',
+      large: '/assets/Amilla-Fushi/submarin.jpg',
+    },
+    {
+      small: '/assets/Amilla-Fushi/sunset-fishing-small.jpg',
+      large: '/assets/Amilla-Fushi/sunset-fishing.jpg',
+    },
+    ],
   },
   {
     id: 36,
@@ -686,7 +1129,18 @@ const hotels = [
     price: "luxury",
     comfort: ["restaurant", "spa", "pool"],
     web: "https://longitude131.com.au/",
-    images: [],
+    images: [{
+      small: '/assets/Longitude-131°/camel-small.jpg',
+      large: '/assets/Longitude-131°/camel.jpg',
+    },
+    {
+      small: '/assets/Longitude-131°/cultura-small.jpg',
+      large: '/assets/Longitude-131°/cultura.jpg',
+    },
+    {
+      small: '/assets/Longitude-131°/sunset-tour-small.jpg',
+      large: '/assets/Longitude-131°/sunset-tour.jpg',
+    },],
   },
   {
     id: 37,
@@ -709,7 +1163,18 @@ const hotels = [
     price: "luxury",
     comfort: ["spa", "pool"],
     web: "https://www.soneva.com/soneva-kiri/",
-    images: [],
+    images: [{
+      small: '/assets/Soneva-Kiri/diving-small.jpg',
+      large: '/assets/Soneva-Kiri/diving.jpg',
+    },
+    {
+      small: '/assets/Soneva-Kiri/dinner-small.jpg',
+      large: '/assets/Soneva-Kiri/dinner.jpg',
+    },
+    {
+      small: '/assets/Soneva-Kiri/stargazing-small.jpg',
+      large: '/assets/Soneva-Kiri/stargazing.jpg',
+    },],
   },
   {
     id: 38,
@@ -733,7 +1198,22 @@ const hotels = [
     price: "luxury",
     comfort: ["restaurant", "spa", "pool"],
     web: "https://www.thesingular.com/patagonia/",
-    images: [],
+    images: [{
+      small: '/assets/The Singular Patagonia/birdwatching-small.jpg',
+      large: '/assets/The Singular Patagonia/birdwatching.jpg',
+    },
+    {
+      small: '/assets/The Singular Patagonia/glacier-tours-small.jpg',
+      large: '/assets/The Singular Patagonia/glacier-tours.jpg',
+    },
+    {
+      small: '/assets/The Singular Patagonia/hiking-small.jpg',
+      large: '/assets/The Singular Patagonia/hiking.jpg',
+    },
+    {
+      small: '/assets/The Singular Patagonia/horseback-riding-small.jpg',
+      large: '/assets/The Singular Patagonia/horseback-riding.jpg',
+    },],
   },
   {
     id: 39,
@@ -756,7 +1236,22 @@ const hotels = [
     price: "luxury",
     comfort: ["restaurant", "spa", "pool"],
     web: "https://www.explora.com/hotels-and-travesias/easter-island/explora-rapa-nui/",
-    images: [],
+    images: [{
+      small: '/assets/Explora-Rapa-Nui/bikes-small.jpg',
+      large: '/assets/Explora-Rapa-Nui/bikes.jpg',
+    },
+    {
+      small: '/assets/Explora-Rapa-Nui/hiking-small.jpg',
+      large: '/assets/Explora-Rapa-Nui/hiking.jpg',
+    },
+    {
+      small: '/assets/Explora-Rapa-Nui/horse-small.jpg',
+      large: '/assets/Explora-Rapa-Nui/horse.jpg',
+    },
+    {
+      small: '/assets/Explora-Rapa-Nui/stargazing-small.jpg',
+      large: '/assets/Explora-Rapa-Nui/stargazing.jpg',
+    },],
   },
   {
     id: 40,
@@ -778,7 +1273,19 @@ const hotels = [
     price: "luxury",
     comfort: ["restaurant", "spa", "gym"],
     web: "https://www.aman.com/resorts/amangani",
-    images: [],
+    images: [{
+      small: '/assets/Amangani/mountein-small.jpg',
+      large: '/assets/Amangani/mountein.jpg',
+    },
+    {
+      small: '/assets/Amangani/mountain-views-small.jpg',
+      large: '/assets/Amangani/mountain-views.jpg',
+    },
+    {
+      small: '/assets/Amangani/skiing-small.jpg',
+      large: '/assets/Amangani/skiing.jpg',
+    },
+   ],
   },
   {
     id: 41,
@@ -795,7 +1302,18 @@ const hotels = [
     price: "luxury",
     comfort: ["restaurant", "spa", "library"],
     web: "https://southernoceanlodge.com.au/",
-    images: [],
+    images: [{
+      small: '/assets/Southern-Ocean-Lodge/vine-tour-small.jpg',
+      large: '/assets/Southern-Ocean-Lodge/vine-tour.jpg',
+    },
+    {
+      small: '/assets/Southern-Ocean-Lodge/vine-small.jpg',
+      large: '/assets/Southern-Ocean-Lodge/vine.jpg',
+    },
+    {
+      small: '/assets/Southern-Ocean-Lodge/wild-nature-small.jpg',
+      large: '/assets/Southern-Ocean-Lodge/wild-nature.jpg',
+    },],
   },
   {
     id: 42,
@@ -816,7 +1334,18 @@ const hotels = [
     price: "luxury",
     comfort: ["restaurant", "spa", "bar"],
     web: "https://www.explora.com/patagonia/",
-    images: [],
+    images: [{
+      small: '/assets/Explora-Patagonia/canyon-small.jpg',
+      large: '/assets/Explora-Patagonia/canyon.jpg',
+    },
+    {
+      small: '/assets/Explora-Patagonia/forest-hiking-small.jpg',
+      large: '/assets/Explora-Patagonia/forest-hiking.jpg',
+    },
+    {
+      small: '/assets/Explora-Patagonia/lake-excursions-small.jpg',
+      large: '/assets/Explora-Patagonia/lake-excursions.jpg',
+    },],
   },
   {
     id: 43,
@@ -838,7 +1367,18 @@ const hotels = [
     price: "luxury",
     comfort: ["restaurant", "spa", "beach"],
     web: "https://thebrando.com/",
-    images: [],
+    images: [{
+      small: '/assets/The-Brando/paddleboarding-small.jpg',
+      large: '/assets/The-Brando/paddleboarding.jpg',
+    },
+    {
+      small: '/assets/The-Brando/kayaking-small.jpg',
+      large: '/assets/The-Brando/kayaking.jpg',
+    },
+    {
+      small: '/assets/The-Brando/underwater-small.jpg',
+      large: '/assets/The-Brando/underwater.jpg',
+    },],
   },
   {
     id: 44,
@@ -854,7 +1394,22 @@ const hotels = [
     price: "luxury",
     comfort: ["restaurant", "spa", "pool"],
     web: "https://www.ladera.com/",
-    images: [],
+    images: [{
+      small: '/assets/Ladera-Resort/zipping-small.jpg',
+      large: '/assets/Ladera-Resort/zipping.jpg',
+    },
+    {
+      small: '/assets/Ladera-Resort/hiking-small.jpg',
+      large: '/assets/Ladera-Resort/hiking.jpg',
+    },
+    {
+      small: '/assets/Ladera-Resort/hiking-again-small.jpg',
+      large: '/assets/Ladera-Resort/hiking-again.jpg',
+    },
+    {
+      small: '/assets/Ladera-Resort/sulphur-springs-visit-small.jpg',
+      large: '/assets/Ladera-Resort/sulphur-springs-visit.jpg',
+    },],
   },
   {
     id: 45,
@@ -877,7 +1432,19 @@ const hotels = [
     price: "luxury",
     comfort: ["restaurant", "spa"],
     web: "https://www.thedatai.com/langkawi/",
-    images: [],
+    images: [{
+      small: '/assets/The-Datai-Langkawi/forrest-small.jpg',
+      large: '/assets/The-Datai-Langkawi/forrest.jpg',
+    },
+    {
+      small: '/assets/The-Datai-Langkawi/nature-small.jpg',
+      large: '/assets/The-Datai-Langkawi/nature.jpg',
+    },
+    {
+      small: '/assets/The-Datai-Langkawi/beach-yoga-small.jpg',
+      large: '/assets/The-Datai-Langkawi/beach-yoga.jpg',
+    },
+    ],
   },
   {
     id: 46,
@@ -899,7 +1466,18 @@ const hotels = [
     price: "luxury",
     comfort: ["restaurant", "spa", "beach"],
     web: "https://www.aman.com/resorts/amanwana",
-    images: [],
+    images: [{
+      small: '/assets/Amanwana/diving-small.jpg',
+      large: '/assets/Amanwana/diving.jpg',
+    },
+    {
+      small: '/assets/Amanwana/snorkeling-small.jpg',
+      large: '/assets/Amanwana/snorkeling.jpg',
+    },
+    {
+      small: '/assets/Amanwana/jungle-small.jpg',
+      large: '/assets/Amanwana/jungle.jpg',
+    },],
   },
   {
     id: 47,
@@ -920,7 +1498,18 @@ const hotels = [
     price: "luxury",
     comfort: ["restaurant", "spa", "pool"],
     web: "https://singita.com/lebombo-lodge/",
-    images: [],
+    images: [{
+      small: '/assets/Singita-Lebombo-Lodge/safari-ride-small.jpg',
+      large: '/assets/Singita-Lebombo-Lodge/safari-ride.jpg',
+    },
+    {
+      small: '/assets/Singita-Lebombo-Lodge/stargazing-small.jpg',
+      large: '/assets/Singita-Lebombo-Lodge/stargazing.jpg',
+    },
+    {
+      small: '/assets/Singita-Lebombo-Lodge/stars-small.jpg',
+      large: '/assets/Singita-Lebombo-Lodge/stars.jpg',
+    },],
   },
   {
     id: 48,
@@ -942,11 +1531,22 @@ const hotels = [
     price: "budget",
     comfort: ["restaurant", "parking", "wifi", "bar"],
     web: "http://www.hotelfrance.com",
-    images: [],
+    images: [{
+      small: '/assets/Hotel-France/concert-small.jpg',
+      large: '/assets/Hotel-France/concert.jpg',
+    },
+    {
+      small: '/assets/Hotel-France/singer-small.jpg',
+      large: '/assets/Hotel-France/singer.jpg',
+    },
+    {
+      small: '/assets/Hotel-France/painting-small.jpg',
+      large: '/assets/Hotel-France/painting.jpg',
+    },],
   },
   {
     id: 49,
-    name: "Safari-Club",
+    name: "Safari Club",
     activities: ["pool", "sport", "horse-riding"],
     address: "1A, Tsentralna Street, Vinnytsia, Ukraine",
     "loc-code": "ua-с",
@@ -957,8 +1557,19 @@ const hotels = [
     rating: 4.2,
     price: "midrange",
     comfort: ["wifi", "parking", "spa", "restaurant", "gym"],
-    web: "http://www.safari-club.com",
-    images: [],
+    web: "https://safari-club-vinnytsia.hotelmix.com.ua/",
+    images: [{
+      small: '/assets/Safari-Club/safari-small.jpg',
+      large: '/assets/Safari-Club/safari.jpg',
+    },
+    {
+      small: '/assets/Safari-Club/safari-sunset-small.jpg',
+      large: '/assets/Safari-Club/safari-sunset.jpg',
+    },
+    {
+      small: '/assets/Safari-Club/horse-kid-small.jpg',
+      large: '/assets/Safari-Club/horse-kid.jpg',
+    },],
   },
   {
     id: 50,
@@ -974,7 +1585,22 @@ const hotels = [
     price: "budget",
     comfort: ["wifi", "parking", "gym", "restaurant"],
     web: "http://www.fenixtown.com",
-    images: [],
+    images: [{
+      small: '/assets/Fenix-Town/billiard-small.jpg',
+      large: '/assets/Fenix-Town/billiard.jpg',
+    },
+    {
+      small: '/assets/Fenix-Town/bowling-small.jpg',
+      large: '/assets/Fenix-Town/bowling.jpg',
+    },
+    {
+      small: '/assets/Fenix-Town/spa-small.jpg',
+      large: '/assets/Fenix-Town/spa.jpg',
+    },
+    {
+      small: '/assets/Fenix-Town/relax-small.jpg',
+      large: '/assets/Fenix-Town/relax.jpg',
+    },],
   },
   {
     id: 51,
@@ -990,7 +1616,19 @@ const hotels = [
     price: "luxury",
     comfort: ["wifi", "parking", "spa", "restaurant", "bar"],
     web: "https://www.fairmont.com/kyiv/",
-    images: [],
+    images: [{
+      small: '/assets/Fairmont-Grand-Hotel-Kyiv/massage-small.jpg',
+      large: '/assets/Fairmont-Grand-Hotel-Kyiv/massage.jpg',
+    },
+    {
+      small: '/assets/Fairmont-Grand-Hotel-Kyiv/sauna-small.jpg',
+      large: '/assets/Fairmont-Grand-Hotel-Kyiv/sauna.jpg',
+    },
+    {
+      small: '/assets/Fairmont-Grand-Hotel-Kyiv/bath-small.jpg',
+      large: '/assets/Fairmont-Grand-Hotel-Kyiv/bath.jpg',
+    },
+   ],
   },
   {
     id: 52,
@@ -1023,13 +1661,26 @@ const hotels = [
     ],
     web: "https://lisotel.com.ua/en/",
     images: [
-      "/assets/Lisotel/motanka.png",
-      "/assets/Lisotel/restaurant.png",
-      "/assets/Lisotel/makoviy.png",
-      "/assets/Lisotel/lake.png",
-      "/assets/Lisotel/baking.png",
-      "/assets/Lisotel/horse.png",
-      "/assets/Lisotel/painting.png",
+      {
+        small: '/assets/Lisotel/motanka-small.jpg',
+        large: '/assets/Lisotel/motanka.jpg',
+      },
+      {
+        small: '/assets/Lisotel/horse-small.jpg',
+        large: '/assets/Lisotel/horse.jpg',
+      },
+      {
+        small: '/assets/Lisotel/lake-small.jpg',
+        large: '/assets/Lisotel/lake.jpg',
+      },
+      {
+        small: '/assets/Lisotel/baking-small.jpg',
+        large: '/assets/Lisotel/baking.jpg',
+      },
+      {
+        small: '/assets/Lisotel/restaurant-small.jpg',
+        large: '/assets/Lisotel/restaurant.jpg',
+      },
     ],
   },
   {
@@ -1048,7 +1699,20 @@ const hotels = [
       "Opera Hotel combines luxury and cultural charm, offering unique themed suites and comprehensive spa services. The hotel's award-winning wine list is a highlight for connoisseurs.",
     comfort: ["wifi", "parking", "spa", "restaurant"],
     web: "https://opera-hotel.com/",
-    images: [],
+    images: [{
+      small: '/assets/Opera-Hotel/piano-music-small.jpg',
+      large: '/assets/Opera-Hotel/piano-music.jpg',
+    },
+    {
+      small: '/assets/Opera-Hotel/vine-small.jpg',
+      large: '/assets/Opera-Hotel/vine.jpg',
+    },
+    {
+      small: '/assets/Opera-Hotel/spa-small.jpg',
+      large: '/assets/Opera-Hotel/spa.jpg',
+    },
+    
+    ],
   },
   {
     id: 54,
@@ -1066,7 +1730,18 @@ const hotels = [
       "Hotel Flamingo offers comfortable accommodation and tennis facilities in a beautiful coastal setting. Guests can enjoy a range of activities including tennis, swimming in the outdoor pool, and exploring the nearby beaches.",
     comfort: ["wifi", "parking", "pool", "restaurant", "beach"],
     web: "https://www.hotelpanoramaestartit.com/",
-    images: [],
+    images: [{
+      small: '/assets/Hotel-Flamingo/kid-paint-small.jpg',
+      large: '/assets/Hotel-Flamingo/kid-paint.jpg',
+    },
+    {
+      small: '/assets/Hotel-Flamingo/kids-in-the-pool-small.jpg',
+      large: '/assets/Hotel-Flamingo/kids-in-the-pool.jpg',
+    },
+    {
+      small: '/assets/Hotel-Flamingo/tennis-small.jpg',
+      large: '/assets/Hotel-Flamingo/tennis.jpg',
+    },],
   },
   {
     id: 55,
@@ -1092,7 +1767,18 @@ const hotels = [
       "beach",
     ],
     web: "https://all.accor.com/hotel/1965/index.en.shtml",
-    images: [],
+    images: [{
+      small: '/assets/Novotel-Phuket-Resort/relax-small.jpg',
+      large: '/assets/Novotel-Phuket-Resort/relax.jpg',
+    },
+    {
+      small: '/assets/Novotel-Phuket-Resort/candles-small.jpg',
+      large: '/assets/Novotel-Phuket-Resort/candles.jpg',
+    },
+    {
+      small: '/assets/Novotel-Phuket-Resort/tennis-small.jpg',
+      large: '/assets/Novotel-Phuket-Resort/tennis.jpg',
+    },],
   },
   {
     id: 56,
@@ -1110,7 +1796,18 @@ const hotels = [
       "Situated in the city of Plzeň, Hotel Panorama provides tennis facilities along with a wellness center and comfortable rooms. The hotel is also close to the city center, making it convenient for exploring local attractions.",
     comfort: ["wifi", "parking", "restaurant"],
     web: "http://www.panorama-pm.cz/",
-    images: [],
+    images: [{
+      small: '/assets/Hotel-Panorama/relax-small.jpg',
+      large: '/assets/Hotel-Panorama/relax.jpg',
+    },
+    {
+      small: '/assets/Hotel-Panorama/spa-small.jpg',
+      large: '/assets/Hotel-Panorama/spa.jpg',
+    },
+    {
+      small: '/assets/Hotel-Panorama/tennis-small.jpg',
+      large: '/assets/Hotel-Panorama/tennis.jpg',
+    },],
   },
   {
     "id": 57,
@@ -1134,7 +1831,18 @@ const hotels = [
     "description": "The Hôtel de Paris Monte-Carlo is an iconic luxury hotel located in the heart of Monaco. The hotel features an on-premises casino, a world-class spa, exquisite dining options, and luxury shopping. It is renowned for its elegance and sophistication, offering guests a truly memorable stay.",
     "comfort": ["wifi", "valet-parking", "pool", "restaurant", "spa", "fitness-center"],
     "web": "https://www.montecarlosbm.com/en/hotel-monaco/hotel-paris-monte-carlo",
-    images: [],
+    images: [{
+      small: '/assets/Hotel-de-Paris-Monte-Carlo/casino-small.jpg',
+      large: '/assets/Hotel-de-Paris-Monte-Carlo/casino.jpg',
+    },
+    {
+      small: '/assets/Hotel-de-Paris-Monte-Carlo/casino-royal-small.jpg',
+      large: '/assets/Hotel-de-Paris-Monte-Carlo/casino-royal.jpg',
+    },
+    {
+      small: '/assets/Hotel-de-Paris-Monte-Carlo/dining-small.jpg',
+      large: '/assets/Hotel-de-Paris-Monte-Carlo/dining.jpg',
+    },],
   }
   
 ];
