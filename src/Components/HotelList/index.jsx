@@ -53,8 +53,6 @@ export const HotelList = ({ hotels, alternativeHotelsFound, ...props }) => {
     );
   };
 
-  console.log(openedHotelsDetails);
-
   return (
     <div className="container-card">
       {alternativeHotelsFound ? <h2>These are alternatives</h2> : null}

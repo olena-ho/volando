@@ -1,30 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './style.css';
+import { Description } from './Description';
+import { Photos } from './Photos';
+import { Comfort } from './Comfort';
+import { Reviews } from './Reviews';
 
-export const HotelDetails = ({
-  hotelDetails,
-  images,
-  web,
-}) => {
+const tabs = [
+  {
+    id: 'description',
+    name: 'description',
+  },
+  {
+    id: 'reviews',
+    name: 'reviews',
+  },
+  {
+    id: 'photos',
+    name: 'photos',
+  },
+  {
+    id: 'comfort',
+    name: 'comfortP',
+  },
+];
+
+export const HotelDetails = ({ hotelDetails, images, web, defaultReviews, hotelId }) => {
+  const [selectedTab, setSelectedTab] = useState(tabs[0].id);
   const { t } = useTranslation(['details', 'translation']);
-console.log(hotelDetails);
+
+  const getContent = () => {
+    switch (selectedTab) {
+      case 'description':
+        return (
+          <Description hotelDetails={hotelDetails} images={images} web={web} />
+        );
+      case 'reviews':
+        return (
+          <Reviews
+            hotelId={hotelId}
+            defaultReviews={defaultReviews}
+          />
+        );
+      case 'photos':
+        return <Photos images={images} />;
+      case 'comfort':
+        return <Comfort />;
+      default:
+        break;
+    }
+  };
+
   return (
-    <div className="details-container">
-      <p>
-        {t('translation:description')}: {hotelDetails.description}
-      </p>
-      <p>
-        {t('translation:comfort')}: {hotelDetails.comfort.join(', ')}
-      </p>
-      <div className="images-container">
-        {images.map((image, index) => (
-          <img key={index} src={image} alt="hotel" />
+    <>
+      <div className="tabs-container">
+        {tabs.map((tab) => (
+          <div key={tab.id} onClick={() => setSelectedTab(tab.id)}>
+            {t(`translation:${tab.name}`)}
+          </div>
         ))}
       </div>
-      <a href={web} target="_blank" rel="noopener noreferrer">
-        {t('translation:website')}
-      </a>
-    </div>
+      {getContent()}
+    </>
   );
 };
