@@ -117,8 +117,8 @@ export const Reviews = ({ hotelId, defaultReviews }) => {
             <p>{review.text}</p>
             {review.userId === currentUserId && (
               <>
-                <button onClick={() => handleEdit(index)}>{t('translation:edit')}</button>
-                <button onClick={() => handleDelete(index)}>{t('translation:delete')}</button>
+                <button onClick={() => handleEdit(index)} className="edit-button" >{t('translation:edit')}</button>
+                <button onClick={() => handleDelete(index)} className="delete-button" >{t('translation:delete')}</button>
               </>
             )}
           </div>
