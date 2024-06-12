@@ -94,7 +94,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
               { key: "cycling", value: t("cycling") },
               { key: "fishing", value: t("fishing") },
               { key: "surfing", value: t("surfing") },
-              { key: "minigolf", value: t("minigolf") },
+              { key: "safari", value: t("safari") },
               { key: "beach-volleyball", value: t("beach-volleyball") },
             ],
           },
@@ -150,6 +150,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
               { key: "playground", value: t("playground") },
               { key: "kids-club", value: t("kids-club") },
               { key: "aquapark", value: t("aquapark") },
+              { key: "minigolf", value: t("minigolf") },
             ],
           },
         ]}
