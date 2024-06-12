@@ -24,6 +24,11 @@
   transform: scale(1.01);
 }
 
+.hotel-info--wrapper {
+  display: flex;
+  gap: 20px;
+}
+
 .hotel-info {
   display: flex;
   flex-direction: column;

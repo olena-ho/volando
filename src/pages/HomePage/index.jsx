@@ -81,8 +81,13 @@ export const HomePage = () => {
     }
   }, [alternativeHotelsFound]);
 
+  const isSearchResults = foundHotelsIds.length > 0;
   return (
-    <div className="main-page__container">
+    <div
+      className={`main-page__container ${
+        isSearchResults ? "padding-top-0" : "padding-top-100"
+      }`}
+    >
       <SearchBar
         onSearch={handleSearch}
         setAlternativeHotelsFound={setAlternativeHotelsFound}
@@ -91,7 +96,7 @@ export const HomePage = () => {
         <div className="animation-container">
           <Lottie animationData={animation} className="animation" />
         </div>
-      ) : foundHotelsIds.length > 0 ? (
+      ) : isSearchResults ? (
         <SearchResults
           foundHotelsIds={foundHotelsIds}
           alternativeHotelsFound={alternativeHotelsFound}
