@@ -1,25 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import hotels from '../../api/hotels.js';
+import localforage from 'localforage';
 
 export const Reviews = ({ hotelId, defaultReviews }) => {
   const [reviews, setReviews] = useState([]);
   const [newReview, setNewReview] = useState({ name: '', text: '' });
   const { t } = useTranslation();
-  console.log({defaultReviews});
+  console.log({ defaultReviews });
 
   useEffect(() => {
-    console.log('hotelId:', hotelId);
     // Load reviews from localStorage
-    const storedReviews = JSON.parse(localStorage.getItem('reviews')) || {};
-    if (storedReviews[hotelId]) {
-      setReviews(storedReviews[hotelId]);
-      console.log('Loaded reviews from localStorage:', storedReviews[hotelId]);
-    } else {
-     setReviews(defaultReviews);
+    const loadReviews = async () => {
+      const storedReviews = (await localforage.getItem('reviews')) || {};
+      if (storedReviews[hotelId]) {
+        setReviews(storedReviews[hotelId]);
+        /*  console.log('Loaded reviews from localStorage:', storedReviews[hotelId]); */
+      } else {
+        setReviews(defaultReviews);
 
-     console.log('Loaded default reviews: ', defaultReviews);
-    }
+        /* console.log('Loaded default reviews: ', defaultReviews); */
+      }
+    };
+    loadReviews();
   }, [hotelId]);
 
   const handleChange = (e) => {
@@ -27,7 +29,7 @@ export const Reviews = ({ hotelId, defaultReviews }) => {
     setNewReview((prevReview) => ({ ...prevReview, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newReviewWithDate = {
       ...newReview,
@@ -38,9 +40,9 @@ export const Reviews = ({ hotelId, defaultReviews }) => {
     setReviews(updatedReviews);
 
     // Save reviews to localStorage for the specific hotel
-    const storedReviews = JSON.parse(localStorage.getItem('reviews')) || {};
+    const storedReviews = await localforage.getItem('reviews') || {};
     storedReviews[hotelId] = updatedReviews;
-    localStorage.setItem('reviews', JSON.stringify(storedReviews));
+    await localforage.setItem('reviews',/*  JSON.stringify */(storedReviews));
 
     setNewReview({ name: '', text: '' });
     console.log('New review added:', newReviewWithDate);
@@ -69,7 +71,9 @@ export const Reviews = ({ hotelId, defaultReviews }) => {
       <div>
         {reviews.map((review, index) => (
           <div key={index} className="review-card">
-            <p><strong>{review.name}</strong> ({review.date})</p>
+            <p>
+              <strong>{review.name}</strong> ({review.date})
+            </p>
             <p>{review.text}</p>
           </div>
         ))}
