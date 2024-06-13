@@ -1,9 +1,14 @@
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Requires CSS file
+import { Carousel } from 'react-responsive-carousel';
+
 export const Photos = ({ images }) => {
   return (
-    <div className="images-container">
+    <Carousel showArrows={true} showThumbs={false}>
       {images?.map((image, index) => (
-        <img className="carousel-photo" key={index} srcSet="" src={image.large} alt="" />
+        <div key={index}>
+          <img className="carousel-photo" src={image.large} alt="" />
+        </div>
       ))}
-    </div>
+    </Carousel>
   );
 };
