@@ -417,7 +417,7 @@
     ],
     "comfort": ["Restaurace", "Parkování", "Wifi", "Bar"]
   },
-  "Safari-Club": {
+  "Safari Club": {
     "description": "Hotel Safari-Club nabízí jedinečný zážitek s plaveckým bazénem, lázeňskými službami a možnostmi jízdy na koni. Je ideální pro ty, kteří chtějí spojit relaxaci s dobrodružstvím. Hotel se nachází v klidném prostředí s krásným přírodním okolím.",
     "activities": ["Bazén", "Sport", "Jízda na koni"],
     "comfort": ["Wifi", "Parkování", "Spa", "Restaurace", "Tělocvična"]
