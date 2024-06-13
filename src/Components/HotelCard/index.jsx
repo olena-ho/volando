@@ -14,20 +14,22 @@ export const HotelCard = ({
 }) => {
   const { t } = useTranslation(["details", "translation"]); // Hook for translations
 
-  const { activities = []} = hotelDetails; //due to this destructuring I use address and rating instead of hotelDetails.address and hotelDetails.rating
+  const { activities = [] } = hotelDetails; //due to this destructuring I use address and rating instead of hotelDetails.address and hotelDetails.rating
 
   return (
     <div className="hotel-card" onClick={() => onHotelClick(hotel)}>
       <div className="hotel-info--wrapper">
-        <img
-          src={
-            hotel.images && hotel.images.length > 0
-              ? hotel.images[0].small
-              : "/assets/img-placeholder.png"
-          }
-          alt={hotel.name}
-          className="hotel-card__small-image"
-        />
+        <div className="hotel-card__image-wrapper">
+          <img
+            src={
+              hotel.images && hotel.images.length > 0
+                ? hotel.images[0].small
+                : "/assets/img-placeholder.png"
+            }
+            alt={hotel.name}
+            className="hotel-card__small-image"
+          />
+        </div>
 
         <div className="hotel-info">
           <h2>{hotel.name}</h2>
@@ -35,8 +37,7 @@ export const HotelCard = ({
             <div className="details-list">
               <div>
                 <p>
-                  {t("translation:activities")}:{" "}
-                  {activities.join(", ")}
+                  {t("translation:activities")}: {activities.join(", ")}
                 </p>
               </div>
             </div>
