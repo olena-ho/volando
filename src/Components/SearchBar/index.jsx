@@ -96,6 +96,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
               { key: "surfing", value: t("surfing") },
               { key: "safari", value: t("safari") },
               { key: "beach-volleyball", value: t("beach-volleyball") },
+              { key: "hotair-ballooning", value: t("hotair-ballooning") },
             ],
           },
           {
@@ -105,9 +106,10 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
             subcategories: [
               { key: "tennis", value: t("tennis") },
               { key: "golf", value: t("golf") },
-              { key: "skiing", value: t("skiing") },
+              { key: "skiing-snowboarding", value: t("skiing-snowboarding") },
               { key: "horse-riding", value: t("horse-riding") },
               { key: "water-sports", value: t("water-sports") },
+              { key: "rock-climbing", value: t("rock-climbing") },
             ],
           },
           {
@@ -119,6 +121,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
               { key: "painting", value: t("painting") },
               { key: "cooking-masterclass", value: t("cooking-masterclass") },
               { key: "wine-tasting", value: t("wine-tasting") },
+              { key: "gall-mus-opera", value: t("gall-mus-opera") },
             ],
           },
           {
@@ -175,6 +178,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
           { key: "beach", value: t("beach") },
           { key: "gym", value: t("gym") },
           { key: "kitchen", value: t("kitchen") },
+          { key: "restaurant", value: t("restaurant") },
         ]}
         selectedOptions={filters.comfort}
         onChange={(newCheckedOptions) =>

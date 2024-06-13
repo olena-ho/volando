@@ -129,10 +129,10 @@
     "activities": ["Solný hotel", "Relaxace"],
     "comfort": ["Wifi", "Restaurace", "Spa"]
   },
-  "Happy Guests Lodge": {
-    "description": "Happy Guests Lodge nabízí jedinečný zážitek, kdy si hosté mohou za 5 liber nechat na pokoji rybího společníka. Je to útulná a přátelská chata v malebném venkovském prostředí Cheshire.",
-    "activities": ["Rybí společník za 5 liber", "Relaxace"],
-    "comfort": ["Wifi", "Parkování", "Restaurace", "Mazlíčci"]
+  "Butlin's Minehead Resort": {
+    "description": "Rodiny si zamilují Butlin's Minehead Resort, perfektní místo pro dovolenou na nádherném jihozápadním pobřeží Anglie. Nabízí zábavní park, bazény, živou zábavu a dokonce i přístup na nedalekou pláž!",
+    "activities": ["Hřiště", "Minigolf", "Aquapark", "Tenis"],
+    "comfort": ["Wifi", "Parkování", "Restaurace", "Bazén"]
   },
   "Hotel Divorce": {
     "description": "Hotel Divorce nabízí jedinečnou službu pro páry, které se chtějí rozvést v dobrém. Hotel poskytuje právní a psychologickou podporu, aby rozchod proběhl hladce.",

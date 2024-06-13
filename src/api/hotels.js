@@ -50,11 +50,11 @@ const hotels = [
     activities: [
       "outdoors",
       "sport",
+      "relax",
       "tennis",
       "beach-volleyball",
-      "paddleboard",
+      "water-sports",
       "yoga",
-      "relax",
       "playground",
     ],
     "loc-code": "cs-c",
@@ -160,8 +160,8 @@ const hotels = [
     name: "Six Senses Douro Valley",
     activities: [
       "art",
-      "painting",
       "sport",
+      "painting",
       "water-sports",
       "cooking-masterclass",
       "wine-tasting",
@@ -205,7 +205,7 @@ const hotels = [
     name: "The Boulders Resort",
     activities: [
       "golf",
-      "hotair-balloons",
+      "hotair-ballooning",
       "rock-climbing",
       "outdoors",
       "sport",
@@ -227,7 +227,7 @@ const hotels = [
       },
       {
         small: "/assets/The-Boulders/fireballs-small.jpg",
-        large: "/assets/The-Boulders/fireballs-small.jpg",
+        large: "/assets/The-Boulders/fireballs.jpg",
       },
       {
         small: "/assets/The-Boulders/golf-play-small.jpg",
@@ -247,7 +247,7 @@ const hotels = [
   {
     id: 7,
     name: "The Residences at Chevy Chase",
-    activities: ["pillow fighting", "relax"],
+    activities: ["yoga", "pillow-fighting", "relax"],
     "loc-code": "us-c",
     address: "8551 Connecticut Ave, Chevy Chase, MD 20815, USA",
     location: {
@@ -256,7 +256,7 @@ const hotels = [
     },
     rating: 0,
     price: "luxury",
-    comfort: ["gym", "library", "pet"],
+    comfort: ["gym", "library", "pets"],
     web: "https://www.theresidenceschevychase.com/",
     images: [
       {
@@ -282,7 +282,7 @@ const hotels = [
   {
     id: 8,
     name: "Loews Coronado Bay Resort",
-    activities: ["surfing for dogs", "outdoors", "sport"],
+    activities: ["water-sports", "outdoors", "sport"],
     "loc-code": "us-c",
     address: "4000 Coronado Bay Road, Coronado, CA 92118, USA",
     location: {
@@ -313,7 +313,7 @@ const hotels = [
     id: 9,
     name: "Obriy Village",
     activities: [
-      "traditional Ukrainian hot tubs",
+      "spa",
       "horse-riding",
       "relax",
       "outdoors",
@@ -352,7 +352,7 @@ const hotels = [
   {
     id: 10,
     name: "Concept Stay Sirimiri",
-    activities: ["horse-riding", "hot tubs", "relax", "outdoors", "sport"],
+    activities: ["horse-riding", "spa", "relax", "outdoors", "sport"],
     "loc-code": "ua-c",
     address: "Yaremche, Ukraine",
     location: {
@@ -367,10 +367,6 @@ const hotels = [
       {
         small: "/assets/Concept-Stay-Sirimiri/hot-tub-small.jpg",
         large: "/assets/Concept-Stay-Sirimiri/hot-tub.jpg",
-      },
-      {
-        small: "/assets/Concept-Stay-Sirimiri/tub-small.jpg",
-        large: "/assets/Concept-Stay-Sirimiri/tub.jpg",
       },
       {
         small: "/assets/Concept-Stay-Sirimiri/girl-on-horse-small.jpg",
@@ -392,14 +388,12 @@ const hotels = [
     name: "Scandi Eco Park",
     activities: [
       "kids",
-      "playground",
       "sport",
       "outdoors",
-      "pet therapy",
-      "husky dogs",
+      "playground",
       "horse-riding",
       "cycling",
-      "trekking",
+      "hiking",
     ],
     "loc-code": "ua-c",
     address: "Chernihiv, Ukraine",
@@ -409,7 +403,7 @@ const hotels = [
     },
     rating: 4.5,
     price: "midrange",
-    comfort: ["wifi", "parking", "restaurant", "spa"],
+    comfort: ["wifi", "parking", "restaurant"],
     web: "https://www.facebook.com/scandi.eco.park/",
     images: [
       {
@@ -442,7 +436,7 @@ const hotels = [
   {
     id: 12,
     name: "Aves Travel",
-    activities: ["hot springs", "relax"],
+    activities: ["spa", "relax"],
     "loc-code": "ua-c",
     address: "Various locations, Ukraine",
     location: {
@@ -649,42 +643,46 @@ const hotels = [
   },
   {
     id: 18,
-    name: "Happy Guests Lodge",
-    activities: ["fish companion for £5", "relax"],
+    name: "Butlin's Minehead Resort",
+    activities: ["playground", "tennis", "minigolf", "aquapark"],
     "loc-code": "gb-c",
-    address: "Tarporley Road, Dutton, Warrington WA4 4EZ, England",
+    address: "Butlin’s Minehead, Warren Road, Minehead TA24 5SH, United Kingdom",
     location: {
-      latitude: 53.3,
-      longitude: -2.65,
+      latitude: 51.205946,
+      longitude: -3.45899,
     },
-    rating: 4,
-    price: "budget",
-    comfort: ["wifi", "parking", "restaurant", "pets"],
-    web: "http://www.happyguestslodge.co.uk/",
+    rating: 4.5,
+    price: "midrange",
+    comfort: ["wifi", "parking", "restaurant", "pool"],
+    web: "https://www.butlins.com/resorts/minehead",
     images: [
       {
-        small: "/assets/Happy-Guests-Lodge/friend-fish-small.jpg",
-        large: "/assets/Happy-Guests-Lodge/friend-fish.jpg",
+        small: "/assets/Butlins/fair-small.jpg",
+        large: "/assets/Butlins/fair.jpg",
       },
       {
-        small: "/assets/Happy-Guests-Lodge/fish-small.jpg",
-        large: "/assets/Happy-Guests-Lodge/fish.jpg",
+        small: "/assets/Butlins/girl-fish-small.jpg",
+        large: "/assets/Butlins/girl-fish.jpg",
       },
       {
-        small: "/assets/Happy-Guests-Lodge/relax-small.jpg",
-        large: "/assets/Happy-Guests-Lodge/relax.jpg",
+        small: "/assets/Butlins/kids-football-small.jpg",
+        large: "/assets/Butlins/kids-football.jpg",
+      },
+      {
+        small: "/assets/Butlins/ride-small.jpg",
+        large: "/assets/Butlins/ride.jpg",
       },
     ],
     defaultReviews: [
       { name: 'James', date: '01.06.2023 10:00', text: 'Lovely place!' },
       { name: 'Олена', date: '02.06.2023 12:00', text: 'Дуже затишно.' },
-      { name: 'Sarah', date: '03.06.2023 14:00', text: 'Nice countryside.' },
+      { name: 'Sarah', date: '03.06.2023 14:00', text: 'Our kids love it!' },
     ]
   },
   {
     id: 19,
     name: "Hotel Divorce",
-    activities: ["divorce hotel", "relax"],
+    activities: ["divorce hotel", "relax", "spa"],
     "loc-code": "nl-c",
     address: "Zeestraat 35, 2518 AA The Hague, Netherlands",
     location: {
@@ -693,7 +691,7 @@ const hotels = [
     },
     rating: 4,
     price: "midrange",
-    comfort: ["wifi", "restaurant", "spa", "legal services"],
+    comfort: ["wifi", "restaurant", "spa"],
     web: "https://www.carlton.nl/hotel-ambassador-den-haag",
     images: [
       {
@@ -833,7 +831,7 @@ const hotels = [
   {
     id: 23,
     name: "Electra Palace Hotel",
-    activities: ["art", "outdoors", "relax"],
+    activities: ["gall-mus-opera", "outdoors", "relax", "spa", "massage", "wine-tasting"],
     "loc-code": "gr-c",
     address: "9 Aristotelous Square, Thessaloniki, 546 24, Greece",
     location: {
@@ -842,8 +840,8 @@ const hotels = [
     },
     rating: 4.7,
     price: "midrange",
-    comfort: ["pool", "restaurant"],
-    web: "https://www.booking.com",
+    comfort: ["pool", "restaurant", "gym"],
+    web: "https://www.electrahotels.gr/hotels/electra-palace-thessaloniki/",
     images: [
       {
         small: "/assets/Electra-Palace-Hotel/art-small.jpg",
@@ -1107,8 +1105,7 @@ const hotels = [
       "outdoors",
       "sport",
       "relax",
-      "stargazing",
-      "hot-air-ballooning",
+      "hotair-ballooning",
       "hiking",
       "horse-riding",
     ],
@@ -1132,10 +1129,6 @@ const hotels = [
         large: "/assets/Amangiri/baloon.jpg",
       },
       {
-        small: "/assets/Amangiri/horseback-riding-small.jpg",
-        large: "/assets/Amangiri/horseback-riding.jpg",
-      },
-      {
         small: "/assets/Amangiri/stargazing-small.jpg",
         large: "/assets/Amangiri/stargazing.jpg",
       },
@@ -1150,9 +1143,8 @@ const hotels = [
     id: 31,
     name: "Soneva Fushi",
     activities: [
-      "snorkeling",
       "outdoors",
-      "diving",
+      "water-sports",
       "art",
       "private cinema screenings",
       "chocolate-making classes",
@@ -1285,7 +1277,7 @@ const hotels = [
     id: 34,
     name: "Whitepod Eco-Luxury Hotel",
     activities: [
-      "skiing",
+      "skiing-snowboarding",
       "sport",
       "outdoors",
       "snowshoeing",
@@ -1412,7 +1404,7 @@ const hotels = [
     activities: [
       "treepod dining",
       "private beach dinners",
-      "snorkeling",
+      "water-sports",
       "stargazing",
       "relax",
       "outdoors",
@@ -1543,9 +1535,8 @@ const hotels = [
     name: "Amangani",
     activities: [
       "sport",
-      "mountaineering",
-      "skiing",
-      "mountain views",
+      "rock-climbing",
+      "skiing-snowboarding",
       "outdoors",
     ],
     "loc-code": "us-c",
@@ -1560,8 +1551,8 @@ const hotels = [
     web: "https://www.aman.com/resorts/amangani",
     images: [
       {
-        small: "/assets/Amangani/mountein-small.jpg",
-        large: "/assets/Amangani/mountein.jpg",
+        small: "/assets/Amangani/mountain-small.jpg",
+        large: "/assets/Amangani/mountain.jpg",
       },
       {
         small: "/assets/Amangani/mountain-views-small.jpg",
@@ -1658,7 +1649,7 @@ const hotels = [
     activities: [
       "snorkeling",
       "kayaking",
-      "paddleboarding",
+      "water-sports",
       "outdoors",
       "sport",
     ],
@@ -1736,7 +1727,7 @@ const hotels = [
     activities: [
       "rainforest walks",
       "guided nature tours",
-      "beach yoga",
+      "yoga",
       "outdoors",
       "relax",
       "golf",
@@ -1776,10 +1767,9 @@ const hotels = [
     name: "Amanwana",
     activities: [
       "outdoors",
-      "jungle trekking",
-      "diving",
-      "snorkeling",
       "sport",
+      "hiking",
+      "water-sports",
     ],
     "loc-code": "id-c",
     address: "Moyo Island, Sumbawa, West Nusa Tenggara, Indonesia",

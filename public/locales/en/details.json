@@ -128,10 +128,10 @@
     "activities": ["salt hotel", "relax"],
     "comfort": ["wifi", "restaurant", "spa"]
   },
-  "Happy Guests Lodge": {
-    "description": "Happy Guests Lodge offers a unique experience where guests can have a fish companion in their room for £5. It's a cozy and friendly lodge located in the picturesque Cheshire countryside.",
-    "activities": ["fish companion for £5", "relax"],
-    "comfort": ["wifi", "parking", "restaurant", "pets"]
+  "Butlin's Minehead Resort": {
+    "description": "Butlin's Minehead Resort is a perfect family vacation spot on the beautiful southwest coast of England. It boasts an amusement park, swimming pools, live entertainment, and even access to a nearby beach!",
+    "activities": ["playground", "minigolf", "aquapark", "tennis"],
+    "comfort": ["wifi", "parking", "restaurant", "pool"]
   },
   "Hotel Divorce": {
     "description": "Hotel Divorce offers a unique service for couples seeking an amicable divorce. The hotel provides legal and psychological support to help couples separate smoothly.",
