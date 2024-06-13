@@ -73,7 +73,7 @@ export const HomePage = () => {
   return (
     <div
       className={`main-page__container ${
-        isSearchResults ? "padding-top-0" : "padding-top-100"
+        isSearchResults || window.innerWidth < 431 ? "padding-top-0" : "padding-top-100"
       }`}
     >
       <SearchBar

@@ -4,13 +4,23 @@
   padding: 20px;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--border-shadow);
   width: fit-content;
   margin: 20px auto 40px;
   position: sticky;
   top: 0;
   z-index: 1;
 }
+/* write media@ for mobile screen, turning the search bar into a column */
+
+@media screen and (max-width: 431px) {
+  .search-bar-wrapper {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+}
+/* for tablet max-width: 768px */
 
 .search-button {
   background-color: var(--volando-bright-blue);

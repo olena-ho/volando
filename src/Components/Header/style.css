@@ -1,10 +1,10 @@
 .header {
-  width: 750px;
+  max-width: 800px;
   margin: 0 auto;
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 20px 14px;
 }
 
 .header__right {
@@ -12,6 +12,8 @@
   align-items: center;
   gap: 20px;
 }
+
+
 .language-selector {
   position: relative;
   cursor: pointer;
@@ -23,6 +25,11 @@
   height: 24px;
 }
 
+@media screen and (max-width: 431px) {
+  .header__right {
+    gap: 10px;
+  }
+}
 .dropdown {
   position: absolute;
   top: 100%;
