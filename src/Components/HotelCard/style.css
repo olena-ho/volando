@@ -1,19 +1,22 @@
+/* General Styles for Hotel Card */
 .container-card {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 50vw;
+  width: 100%; /* Зміна ширини контейнера */
+  padding: 0 10px; /* Додавання відступів */
+  box-sizing: border-box;
 }
 
 .hotel-card {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   border: 1px solid var(--light-grey-color);
   border-radius: 10px;
   padding: 10px;
   gap: 10px;
-  width: 100%;
+  width: 100%; /* Зміна ширини картки */
   transition: transform 0.2s;
   background-color: #ffffff;
 }
@@ -27,14 +30,16 @@
 
 .hotel-info--wrapper {
   display: flex;
+  flex-direction: row;
   gap: 20px;
+  width: 100%;
 }
 
 .hotel-card__image-wrapper {
   flex-basis: 160px;
   flex-shrink: 0;
   flex-grow: 0;
-  height: 225px;
+  height: 160px;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -50,6 +55,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex-grow: 1;
 }
 
 .activities-container {
@@ -63,11 +69,6 @@
   flex-shrink: 0;
 }
 
-.activities-list {
-  margin: 0;
-  flex-grow: 1;
-}
-
 .details-container {
   display: flex;
   flex-direction: column;
@@ -79,35 +80,23 @@
   margin-top: 5px;
 }
 
-.hotel-card h2 {
-  margin: 0;
-  font-size: 1.5em;
-  color: var(--main-font-color);
+.show-on-map-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .hotel-card {
-    flex-direction: column;
-  }
-
-  .hotel-card h2 {
-    font-size: 1.2em;
-  }
-
-  .hotel-details {
-    flex-direction: column;
-    gap: 10px;
-  }
+.show-on-map-btn:hover {
+  background-color: #0056b3;
 }
 
-@media (max-width: 480px) {
-  .hotel-card h2 {
-    font-size: 1em;
-  }
-
-  .hotel-details {
-    width: 100%;
-  }
+.map-container {
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
 }
 
 .favorite-container {
@@ -155,4 +144,50 @@
 .additional-container {
   margin-top: 10px;
   /* Space between the main content and additional content */
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  .container-card {
+    width: 100%; /* Розтягуємо контейнер на всю ширину екрану */
+    padding: 0 10px; /* Додаємо відступи */
+  }
+
+  .hotel-card {
+    flex-direction: column;
+    width: 100%; /* Розтягуємо картку на всю ширину контейнера */
+    margin-bottom: 10px; /* Додаємо нижній відступ між картками */
+  }
+
+  .hotel-info--wrapper {
+    flex-direction: column;
+  }
+
+  .hotel-card__image-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .hotel-card__small-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .hotel-info {
+    align-items: flex-start;
+  }
+
+  .show-on-map-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hotel-card h2 {
+    font-size: 1em;
+  }
+
+  .hotel-details {
+    width: 100%;
+  }
 }

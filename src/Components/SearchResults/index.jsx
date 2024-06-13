@@ -6,10 +6,16 @@ import { HotelList } from '../HotelList';
 
 export const SearchResults = ({ foundHotelsIds, alternativeHotelsFound }) => {
   const [selectedHotel, setSelectedHotel] = useState(null);
+  const [isMapVisible, setIsMapVisible] = useState(false);
 
   const filteredHotels = hotelsData.filter((hotel) =>
     foundHotelsIds.includes(hotel.id),
   );
+
+  const handleShowOnMap = (hotel) => {
+    setSelectedHotel(hotel);
+    setIsMapVisible(true);
+  };
 
   return (
     <div className="search-results-container">
@@ -17,14 +23,17 @@ export const SearchResults = ({ foundHotelsIds, alternativeHotelsFound }) => {
         hotels={filteredHotels}
         onHotelClick={setSelectedHotel}
         alternativeHotelsFound={alternativeHotelsFound}
+        onShowOnMap={handleShowOnMap}
       />
-      <div className="map-container">
-        <Map
-          hotels={filteredHotels}
-          selectedHotel={selectedHotel}
-          onHotelSelect={setSelectedHotel}
-        />
-      </div>
+     {isMapVisible && (
+        <div className="map-container">
+          <Map
+            hotels={filteredHotels}
+            selectedHotel={selectedHotel}
+            onHotelSelect={setSelectedHotel}
+          />
+        </div>
+      )}
     </div>
   );
 };
