@@ -2,6 +2,7 @@
   position: relative;
   display: inline-block;
   margin: 0 10px;
+  cursor: pointer;
 }
 
 .dropdown-input {
@@ -97,7 +98,18 @@
   border: 1px solid #ddd;
 }
 
-.dropdown-content.show {
+@media (max-width: 890px) {
+  .dropdown-content--large {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown-content {
+    width: fit-content
+  }
+}
+
+.show {
   display: block;
 }
 

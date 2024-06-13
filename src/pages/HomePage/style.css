@@ -14,13 +14,13 @@
 .animation-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 50vh; 
+  margin: 150px 0;
+  height: 30vh; 
 }
 
 .animation {
   width: 100%;
-  max-width: 600px;
+  max-width: 300px;
 }
 
 .map-container {

@@ -7,11 +7,7 @@ export const LargeDropdownContent = ({
   show,
 }) => {
   return (
-    <div
-      className={`dropdown-content ${
-        show ? "show" : ""
-      } dropdown-content--large`}
-    >
+    <div className={`${show ? "show" : ""} dropdown-content--large`}>
       {categories.map((category) => (
         <div className="category-section" key={category.key}>
           <div className="category-header">

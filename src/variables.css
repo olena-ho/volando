@@ -9,6 +9,8 @@
   --volando-green: #2EC4B6;
   --volando-light-green: #CBF3F0;
   --autocomplete-item-highlight: #f0f0f0;
+  /* boarder styles */
+  --border-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
   /* gradient */
   --gradient-background: linear-gradient(45deg, #21a1f2, #2EC4B6);

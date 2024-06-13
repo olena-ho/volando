@@ -396,7 +396,7 @@ const hotels = [
       "hiking",
     ],
     "loc-code": "ua-c",
-    address: "Chernihiv, Ukraine",
+    address: "Klad'kivka, Chernihivska obl, 16351, Ukraine",
     location: {
       latitude: 51.4982,
       longitude: 31.2893,

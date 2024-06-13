@@ -15,7 +15,24 @@ export const HomePage = () => {
   const [searchParams] = useSearchParams();
   const [showAnimation, setShowAnimation] = useState(false);
 
-  const handleSearch = (filters) => {
+  const handleSearch = () => {
+    const filters = {
+      activities: searchParams.get("activities")
+        ? searchParams.get("activities").split(",")
+        : [],
+      locCode: searchParams.get("locCode")
+        ? searchParams.get("locCode").split(",")
+        : [],
+      comfort: searchParams.get("comfort")
+        ? searchParams.get("comfort").split(",")
+        : [],
+      price: searchParams.get("price")
+        ? searchParams.get("price").split(",")
+        : [],
+      rating: searchParams.get("rating")
+        ? searchParams.get("rating").split(",")
+        : [],
+    };
     const hasNoFilters = Object.values(filters).every(
       (filter) => filter.length === 0
     );
@@ -36,40 +53,11 @@ export const HomePage = () => {
       )
     );
   };
-
+  // enabling sharing a link with search parameters with someone else and letting them see the results right away
   useEffect(() => {
-    const initialFilters = {
-      activities: searchParams.get("activities")
-        ? searchParams.get("activities").split(",")
-        : [],
-      locCode: searchParams.get("locCode")
-        ? searchParams.get("locCode").split(",")
-        : [],
-      comfort: searchParams.get("comfort")
-        ? searchParams.get("comfort").split(",")
-        : [],
-      price: searchParams.get("price")
-        ? searchParams.get("price").split(",")
-        : [],
-      rating: searchParams.get("rating")
-        ? searchParams.get("rating").split(",")
-        : [],
-    };
-
-    if (
-      initialFilters.activities.length > 0 ||
-      initialFilters.locCode.length > 0 ||
-      initialFilters.comfort.length > 0 ||
-      initialFilters.price.length > 0 ||
-      initialFilters.rating.length > 0
-    ) {
-      handleSearch(initialFilters);
-    } else {
-      setFoundHotelsIds([]);
-      setAlternativeHotelsFound(false);
-    }
-  }, [searchParams]);
-
+    handleSearch();
+  }, []);
+  
   useEffect(() => {
     if (alternativeHotelsFound) {
       setShowAnimation(true);
@@ -85,7 +73,7 @@ export const HomePage = () => {
   return (
     <div
       className={`main-page__container ${
-        isSearchResults ? "padding-top-0" : "padding-top-100"
+        isSearchResults || window.innerWidth < 431 ? "padding-top-0" : "padding-top-100"
       }`}
     >
       <SearchBar
