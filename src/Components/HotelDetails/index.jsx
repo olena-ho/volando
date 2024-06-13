@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './style.css';
 import { Description } from './Description';
-import { Photos } from './Photos';
+import { PhotosCarousel } from './PhotosCarousel'; 
 import { Reviews } from './Reviews';
 
 const tabs = [
@@ -38,7 +38,7 @@ export const HotelDetails = ({ hotelDetails ={}, images, web, defaultReviews, ho
           />
         );
       case 'photos':
-        return <Photos images={images} />;
+        return <PhotosCarousel images={images} />; 
       default:
         break;
     }
