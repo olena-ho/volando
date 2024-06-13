@@ -9,12 +9,13 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  border: 1px solid #ddd;
+  border: 1px solid var(--light-grey-color);
   border-radius: 10px;
   padding: 10px;
   gap: 10px;
   width: 100%;
   transition: transform 0.2s;
+  background-color: #ffffff;
 }
 
 .hotel-card:hover,
@@ -30,7 +31,7 @@
 }
 
 .hotel-card__image-wrapper {
-  flex-basis: 160px; 
+  flex-basis: 160px;
   flex-shrink: 0;
   flex-grow: 0;
   height: 225px;
@@ -78,10 +79,10 @@
   margin-top: 5px;
 }
 
-
 .hotel-card h2 {
   margin: 0;
   font-size: 1.5em;
+  color: var(--main-font-color);
 }
 
 @media (max-width: 768px) {

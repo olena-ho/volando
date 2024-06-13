@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import './style.css';
 import { Description } from './Description';
 import { Photos } from './Photos';
-import { Comfort } from './Comfort';
 import { Reviews } from './Reviews';
 
 const tabs = [
@@ -19,12 +18,7 @@ const tabs = [
     id: 'photos',
     name: 'photos',
   },
-  {
-    id: 'comfort',
-    name: 'comfortP',
-  },
 ];
-//to remove later: I added ={} to the props to avoid the error of undefined
 
 export const HotelDetails = ({ hotelDetails ={}, images, web, defaultReviews, hotelId }) => {
   const [selectedTab, setSelectedTab] = useState(tabs[0].id);
@@ -45,8 +39,6 @@ export const HotelDetails = ({ hotelDetails ={}, images, web, defaultReviews, ho
         );
       case 'photos':
         return <Photos images={images} />;
-      case 'comfort':
-        return <Comfort hotelDetails={hotelDetails}/>;
       default:
         break;
     }
