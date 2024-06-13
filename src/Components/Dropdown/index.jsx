@@ -36,8 +36,8 @@ export const Dropdown = ({ title, options, onChange, large }) => {
   }, []);
 
   return (
-    <div className="dropdown-wrapper" ref={dropdownRef} onClick={toggleDropdown}>
-      <button className="dropdown-button">
+    <div className="dropdown-wrapper" ref={dropdownRef}>
+      <button className="dropdown-button" onClick={toggleDropdown}>
         {title} <img src={icon} alt="down-icon" className="down-icon" />
       </button>
       {large ? (
