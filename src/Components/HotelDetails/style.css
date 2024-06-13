@@ -2,13 +2,31 @@
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs-container div {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: var(--volando-light-orange);
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.tabs-container div:hover,
+.tabs-container div:focus,
+.tabs-container .active {
+  background-color: var(--volando-bright-orange);
+  color: white;
 }
 
 .review-card {
-  border: 1px solid #ddd;
+  border: 1px solid var(--light-grey-color);
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
+  background-color: #ffffff;
 }
 
 form input,
@@ -17,13 +35,13 @@ form textarea {
   width: 100%;
   margin: 10px 0;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--light-grey-color);
   border-radius: 5px;
 }
 
 form button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: var(--volando-bright-blue);
   color: white;
   border: none;
   border-radius: 5px;
@@ -31,7 +49,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #0056b3;
+  background-color: var(--volando-dark-blue);
 }
 
 .edit-button,
@@ -41,24 +59,24 @@ form button:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: var(--main-font-size);
   margin-right: 5px;
 }
 
 .edit-button {
-  background-color: #ffc107;
+  background-color: var(--volando-bright-orange);
 }
 
 .edit-button:hover {
-  background-color: #e0a800;
+  background-color: var(--volando-light-orange);
 }
 
 .delete-button {
-  background-color: #dc3545;
+  background-color: var(--volando-bright-blue);
 }
 
 .delete-button:hover {
-  background-color: #c82333;
+  background-color: var(--volando-dark-blue);
 }
 
 .carousel-photo {
@@ -66,4 +84,5 @@ form button:hover {
   height: 400px;
   object-fit: cover;
   object-position: center;
+  border-radius: 25px;
 }
