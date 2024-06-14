@@ -1,11 +1,9 @@
-/* General Styles for Hotel Card */
+/* /* General Styles for Hotel Card */
 .container-card {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 100%; /* Зміна ширини контейнера */
-  padding: 0 10px; /* Додавання відступів */
-  box-sizing: border-box;
+  width: 50vw;
 }
 
 .hotel-card {
@@ -16,7 +14,7 @@
   border-radius: 10px;
   padding: 10px;
   gap: 10px;
-  width: 100%; /* Зміна ширини картки */
+  width: 100%;
   transition: transform 0.2s;
   background-color: #ffffff;
 }
@@ -56,6 +54,7 @@
   flex-direction: column;
   gap: 10px;
   flex-grow: 1;
+  position: relative;
 }
 
 .activities-container {
@@ -80,20 +79,6 @@
   margin-top: 5px;
 }
 
-.show-on-map-btn {
-  margin-top: 10px;
-  padding: 8px 12px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.show-on-map-btn:hover {
-  background-color: #0056b3;
-}
-
 .map-container {
   width: 100%;
   height: 300px; /* Adjust the height as needed */
@@ -103,10 +88,23 @@
   position: absolute;
   top: 10px;
   right: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .add-heart {
   position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.arrow-details {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
 }
 
 .add-heart::before {
@@ -129,7 +127,7 @@
   content: url(../Dropdown/img/down-icon.png);
   animation: zoomIn 0.5s ease;
   background-repeat: no-repeat;
-  background-size: 70%;
+  background-size: 100%;
   background-position: center center;
 }
 
@@ -137,26 +135,30 @@
   content: url(../../../public/arrow-up.png);
   animation: zoomIn 0.5s ease;
   background-repeat: no-repeat;
-  background-size: 70%;
+  background-size: 100%;
   background-position: center center;
 }
 
 .additional-container {
   margin-top: 10px;
-  /* Space between the main content and additional content */
+}
+
+.mobile-map-container {
+  width: 100%;
+  height: 200px; /* Smaller height for mobile */
 }
 
 /* Responsive Styles for Mobile Devices */
 @media (max-width: 768px) {
   .container-card {
-    width: 100%; /* Розтягуємо контейнер на всю ширину екрану */
-    padding: 0 10px; /* Додаємо відступи */
+    width: 100%; 
+    padding: 0 10px; 
   }
 
   .hotel-card {
     flex-direction: column;
-    width: 100%; /* Розтягуємо картку на всю ширину контейнера */
-    margin-bottom: 10px; /* Додаємо нижній відступ між картками */
+    width: 100%; 
+    margin-bottom: 10px; 
   }
 
   .hotel-info--wrapper {
@@ -177,9 +179,20 @@
     align-items: flex-start;
   }
 
-  .show-on-map-btn {
-    width: 100%;
+  .add-heart {
+    display: block; 
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
+
+  .arrow-details {
+    display: block;
+    position: absolute;
+    bottom: -213px; 
+  right: 10px; 
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -189,5 +202,12 @@
 
   .hotel-details {
     width: 100%;
+  }
+
+} 
+
+@media (min-width: 769px) {
+  .mobile-map-container {
+    display: none;
   }
 }

@@ -1,23 +1,33 @@
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { HotelDetails } from "../HotelDetails/index.jsx";
-import { useState } from "react";
+import Map from "../Map/index.jsx";
 import "./style.css";
 
 export const HotelCard = ({
   hotel,
-  hotelDetails = {}, 
+  hotelDetails = {},
   onRemoveFromFavorites,
   onHotelClick,
   isFavorite,
   onAddToFavorites,
   handleOpenHotelDetails,
   isHotelDetailsOpened,
-  onShowOnMap,
 }) => {
-  const { t } = useTranslation(["details", "translation"]); // Hook for translations
-
-  const { activities = [] } = hotelDetails; //due to this destructuring I use address and rating instead of hotelDetails.address and hotelDetails.rating
+  const { t } = useTranslation(["details", "translation"]);
+  const { activities = [] } = hotelDetails;
   const [showMap, setShowMap] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleShowMap = (e) => {
     e.stopPropagation();
@@ -58,42 +68,32 @@ export const HotelCard = ({
               {t("translation:ratingP")}: {hotel.rating}
             </p>
           </div>
+        </div>
+        <div className="favorite-container">
           <button
-            className="show-on-map-btn"
-            onClick={handleShowMap}
-          >
-            Show on map
-          </button>
+            className={`add-heart icon ${
+              isFavorite(hotel.id) ? "active" : "inactive"
+            }`}
+            onClick={(e) => {
+              e.stopPropagation();
+              if (isFavorite(hotel.id)) {
+                onRemoveFromFavorites(hotel.id);
+              } else {
+                onAddToFavorites(hotel.id);
+              }
+            }}
+          ></button>
+          <button
+            className={`arrow-details icon ${
+              isHotelDetailsOpened ? "active" : "inactive"
+            }`}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleOpenHotelDetails(hotel.id);
+              handleShowMap(e);
+            }}
+          ></button>
         </div>
-      </div>
-      {showMap && (
-        <div className="map-container">
-          <Map hotels={[hotel]} selectedHotel={hotel} onHotelSelect={() => {}} />
-        </div>
-      )}
-      <div className="favorite-container">
-        <button
-          className={`add-heart icon ${
-            isFavorite(hotel.id) ? "active" : "inactive"
-          }`}
-          onClick={(e) => {
-            e.stopPropagation();
-            if (isFavorite(hotel.id)) {
-              onRemoveFromFavorites(hotel.id);
-            } else {
-              onAddToFavorites(hotel.id);
-            }
-          }}
-        ></button>
-        <button
-          className={`arrow-details icon ${
-            isHotelDetailsOpened ? "active" : "inactive"
-          }`}
-          onClick={(e) => {
-            e.stopPropagation();
-            handleOpenHotelDetails(hotel.id);
-          }}
-        ></button>
       </div>
       {isHotelDetailsOpened && (
         <div className="additional-container">
@@ -104,6 +104,11 @@ export const HotelCard = ({
             defaultReviews={hotel.defaultReviews}
             hotelId={hotel.id}
           />
+          {isMobile && showMap && (
+            <div className="mobile-map-container">
+              <Map hotels={[hotel]} selectedHotel={hotel} onHotelSelect={() => {}} />
+            </div>
+          )}
         </div>
       )}
     </div>

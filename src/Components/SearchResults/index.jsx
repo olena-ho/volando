@@ -25,15 +25,13 @@ export const SearchResults = ({ foundHotelsIds, alternativeHotelsFound }) => {
         alternativeHotelsFound={alternativeHotelsFound}
         onShowOnMap={handleShowOnMap}
       />
-     {isMapVisible && (
-        <div className="map-container">
+<div className={`map-container ${isMapVisible ? 'visible' : ''}`}>
           <Map
             hotels={filteredHotels}
             selectedHotel={selectedHotel}
             onHotelSelect={setSelectedHotel}
           />
         </div>
-      )}
     </div>
   );
 };

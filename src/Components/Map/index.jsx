@@ -5,37 +5,31 @@ import {
   LoadScript,
   Marker,
 } from '@react-google-maps/api';
-import './style.css'; // Import styles
+import './style.css'; 
 
-// Container style for the Google Map
 const containerStyle = {
   width: '100%',
   height: '100vh',
 };
 
-// Default center location for the map
 const defaultCenter = {
   lat: 49.5,
   lng: 14.5,
 };
 
-// Error handling for Google Maps loading
 const handleLoadError = (e) => {
   console.error('Error loading Google Maps', e);
 };
 
-// Map load success handler
 const handleMapLoad = (map) => {
   console.log('Map loaded successfully', map);
 };
 
 const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
-  const [currentLocation, setCurrentLocation] = useState(null); // State to store the current location of the user
-  const [displayInfo, setDisplayInfo] = useState(null); // State to store the hotel info to display in InfoWindow
-  const [directions, setDirections] = useState(null); // State to store directions
-  const [showDirections, setShowDirections] = useState(false); // State to manage whether to show directions or not
-  const [isLargeMap, setIsLargeMap] = useState(false); // State to manage map size
-  const mapRef = useRef(null); // Ref for the map object
+  const [currentLocation, setCurrentLocation] = useState(null); 
+  const [displayInfo, setDisplayInfo] = useState(null); 
+  const [isLargeMap, setIsLargeMap] = useState(false); 
+  const mapRef = useRef(null); 
 
   // Get user's current location
   useEffect(() => {
@@ -64,13 +58,12 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
       const map = mapRef.current;
       const { latitude, longitude } = selectedHotel.location;
       map.setCenter({ lat: latitude, lng: longitude });
-      map.setZoom(12); // Set a custom zoom level
+      map.setZoom(12); 
     }
   }, [selectedHotel]);
 
-  // Handle marker click event
   const handleMarkerClick = (hotel) => {
-    setDisplayInfo(hotel); // Show info window for the selected hotel
+    setDisplayInfo(hotel); 
     onHotelSelect(hotel);
   };
 
@@ -138,9 +131,9 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
               zoom={10}
               onLoad={(map) => {
                 handleMapLoad(map);
-                mapRef.current = map; // Set map ref when map is loaded
+                mapRef.current = map; 
               }}
-              onClick={() => setIsLargeMap(!isLargeMap)} // Toggle map size on click
+              onClick={() => setIsLargeMap(!isLargeMap)} 
             >
               {currentLocationMarker}
               {hotelMarkers}

@@ -16,9 +16,25 @@
   padding: 0 10px;
 }
 .map-container {
-  width: 100%;
+  flex-grow: 1;
   height: 465px;
   border-radius: 10px 0 0 10px;
   position: sticky;
   top: 0;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  .search-results-container {
+    flex-direction: column;
+  }
+
+  .map-container {
+    display: none; /* Hide map container on mobile */
+  }
+
+  .search-cards {
+    width: 100%; 
+    padding: 0 10px;
+  }
 }
