@@ -13,7 +13,7 @@ export const Description = ({ hotelDetails, web }) => {
       <p>
         {t("translation:comfort")}: {comfort.join(", ")}
       </p>
-      <a href={web} target="_blank" rel="noopener noreferrer">
+      <a href={web} target="_blank" rel="noopener noreferrer" className='link'>
         {t('translation:website')}
       </a>
     </div>
