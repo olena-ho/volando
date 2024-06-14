@@ -2,7 +2,6 @@ import React, { useEffect, useState, useMemo, useRef } from 'react';
 import {
   GoogleMap,
   InfoWindow,
-  LoadScript,
   Marker,
 } from '@react-google-maps/api';
 import './style.css'; 
@@ -15,10 +14,6 @@ const containerStyle = {
 const defaultCenter = {
   lat: 49.5,
   lng: 14.5,
-};
-
-const handleLoadError = (e) => {
-  console.error('Error loading Google Maps', e);
 };
 
 const handleMapLoad = (map) => {

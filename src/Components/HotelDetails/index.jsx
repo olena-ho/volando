@@ -48,7 +48,9 @@ export const HotelDetails = ({ hotelDetails ={}, images, web, defaultReviews, ho
     <>
       <div className="tabs-container">
         {tabs.map((tab) => (
-          <div key={tab.id} onClick={() => setSelectedTab(tab.id)}>
+          <div key={tab.id} onClick={() => setSelectedTab(tab.id)}
+          className={selectedTab === tab.id ? 'active' : ''}
+          >
             {t(`translation:${tab.name}`)}
           </div>
         ))}
