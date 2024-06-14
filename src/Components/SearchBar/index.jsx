@@ -118,7 +118,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
               { key: "cooking-masterclass", value: t("cooking-masterclass") },
               { key: "wine-tasting", value: t("wine-tasting") },
               { key: "gall-mus-opera", value: t("gall-mus-opera") },
-              { key: "music-singing", value: t("music-singing") },
+              { key: "dancing", value: t("dancing") },
             ],
           },
           {

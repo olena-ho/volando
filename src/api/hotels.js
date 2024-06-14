@@ -990,7 +990,7 @@ const hotels = [
   {
     id: 27,
     name: "Grand Velas Riviera Maya",
-    activities: ["art", "sport", "music-singing"],
+    activities: ["art", "sport", "dancing"],
     "loc-code": "mx-c",
     address:
       "Carretera Cancún Tulum Km 62, 77710 Playa del Carmen, Q.R., Mexico",
