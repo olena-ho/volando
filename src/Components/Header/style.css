@@ -13,7 +13,6 @@
   gap: 20px;
 }
 
-
 .language-selector {
   position: relative;
   cursor: pointer;
@@ -40,7 +39,7 @@
 }
 
 .dropdown-flag {
-  width: 24px; 
+  width: 24px;
   height: 24px;
   display: block;
   margin: 10px 0;

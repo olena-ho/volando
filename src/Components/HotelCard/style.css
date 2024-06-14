@@ -1,4 +1,4 @@
-/* /* General Styles for Hotel Card */
+/* General Styles for Hotel Card */
 .container-card {
   display: flex;
   flex-direction: column;
@@ -31,6 +31,7 @@
   flex-direction: row;
   gap: 20px;
   width: 100%;
+  position: relative;
 }
 
 .hotel-card__image-wrapper {
@@ -54,7 +55,12 @@
   flex-direction: column;
   gap: 10px;
   flex-grow: 1;
-  position: relative;
+}
+.hotel-info__first-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
 }
 
 .activities-container {
@@ -81,50 +87,33 @@
 
 .map-container {
   width: 100%;
-  height: 300px; /* Adjust the height as needed */
-}
-
-.favorite-container {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  gap: 10px;
+  height: 300px;
 }
 
 .add-heart {
-  position: relative;
   background: none;
   border: none;
   cursor: pointer;
 }
+.heart-icon {
+  height: 24px;
+}
 
+.add-heart:hover .heart-icon {
+  content: url(../../../public/heart-orange.png);
+}
 .arrow-details {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   background: none;
   border: none;
   cursor: pointer;
   font-size: 1.5em;
 }
 
-.add-heart::before {
-  content: url(../../../public/heart-grey.png);
-  animation: zoomIn 0.5s ease;
-  background-repeat: no-repeat;
-  background-size: 70%;
-  background-position: center center;
-}
-
-.add-heart.active:hover::before {
-  content: url(../../../public/heart-orange.png);
-  animation: zoomIn 0.5s ease;
-  background-repeat: no-repeat;
-  background-size: 70%;
-  background-position: center center;
-}
-
 .arrow-details::before {
-  content: url(../Dropdown/img/down-icon.png);
+  content: url(../../../public/arrow-down.png);
   animation: zoomIn 0.5s ease;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -145,7 +134,7 @@
 
 .mobile-map-container {
   width: 100%;
-  height: 200px; /* Smaller height for mobile */
+  height: 200px;
 }
 
 /* Responsive Styles for Mobile Devices */
@@ -178,21 +167,6 @@
   .hotel-info {
     align-items: flex-start;
   }
-
-  .add-heart {
-    display: block; 
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-
-  .arrow-details {
-    display: block;
-    position: absolute;
-    bottom: -213px; 
-  right: 10px; 
-  }
-
 }
 
 @media (max-width: 480px) {
@@ -203,7 +177,6 @@
   .hotel-details {
     width: 100%;
   }
-
 } 
 
 @media (min-width: 769px) {

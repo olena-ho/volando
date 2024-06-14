@@ -3,10 +3,12 @@ import { useTranslation } from "react-i18next";
 import { HotelDetails } from "../HotelDetails/index.jsx";
 import Map from "../Map/index.jsx";
 import "./style.css";
+import heartOff from "../../../public/heart-grey.png";
+import heartOn from "../../../public/heart-orange.png";
 
 export const HotelCard = ({
   hotel,
-  hotelDetails = {},
+  hotelDetails = {}, //to remove later: I added ={} to the props to avoid the error of undefined: *from Olena: I tried removing it and it works, so we can remove it I think
   onRemoveFromFavorites,
   onHotelClick,
   isFavorite,
@@ -50,7 +52,28 @@ export const HotelCard = ({
         </div>
 
         <div className="hotel-info">
-          <h2>{hotel.name}</h2>
+          <div className="hotel-info__first-line">
+            <h2>{hotel.name}</h2>
+            <button
+              className={`add-heart icon ${
+                isFavorite(hotel.id) ? "active" : "inactive"
+              }`}
+              onClick={(e) => {
+                e.stopPropagation();
+                if (isFavorite(hotel.id)) {
+                  onRemoveFromFavorites(hotel.id);
+                } else {
+                  onAddToFavorites(hotel.id);
+                }
+              }}
+            >
+              <img
+                src={isFavorite(hotel.id) ? heartOn : heartOff}
+                alt="heart icon"
+                className="heart-icon"
+              />
+            </button>
+          </div>
           <div className="activities-container">
             <div className="details-list">
               <div>
@@ -69,31 +92,17 @@ export const HotelCard = ({
             </p>
           </div>
         </div>
-        <div className="favorite-container">
-          <button
-            className={`add-heart icon ${
-              isFavorite(hotel.id) ? "active" : "inactive"
-            }`}
-            onClick={(e) => {
-              e.stopPropagation();
-              if (isFavorite(hotel.id)) {
-                onRemoveFromFavorites(hotel.id);
-              } else {
-                onAddToFavorites(hotel.id);
-              }
-            }}
-          ></button>
-          <button
-            className={`arrow-details icon ${
-              isHotelDetailsOpened ? "active" : "inactive"
-            }`}
-            onClick={(e) => {
-              e.stopPropagation();
-              handleOpenHotelDetails(hotel.id);
-              handleShowMap(e);
-            }}
-          ></button>
-        </div>
+
+        <button
+          className={`arrow-details icon ${
+            isHotelDetailsOpened ? "active" : "inactive"
+          }`}
+          onClick={(e) => {
+            e.stopPropagation();
+            handleOpenHotelDetails(hotel.id);
+            handleShowMap(e);
+          }}
+        ></button>
       </div>
       {isHotelDetailsOpened && (
         <div className="additional-container">
@@ -106,7 +115,11 @@ export const HotelCard = ({
           />
           {isMobile && showMap && (
             <div className="mobile-map-container">
-              <Map hotels={[hotel]} selectedHotel={hotel} onHotelSelect={() => {}} />
+              <Map
+                hotels={[hotel]}
+                selectedHotel={hotel}
+                onHotelSelect={() => {}}
+              />
             </div>
           )}
         </div>

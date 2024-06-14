@@ -15,10 +15,6 @@ body {
   padding: 0;
 }
 
-a {
-  
-}
-
 /* .container {
   max-width: 26rem;
   margin-right: auto;
@@ -41,4 +37,10 @@ ul {
 .icon {
   border: none;
   background: none;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--light-grey-color);
 }

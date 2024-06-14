@@ -113,10 +113,6 @@ export const CountriesInput = ({ placeholder, onChange }) => {
     }
   };
 
-  const handleHover = () => {
-    const inputElement = document.getElementById("location");
-  };
-
   //the code for the animated line, see later if I can refactor it
   const handleFocus = (event) => {
     const inputElement = event.target;
@@ -162,8 +158,6 @@ export const CountriesInput = ({ placeholder, onChange }) => {
         onKeyDown={handleKeyDown}
         className="dropdown-button text-input"
         autoComplete="off"
-        onMouseEnter={() => handleHover(true)}
-        onMouseLeave={() => handleHover(false)}
       />
       <div className="input-line"></div>
       {showAutocomplete && inputValue && (

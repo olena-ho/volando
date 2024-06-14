@@ -1,10 +1,12 @@
-
+import './style.css';
 import hotels from '../../api/hotels.js';
 import { useState, useEffect } from 'react';
+import { useTranslation } from "react-i18next";
 import { HotelList } from '../../components/HotelList/index.jsx';
 import './style.css'
 
 export const Favorites = () => {
+  const { t } = useTranslation();
   const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
   const [filteredHotels, setFilteredHotels] = useState(
@@ -22,8 +24,10 @@ export const Favorites = () => {
     setFilteredHotels(hotels.filter(({ id }) => updatedFavorites.includes(id)));
   };
 
+  console.log('filteredHotels', filteredHotels);
   return (
-    <div className="favorites-container">
+    <div className='favorites-container'>
+      <h1 className='title'>{t("favoritesM")}</h1>
       <HotelList
         hotels={filteredHotels}
         onRemoveFromFavorites={onRemoveFromFavorites}
