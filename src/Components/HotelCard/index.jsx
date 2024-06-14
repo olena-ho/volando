@@ -1,5 +1,7 @@
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { HotelDetails } from "../HotelDetails/index.jsx";
+import Map from "../Map/index.jsx";
 import "./style.css";
 
 export const HotelCard = ({
@@ -13,8 +15,24 @@ export const HotelCard = ({
   isHotelDetailsOpened,
 }) => {
   const { t } = useTranslation(["details", "translation"]);
+  const { activities = [] } = hotelDetails;
+  const [showMap, setShowMap] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  const { activities = [] } = hotelDetails; //due to this destructuring I use address and rating instead of hotelDetails.address and hotelDetails.rating
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleShowMap = (e) => {
+    e.stopPropagation();
+    setShowMap(!showMap);
+  };
 
   return (
     <div className="hotel-card" onClick={() => onHotelClick(hotel)}>
@@ -72,6 +90,7 @@ export const HotelCard = ({
             onClick={(e) => {
               e.stopPropagation();
               handleOpenHotelDetails(hotel.id);
+              handleShowMap(e);
             }}
           ></button>
         </div>
@@ -85,6 +104,11 @@ export const HotelCard = ({
             defaultReviews={hotel.defaultReviews}
             hotelId={hotel.id}
           />
+          {isMobile && showMap && (
+            <div className="mobile-map-container">
+              <Map hotels={[hotel]} selectedHotel={hotel} onHotelSelect={() => {}} />
+            </div>
+          )}
         </div>
       )}
     </div>

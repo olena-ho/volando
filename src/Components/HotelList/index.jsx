@@ -3,10 +3,10 @@ import { useTranslation } from "react-i18next";
 import { HotelCard } from "../HotelCard";
 import "./style.css";
 
-export const HotelList = ({ hotels, alternativeHotelsFound, ...props }) => {
+export const HotelList = ({ hotels, alternativeHotelsFound, onShowOnMap, ...props }) => {
   const { i18n } = useTranslation(['details', 'translation']); 
-  const [details, setDetails] = useState(null); // State to store hotel details
-  const [isLoading, setIsLoading] = useState(true); // State to manage loading status
+  const [details, setDetails] = useState(null); 
+  const [isLoading, setIsLoading] = useState(true); 
   const [openedHotelsDetails, setOpenedHotelsDetails] = useState([]);
 
   // Load hotel details based on current language
@@ -25,7 +25,7 @@ export const HotelList = ({ hotels, alternativeHotelsFound, ...props }) => {
     };
 
     loadDetails();
-  }, [i18n.language]); // Re-fetch details when language changes
+  }, [i18n.language]); 
 
   // Log details state updates
   useEffect(() => {
@@ -72,6 +72,7 @@ export const HotelList = ({ hotels, alternativeHotelsFound, ...props }) => {
               isFavorite={isFavorite}
               handleOpenHotelDetails={handleOpenHotelDetails}
               isHotelDetailsOpened={isHotelDetailsOpened}
+              onShowOnMap={onShowOnMap}
               {...props}
             />
           );
