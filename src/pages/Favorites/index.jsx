@@ -2,6 +2,7 @@
 import hotels from '../../api/hotels.js';
 import { useState, useEffect } from 'react';
 import { HotelList } from '../../components/HotelList/index.jsx';
+import './style.css'
 
 export const Favorites = () => {
   const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -22,7 +23,7 @@ export const Favorites = () => {
   };
 
   return (
-    <div>
+    <div className="favorites-container">
       <HotelList
         hotels={filteredHotels}
         onRemoveFromFavorites={onRemoveFromFavorites}

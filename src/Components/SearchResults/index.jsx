@@ -3,6 +3,7 @@ import Map from '../Map';
 import './style.css';
 import hotelsData from '../../api/hotels';
 import { HotelList } from '../HotelList';
+import { LoadScript } from '@react-google-maps/api';
 
 export const SearchResults = ({ foundHotelsIds, alternativeHotelsFound }) => {
   const [selectedHotel, setSelectedHotel] = useState(null);
@@ -17,7 +18,15 @@ export const SearchResults = ({ foundHotelsIds, alternativeHotelsFound }) => {
     setIsMapVisible(true);
   };
 
+const handleLoadError = (e) => {
+  console.error('Error loading Google Maps', e);
+}
+
   return (
+    <LoadScript
+    googleMapsApiKey={__GOOGLE_MAPS_API_KEY__}
+    onError={handleLoadError}
+    >
     <div className="search-results-container">
       <HotelList
         hotels={filteredHotels}
@@ -33,5 +42,6 @@ export const SearchResults = ({ foundHotelsIds, alternativeHotelsFound }) => {
           />
         </div>
     </div>
+    </LoadScript>
   );
 };
