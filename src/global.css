@@ -38,3 +38,9 @@ ul {
   border: none;
   background: none;
 }
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--light-grey-color);
+}

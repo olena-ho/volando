@@ -4,7 +4,7 @@ import { HotelCard } from "../HotelCard";
 import "./style.css";
 
 export const HotelList = ({ hotels, alternativeHotelsFound, ...props }) => {
-  const { i18n } = useTranslation(['details', 'translation']); // Hook for translations
+  const { i18n } = useTranslation(['details', 'translation']); 
   const [details, setDetails] = useState(null); // State to store hotel details
   const [isLoading, setIsLoading] = useState(true); // State to manage loading status
   const [openedHotelsDetails, setOpenedHotelsDetails] = useState([]);

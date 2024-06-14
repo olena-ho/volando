@@ -4,7 +4,7 @@ import "./style.css";
 
 export const HotelCard = ({
   hotel,
-  hotelDetails = {}, //to remove later: I added ={} to the props to avoid the error of undefined
+  hotelDetails = {}, //to remove later: I added ={} to the props to avoid the error of undefined: *from Olena: I tried removing it and it works, so we can remove it I think
   onRemoveFromFavorites,
   onHotelClick,
   isFavorite,
@@ -12,7 +12,7 @@ export const HotelCard = ({
   handleOpenHotelDetails,
   isHotelDetailsOpened,
 }) => {
-  const { t } = useTranslation(["details", "translation"]); // Hook for translations
+  const { t } = useTranslation(["details", "translation"]);
 
   const { activities = [] } = hotelDetails; //due to this destructuring I use address and rating instead of hotelDetails.address and hotelDetails.rating
 

@@ -1,0 +1,7 @@
+.favorites-container {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
