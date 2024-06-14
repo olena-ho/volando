@@ -118,10 +118,6 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
   console.log(__GOOGLE_MAPS_API_KEY__);
   return (
     <>
-      <LoadScript
-        googleMapsApiKey={__GOOGLE_MAPS_API_KEY__}
-        onError={handleLoadError}
-      >
         <div className={`map-container ${isLargeMap ? 'large' : ''}`}>
  
           <div className="map-content">
@@ -133,14 +129,13 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
                 handleMapLoad(map);
                 mapRef.current = map; 
               }}
-              onClick={() => setIsLargeMap(!isLargeMap)} 
+              onClick={() => setIsLargeMap(!isLargeMap)} // Toggle map size on click
             >
               {currentLocationMarker}
               {hotelMarkers}
             </GoogleMap>
           </div>
         </div>
-      </LoadScript>
     </>
   );
 };

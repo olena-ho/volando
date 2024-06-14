@@ -18,30 +18,30 @@ export const SearchResults = ({ foundHotelsIds, alternativeHotelsFound }) => {
     setIsMapVisible(true);
   };
 
-const handleLoadError = (e) => {
-  console.error('Error loading Google Maps', e);
-}
+  const handleLoadError = (e) => {
+    console.error('Error loading Google Maps', e);
+  }
 
   return (
     <LoadScript
-    googleMapsApiKey={__GOOGLE_MAPS_API_KEY__}
-    onError={handleLoadError}
+      googleMapsApiKey={__GOOGLE_MAPS_API_KEY__}
+      onError={handleLoadError}
     >
-    <div className="search-results-container">
-      <HotelList
-        hotels={filteredHotels}
-        onHotelClick={setSelectedHotel}
-        alternativeHotelsFound={alternativeHotelsFound}
-        onShowOnMap={handleShowOnMap}
-      />
-<div className={`map-container ${isMapVisible ? 'visible' : ''}`}>
+      <div className="search-results-container">
+        <HotelList
+          hotels={filteredHotels}
+          onHotelClick={setSelectedHotel}
+          alternativeHotelsFound={alternativeHotelsFound}
+          onShowOnMap={handleShowOnMap}
+        />
+        <div className={`map-container ${isMapVisible ? 'visible' : ''}`}>
           <Map
             hotels={filteredHotels}
             selectedHotel={selectedHotel}
             onHotelSelect={setSelectedHotel}
           />
         </div>
-    </div>
+      </div>
     </LoadScript>
   );
 };
