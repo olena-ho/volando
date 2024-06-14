@@ -3,6 +3,7 @@ import hotels from '../../api/hotels.js';
 import { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 import { HotelList } from '../../components/HotelList/index.jsx';
+import './style.css'
 
 export const Favorites = () => {
   const { t } = useTranslation();
