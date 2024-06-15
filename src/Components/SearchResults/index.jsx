@@ -4,7 +4,7 @@ import './style.css';
 import hotelsData from '../../api/hotels';
 import { HotelList } from '../HotelList';
 import { LoadScript } from '@react-google-maps/api';
-import useScreenSize from '../../../useScreenSize';
+import useScreenSize from '../../hooks/useScreenSize.js';
 
 export const SearchResults = ({ foundHotelsIds, alternativeHotelsFound }) => {
   const [selectedHotel, setSelectedHotel] = useState(null);

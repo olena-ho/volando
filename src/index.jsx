@@ -1,35 +1,35 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { App } from "./Components/App/index.jsx";
-import { HomePage } from "./pages/HomePage";
-import "./i18n";
-import "./variables.css";
-import "./global.css";
-import { Favorites } from "./pages/Favorites";
-import { TeamInfo } from "./pages/TeamInfo";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { App } from './Components/App/index.jsx';
+import { HomePage } from './pages/HomePage';
+import './i18n';
+import './variables.css';
+import './global.css';
+import { Favorites } from './pages/Favorites';
+import { TeamInfo } from './pages/TeamInfo';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <HomePage />,
       },
       {
-        path: "/favorites",
+        path: '/favorites',
         element: <Favorites />,
       },
       {
-        path: "/team-info",
+        path: '/team-info',
         element: <TeamInfo />,
       },
     ],
   },
 ]);
 
-createRoot(document.querySelector("#app")).render(
-  <RouterProvider router={router} />
+createRoot(document.querySelector('#app')).render(
+  <RouterProvider router={router} />,
 );

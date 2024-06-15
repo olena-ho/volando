@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
-import { HomeVisual } from "../../Components/HomeVisual";
-import { SearchBar } from "../../Components/SearchBar";
-import { SearchResults } from "../../Components/SearchResults";
-import hotels from "../../api/hotels";
-import { filterHotels } from "../../utils/filterHotels";
-import Lottie from "lottie-react";
-import animation from "../../../public/assets/animation/searching-animation.json";
-import "./style.css";
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { HomeVisual } from '../../Components/HomeVisual';
+import { SearchBar } from '../../Components/SearchBar';
+import { SearchResults } from '../../Components/SearchResults';
+import hotels from '../../api/hotels';
+import { filterHotels } from '../../utils/filterHotels';
+import Lottie from 'lottie-react';
+import animation from '../../../public/assets/animation/searching-animation.json';
+import './style.css';
 
 export const HomePage = () => {
   const [foundHotelsIds, setFoundHotelsIds] = useState([]);
@@ -17,24 +17,24 @@ export const HomePage = () => {
 
   const handleSearch = () => {
     const filters = {
-      activities: searchParams.get("activities")
-        ? searchParams.get("activities").split(",")
+      activities: searchParams.get('activities')
+        ? searchParams.get('activities').split(',')
         : [],
-      locCode: searchParams.get("locCode")
-        ? searchParams.get("locCode").split(",")
+      locCode: searchParams.get('locCode')
+        ? searchParams.get('locCode').split(',')
         : [],
-      comfort: searchParams.get("comfort")
-        ? searchParams.get("comfort").split(",")
+      comfort: searchParams.get('comfort')
+        ? searchParams.get('comfort').split(',')
         : [],
-      price: searchParams.get("price")
-        ? searchParams.get("price").split(",")
+      price: searchParams.get('price')
+        ? searchParams.get('price').split(',')
         : [],
-      rating: searchParams.get("rating")
-        ? searchParams.get("rating").split(",")
+      rating: searchParams.get('rating')
+        ? searchParams.get('rating').split(',')
         : [],
     };
     const hasNoFilters = Object.values(filters).every(
-      (filter) => filter.length === 0
+      (filter) => filter.length === 0,
     );
 
     if (hasNoFilters) {
@@ -49,8 +49,8 @@ export const HomePage = () => {
 
     setFoundHotelsIds(
       (filteredHotels.length > 0 ? filteredHotels : alternativeHotels).map(
-        (hotel) => hotel.id
-      )
+        (hotel) => hotel.id,
+      ),
     );
   };
   // enabling sharing a link with search parameters with someone else and letting them see the results right away
@@ -74,8 +74,8 @@ export const HomePage = () => {
     <div
       className={`main-page__container ${
         isSearchResults || window.innerWidth < 431
-          ? "padding-top-0"
-          : "padding-top-100"
+          ? 'padding-top-0'
+          : 'padding-top-100'
       }`}
     >
       <SearchBar
