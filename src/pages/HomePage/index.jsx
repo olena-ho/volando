@@ -5,6 +5,7 @@ import { SearchBar } from '../../Components/SearchBar';
 import { SearchResults } from '../../Components/SearchResults';
 import hotels from '../../api/hotels';
 import { filterHotels } from '../../utils/filterHotels';
+import { getFilters } from '../../utils/getFilters';
 import Lottie from 'lottie-react';
 import animation from '../../../public/assets/animation/searching-animation.json';
 import './style.css';
@@ -16,23 +17,7 @@ export const HomePage = () => {
   const [showAnimation, setShowAnimation] = useState(false);
 
   const handleSearch = () => {
-    const filters = {
-      activities: searchParams.get('activities')
-        ? searchParams.get('activities').split(',')
-        : [],
-      locCode: searchParams.get('locCode')
-        ? searchParams.get('locCode').split(',')
-        : [],
-      comfort: searchParams.get('comfort')
-        ? searchParams.get('comfort').split(',')
-        : [],
-      price: searchParams.get('price')
-        ? searchParams.get('price').split(',')
-        : [],
-      rating: searchParams.get('rating')
-        ? searchParams.get('rating').split(',')
-        : [],
-    };
+    const filters = getFilters(searchParams);
     const hasNoFilters = Object.values(filters).every(
       (filter) => filter.length === 0,
     );
@@ -53,6 +38,7 @@ export const HomePage = () => {
       ),
     );
   };
+  
   // enabling sharing a link with search parameters with someone else and letting them see the results right away
   useEffect(() => {
     handleSearch();
