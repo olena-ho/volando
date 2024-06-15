@@ -26,8 +26,8 @@ const hotels = [
     web: 'http://www.equitana.cz',
     images: [
       {
-        small: '/assets/Equitana/horse-kid-small.jpg',
-        large: '/assets/Equitana/horse-kid.jpg',
+        small: '/assets/Equitana/horses-small.jpg',
+        large: '/assets/Equitana/horses.jpg',
       },
       {
         small: '/assets/Equitana/horse-ocean-small.jpg',
@@ -36,6 +36,10 @@ const hotels = [
       {
         small: '/assets/Equitana/horse-passion-small.jpg',
         large: '/assets/Equitana/horse-passion.jpg',
+      },
+      {
+        small: '/assets/Equitana/horse-kid-small.jpg',
+        large: '/assets/Equitana/horse-kid.jpg',
       },
     ],
     defaultReviews: [
@@ -199,14 +203,6 @@ const hotels = [
     web: 'https://www.sixsenses.com/en/resorts/douro-valley/experiences/',
     images: [
       {
-        small: '/assets/Six-Senses/painting-small.jpg',
-        large: '/assets/Six-Senses/painting.jpg',
-      },
-      {
-        small: '/assets/Six-Senses/master-class-small.jpg',
-        large: '/assets/Six-Senses/master-class.jpg',
-      },
-      {
         small: '/assets/Six-Senses/vine-small.jpg',
         large: '/assets/Six-Senses/vine.jpg',
       },
@@ -214,6 +210,16 @@ const hotels = [
         small: '/assets/Six-Senses/water-activity-small.jpg',
         large: '/assets/Six-Senses/water-activity.jpg',
       },
+      {
+        small: '/assets/Six-Senses/painting-small.jpg',
+        large: '/assets/Six-Senses/painting.jpg',
+      },
+      {
+        small: '/assets/Six-Senses/master-class-small.jpg',
+        large: '/assets/Six-Senses/master-class.jpg',
+      },
+      
+     
     ],
     defaultReviews: [
       { name: 'João', date: '01.06.2023 10:00', text: 'Resort maravilhoso!' },
@@ -243,13 +249,24 @@ const hotels = [
     web: 'https://www.theboulders.com/outdoor-adventures/',
     images: [
       {
-        small: '/assets/The-Boulders/fireball-small.jpg',
-        large: '/assets/The-Boulders/fireball.jpg',
+        small: '/assets/The-Boulders/baloon-small.jpg',
+        large: '/assets/The-Boulders/baloon.jpg',
       },
+      {
+        small: '/assets/The-Boulders/baloons-small.jpg',
+        large: '/assets/The-Boulders/baloons.jpg',
+      },
+      
+      
       {
         small: '/assets/The-Boulders/fireballs-small.jpg',
         large: '/assets/The-Boulders/fireballs.jpg',
       },
+      {
+        small: '/assets/The-Boulders/fireball-small.jpg',
+        large: '/assets/The-Boulders/fireball.jpg',
+      },
+     
       {
         small: '/assets/The-Boulders/golf-play-small.jpg',
         large: '/assets/The-Boulders/golf-play.jpg',
@@ -354,10 +371,6 @@ const hotels = [
     web: 'https://obriyvillage.com/',
     images: [
       {
-        small: '/assets/Obriy-Village/horse-small.jpg',
-        large: '/assets/Obriy-Village/horse.jpg',
-      },
-      {
         small: '/assets/Obriy-Village/nature-small.jpg',
         large: '/assets/Obriy-Village/nature.jpg',
       },
@@ -365,6 +378,12 @@ const hotels = [
         small: '/assets/Obriy-Village/tub-small.jpg',
         large: '/assets/Obriy-Village/tub.jpg',
       },
+      {
+        small: '/assets/Obriy-Village/horse-small.jpg',
+        large: '/assets/Obriy-Village/horse.jpg',
+      },
+     
+     
     ],
     defaultReviews: [
       { name: 'Михайло', date: '01.06.2023 10:00', text: 'Дуже гарне місце!' },
@@ -396,13 +415,14 @@ const hotels = [
     web: 'https://en.concept-stay.com/sirimiri',
     images: [
       {
-        small: '/assets/Concept-Stay-Sirimiri/hot-tub-small.jpg',
-        large: '/assets/Concept-Stay-Sirimiri/hot-tub.jpg',
-      },
-      {
         small: '/assets/Concept-Stay-Sirimiri/girl-on-horse-small.jpg',
         large: '/assets/Concept-Stay-Sirimiri/girl-on-horse.jpg',
       },
+      {
+        small: '/assets/Concept-Stay-Sirimiri/hot-tub-small.jpg',
+        large: '/assets/Concept-Stay-Sirimiri/hot-tub.jpg',
+      },
+     
       {
         small: '/assets/Concept-Stay-Sirimiri/girl-and-horse-small.jpg',
         large: '/assets/Concept-Stay-Sirimiri/girl-and-horse.jpg',
@@ -967,8 +987,8 @@ const hotels = [
     web: 'https://www.marriott.com/en-us/hotels/mcogp-gaylord-palms-resort-and-convention-center/overview/',
     images: [
       {
-        small: '/assets/Gaylord-Palms-and-Convention-Center/princess-small.jpg',
-        large: '/assets/Gaylord-Palms-and-Convention-Center/princess.jpg',
+        small: '/assets/Gaylord-Palms-and-Convention-Center/surfing-lessons-small.jpg',
+        large: '/assets/Gaylord-Palms-and-Convention-Center/surfing-lessons.jpg',
       },
       {
         small: '/assets/Gaylord-Palms-and-Convention-Center/pirats-small.jpg',
@@ -976,9 +996,9 @@ const hotels = [
       },
       {
         small:
-          '/assets/Gaylord-Palms-and-Convention-Center/surfing-lessons-small.jpg',
+          '/assets/Gaylord-Palms-and-Convention-Center/princess-small.jpg',
         large:
-          '/assets/Gaylord-Palms-and-Convention-Center/surfing-lessons.jpg',
+          '/assets/Gaylord-Palms-and-Convention-Center/princess.jpg',
       },
       {
         small:
@@ -1292,6 +1312,10 @@ const hotels = [
     web: 'https://www.soneva.com/soneva-fushi/',
     images: [
       {
+        small: '/assets/Soneva-Fushi/diving-small.jpg',
+        large: '/assets/Soneva-Fushi/diving.jpg',
+      },
+      {
         small: '/assets/Soneva-Fushi/chocolate-making-small.jpg',
         large: '/assets/Soneva-Fushi/chocolate-making.jpg',
       },
@@ -1303,10 +1327,7 @@ const hotels = [
         small: '/assets/Soneva-Fushi/cinema-small.jpg',
         large: '/assets/Soneva-Fushi/cinema.jpg',
       },
-      {
-        small: '/assets/Soneva-Fushi/diving-small.jpg',
-        large: '/assets/Soneva-Fushi/diving.jpg',
-      },
+     
     ],
     defaultReviews: [
       { name: 'Ahmed', date: '01.06.2023 10:00', text: 'Paradise on earth!' },
@@ -1398,8 +1419,8 @@ const hotels = [
     web: 'https://www.kakslauttanen.fi/',
     images: [
       {
-        small: '/assets/Kakslauttanen-Arctic-Resort/aurora-small.jpg',
-        large: '/assets/Kakslauttanen-Arctic-Resort/aurora.jpg',
+        small: '/assets/Kakslauttanen-Arctic-Resort/snowmobile-small.jpg',
+        large: '/assets/Kakslauttanen-Arctic-Resort/snowmobile.jpg',
       },
       {
         small: '/assets/Kakslauttanen-Arctic-Resort/fishing-small.jpg',
@@ -1410,8 +1431,8 @@ const hotels = [
         large: '/assets/Kakslauttanen-Arctic-Resort/huskey.jpg',
       },
       {
-        small: '/assets/Kakslauttanen-Arctic-Resort/snowmobile-small.jpg',
-        large: '/assets/Kakslauttanen-Arctic-Resort/snowmobile.jpg',
+        small: '/assets/Kakslauttanen-Arctic-Resort/aurora-small.jpg',
+        large: '/assets/Kakslauttanen-Arctic-Resort/aurora.jpg',
       },
     ],
     defaultReviews: [
@@ -1443,20 +1464,21 @@ const hotels = [
     web: 'https://www.whitepod.com/',
     images: [
       {
-        small: '/assets/Whitepod-Eco-Luxury-Hotel/skiing-small.jpg',
-        large: '/assets/Whitepod-Eco-Luxury-Hotel/skiing.jpg',
-      },
-      {
         small: '/assets/Whitepod-Eco-Luxury-Hotel/snowshoeing-small.jpg',
         large: '/assets/Whitepod-Eco-Luxury-Hotel/snowshoeing.jpg',
+      },
+      {
+        small: '/assets/Whitepod-Eco-Luxury-Hotel/yoga-small.jpg',
+        large: '/assets/Whitepod-Eco-Luxury-Hotel/yoga.jpg',
       },
       {
         small: '/assets/Whitepod-Eco-Luxury-Hotel/stargazing-small.jpg',
         large: '/assets/Whitepod-Eco-Luxury-Hotel/stargazing.jpg',
       },
+     
       {
-        small: '/assets/Whitepod-Eco-Luxury-Hotel/yoga-small.jpg',
-        large: '/assets/Whitepod-Eco-Luxury-Hotel/yoga.jpg',
+        small: '/assets/Whitepod-Eco-Luxury-Hotel/skiing-small.jpg',
+        large: '/assets/Whitepod-Eco-Luxury-Hotel/skiing.jpg',
       },
     ],
     defaultReviews: [
@@ -1721,17 +1743,20 @@ const hotels = [
     web: 'https://www.aman.com/resorts/amangani',
     images: [
       {
-        small: '/assets/Amangani/mountain-small.jpg',
-        large: '/assets/Amangani/mountain.jpg',
-      },
-      {
         small: '/assets/Amangani/mountain-views-small.jpg',
         large: '/assets/Amangani/mountain-views.jpg',
+      },
+      {
+        small: '/assets/Amangani/mountain-small.jpg',
+        large: '/assets/Amangani/mountain.jpg',
       },
       {
         small: '/assets/Amangani/skiing-small.jpg',
         large: '/assets/Amangani/skiing.jpg',
       },
+      
+     
+     
     ],
     defaultReviews: [
       {
@@ -2064,6 +2089,10 @@ const hotels = [
     web: 'http://www.safari-club.com',
     images: [
       {
+        small: '/assets/Safari-Club/safari-sunset-small.jpg',
+        large: '/assets/Safari-Club/safari-sunset.jpg',
+      },
+      {
         small: '/assets/Safari-Club/safari-small.jpg',
         large: '/assets/Safari-Club/safari.jpg',
       },
@@ -2071,10 +2100,7 @@ const hotels = [
         small: '/assets/Safari-Club/horse-kid-small.jpg',
         large: '/assets/Safari-Club/horse-kid.jpg',
       },
-      {
-        small: '/assets/Safari-Club/safari-sunset-small.jpg',
-        large: '/assets/Safari-Club/safari-sunset.jpg',
-      },
+     
     ],
   },
   {
