@@ -159,6 +159,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
           handleFilterChange("activities", newCheckedOptions)
         }
         large={true}
+        filtersApplied={filters.activities}
       />
       <CountriesInput
         placeholder={t("locationP")}

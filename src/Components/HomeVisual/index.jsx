@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import "./style.css";
 
 export const HomeVisual = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
