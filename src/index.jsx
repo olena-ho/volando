@@ -1,14 +1,13 @@
 import React from "react";
-import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider} from "react-router-dom";
-import { App } from "./components/App/index.jsx";
+import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { App } from "./Components/App/index.jsx";
 import { HomePage } from "./pages/HomePage";
-import './i18n';
-import './variables.css';
-import './global.css';
+import "./i18n";
+import "./variables.css";
+import "./global.css";
 import { Favorites } from "./pages/Favorites";
 import { TeamInfo } from "./pages/TeamInfo";
-
 
 const router = createBrowserRouter([
   {
@@ -26,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: "/team-info",
         element: <TeamInfo />,
-      }
+      },
     ],
   },
 ]);
