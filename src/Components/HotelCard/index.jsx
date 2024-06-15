@@ -8,7 +8,7 @@ import heartOn from "../../../public/heart-orange.png";
 
 export const HotelCard = ({
   hotel,
-  hotelDetails = {}, //to remove later: I added ={} to the props to avoid the error of undefined: *from Olena: I tried removing it and it works, so we can remove it I think
+  hotelDetails,
   onRemoveFromFavorites,
   onHotelClick,
   isFavorite,
@@ -55,16 +55,10 @@ export const HotelCard = ({
           <div className="hotel-info__first-line">
             <h2>{hotel.name}</h2>
             <button
-              className={`add-heart icon ${
-                isFavorite(hotel.id) ? "active" : "inactive"
-              }`}
+              className="add-heart icon"
               onClick={(e) => {
                 e.stopPropagation();
-                if (isFavorite(hotel.id)) {
-                  onRemoveFromFavorites(hotel.id);
-                } else {
-                  onAddToFavorites(hotel.id);
-                }
+                onAddToFavorites(hotel.id);
               }}
             >
               <img

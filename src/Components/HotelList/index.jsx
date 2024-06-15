@@ -13,6 +13,9 @@ export const HotelList = ({
   const [details, setDetails] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [openedHotelsDetails, setOpenedHotelsDetails] = useState([]);
+  const [favorites, setFavorites] = useState(() => {
+    return JSON.parse(localStorage.getItem("favorites")) || [];
+  });
 
   // Load hotel details based on current language
   useEffect(() => {
@@ -33,21 +36,20 @@ export const HotelList = ({
   }, [i18n.language]);
 
   // Log details state updates
-  useEffect(() => {
-    console.log("Details state updated:", details);
-  }, [details]);
+  // useEffect(() => {
+  //   console.log("Details state updated:", details);
+  // }, [details]);
 
   const onAddToFavorites = (id) => {
-    const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    const newFavorites = storedFavorites.includes(id)
-      ? storedFavorites.filter((hotelId) => hotelId !== id)
-      : [...storedFavorites, id];
+    const newFavorites = favorites.includes(id)
+      ? favorites.filter((hotelId) => hotelId !== id)
+      : [...favorites, id];
     localStorage.setItem("favorites", JSON.stringify(newFavorites));
+    setFavorites(newFavorites);
   };
 
   const isFavorite = (id) => {
-    const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    return storedFavorites.includes(id);
+    return favorites.includes(id);
   };
 
   const handleOpenHotelDetails = (id) => {
@@ -57,8 +59,6 @@ export const HotelList = ({
         : [...prev, id]
     );
   };
-
-  console.log(alternativeHotelsFound);
 
   return (
     <div className="container-card">
