@@ -477,5 +477,48 @@
     "description": "Hôtel de Paris Monte-Carlo je ikonický luxusní hotel v centru Monaka. Hotel nabízí kasino přímo v hotelu, prvotřídní lázně, vynikající restaurace a luxusní nákupní možnosti. Je proslulý svou elegancí a sofistikovaností a nabízí hostům skutečně nezapomenutelný pobyt.",
     "activities": ["Wellness", "Plavaní", "Kasino", "Nákupy"],
     "comfort": ["Wifi", "Parkování s obsluhou", "Wellness Sky Club", "Restaurace"]
+  },
+  "Dolina Charlotty Resort & Spa": {
+"description": "Dolina Charlotty Resort & Spa je okouzlující útočiště, které se nachází nedaleko města Słupsk v severním Polsku. Resort se nachází uprostřed svěží zeleně a nabízí klidné prostředí ideální pro relaxaci a venkovní aktivity. Hosté mohou využívat různá zařízení včetně luxusních lázní, vnitřních a venkovních bazénů a řady možností stravování.",
+"activities": ["venku",
+      "sport",
+      "děti",
+      "relax",
+      "jízda na koni",
+      "lázně",
+      "bowling",
+      "kulečník",
+      "vodní sporty",
+      "rybaření"],
+      "comfort": ["wifi", "parkování", "bazén", "restaurace", "dětské hřiště"]
+  },
+  "Hotel Arłamów": {
+"description": "Hotel Arłamów je luxusní horský resort s nádherným výhledem a špičkovým vybavením. Nachází se v malebných Bieszczadech a je ideálním místem pro sportovní nadšence a ty, kteří hledají luxusní útočiště. Hotel nabízí rozsáhlé sportovní zázemí, včetně lyžování, golfu a tenisu, a lázně s kompletními službami.",
+"activities": ["venku",
+      "sport",
+      "děti",
+      "relax",
+      "lyžování",
+      "lázně",
+      "tenis",
+      "golf",
+      "cyklistika",
+      "horolezectví"],
+      "comfort": ["wifi", "parkování", "bazén", "restaurace", "posilovna"]
+  },
+  "Hotel Warszawianka": {
+"description": "Hotel Warszawianka je rodinný resort, který se nachází v klidné oblasti Jachranka nedaleko Serocku. Nabízí řadu aktivit vhodných pro všechny věkové kategorie, včetně aquaparku, bowlingu a tenisu. Hotel je ideální pro rodinnou dovolenou a víkendové pobyty a nabízí kombinaci odpočinku a aktivit plných zábavy.",
+"activities": [ "venku",
+"sport",
+"děti",
+"relax",
+"aquapark",
+"lázně",
+"bowling",
+"tenis",
+"cyklistika",
+"vodní sporty"],
+      "comfort": ["wifi", "parking", "pool", "restaurant", "gym"]
   }
+
 }

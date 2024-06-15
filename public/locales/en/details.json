@@ -467,5 +467,47 @@
     "description": "The Hôtel de Paris Monte-Carlo is an iconic luxury hotel located in the heart of Monaco. The hotel features an on-premises casino, a world-class spa, exquisite dining options, and luxury shopping. It is renowned for its elegance and sophistication, offering guests a truly memorable stay.",
     "activities": ["Spa", "Swimming", "Casino", "Shopping"],
     "comfort": ["Wifi", "Valet-parking", "Wellness Sky Club", "Restaurant"]
+  },
+  "Dolina Charlotty Resort & Spa": {
+"description": "Dolina Charlotty Resort & Spa is a charming retreat located near Słupsk in northern Poland. Nestled amidst lush greenery, the resort offers a tranquil environment perfect for relaxation and outdoor activities. Guests can enjoy various amenities including a luxurious spa, indoor and outdoor pools, and a range of dining options.",
+"activities": ["outdoors",
+      "sport",
+      "kids",
+      "relax",
+      "horse-riding",
+      "spa",
+      "bowling",
+      "billiard",
+      "water-sports",
+      "fishing"],
+      "comfort": ["wifi", "parking", "pool", "restaurant", "playground"]
+  },
+  "Hotel Arłamów": {
+"description": "Hotel Arłamów is a luxurious mountain resort offering spectacular views and top-notch amenities. Located in the scenic Bieszczady Mountains, it is a perfect destination for sports enthusiasts and those seeking a high-end retreat. The hotel features extensive sports facilities, including skiing, golf, and tennis, along with a full-service spa.",
+"activities": ["outdoors",
+      "sport",
+      "kids",
+      "relax",
+      "skiing",
+      "spa",
+      "tennis",
+      "golf",
+      "cycling",
+      "rock-climbing"],
+      "comfort": ["wifi", "parking", "pool", "restaurant", "gym"]
+  },
+  "Hotel Warszawianka": {
+"description": "Hotel Warszawianka is a family-friendly resort located in the serene area of Jachranka near Serock. It offers a variety of activities suitable for all ages, including an aquapark, bowling, and tennis. The hotel is ideal for family vacations and weekend getaways, providing a mix of relaxation and fun-filled activities.",
+"activities": [ "outdoors",
+      "sport",
+      "kids",
+      "relax",
+      "aquapark",
+      "spa",
+      "bowling",
+      "tennis",
+      "cycling",
+      "water-sports"],
+      "comfort": ["wifi", "parking", "pool", "restaurant", "gym"]
   }
 }
