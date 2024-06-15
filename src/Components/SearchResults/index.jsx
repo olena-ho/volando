@@ -4,10 +4,12 @@ import './style.css';
 import hotelsData from '../../api/hotels';
 import { HotelList } from '../HotelList';
 import { LoadScript } from '@react-google-maps/api';
+import useScreenSize from '../../../useScreenSize';
 
 export const SearchResults = ({ foundHotelsIds, alternativeHotelsFound }) => {
   const [selectedHotel, setSelectedHotel] = useState(null);
   const [isMapVisible, setIsMapVisible] = useState(false);
+  const isMobile = useScreenSize();
 
   const filteredHotels = hotelsData.filter((hotel) =>
     foundHotelsIds.includes(hotel.id),
@@ -34,13 +36,15 @@ export const SearchResults = ({ foundHotelsIds, alternativeHotelsFound }) => {
           alternativeHotelsFound={alternativeHotelsFound}
           onShowOnMap={handleShowOnMap}
         />
-        <div className={`map-container ${isMapVisible ? 'visible' : ''}`}>
-          <Map
-            hotels={filteredHotels}
-            selectedHotel={selectedHotel}
-            onHotelSelect={setSelectedHotel}
-          />
-        </div>
+         {!isMobile && (  // Conditionally render the map container based on screen size
+          <div className={`map-container ${isMapVisible ? 'visible' : ''}`}>
+            <Map
+              hotels={filteredHotels}
+              selectedHotel={selectedHotel}
+              onHotelSelect={setSelectedHotel}
+            />
+          </div>
+        )}
       </div>
     </LoadScript>
   );

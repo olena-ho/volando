@@ -1026,12 +1026,20 @@ const hotels = [
     web: 'https://www.treebonesresort.com/',
     images: [
       {
-        small: '/assets/Treebones-Resort/boat-small.jpg',
-        large: '/assets/Treebones-Resort/boat.jpg',
+        small: '/assets/Treebones-Resort/hiking-small.jpg',
+        large: '/assets/Treebones-Resort/hiking.jpg',
       },
       {
         small: '/assets/Treebones-Resort/yurta-small.jpg',
         large: '/assets/Treebones-Resort/yurta.jpg',
+      },
+      {
+        small: '/assets/Treebones-Resort/boat-small.jpg',
+        large: '/assets/Treebones-Resort/boat.jpg',
+      },
+      {
+        small: '/assets/Treebones-Resort/yurt-small.jpg',
+        large: '/assets/Treebones-Resort/yurt.jpg',
       },
     ],
     defaultReviews: [
