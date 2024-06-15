@@ -104,6 +104,7 @@
 .add-heart:hover .heart-icon {
   content: url(../../../public/heart-orange.png);
 }
+
 .arrow-details {
   position: absolute;
   bottom: 0;
