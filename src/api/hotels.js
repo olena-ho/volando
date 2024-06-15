@@ -2239,8 +2239,6 @@ const hotels = [
     },
     rating: 5,
     price: 'luxury',
-    description:
-      "Opera Hotel combines luxury and cultural charm, offering unique themed suites and comprehensive spa services. The hotel's award-winning wine list is a highlight for connoisseurs.",
     comfort: ['wifi', 'parking', 'spa', 'restaurant'],
     web: 'https://opera-hotel.com/',
     images: [
@@ -2270,8 +2268,6 @@ const hotels = [
     },
     rating: 4,
     price: 'midrange',
-    description:
-      'Hotel Flamingo offers comfortable accommodation and tennis facilities in a beautiful coastal setting. Guests can enjoy a range of activities including tennis, swimming in the outdoor pool, and exploring the nearby beaches.',
     comfort: ['wifi', 'parking', 'pool', 'restaurant', 'beach'],
     web: 'https://www.hotelpanoramaestartit.com/',
     images: [
@@ -2302,8 +2298,6 @@ const hotels = [
     },
     rating: 4,
     price: 'midrange',
-    description:
-      'Overlooking Patong Beach, this hotel offers tennis courts, a fitness center, and three tiered swimming pools. It’s a great option for those wanting to enjoy both tennis and the vibrant life of Phuket.',
     comfort: ['wifi', 'parking', 'pool', 'restaurant', 'gym', 'beach'],
     web: 'https://all.accor.com/hotel/1965/index.en.shtml',
     images: [
@@ -2333,8 +2327,6 @@ const hotels = [
     },
     rating: 3,
     price: 'midrange',
-    description:
-      'Situated in the city of Plzeň, Hotel Panorama provides tennis facilities along with a wellness center and comfortable rooms. The hotel is also close to the city center, making it convenient for exploring local attractions.',
     comfort: ['wifi', 'parking', 'restaurant'],
     web: 'http://www.panorama-pm.cz/',
     images: [
@@ -2371,8 +2363,6 @@ const hotels = [
     },
     rating: 5,
     price: 'luxury',
-    description:
-      'The Hôtel de Paris Monte-Carlo is an iconic luxury hotel located in the heart of Monaco. The hotel features an on-premises casino, a world-class spa, exquisite dining options, and luxury shopping. It is renowned for its elegance and sophistication, offering guests a truly memorable stay.',
     comfort: [
       'wifi',
       'valet-parking',

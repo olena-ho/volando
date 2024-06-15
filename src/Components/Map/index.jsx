@@ -99,7 +99,10 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
             >
               <div>
                 <h3>{hotel.name}</h3>
-                <p>{hotel.description ? `${hotel.description.substring(0, 12)}...` : 'No description available'}</p>
+                <p>{`${hotel.description.substring(0, 12)}...`}</p>
+                <button onClick={() => onHotelSelect(hotel)}>
+                  Get Directions
+                </button>
               </div>
             </InfoWindow>
           )}
@@ -107,7 +110,7 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
       )),
     [hotels, displayInfo, onHotelSelect],
   );
- 
+  console.log(__GOOGLE_MAPS_API_KEY__);
   return (
     <>
         <div className={`map-container ${isLargeMap ? 'large' : ''}`}>
