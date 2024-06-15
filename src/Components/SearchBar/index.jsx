@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Dropdown } from "../Dropdown";
 import { CountriesInput } from "../CountriesInput";
 import { filterHotels } from "../../utils/filterHotels";
+import { getFilters } from "../../utils/getFilters";
 import "./style.css";
 import hotels from "../../api/hotels";
 import outdoorsImg from "../LargeDropdownContent/img/cycling.png";
@@ -17,24 +18,8 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
   const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const [filters, setFilters] = useState({
-    activities: searchParams.get("activities")
-      ? searchParams.get("activities").split(",")
-      : [],
-    locCode: searchParams.get("locCode")
-      ? searchParams.get("locCode").split(",")
-      : [],
-    comfort: searchParams.get("comfort")
-      ? searchParams.get("comfort").split(",")
-      : [],
-    price: searchParams.get("price")
-      ? searchParams.get("price").split(",")
-      : [],
-    rating: searchParams.get("rating")
-      ? searchParams.get("rating").split(",")
-      : [],
-  });
-
+  const [filters, setFilters] = useState(getFilters(searchParams));
+  
   useEffect(() => {
     //a variable to store the filters that are not empty
     const activeFilters = Object.entries(filters).reduce(
