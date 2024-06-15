@@ -10,3 +10,24 @@
   align-items: center;
   height: 100%;
 }
+
+.alternative-hotels-found {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.alternative-hotels-found p {
+  font-weight: 500;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  color: var(--light-grey-color);
+}
+
+.hotel-list__emoji {
+  display: block;
+  font-size: 30px;
+  width: fit-content;
+  margin: 0 auto;
+}

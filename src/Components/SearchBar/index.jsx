@@ -65,8 +65,8 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
 
   const handleSearch = () => {
     const { filteredHotels, alternativeHotels } = filterHotels(hotels, filters);
-    //the user has to select at least one activity or location
-    if (filters.activities.length === 0 && filters.locCode.length === 0) {
+    //the user has to select at least one activity
+    if (filters.activities.length === 0) {
       alert(t("alert-param"));
       return;
     }
@@ -182,6 +182,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
         onChange={(newCheckedOptions) =>
           handleFilterChange("comfort", newCheckedOptions)
         }
+        filtersApplied={filters.comfort}
       />
       <Dropdown
         title={t("priceP")}
@@ -195,6 +196,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
         onChange={(newCheckedOptions) =>
           handleFilterChange("price", newCheckedOptions)
         }
+        filtersApplied={filters.price}
       />
       <Dropdown
         title={t("ratingP")}
@@ -208,6 +210,7 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
         onChange={(newCheckedOptions) =>
           handleFilterChange("rating", newCheckedOptions)
         }
+        filtersApplied={filters.rating}
       />
 
       <button className="btn search-button" onClick={handleSearch}>
