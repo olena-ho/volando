@@ -4,11 +4,12 @@ import icon from "./img/down-icon.png";
 import { DropdownContent } from "../DropdownContent";
 import { LargeDropdownContent } from "../LargeDropdownContent";
 
-export const Dropdown = ({ title, options, onChange, large }) => {
+export const Dropdown = ({ title, options, onChange, large, filtersApplied }) => {
   const [show, setShow] = useState(false);
-  const [checkedOptions, setCheckedOptions] = useState([]);
+  const [checkedOptions, setCheckedOptions] = useState(filtersApplied || []);
   const dropdownRef = useRef(null);
 
+  console.log(checkedOptions);
   const toggleDropdown = () => setShow(!show);
 
   const handleCheckboxChange = (event) => {

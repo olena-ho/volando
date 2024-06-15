@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import "../Dropdown/style.css";
 
 export const CountriesInput = ({ placeholder, onChange }) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [show, setShow] = useState(false);
   const [locCode, setLocCode] = useState([]);
   const [inputValue, setInputValue] = useState("");
