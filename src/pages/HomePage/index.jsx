@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { HomeVisual } from "../../components/HomeVisual";
-import { SearchBar } from "../../components/SearchBar";
-import { SearchResults } from "../../components/SearchResults";
+import { HomeVisual } from "../../Components/HomeVisual";
+import { SearchBar } from "../../Components/SearchBar";
+import { SearchResults } from "../../Components/SearchResults";
 import hotels from "../../api/hotels";
 import { filterHotels } from "../../utils/filterHotels";
 import Lottie from "lottie-react";
@@ -57,7 +57,7 @@ export const HomePage = () => {
   useEffect(() => {
     handleSearch();
   }, []);
-  
+
   useEffect(() => {
     if (alternativeHotelsFound) {
       setShowAnimation(true);
@@ -73,7 +73,9 @@ export const HomePage = () => {
   return (
     <div
       className={`main-page__container ${
-        isSearchResults || window.innerWidth < 431 ? "padding-top-0" : "padding-top-100"
+        isSearchResults || window.innerWidth < 431
+          ? "padding-top-0"
+          : "padding-top-100"
       }`}
     >
       <SearchBar
