@@ -29,6 +29,7 @@ export const Favorites = () => {
       <HotelList
         hotels={filteredHotels}
         onRemoveFromFavorites={onRemoveFromFavorites}
+        alternativeHotels={[]}
       />
     </div>
   );
