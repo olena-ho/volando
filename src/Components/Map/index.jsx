@@ -7,10 +7,10 @@ import {
 import './style.css';
 import { useTranslation } from "react-i18next";
 
-const containerStyle = {
+const getContainerStyle = ({fullHeight}) => ({
   width: '100%',
-  height: '100vh',
-};
+  height: fullHeight ? '100vh' : '200px',
+});
 
 const defaultCenter = {
   lat: 49.5,
@@ -21,7 +21,7 @@ const handleMapLoad = (map) => {
   console.log('Map loaded successfully', map);
 };
 
-const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
+const Map = ({ hotels, selectedHotel, onHotelSelect, hotelLocation }) => {
   const { t } = useTranslation(["details", "translation"]);
   const [currentLocation, setCurrentLocation] = useState(null);
   const [displayInfo, setDisplayInfo] = useState(null);
@@ -34,8 +34,8 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           setCurrentLocation({
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
+            lat: hotelLocation?.latitude || position.coords.latitude,
+            lng: hotelLocation?.longitude || position.coords.longitude,
           });
         },
         (error) => {
@@ -67,7 +67,7 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
   // Memorized current location marker
   const currentLocationMarker = useMemo(
     () =>
-      currentLocation && (
+      currentLocation && !hotelLocation && (
         <Marker
           key="currentLocation"
           position={currentLocation}
@@ -76,7 +76,7 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
           }}
         />
       ),
-    [currentLocation],
+    [currentLocation, hotelLocation],
   );
 
   // Memorized hotel markers
@@ -127,7 +127,7 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
       <div className={`map-container ${isLargeMap ? 'large' : ''}`}>
         <div className="map-content">
           <GoogleMap
-            mapContainerStyle={containerStyle}
+            mapContainerStyle={getContainerStyle({fullHeight: !hotelLocation})}
             center={currentLocation || defaultCenter}
             zoom={10}
             onLoad={(map) => {
