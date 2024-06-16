@@ -6,7 +6,7 @@ import { HotelList } from '../HotelList';
 import { LoadScript } from '@react-google-maps/api';
 import useScreenSize from '../../hooks/useScreenSize.js';
 
-export const SearchResults = ({ foundHotelsIds, alternativeHotelsFound }) => {
+export const SearchResults = ({ foundHotelsIds, alternativeHotels }) => {
   const [selectedHotel, setSelectedHotel] = useState(null);
   const [isMapVisible, setIsMapVisible] = useState(false);
   const isMobile = useScreenSize();
@@ -33,7 +33,7 @@ export const SearchResults = ({ foundHotelsIds, alternativeHotelsFound }) => {
         <HotelList
           hotels={filteredHotels}
           onHotelClick={setSelectedHotel}
-          alternativeHotelsFound={alternativeHotelsFound}
+          alternativeHotels={alternativeHotels}
           onShowOnMap={handleShowOnMap}
         />
          {!isMobile && (  // Conditionally render the map container based on screen size
