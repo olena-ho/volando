@@ -23,7 +23,6 @@ export const HotelList = ({
       try {
         const response = await fetch(`/locales/${i18n.language}/details.json`);
         const data = await response.json();
-        console.log("Loaded details:", data);
         setDetails(data); // Set details state
       } catch (error) {
         console.error("Error loading details:", error);
@@ -34,11 +33,6 @@ export const HotelList = ({
 
     loadDetails();
   }, [i18n.language]);
-
-  // Log details state updates
-  // useEffect(() => {
-  //   console.log("Details state updated:", details);
-  // }, [details]);
 
   const onAddToFavorites = (id) => {
     const newFavorites = favorites.includes(id)

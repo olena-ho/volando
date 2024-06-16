@@ -9,7 +9,6 @@ export const Dropdown = ({ title, options, onChange, large, filtersApplied }) =>
   const [checkedOptions, setCheckedOptions] = useState(filtersApplied || []);
   const dropdownRef = useRef(null);
 
-  console.log(checkedOptions);
   const toggleDropdown = () => setShow(!show);
 
   const handleCheckboxChange = (event) => {
