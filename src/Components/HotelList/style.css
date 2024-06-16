@@ -18,7 +18,8 @@
   padding: 10px;
 }
 
-.alternative-hotels-found p {
+.alternative-hotels-found p,
+.hotels-found-count {
   font-weight: 500;
   font-size: 1.2em;
   line-height: 1.4em;
@@ -30,4 +31,8 @@
   font-size: 30px;
   width: fit-content;
   margin: 0 auto;
+}
+
+.hotels-found-count {
+  padding: 0 10px;
 }

@@ -35,6 +35,7 @@ export const SearchResults = ({ foundHotelsIds, alternativeHotels }) => {
           onHotelClick={setSelectedHotel}
           alternativeHotels={alternativeHotels}
           onShowOnMap={handleShowOnMap}
+          showHotelsCount={true}
         />
          {!isMobile && (  // Conditionally render the map container based on screen size
           <div className={`map-container ${isMapVisible ? 'visible' : ''}`}>

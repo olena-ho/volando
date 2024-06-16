@@ -140,7 +140,7 @@ const hotels = [
   {
     id: 4,
     name: 'Caribe Bay',
-    activities: ['kids', 'aquapark', 'playground'],
+    activities: ['kids', 'aquapark', 'playground', 'kids-club', 'boardgames'],
     'loc-code': 'it-c',
     address:
       'Via Michelangelo Buonarroti, 15, 30016 Lido di Jesolo, Venice, Italy',
@@ -437,6 +437,8 @@ const hotels = [
     name: 'Scandi Eco Park',
     activities: [
       'kids',
+      'boardgames',
+      'kids-club',
       'sport',
       'outdoors',
       'playground',
@@ -969,6 +971,8 @@ const hotels = [
     name: 'Gaylord Palms and Convention Center',
     activities: [
       'kids',
+      'boardgames',
+      'kids-club',
       'sport',
       'outdoors',
       'playground',
@@ -1404,6 +1408,7 @@ const hotels = [
       'husky sledding',
       'fishing',
       'kids',
+      'boardgames',
       'playground',
     ],
     'loc-code': 'fi-c',
@@ -2187,6 +2192,8 @@ const hotels = [
       'art',
       'outdoors',
       'kids',
+      'boardgames',
+      'kids-club',
       'painting',
       'crafts',
       'cycling',

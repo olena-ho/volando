@@ -7,6 +7,7 @@ export const HotelList = ({
   hotels,
   alternativeHotels,
   onShowOnMap,
+  showHotelsCount = false,
   ...props
 }) => {
   const { t, i18n } = useTranslation(["details", "translation"]);
@@ -68,7 +69,11 @@ export const HotelList = ({
       {!details ? (
         <p>No details available</p>
       ) : (
-        hotels.map((hotel) => {
+          <>
+            {showHotelsCount && (
+              <p className="hotels-found-count">{`${t("translation:hotelsFoundM")} ${hotels.length}`}</p>
+            )}
+          {hotels.map((hotel) => {
           const isHotelDetailsOpened = openedHotelsDetails.includes(hotel.id);
           const hotelDetails = details[hotel.name] || {};
           return (
@@ -82,9 +87,10 @@ export const HotelList = ({
               isHotelDetailsOpened={isHotelDetailsOpened}
               onShowOnMap={onShowOnMap}
               {...props}
-            />
-          );
-        })
+              />
+            );
+          })}
+        </>
       )}
     </div>
   );
