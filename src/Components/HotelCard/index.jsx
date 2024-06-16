@@ -36,6 +36,15 @@ export const HotelCard = ({
     setShowMap(!showMap);
   };
 
+  const handleHeartClick = (e) => {
+    e.stopPropagation();
+    if (isFavorite(hotel.id)) {
+      onRemoveFromFavorites(hotel.id);
+    } else {
+      onAddToFavorites(hotel.id);
+    }
+  };
+
   return (
     <div className="hotel-card" onClick={() => onHotelClick(hotel)}>
       <div className="hotel-info--wrapper">
@@ -56,10 +65,7 @@ export const HotelCard = ({
             <h2>{hotel.name}</h2>
             <button
               className="add-heart icon"
-              onClick={(e) => {
-                e.stopPropagation();
-                onAddToFavorites(hotel.id);
-              }}
+              onClick={handleHeartClick}
             >
               <img
                 src={isFavorite(hotel.id) ? heartOn : heartOff}

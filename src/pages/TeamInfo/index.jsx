@@ -35,6 +35,8 @@ export const TeamInfo = () => {
                 href={member.github}
                 aria-label={`${member.name}'s Github profile`}
                 className="team-icon"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg width="20" height="20">
                   <use href="/icons.svg#github" />
@@ -44,6 +46,8 @@ export const TeamInfo = () => {
                 href={member.linkedin}
                 aria-label={`${member.name}'s Linkedin profile`}
                 className="team-icon"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg width="20" height="20">
                   <use href="/icons.svg#linkedin" />

@@ -21,6 +21,7 @@ export const Favorites = () => {
     const updatedFavorites = favorites.filter((favId) => favId !== id);
     localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
     setFavorites(updatedFavorites);
+    setFilteredHotels(hotels.filter(({ id }) => updatedFavorites.includes(id)));
   };
 
   return (
