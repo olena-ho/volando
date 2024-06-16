@@ -1122,6 +1122,10 @@ const hotels = [
     web: 'https://www.grandvelas.com',
     images: [
       {
+        small: '/assets/Grand-Velas-Riviera-Maya/salsa-classes-small.jpg',
+        large: '/assets/Grand-Velas-Riviera-Maya/salsa-classes.jpg',
+      },
+      {
         small: '/assets/Grand-Velas-Riviera-Maya/aguafit-small.jpg',
         large: '/assets/Grand-Velas-Riviera-Maya/aguafit.jpg',
       },
@@ -1129,10 +1133,7 @@ const hotels = [
         small: '/assets/Grand-Velas-Riviera-Maya/salsa-small.jpg',
         large: '/assets/Grand-Velas-Riviera-Maya/salsa.jpg',
       },
-      {
-        small: '/assets/Grand-Velas-Riviera-Maya/salsa-classes-small.jpg',
-        large: '/assets/Grand-Velas-Riviera-Maya/salsa-classes.jpg',
-      },
+      
     ],
     defaultReviews: [
       { name: 'Carlos', date: '01.06.2023 10:00', text: 'Resort increíble!' },
@@ -1156,6 +1157,10 @@ const hotels = [
     web: 'https://www.marriott.com',
     images: [
       {
+        small: '/assets/W-Barcelona/sunrics-yoga-small.jpg',
+        large: '/assets/W-Barcelona/sunrics-yoga.jpg',
+      },
+      {
         small: '/assets/W-Barcelona/salsa-night-small.jpg',
         large: '/assets/W-Barcelona/salsa-night.jpg',
       },
@@ -1163,10 +1168,7 @@ const hotels = [
         small: '/assets/W-Barcelona/salsa-small.jpg',
         large: '/assets/W-Barcelona/salsa.jpg',
       },
-      {
-        small: '/assets/W-Barcelona/sunrics-yoga-small.jpg',
-        large: '/assets/W-Barcelona/sunrics-yoga.jpg',
-      },
+     
       {
         small: '/assets/W-Barcelona/yoga-small.jpg',
         large: '/assets/W-Barcelona/yoga.jpg',
