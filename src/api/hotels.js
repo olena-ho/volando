@@ -498,13 +498,14 @@ const hotels = [
     web: 'https://www.avestravel.com.ua/hotel_list/goteli-z-garjachimi-dzherelami-v-ukraini/',
     images: [
       {
-        small: '/assets/Aves-Travel/background-small.jpg',
-        large: '/assets/Aves-Travel/background.jpg',
-      },
-      {
         small: '/assets/Aves-Travel/man-small.jpg',
         large: '/assets/Aves-Travel/man.jpg',
       },
+      {
+        small: '/assets/Aves-Travel/background-small.jpg',
+        large: '/assets/Aves-Travel/background.jpg',
+      },
+     
       {
         small: '/assets/Aves-Travel/woman-small.jpg',
         large: '/assets/Aves-Travel/woman.jpg',
@@ -2118,21 +2119,24 @@ const hotels = [
     web: 'http://www.fenixtown.com',
     images: [
       {
-        small: '/assets/Fenix-Town/billiard-small.jpg',
-        large: '/assets/Fenix-Town/billiard.jpg',
-      },
-      {
         small: '/assets/Fenix-Town/bowling-small.jpg',
         large: '/assets/Fenix-Town/bowling.jpg',
+      },
+      {
+        small: '/assets/Fenix-Town/spa-small.jpg',
+        large: '/assets/Fenix-Town/spa.jpg',
       },
       {
         small: '/assets/Fenix-Town/relax-small.jpg',
         large: '/assets/Fenix-Town/relax.jpg',
       },
       {
-        small: '/assets/Fenix-Town/spa-small.jpg',
-        large: '/assets/Fenix-Town/spa.jpg',
+        small: '/assets/Fenix-Town/billiard-small.jpg',
+        large: '/assets/Fenix-Town/billiard.jpg',
       },
+      
+      
+      
     ],
     "defaultReviews": [
       { name: 'Олена', date: '02.06.2023 12:00', text: 'Чудове обслуговування.' },
