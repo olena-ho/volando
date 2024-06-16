@@ -13,6 +13,8 @@ import kidsImg from "../LargeDropdownContent/img/playground.png";
 import artImg from "../LargeDropdownContent/img/hobby.png";
 import relaxImg from "../LargeDropdownContent/img/beach.png";
 import indoorsImg from "../LargeDropdownContent/img/pool.png";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const SearchBar = ({ onSearch }) => {
   const { t } = useTranslation();
@@ -52,15 +54,29 @@ export const SearchBar = ({ onSearch }) => {
     filterHotels(hotels, filters);
     //the user has to select at least one activity
     if (filters.activities.length === 0) {
-      alert(t("alert-param"));
+      toast.error(t("alert-param"), {
+        className: 'custom-toast',
+        progressClassName: 'custom-toast-progress-bar'
+      });
       return;
     }
 
     onSearch();
   };
-
+  
   return (
     <div className="search-bar-wrapper">
+      <ToastContainer 
+  position="top-center"
+  autoClose={5000}
+  hideProgressBar={false}
+  newestOnTop={false}
+  closeOnClick
+  rtl={false}
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+/>
       <Dropdown
         title={t("activitiesP")}
         options={[
