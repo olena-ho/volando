@@ -24,6 +24,13 @@ export const SearchResults = ({ foundHotelsIds, alternativeHotelsFound }) => {
     console.error('Error loading Google Maps', e);
   }
 
+  const handleHotelClick = (hotel) => {
+    setSelectedHotel(hotel);
+    if (isMobile) {
+      setIsMapVisible(true);
+    }
+  };
+
   return (
     <LoadScript
       googleMapsApiKey={__GOOGLE_MAPS_API_KEY__}

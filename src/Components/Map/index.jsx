@@ -113,7 +113,6 @@ const Map = ({ hotels, selectedHotel, onHotelSelect }) => {
                  className="info-window-image"
                />
                <h3>{hotel.name}</h3>
-               {description && <p>{`${description.substring(0, 12)}...`}</p>}
              </div>
            </InfoWindow>
             )}
