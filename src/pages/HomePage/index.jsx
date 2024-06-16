@@ -12,7 +12,7 @@ import './style.css';
 
 export const HomePage = () => {
   const [foundHotelsIds, setFoundHotelsIds] = useState([]);
-  const [alternativeHotelsFound, setAlternativeHotelsFound] = useState(false);
+  const [alternativeHotels, setAlternativeHotels] = useState([]);
   const [searchParams] = useSearchParams();
   const [showAnimation, setShowAnimation] = useState(false);
 
@@ -24,38 +24,38 @@ export const HomePage = () => {
 
     if (hasNoFilters) {
       setFoundHotelsIds([]);
-      setAlternativeHotelsFound(false);
+      setAlternativeHotels([]);
       return;
     }
 
     const { filteredHotels, alternativeHotels } = filterHotels(hotels, filters);
 
-    setAlternativeHotelsFound(filteredHotels.length === 0);
-
-    setFoundHotelsIds(
-      (filteredHotels.length > 0 ? filteredHotels : alternativeHotels).map(
-        (hotel) => hotel.id,
-      ),
-    );
+    if (filteredHotels.length === 0) {
+      setAlternativeHotels(alternativeHotels);
+      setShowAnimation(true);
+    } else {
+      setFoundHotelsIds(filteredHotels.map(hotel => hotel.id));
+      setAlternativeHotels([]);
+    }
   };
-  
-  // enabling sharing a link with search parameters with someone else and letting them see the results right away
+
   useEffect(() => {
     handleSearch();
   }, []);
 
   useEffect(() => {
-    if (alternativeHotelsFound) {
-      setShowAnimation(true);
+    if (alternativeHotels.length > 0) {
       const timer = setTimeout(() => {
         setShowAnimation(false);
+        setFoundHotelsIds(alternativeHotels.map(hotel => hotel.id));
       }, 3000);
 
       return () => clearTimeout(timer);
     }
-  }, [alternativeHotelsFound]);
+  }, [alternativeHotels]);
 
   const isSearchResults = foundHotelsIds.length > 0;
+
   return (
     <div
       className={`main-page__container ${
@@ -64,10 +64,7 @@ export const HomePage = () => {
           : 'padding-top-100'
       }`}
     >
-      <SearchBar
-        onSearch={handleSearch}
-        setAlternativeHotelsFound={setAlternativeHotelsFound}
-      />
+      <SearchBar onSearch={handleSearch} />
       {showAnimation ? (
         <div className="animation-container">
           <Lottie animationData={animation} className="animation" />
@@ -75,7 +72,7 @@ export const HomePage = () => {
       ) : isSearchResults ? (
         <SearchResults
           foundHotelsIds={foundHotelsIds}
-          alternativeHotelsFound={alternativeHotelsFound}
+          alternativeHotels={alternativeHotels}
         />
       ) : (
         <HomeVisual />

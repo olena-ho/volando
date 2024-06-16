@@ -14,7 +14,7 @@ import artImg from "../LargeDropdownContent/img/hobby.png";
 import relaxImg from "../LargeDropdownContent/img/beach.png";
 import indoorsImg from "../LargeDropdownContent/img/pool.png";
 
-export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
+export const SearchBar = ({ onSearch }) => {
   const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -57,8 +57,6 @@ export const SearchBar = ({ onSearch, setAlternativeHotelsFound }) => {
     }
 
     onSearch();
-
-    setAlternativeHotelsFound(filteredHotels.length === 0);
   };
 
   return (
