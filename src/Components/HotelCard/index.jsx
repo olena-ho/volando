@@ -112,7 +112,7 @@ export const HotelCard = ({
               <Map
                 hotels={[hotel]}
                 selectedHotel={hotel}
-                onHotelSelect={() => {}}
+                hotelLocation={hotel.location}
               />
             </div>
           )}
