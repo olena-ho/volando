@@ -3,8 +3,7 @@ export const DropdownContent = ({
   checkedOptions,
   onCheckboxChange,
   show,
-}) => {
-  return (
+}) => (
     <div className={`dropdown-content ${show ? "show" : ""}`}>
       {options.map((option) => (
         <label className="checkbox-label" key={option.key}>
@@ -19,4 +18,3 @@ export const DropdownContent = ({
       ))}
     </div>
   );
-};

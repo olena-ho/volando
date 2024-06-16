@@ -49,7 +49,7 @@ export const SearchBar = ({ onSearch }) => {
   };
 
   const handleSearch = () => {
-    const { filteredHotels, alternativeHotels } = filterHotels(hotels, filters);
+    filterHotels(hotels, filters);
     //the user has to select at least one activity
     if (filters.activities.length === 0) {
       alert(t("alert-param"));

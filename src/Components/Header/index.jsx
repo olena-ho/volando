@@ -27,8 +27,8 @@ export const Header = () => {
 
   const getCurrentFlag = () => {
     switch (currentLang) {
-      case "cs":
-        return cs;
+      // case "cs":
+      //   return cs;
       case "uk":
         return uk;
       case "en":

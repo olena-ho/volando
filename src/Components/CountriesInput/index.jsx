@@ -15,29 +15,23 @@ export const CountriesInput = ({ placeholder, onChange }) => {
   const autocompleteListRef = useRef(null);
 
   useEffect(() => {
-    const loadCountries = () => {
-      const countryTranslations = i18n.getResourceBundle(
-        i18n.language,
-        "countries"
+    const countryTranslations = i18n.getResourceBundle(
+      i18n.language,
+      "countries"
+    );
+
+    if (!countryTranslations) {
+      console.error(
+        `No country translations found for language: ${i18n.language}`
       );
+      return;
+    }
 
-      if (!countryTranslations) {
-        console.error(
-          `No country translations found for language: ${i18n.language}`
-        );
-        return;
-      }
-
-      const translatedCountries = Object.keys(countryTranslations).map(
-        (key) => ({
-          key,
-          name: countryTranslations[key],
-        })
-      );
-      setCountries(translatedCountries);
-    };
-
-    loadCountries();
+    const translatedCountries = Object.keys(countryTranslations).map((key) => ({
+      key,
+      name: countryTranslations[key],
+    }));
+    setCountries(translatedCountries);
   }, [i18n.language, i18n]);
 
   const handleInputChange = (event) => {

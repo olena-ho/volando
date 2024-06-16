@@ -5,8 +5,7 @@ export const LargeDropdownContent = ({
   checkedOptions,
   onCheckboxChange,
   show,
-}) => {
-  return (
+}) => (
     <div className={`${show ? "show" : ""} dropdown-content--large`}>
       {categories.map((category) => (
         <div className="category-section" key={category.key}>
@@ -38,4 +37,3 @@ export const LargeDropdownContent = ({
       ))}
     </div>
   );
-};
