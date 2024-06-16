@@ -218,8 +218,6 @@ const hotels = [
         small: '/assets/Six-Senses/master-class-small.jpg',
         large: '/assets/Six-Senses/master-class.jpg',
       },
-      
-     
     ],
     defaultReviews: [
       { name: 'João', date: '01.06.2023 10:00', text: 'Resort maravilhoso!' },
@@ -1754,9 +1752,6 @@ const hotels = [
         small: '/assets/Amangani/skiing-small.jpg',
         large: '/assets/Amangani/skiing.jpg',
       },
-      
-     
-     
     ],
     defaultReviews: [
       {
@@ -2100,7 +2095,11 @@ const hotels = [
         small: '/assets/Safari-Club/horse-kid-small.jpg',
         large: '/assets/Safari-Club/horse-kid.jpg',
       },
-     
+    ],
+    "defaultReviews": [
+      { name: 'Jan', date: '01.06.2023 10:00', text: 'Velmi pěkný hotel!' },
+      { name: 'Lucie', date: '02.06.2023 11:30', text: 'Skvělé místo k odpočinku.' },
+      { name: 'Petr', date: '03.06.2023 15:00', text: 'Vynikající jídlo a služby.' }
     ],
   },
   {
@@ -2135,6 +2134,12 @@ const hotels = [
         large: '/assets/Fenix-Town/spa.jpg',
       },
     ],
+    "defaultReviews": [
+      { name: 'Олена', date: '02.06.2023 12:00', text: 'Чудове обслуговування.' },
+      { name: 'Андрій', date: '03.06.2023 14:30', text: 'Дуже затишний готель.' },
+      { name: 'Світлана', date: '04.06.2023 09:00', text: 'Відмінне розташування.' },
+      { name: 'Олексій', date: '05.06.2023 10:45', text: 'Смачний сніданок.' }
+    ],
   },
   {
     id: 51,
@@ -2163,6 +2168,11 @@ const hotels = [
         small: '/assets/Fairmont-Grand-Hotel-Kyiv/sauna-small.jpg',
         large: '/assets/Fairmont-Grand-Hotel-Kyiv/sauna.jpg',
       },
+    ],
+    "defaultReviews": [
+      { name: 'John', date: '03.06.2023 14:00', text: 'Convenient location.' },
+      { name: 'Emma', date: '04.06.2023 16:30', text: 'Clean and comfortable.' },
+      { name: 'Michael', date: '05.06.2023 11:15', text: 'Friendly staff and great amenities.' }
     ],
   },
   {
@@ -2255,6 +2265,12 @@ const hotels = [
         large: '/assets/Opera-Hotel/spa.jpg',
       },
     ],
+    "defaultReviews": [
+      { name: 'María', date: '04.06.2023 09:30', text: 'Excelente servicio y ubicación.' },
+      { name: 'Carlos', date: '05.06.2023 13:00', text: 'Habitaciones limpias y cómodas.' },
+      { name: 'Sofía', date: '06.06.2023 14:45', text: 'Personal muy amable.' },
+      { name: 'Juan', date: '07.06.2023 10:20', text: 'Desayuno delicioso y variado.' }
+    ],
   },
   {
     id: 54,
@@ -2283,6 +2299,11 @@ const hotels = [
         small: '/assets/Hotel-Flamingo/tennis-small.jpg',
         large: '/assets/Hotel-Flamingo/tennis.jpg',
       },
+    ],
+    defaultReviews: [
+      { name: 'Carlos', date: '01.06.2023 10:00', text: 'Excelente servicio!' },
+      { name: 'Eva', date: '02.06.2023 12:00', text: 'Ubicación perfecta.' },
+      { name: 'John', date: '03.06.2023 14:00', text: 'Great for families.' },
     ],
   },
   {
@@ -2314,6 +2335,11 @@ const hotels = [
         large: '/assets/Novotel-Phuket-Resort/tennis.jpg',
       },
     ],
+    "defaultReviews": [
+      { name: 'Pierre', date: '05.06.2023 16:45', text: 'Très bel hôtel, personnel amical.' },
+      { name: 'Marie', date: '06.06.2023 12:00', text: 'Chambres confortables et propres.' },
+      { name: 'Luc', date: '07.06.2023 09:30', text: 'Très bien situé, proche des attractions.' }
+    ],
   },
   {
     id: 56,
@@ -2342,6 +2368,11 @@ const hotels = [
         small: '/assets/Hotel-Panorama/tennis-small.jpg',
         large: '/assets/Hotel-Panorama/tennis.jpg',
       },
+    ],
+    defaultReviews: [
+      { name: 'Jan', date: '01.06.2023 10:00', text: 'Velmi pěkný hotel!' },
+      { name: 'Lucie', date: '02.06.2023 11:30', text: 'Skvělé místo k odpočinku.' },
+      { name: 'Petr', date: '03.06.2023 15:00', text: 'Vynikající jídlo a služby.' },
     ],
   },
   {
