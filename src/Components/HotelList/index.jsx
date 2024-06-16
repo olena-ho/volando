@@ -5,7 +5,7 @@ import "./style.css";
 
 export const HotelList = ({
   hotels,
-  alternativeHotelsFound,
+  alternativeHotels,
   onShowOnMap,
   ...props
 }) => {
@@ -60,6 +60,8 @@ export const HotelList = ({
     );
   };
 
+  const alternativeHotelsFound = alternativeHotels.length > 0;
+  
   return (
     <div className="container-card">
       {alternativeHotelsFound ? (

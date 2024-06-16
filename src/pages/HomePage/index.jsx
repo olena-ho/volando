@@ -27,9 +27,9 @@ export const HomePage = () => {
       setAlternativeHotels([]);
       return;
     }
-
+//getting filteredHotels and alternativeHotels from filterHotels function
     const { filteredHotels, alternativeHotels } = filterHotels(hotels, filters);
-
+// setting alternativeHotels state when filteredHotels are empty
     if (filteredHotels.length === 0) {
       setAlternativeHotels(alternativeHotels);
       setShowAnimation(true);
