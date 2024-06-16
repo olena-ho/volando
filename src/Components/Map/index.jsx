@@ -1,13 +1,9 @@
 import React, { useEffect, useState, useMemo, useRef } from 'react';
-import {
-  GoogleMap,
-  InfoWindow,
-  Marker,
-} from '@react-google-maps/api';
+import { GoogleMap, InfoWindow, Marker } from '@react-google-maps/api';
 import './style.css';
 import { useTranslation } from "react-i18next";
 
-const getContainerStyle = ({fullHeight}) => ({
+const getContainerStyle = ({ fullHeight }) => ({
   width: '100%',
   height: fullHeight ? '100vh' : '200px',
 });
@@ -20,6 +16,8 @@ const defaultCenter = {
 const handleMapLoad = (map) => {
   console.log('Map loaded successfully', map);
 };
+
+const isMobile = () => window.innerWidth <= 767;
 
 const Map = ({ hotels, selectedHotel, onHotelSelect, hotelLocation }) => {
   const { t } = useTranslation(["details", "translation"]);
@@ -60,8 +58,10 @@ const Map = ({ hotels, selectedHotel, onHotelSelect, hotelLocation }) => {
   }, [selectedHotel]);
 
   const handleMarkerClick = (hotel) => {
-    setDisplayInfo(hotel);
-    onHotelSelect(hotel);
+    if (!isMobile()) {
+      setDisplayInfo(hotel);
+      onHotelSelect(hotel);
+    }
   };
 
   // Memorized current location marker
@@ -94,27 +94,28 @@ const Map = ({ hotels, selectedHotel, onHotelSelect, hotelLocation }) => {
             }}
             onClick={() => handleMarkerClick(hotel)}
           >
-            {displayInfo === hotel && (
-             <InfoWindow
-             position={{
-               lat: hotel.location.latitude,
-               lng: hotel.location.longitude,
-             }}
-             onCloseClick={() => setDisplayInfo(null)}
-           >
-             <div className="info-window">
-               <img
-                 src={
-                   hotel.images && hotel.images.length > 0
-                     ? hotel.images[0].small
-                     : "/assets/img-placeholder.png"
-                 }
-                 alt={hotel.name}
-                 className="info-window-image"
-               />
-               <h3>{hotel.name}</h3>
-             </div>
-           </InfoWindow>
+            {!isMobile() && displayInfo === hotel && (
+              <InfoWindow
+                position={{
+                  lat: hotel.location.latitude,
+                  lng: hotel.location.longitude,
+                }}
+                onCloseClick={() => setDisplayInfo(null)}
+                className="info-window"
+              >
+                <div className="info-window">
+                  <img
+                    src={
+                      hotel.images && hotel.images.length > 0
+                        ? hotel.images[0].small
+                        : "/assets/img-placeholder.png"
+                    }
+                    alt={hotel.name}
+                    className="info-window-image"
+                  />
+                  <h3>{hotel.name}</h3>
+                </div>
+              </InfoWindow>
             )}
           </Marker>
         );
@@ -127,7 +128,7 @@ const Map = ({ hotels, selectedHotel, onHotelSelect, hotelLocation }) => {
       <div className={`map-container ${isLargeMap ? 'large' : ''}`}>
         <div className="map-content">
           <GoogleMap
-            mapContainerStyle={getContainerStyle({fullHeight: !hotelLocation})}
+            mapContainerStyle={getContainerStyle({ fullHeight: !hotelLocation })}
             center={currentLocation || defaultCenter}
             zoom={10}
             onLoad={(map) => {
